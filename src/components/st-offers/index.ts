@@ -1,5 +1,6 @@
 import { html, LitElement } from 'lit';
 import { property, state } from 'lit/decorators.js';
+import { classMap } from 'lit/directives/class-map.js';
 import AOS from '../../utils/animate-on-scroll';
 import '../../utils/fonts';
 
@@ -382,7 +383,7 @@ export default class StOffers extends LitElement {
             ${offers.map(
               (offer, i) => html`
                 <div
-                  class="st-offers__card ${i === this.selectedOffer ? 'is-selected' : ''}"
+                  class="${classMap({ 'st-offers__card': true, 'is-selected': i === this.selectedOffer })}"
                   data-animate="bounce-in"
                   data-delay="${i * 300}"
                   @click="${() => this.handleSelectOffer(i)}"
