@@ -2,7 +2,7 @@ import { html, LitElement } from 'lit';
 import { property, state } from 'lit/decorators.js';
 import { classMap } from 'lit/directives/class-map.js';
 import AOS from '../../utils/animate-on-scroll';
-import { ScrollScene } from '../../utils/scroll-scene';
+import { ScrollScene, getScrollParent } from '../../utils/scroll-scene';
 import { clamp, easeInOutCubic, holdEase, mixHex } from '../../utils/motion';
 import '../../utils/fonts';
 
@@ -12,8 +12,8 @@ import '../../utils/fonts';
  * Segment count derives from config.variants, so adding colors just works.
  */
 const SCENE = {
-  segmentVh: 80, // extra scroll length per color transition
-  tailSegments: 0.35, // rest on the final color before the section unpins
+  segmentVh: 70, // extra scroll length per color transition
+  tailSegments: 0.3, // rest on the final color before the section unpins
   hold: 0.45, // fraction of each segment a color rests before easing onward
   tintStrength: 0.93, // how far the ambient tint leans back toward the base bg
   product: { blur: 8, scaleOut: 0.96, scaleIn: 1.04, rotate: 1.2, dim: 0.05 },
@@ -39,14 +39,22 @@ export default class StVariants extends LitElement {
   @state() private activeIndex = 0;
   @state() private lightboxOpen = false;
   @state() private lightboxSrc = '';
+  @state() private pinCapable = false;
 
   private styleElement: HTMLStyleElement | null = null;
   private scene: ScrollScene | null = null;
-  private sceneVariantCount = 0;
   private lastTimeline = 0;
   private productLayers: HTMLElement[] = [];
   private mobileLayers: HTMLElement[] = [];
   private sideLayers: HTMLElement[] = [];
+  private stageEl: HTMLElement | null = null;
+  private wrapEl: HTMLElement | null = null;
+
+  private desktopMq = window.matchMedia('(min-width: 1024px)');
+  private motionMq = window.matchMedia('(prefers-reduced-motion: reduce)');
+  private onMqChange = () => {
+    this.pinCapable = this.desktopMq.matches && !this.motionMq.matches;
+  };
 
   // Render in light DOM so Salla styles work correctly
   createRenderRoot() {
@@ -56,11 +64,16 @@ export default class StVariants extends LitElement {
   connectedCallback() {
     super.connectedCallback();
     this.injectStyles();
+    this.onMqChange();
+    this.desktopMq.addEventListener('change', this.onMqChange);
+    this.motionMq.addEventListener('change', this.onMqChange);
     AOS.init();
   }
 
   disconnectedCallback() {
     super.disconnectedCallback();
+    this.desktopMq.removeEventListener('change', this.onMqChange);
+    this.motionMq.removeEventListener('change', this.onMqChange);
     this.scene?.destroy();
     this.scene = null;
     this.styleElement?.remove();
@@ -75,12 +88,8 @@ export default class StVariants extends LitElement {
     return this.variants[Math.min(this.activeIndex, this.variants.length - 1)];
   }
 
-  private get reducedMotion() {
-    return window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  }
-
   private get sceneEnabled() {
-    return this.variants.length > 1 && !this.reducedMotion;
+    return this.variants.length > 1 && this.pinCapable;
   }
 
   /** Total scroll span in "segments": (n-1) transitions + a tail rest. */
@@ -110,19 +119,53 @@ export default class StVariants extends LitElement {
     return i + holdEase(u - i, SCENE.hold);
   }
 
-  private onSceneProgress = (p: number) => {
+  private onSceneProgress = (p: number, rect: DOMRect) => {
+    this.updatePin(p, rect);
     this.applyTimeline(this.timelineFromProgress(p));
   };
+
+  /**
+   * JS pinning (GSAP ScrollTrigger-style): the stage rides fixed while the
+   * wrapper scrolls through, parked absolute at either end. Unlike sticky,
+   * this survives `overflow: hidden` ancestors and nested scroll containers.
+   */
+  private updatePin(p: number, rect: DOMRect) {
+    const s = this.stageEl?.style;
+    if (!s) return;
+    if (p <= 0) {
+      s.position = 'absolute';
+      s.top = '0';
+      s.bottom = 'auto';
+      s.left = '0';
+      s.right = '0';
+      s.width = 'auto';
+    } else if (p >= 1) {
+      s.position = 'absolute';
+      s.top = 'auto';
+      s.bottom = '0';
+      s.left = '0';
+      s.right = '0';
+      s.width = 'auto';
+    } else {
+      s.position = 'fixed';
+      s.top = '0';
+      s.bottom = 'auto';
+      s.left = `${rect.left}px`;
+      s.width = `${rect.width}px`;
+      s.right = 'auto';
+    }
+  }
 
   private applyTimeline(t: number) {
     this.lastTimeline = t;
     const n = this.variants.length;
+    const hideFaded = this.sceneEnabled;
 
     for (let i = 0; i < n; i++) {
       const layerT = this.sceneEnabled ? t : this.activeIndex;
-      if (this.productLayers[i]) this.styleProductLayer(this.productLayers[i], i, layerT);
-      if (this.mobileLayers[i]) this.styleLifestyleLayer(this.mobileLayers[i], i, layerT);
-      if (this.sideLayers[i]) this.styleLifestyleLayer(this.sideLayers[i], i, layerT);
+      if (this.productLayers[i]) this.styleProductLayer(this.productLayers[i], i, layerT, hideFaded);
+      if (this.mobileLayers[i]) this.styleLifestyleLayer(this.mobileLayers[i], i, layerT, hideFaded);
+      if (this.sideLayers[i]) this.styleLifestyleLayer(this.sideLayers[i], i, layerT, hideFaded);
     }
 
     const idx = Math.round(clamp(t, 0, n - 1));
@@ -130,7 +173,7 @@ export default class StVariants extends LitElement {
   }
 
   /** Product shot: crossfade + counter-scale + subtle rotate/blur/dim. */
-  private styleProductLayer(el: HTMLElement, i: number, t: number) {
+  private styleProductLayer(el: HTMLElement, i: number, t: number, hideFaded: boolean) {
     const d = t - i;
     const a = clamp(Math.abs(d));
     const eased = easeInOutCubic(a);
@@ -144,11 +187,11 @@ export default class StVariants extends LitElement {
     el.style.transform = `scale(${scale.toFixed(4)}) rotate(${deg.toFixed(3)}deg)`;
     el.style.filter =
       blurPx > 0.05 ? `blur(${blurPx.toFixed(2)}px) brightness(${(1 - dim * eased).toFixed(3)})` : 'none';
-    el.style.visibility = a >= 0.999 ? 'hidden' : 'visible';
+    el.style.visibility = hideFaded && a >= 0.999 ? 'hidden' : 'visible';
   }
 
   /** Lifestyle shot: crossfade + tiny zoom + directional parallax drift. */
-  private styleLifestyleLayer(el: HTMLElement, i: number, t: number) {
+  private styleLifestyleLayer(el: HTMLElement, i: number, t: number, hideFaded: boolean) {
     const d = t - i;
     const a = clamp(Math.abs(d));
     const eased = easeInOutCubic(a);
@@ -159,7 +202,7 @@ export default class StVariants extends LitElement {
 
     el.style.opacity = String(1 - eased);
     el.style.transform = `scale(${scale.toFixed(4)}) translateY(${y.toFixed(2)}px)`;
-    el.style.visibility = a >= 0.999 ? 'hidden' : 'visible';
+    el.style.visibility = hideFaded && a >= 0.999 ? 'hidden' : 'visible';
   }
 
   // ── Lifecycle wiring ────────────────────────────────────────────
@@ -168,19 +211,19 @@ export default class StVariants extends LitElement {
     this.productLayers = Array.from(this.querySelectorAll('.st-variants__product-image'));
     this.mobileLayers = Array.from(this.querySelectorAll('.st-variants__mobile-side-image'));
     this.sideLayers = Array.from(this.querySelectorAll('.st-variants__side-image'));
+    this.stageEl = this.querySelector('.st-variants__stage');
+    this.wrapEl = this.querySelector('.st-variants__scroll');
   }
 
   private syncScene() {
-    const wrap = this.querySelector('.st-variants__scroll') as HTMLElement | null;
-    const count = this.variants.length;
-
-    if (this.scene && this.sceneVariantCount !== count) {
+    if (this.scene && !this.sceneEnabled) {
       this.scene.destroy();
       this.scene = null;
+      if (this.stageEl) this.stageEl.style.cssText = '';
+      this.lastTimeline = this.activeIndex;
     }
-    if (!this.scene && wrap && this.sceneEnabled) {
-      this.sceneVariantCount = count;
-      this.scene = new ScrollScene(wrap, this.onSceneProgress);
+    if (!this.scene && this.wrapEl && this.sceneEnabled) {
+      this.scene = new ScrollScene(this.wrapEl, this.onSceneProgress);
     }
   }
 
@@ -195,9 +238,10 @@ export default class StVariants extends LitElement {
   // ── Interactions ────────────────────────────────────────────────
 
   /** Dot click: drive the scroll to the color's resting segment so the
-   *  scroll position stays the single source of truth for the scene. */
+   *  scroll position stays the single source of truth for the scene.
+   *  In static mode (mobile / reduced motion) it swaps via CSS transitions. */
   private goToVariant(index: number) {
-    const wrap = this.querySelector('.st-variants__scroll') as HTMLElement | null;
+    const wrap = this.wrapEl;
     if (!this.sceneEnabled || !wrap) {
       this.activeIndex = index;
       this.applyTimeline(index);
@@ -205,8 +249,13 @@ export default class StVariants extends LitElement {
     }
     const scrollable = wrap.offsetHeight - window.innerHeight;
     if (scrollable <= 0) return;
-    const top = window.scrollY + wrap.getBoundingClientRect().top + (index / this.span) * scrollable;
-    window.scrollTo({ top, behavior: 'smooth' });
+    const offset = wrap.getBoundingClientRect().top + (index / this.span) * scrollable;
+    const scroller = getScrollParent(wrap);
+    if (scroller) {
+      scroller.scrollTo({ top: scroller.scrollTop + offset, behavior: 'smooth' });
+    } else {
+      window.scrollTo({ top: window.scrollY + offset, behavior: 'smooth' });
+    }
   }
 
   private openLightbox(src: string) {
@@ -241,27 +290,31 @@ export default class StVariants extends LitElement {
         transition: background-color 0.7s ease;
       }
 
-      /* Tall wrapper that creates the pin; sticky stage rides inside it */
+      /* Tall wrapper that creates the pin distance; the stage rides inside
+         it (fixed while pinned, parked absolute at either end via JS) */
       .st-variants__scroll {
+        position: relative;
         height: calc(100vh + var(--stv-extra, 0vh));
         height: calc(100svh + var(--stv-extra, 0vh));
       }
 
       .st-variants__scroll.is-static { height: auto; }
 
-      .st-variants__sticky {
-        position: sticky;
+      .st-variants__stage {
+        position: absolute;
         top: 0;
-        min-height: 100vh;
-        min-height: 100svh;
+        left: 0;
+        right: 0;
+        height: 100vh;
+        height: 100svh;
         display: flex;
         flex-direction: column;
         justify-content: center;
       }
 
-      .st-variants__scroll.is-static .st-variants__sticky {
+      .st-variants__scroll.is-static .st-variants__stage {
         position: static;
-        min-height: 0;
+        height: auto;
       }
 
       .st-variants__container {
@@ -275,15 +328,15 @@ export default class StVariants extends LitElement {
       }
 
       @media (min-width: 768px) {
-        .st-variants__container { padding: 52px 1rem 3rem; gap: 2rem; }
+        .st-variants__container { padding: 40px 1rem; gap: 2rem; }
       }
 
       @media (min-width: 1024px) {
-        .st-variants__container { padding: 52px 2.5rem 3rem; }
+        .st-variants__container { padding: 40px 2.5rem; }
       }
 
       @media (min-width: 1280px) {
-        .st-variants__container { padding: 52px 88px 3rem; }
+        .st-variants__container { padding: 40px 88px; }
       }
 
       .st-variants__title {
@@ -306,14 +359,19 @@ export default class StVariants extends LitElement {
         .st-variants__title { font-size: 40px; line-height: 64px; }
       }
 
-      /* Split layout: selector panel 42% / lifestyle image 58%, fixed 654px on lg */
+      /* Split layout: selector panel 42% / lifestyle image 58%.
+         Height clamps to the viewport so the pinned stage always fits
+         (654px design height on tall screens, shrinks on laptops). */
       .st-variants__layout {
         display: flex;
         position: relative;
       }
 
       @media (min-width: 1024px) {
-        .st-variants__layout { height: 654px; }
+        .st-variants__layout {
+          height: min(654px, calc(100vh - 220px));
+          height: min(654px, calc(100svh - 220px));
+        }
       }
 
       /* Selector panel — gray bg + border + asymmetric rounding (matches source) */
@@ -366,8 +424,13 @@ export default class StVariants extends LitElement {
         backface-visibility: hidden;
       }
 
+      /* Static mode (mobile / reduced motion): dot clicks crossfade with
+         the same motion DNA via CSS transitions instead of scroll */
       .st-variants__scroll.is-static .st-variants__layer {
-        transition: opacity 0.5s ${luxEase};
+        transition:
+          opacity 0.6s ${luxEase},
+          transform 0.6s ${luxEase},
+          filter 0.6s ${luxEase};
       }
 
       /* Product shot stack — circular floating badge on mobile, main image on lg */
@@ -630,7 +693,7 @@ export default class StVariants extends LitElement {
 
     const variants = this.variants;
     const active = this.activeVariant;
-    const extraVh = this.sceneEnabled ? this.span * SCENE.segmentVh : 0;
+    const extraVh = this.sceneEnabled ? Math.round(this.span * SCENE.segmentVh) : 0;
 
     return html`
       <section class="st-variants" style="background-color: ${this.tint};">
@@ -638,7 +701,7 @@ export default class StVariants extends LitElement {
           class="${classMap({ 'st-variants__scroll': true, 'is-static': !this.sceneEnabled })}"
           style="--stv-extra: ${extraVh}vh"
         >
-          <div class="st-variants__sticky">
+          <div class="st-variants__stage">
             <div class="st-variants__container">
               <h3 class="st-variants__title" data-animate="fade-up">
                 ${this.config.section_title}
