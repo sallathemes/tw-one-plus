@@ -1,5 +1,6 @@
 import { html, LitElement } from 'lit';
 import { property, state } from 'lit/decorators.js';
+import { classMap } from 'lit/directives/class-map.js';
 import AOS from '../../utils/animate-on-scroll';
 import '../../utils/fonts';
 
@@ -186,9 +187,13 @@ export default class StReviews extends LitElement {
         font-weight: 700;
         line-height: 1.6;
         margin: 0;
+        padding-bottom: 0.125rem;
+      }
+
+      /* Scroll only kicks in once the shopper expands the full quote */
+      .st-reviews__body.is-expanded {
         overflow-y: auto;
         max-height: 15rem;
-        padding-bottom: 0.125rem;
       }
 
       @media (min-width: 768px) {
@@ -316,7 +321,7 @@ export default class StReviews extends LitElement {
         .st-reviews__media {
           width: 629px;
           min-width: 50%;
-          height: 100%;
+          height: 450px;
           min-height: 450px;
           order: 1;
         }
@@ -442,7 +447,7 @@ export default class StReviews extends LitElement {
 
                     <!-- Large body quote -->
                     ${body ? html`
-                      <h5 class="st-reviews__body" style="color:${this.primary};">
+                      <h5 class="${classMap({ 'st-reviews__body': true, 'is-expanded': expanded })}" style="color:${this.primary};">
                         "${displayBody}${truncated ? html`
                           <button class="st-reviews__more-btn"
                                   style="color:${this.secondary};"
