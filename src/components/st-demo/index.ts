@@ -23,7 +23,7 @@ export default class StDemo extends LitElement {
     viewer_bg_text: string;
   };
 
-  @state() private currentViewerIndex = 0;
+  @state() private currentViewerIndex = -1;
 
   createRenderRoot() { return this; }
 
@@ -45,14 +45,24 @@ export default class StDemo extends LitElement {
     AOS.refresh();
   }
 
+  // Source defaults to the middle image: keys[floor((len - 1) / 2)]
+  private get defaultViewerIndex(): number {
+    const len = this.config?.viewer_images?.length || 0;
+    return len ? Math.floor((len - 1) / 2) : 0;
+  }
+
+  private get viewerIndex(): number {
+    return this.currentViewerIndex === -1 ? this.defaultViewerIndex : this.currentViewerIndex;
+  }
+
   injectStyles() {
     if (this.styleElement) return;
 
     const bg    = this.config?.bg_color    || '#050505';
     const text  = this.config?.text_color  || '#ffffff';
     const brand = this.config?.brand_color || '#0071E3';
-    const dark  = 'rgba(255,255,255,0.12)';
-    const light = 'rgba(255,255,255,0.65)';
+    const dark  = '#222222';
+    const light = '#EEEEEE';
 
     this.styleElement = document.createElement('style');
     this.styleElement.textContent = `
@@ -68,159 +78,265 @@ export default class StDemo extends LitElement {
       /* ══════════════════════════════════════════════════
          SECTION 1 & 3 — InsightPanel
       ══════════════════════════════════════════════════ */
-      .st-demo__section {
-        padding: 5rem 1.5rem;
-      }
-
-      /* two-column flex row — stretch so both columns share the same height */
+      /* container-xl + container-padding + container-padding-y (matches source) */
       .st-demo__panel-row {
         max-width: 1440px;
         margin: 0 auto;
+        padding: 2.5rem 0.5rem;
         display: flex;
-        flex-direction: row;
-        align-items: stretch;
-        min-height: 520px;
-        gap: 4rem;
+        flex-direction: column-reverse;
+        gap: 1.5rem;
+        overflow: hidden;
       }
 
-      /* section 3 reverses the column order */
-      .st-demo__panel-row--reversed {
-        flex-direction: row-reverse;
+      @media (min-width: 768px) {
+        .st-demo__panel-row {
+          padding: 4rem 1rem;
+          flex-direction: row;
+          align-items: center;
+          gap: 40px;
+        }
+
+        .st-demo__panel-row--reversed { flex-direction: row-reverse; }
       }
 
-      @media (max-width: 767px) {
-        .st-demo__panel-row,
-        .st-demo__panel-row--reversed {
-          flex-direction: column;
-          min-height: 0;
-          gap: 2.5rem;
+      @media (min-width: 1024px) {
+        .st-demo__panel-row { padding: 4rem 2.5rem; gap: 60px; }
+      }
+
+      @media (min-width: 1280px) {
+        .st-demo__panel-row { padding: 88px 88px; gap: 88px; }
+      }
+
+      /* ── content column ── */
+      .st-demo__panel-content {
+        width: 100%;
+        max-width: 36rem;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1.5rem;
+        text-align: center;
+      }
+
+      @media (min-width: 768px) {
+        .st-demo__panel-content {
+          width: 50%;
+          max-width: none;
+          margin: 0;
+          text-align: start;
         }
       }
 
-      /* ── content column — vertically center the text ── */
-      .st-demo__panel-content {
-        flex: 1;
-        min-width: 0;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        gap: 1.5rem;
-      }
-
+      /* Title: font-extrabold, 20px -> md 24px -> lg 32px/51px (matches source) */
       .st-demo__panel-title {
-        font-size: clamp(1.75rem, 3.5vw, 3rem);
+        width: 100%;
+        font-size: 1.25rem;
         font-weight: 800;
-        line-height: 1.25;
+        line-height: 1.4;
         margin: 0;
         color: ${text};
       }
 
-      .st-demo__panel-body-group {
-        display: flex;
-        flex-direction: column;
-        gap: 1rem;
+      @media (min-width: 768px) {
+        .st-demo__panel-title { font-size: 1.5rem; }
       }
 
+      @media (min-width: 1024px) {
+        .st-demo__panel-title { font-size: 32px; line-height: 51px; }
+      }
+
+      .st-demo__panel-body-group {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+      }
+
+      /* Body: 12px -> md 14px -> lg 16px, normal weight, light color (matches source) */
       .st-demo__panel-body {
-        font-size: 1rem;
-        line-height: 1.8;
+        font-size: 0.75rem;
+        line-height: 1rem;
+        font-weight: 400;
         margin: 0;
         color: ${light};
       }
 
       @media (min-width: 768px) {
-        .st-demo__panel-body { font-size: 1.0625rem; }
+        .st-demo__panel-body { font-size: 0.875rem; line-height: 1.25rem; }
       }
 
-      /* CTA button */
-      .st-demo__btn {
-        display: inline-flex;
-        align-items: center;
-        gap: 0.5rem;
-        padding: 0.875rem 1.75rem;
-        border-radius: 0.75rem;
-        background: ${text};
-        color: ${bg};
-        font-weight: 700;
-        font-size: 0.9375rem;
-        text-decoration: none;
-        width: fit-content;
-        transition: opacity 0.2s;
+      @media (min-width: 1024px) {
+        .st-demo__panel-body { font-size: 1rem; line-height: 1.5rem; }
       }
 
-      .st-demo__btn:hover { opacity: 0.85; }
-
-      /* ── media column — fills the row's shared height ── */
-      .st-demo__panel-media {
-        flex: 1;
-        min-width: 0;
+      /* CTA button — source LinkButton white variant with text-swap hover */
+      .st-demo__btn-row {
+        width: 100%;
         display: flex;
-        align-items: center;
         justify-content: center;
-        /* mobile stacked: give it a sensible height */
-        min-height: 18rem;
       }
 
       @media (min-width: 768px) {
-        /* panel-row uses stretch, so height comes from min-height on the row */
-        .st-demo__panel-media { min-height: 0; }
+        .st-demo__btn-row { justify-content: flex-start; }
       }
 
-      /* portrait product image (airpod 458×760): height drives the size */
+      .st-demo__btn {
+        position: relative;
+        overflow: hidden;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+        padding: 0.75rem 1.25rem;
+        border-radius: 0.75rem;
+        border: 1px solid ${text};
+        background: ${text};
+        color: ${bg};
+        font-size: 0.875rem;
+        text-decoration: none;
+        width: max-content;
+        white-space: nowrap;
+        cursor: pointer;
+      }
+
+      @media (min-width: 768px) {
+        .st-demo__btn { font-size: 1rem; }
+      }
+
+      @media (min-width: 1024px) {
+        .st-demo__btn { font-size: 1.125rem; }
+      }
+
+      .st-demo__btn span { font-weight: 800; }
+      .st-demo__btn i { font-size: 1.25rem; line-height: 1; }
+
+      .st-demo__btn-text-a,
+      .st-demo__btn-text-b {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        transition: transform 0.25s ease, opacity 0.25s ease;
+        white-space: nowrap;
+      }
+
+      .st-demo__btn-text-b {
+        position: absolute;
+        inset: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+        transform: translateY(150%);
+        opacity: 0;
+      }
+
+      .st-demo__btn:hover .st-demo__btn-text-a {
+        transform: translateY(-150%);
+        opacity: 0;
+      }
+
+      .st-demo__btn:hover .st-demo__btn-text-b {
+        transform: translateY(0);
+        opacity: 1;
+      }
+
+      /* ── media column ── */
+      .st-demo__panel-media {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      @media (min-width: 768px) {
+        .st-demo__panel-media { width: 50%; }
+      }
+
       .st-demo__feat-img {
-        height: 100%;
-        width: auto;
-        max-width: 100%;
-        max-height: 480px;
-        object-fit: contain;
+        width: 100%;
+        max-width: 36rem;
+        height: auto;
+        object-fit: cover;
         display: block;
+      }
+
+      @media (min-width: 768px) {
+        .st-demo__feat-img { max-width: none; }
       }
 
       /* ══════════════════════════════════════════════════
          SECTION 2 — InsightModel (circular 3-D viewer)
       ══════════════════════════════════════════════════ */
       .st-demo__viewer-section {
-        padding: 4rem 1.5rem;
+        padding: 2rem 0;
         overflow: hidden;
+      }
+
+      @media (min-width: 768px) {
+        .st-demo__viewer-section { padding: 4rem 0; }
+      }
+
+      @media (min-width: 1024px) {
+        .st-demo__viewer-section { padding: 85px 0; }
       }
 
       .st-demo__viewer-inner {
         position: relative;
-        max-width: 700px;
-        margin: 0 auto;
+        width: 100%;
+        padding: 0.5rem;
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 2rem;
+        gap: 3rem;
       }
 
-      /* watermark text behind everything */
+      /* watermark: 50px -> sm 60px -> md 96px -> xl 150px/240px, #D9D9D9 at 5% */
       .st-demo__viewer-bg-text {
         position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        font-size: clamp(3rem, 10vw, 9.375rem);
+        width: 100%;
+        text-align: center;
+        font-size: 50px;
+        line-height: 1.625;
         font-weight: 900;
-        line-height: 1;
         white-space: nowrap;
-        opacity: 0.04;
         user-select: none;
         pointer-events: none;
-        color: ${text};
-        z-index: 0;
+        color: rgba(217, 217, 217, 0.05);
+        z-index: 10;
+      }
+
+      @media (min-width: 640px) {
+        .st-demo__viewer-bg-text { font-size: 60px; }
+      }
+
+      @media (min-width: 768px) {
+        .st-demo__viewer-bg-text { font-size: 96px; }
+      }
+
+      @media (min-width: 1280px) {
+        .st-demo__viewer-bg-text { font-size: 150px; line-height: 240px; }
       }
 
       /* circle */
       .st-demo__circle {
         position: relative;
-        z-index: 2;
+        z-index: 20;
         width: min(100%, 605px);
+        max-height: 605px;
         aspect-ratio: 1 / 1;
         border-radius: 50%;
         border: 1px solid ${dark};
         overflow: hidden;
         flex-shrink: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
       }
 
       /* product images inside circle */
@@ -229,7 +345,7 @@ export default class StDemo extends LitElement {
         top: 50%;
         left: 50%;
         width: 68.5%;
-        height: 68.5%;
+        aspect-ratio: 1 / 1;
         object-fit: contain;
         opacity: 0;
         transform: translate(-50%, -50%) translateX(300px) scale(0.5);
@@ -261,88 +377,97 @@ export default class StDemo extends LitElement {
         to   { transform: translate(-50%, -50%) translateX(0) scale(1); opacity: 1; }
       }
 
-      /* controls row: reset btn + dots */
+      /* controls: reset icon stacked ABOVE the dot track (matches source) */
       .st-demo__controls-wrap {
         position: relative;
-        z-index: 2;
+        z-index: 20;
+        width: 100%;
         display: flex;
+        flex-direction: column;
         align-items: center;
-        gap: 1.5rem;
+        gap: 2rem;
+        text-align: center;
+        overflow: auto;
       }
 
       .st-demo__reset-btn {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 2.5rem;
-        height: 2.5rem;
-        border-radius: 50%;
-        border: 1px solid ${dark};
-        background: transparent;
+        background: none;
+        border: none;
+        padding: 0;
         color: ${text};
         cursor: pointer;
-        font-size: 1.125rem;
-        flex-shrink: 0;
-        transition: border-color 0.2s;
+        font-size: 1.5rem;
+        line-height: 1;
+        white-space: nowrap;
       }
 
-      .st-demo__reset-btn:hover { border-color: ${brand}; color: ${brand}; }
-
-      /* dot track */
+      /* dot track: items linked by 88px connector lines */
       .st-demo__dot-track {
         display: flex;
         align-items: center;
-        gap: 1.25rem;
+        justify-content: flex-start;
+        gap: 88px;
+        width: max-content;
+        max-width: 100%;
+        margin: 0 auto;
+        overflow-x: auto;
+        padding-bottom: 1rem;
+        scrollbar-width: thin;
+        scrollbar-color: ${brand} #F1F1F1;
       }
 
       .st-demo__dot-item {
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 0.375rem;
+        gap: 1.5rem;
         cursor: pointer;
+        background: none;
+        border: none;
+        padding: 0;
+        color: ${text};
       }
 
       .st-demo__dot-label {
-        font-size: 0.6875rem;
-        opacity: 0.55;
+        font-size: 0.875rem;
+        font-weight: 800;
         white-space: nowrap;
-        transition: opacity 0.2s;
+        min-width: max-content;
+        text-align: center;
       }
 
-      .st-demo__dot-item:hover .st-demo__dot-label { opacity: 1; }
+      @media (min-width: 768px) {
+        .st-demo__dot-label { font-size: 1rem; line-height: 25.6px; }
+      }
 
+      /* 12px dot with 2px outline; active = white with 2px offset (matches source) */
       .st-demo__dot-circle {
-        width: 0.5rem;
-        height: 0.5rem;
-        border-radius: 50%;
-        background: ${dark};
         position: relative;
-        transition: background 0.2s, transform 0.2s;
+        width: 0.75rem;
+        height: 0.75rem;
+        border-radius: 9999px;
+        background: ${dark};
+        outline: 2px solid ${dark};
+        outline-offset: 0;
+        transition: all 0.2s ease;
       }
 
       .st-demo__dot-circle.is-active {
-        background: ${brand};
-        transform: scale(1.4);
+        background: ${text};
+        outline-color: ${text};
+        outline-offset: 2px;
       }
 
-      /* animated line under active dot */
-      .st-demo__dot-line {
+      /* connector line to the next dot (hidden on last item) */
+      .st-demo__dot-connector {
         position: absolute;
-        bottom: -4px;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 1.5rem;
-        height: 2px;
-        border-radius: 1px;
-        background: ${brand};
-        transform-origin: center;
-        animation: stDotLine 0.25s ease forwards;
-      }
-
-      @keyframes stDotLine {
-        from { width: 0; }
-        to   { width: 1.5rem; }
+        top: 50%;
+        transform: translateY(-50%);
+        inset-inline-start: calc(100% + 12px);
+        width: 88px;
+        height: 1px;
+        background: ${dark};
+        pointer-events: none;
       }
     `;
     document.head.appendChild(this.styleElement);
@@ -354,7 +479,7 @@ export default class StDemo extends LitElement {
   }
 
   private reset() {
-    this.currentViewerIndex = 0;
+    this.currentViewerIndex = this.defaultViewerIndex;
     this.requestUpdate();
   }
 
@@ -368,7 +493,7 @@ export default class StDemo extends LitElement {
       viewer_images = [], viewer_bg_text,
     } = this.config;
 
-    const brand = this.config.brand_color || '#0071E3';
+    const activeIndex = this.viewerIndex;
 
     return html`
       <div id="st-demo" class="st-demo">
@@ -412,13 +537,13 @@ export default class StDemo extends LitElement {
                 <img
                   loading="lazy"
                   src="${item.image}"
-                  class="st-demo__circle-img ${i === this.currentViewerIndex ? 'is-active' : ''}"
+                  class="st-demo__circle-img ${i === activeIndex ? 'is-active' : ''}"
                   alt="${item.label}"
                 />
               `)}
             </div>
 
-            <!-- reset + dots -->
+            <!-- reset (above) + dot track (below), matches source layout -->
             <div class="st-demo__controls-wrap">
               <button
                 type="button"
@@ -432,17 +557,19 @@ export default class StDemo extends LitElement {
               ${viewer_images.length > 1 ? html`
                 <div class="st-demo__dot-track">
                   ${viewer_images.map((item, i) => html`
-                    <div
+                    <button
+                      type="button"
                       class="st-demo__dot-item"
+                      title="${item.label}"
                       @click="${() => this.selectImage(i)}"
                     >
                       <span class="st-demo__dot-label">${item.label}</span>
-                      <div class="st-demo__dot-circle ${i === this.currentViewerIndex ? 'is-active' : ''}">
-                        ${i === this.currentViewerIndex
-                          ? html`<div class="st-demo__dot-line"></div>`
+                      <span class="st-demo__dot-circle ${i === activeIndex ? 'is-active' : ''}">
+                        ${i < viewer_images.length - 1
+                          ? html`<span class="st-demo__dot-connector"></span>`
                           : ''}
-                      </div>
-                    </div>
+                      </span>
+                    </button>
                   `)}
                 </div>
               ` : ''}
@@ -470,10 +597,16 @@ export default class StDemo extends LitElement {
                 </div>
               ` : ''}
               ${panel2_button_label ? html`
-                <div>
+                <div class="st-demo__btn-row">
                   <a class="st-demo__btn" href="${panel2_button_link || '#'}">
-                    <span>${panel2_button_label}</span>
-                    <i class="sicon-caret-left-double"></i>
+                    <span class="st-demo__btn-text-a">
+                      <span>${panel2_button_label}</span>
+                      <i class="sicon-caret-left-double"></i>
+                    </span>
+                    <span class="st-demo__btn-text-b">
+                      <span>${panel2_button_label}</span>
+                      <i class="sicon-caret-left-double"></i>
+                    </span>
                   </a>
                 </div>
               ` : ''}
