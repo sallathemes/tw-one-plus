@@ -1,6 +1,7 @@
 import { html, LitElement } from 'lit';
 import { property } from 'lit/decorators.js';
 import AOS from '../../utils/animate-on-scroll';
+import '../../utils/fonts';
 
 type SpecificationRow = {
   header: string;
@@ -86,14 +87,29 @@ export default class StSpecification extends LitElement {
       .st-specification__title {
         margin: 0;
         font-size: 1.5rem;
-        font-weight: 700;
-        line-height: 1.3;
+        font-weight: 800;
+        line-height: 1.35;
         color: var(--st-specification-primary, #050505);
       }
 
       @media (min-width: 768px) {
         .st-specification__title {
-          font-size: 2rem;
+          font-size: 1.875rem;
+          line-height: 40px;
+        }
+      }
+
+      @media (min-width: 1024px) {
+        .st-specification__title {
+          font-size: 2.25rem;
+          line-height: 48px;
+        }
+      }
+
+      @media (min-width: 1280px) {
+        .st-specification__title {
+          font-size: 40px;
+          line-height: 64px;
         }
       }
 
@@ -162,16 +178,15 @@ export default class StSpecification extends LitElement {
         border-bottom: 0;
       }
 
+      /* Fixed cell widths matching source: 160px / md 300px / xl 350px */
       .st-specification__row-header {
         position: sticky;
         left: 0;
         z-index: 10;
-        min-width: 180px;
-        font-weight: 600;
+        width: 160px;
+        flex-shrink: 0;
+        font-weight: 700;
         font-size: 1rem;
-        padding: 1.25rem;
-        padding-top: 0;
-        padding-bottom: 0;
         color: var(--st-specification-primary, #050505);
         background: var(--st-specification-bg, #ffffff);
       }
@@ -184,28 +199,36 @@ export default class StSpecification extends LitElement {
       @media (min-width: 768px) {
         .st-specification__row-header {
           font-size: 1.125rem;
-          min-width: 240px;
+          width: 300px;
         }
       }
 
       @media (min-width: 1280px) {
         .st-specification__row-header {
           font-size: 1.25rem;
-          min-width: 300px;
+          width: 350px;
         }
       }
 
       .st-specification__cols {
         display: flex;
         flex-direction: row;
-        gap: 1rem;
       }
 
       .st-specification__col {
-        min-width: 180px;
+        width: 160px;
+        flex-shrink: 0;
         display: flex;
         flex-direction: column;
         gap: 5px;
+      }
+
+      @media (min-width: 768px) {
+        .st-specification__col { width: 300px; }
+      }
+
+      @media (min-width: 1280px) {
+        .st-specification__col { width: 350px; }
       }
 
       .st-specification__col-title {
@@ -244,16 +267,6 @@ export default class StSpecification extends LitElement {
         }
       }
 
-      @media (max-width: 767px) {
-        .st-specification__row-header {
-          min-width: 130px;
-          padding: 0 0.75rem;
-        }
-
-        .st-specification__col {
-          min-width: 130px;
-        }
-      }
     `;
     document.head.appendChild(this.styleElement);
   }
@@ -309,23 +322,34 @@ export default class StSpecification extends LitElement {
           </div>
 
           <div class="st-specification__table-wrapper">
-            ${rows.map((row, i) => html`
-              <div
-                class="st-specification__row"
-                data-animate="fade-up"
-                data-delay="${i * 150}"
-              >
-                <div class="st-specification__row-header">${row.header}</div>
-                <div class="st-specification__cols">
-                  ${this.getColumns(row).map((col) => html`
-                    <div class="st-specification__col">
-                      <span class="st-specification__col-title">${col.title}</span>
-                      <span class="st-specification__col-value">${col.value}</span>
+            ${(() => {
+              const maxColumns = Math.max(
+                0,
+                ...rows.map((row) => this.getColumns(row).length)
+              );
+              return rows.map((row, i) => {
+                const columns = this.getColumns(row);
+                const fillers = Array(Math.max(0, maxColumns - columns.length)).fill(null);
+                return html`
+                  <div
+                    class="st-specification__row"
+                    data-animate="fade-up"
+                    data-delay="${i * 150}"
+                  >
+                    <div class="st-specification__row-header">${row.header}</div>
+                    <div class="st-specification__cols">
+                      ${columns.map((col) => html`
+                        <div class="st-specification__col">
+                          <span class="st-specification__col-title">${col.title}</span>
+                          <span class="st-specification__col-value">${col.value}</span>
+                        </div>
+                      `)}
+                      ${fillers.map(() => html`<div class="st-specification__col"></div>`)}
                     </div>
-                  `)}
-                </div>
-              </div>
-            `)}
+                  </div>
+                `;
+              });
+            })()}
           </div>
         </div>
       </section>

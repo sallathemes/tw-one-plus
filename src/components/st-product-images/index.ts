@@ -1,6 +1,7 @@
 import { html, LitElement } from 'lit';
 import { property, state } from 'lit/decorators.js';
 import AOS from '../../utils/animate-on-scroll';
+import '../../utils/fonts';
 
 export default class StProductImages extends LitElement {
   @property({ type: Object })
@@ -107,30 +108,53 @@ export default class StProductImages extends LitElement {
     this.styleElement.textContent = `
       .st-product-images {
         display: block;
-        padding: 4rem 1.5rem;
         overflow: hidden;
       }
 
       .st-product-images__container {
-        max-width: 1200px;
+        max-width: 1440px;
         margin: 0 auto;
+        padding: 2rem 0.5rem 2.25rem;
+      }
+
+      @media (min-width: 768px) {
+        .st-product-images__container { padding: 3.5rem 1rem 72px; }
+      }
+
+      @media (min-width: 1024px) {
+        .st-product-images__container { padding: 3.5rem 2.5rem 72px; }
+      }
+
+      @media (min-width: 1280px) {
+        .st-product-images__container { padding: 3.5rem 88px 72px; }
       }
 
       .st-product-images__header {
-        margin-bottom: 2.5rem;
+        margin-bottom: 1rem;
+      }
+
+      @media (min-width: 768px) {
+        .st-product-images__header { margin-bottom: 2.5rem; }
       }
 
       .st-product-images__title {
         font-size: 1.5rem;
-        font-weight: 700;
-        line-height: 1.3;
+        font-weight: 800;
+        line-height: 1.35;
         margin: 0;
+        text-align: start;
       }
 
       @media (min-width: 768px) {
-        .st-product-images__title {
-          font-size: 2.25rem;
-        }
+        .st-product-images__title { font-size: 1.875rem; line-height: 40px; }
+      }
+
+      @media (min-width: 1024px) {
+        .st-product-images__title { font-size: 2.25rem; line-height: 48px; }
+      }
+
+      @media (min-width: 1280px) {
+        .st-product-images__title { font-size: 40px; line-height: 64px; }
       }
 
       .st-product-images__perspective {
@@ -141,54 +165,98 @@ export default class StProductImages extends LitElement {
         transition: none;
       }
 
+      /* Mobile: horizontal scroll row; grid only at lg (matches source) */
       .st-product-images__grid {
-        display: grid;
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: auto;
         gap: 1rem;
+        padding-bottom: 1rem;
+        scrollbar-width: thin;
+        scrollbar-color: var(--st-product-images-brand, #0071E3) #F1F1F1;
       }
 
-      .st-product-images__grid--2 {
-        grid-template-columns: repeat(2, 1fr);
+      .st-product-images__grid::-webkit-scrollbar { height: 8px; }
+
+      .st-product-images__grid::-webkit-scrollbar-track {
+        background: #F1F1F1;
+        border-radius: 4px;
       }
 
-      .st-product-images__grid--3 {
-        grid-template-columns: repeat(3, 1fr);
+      .st-product-images__grid::-webkit-scrollbar-thumb {
+        background: var(--st-product-images-brand, #0071E3);
+        border-radius: 4px;
       }
 
-      /* Mobile: always 2 cols */
-      @media (max-width: 768px) {
-        .st-product-images__grid--3 {
+      @media (min-width: 1024px) {
+        .st-product-images__grid {
+          display: grid;
+          overflow: visible;
+        }
+
+        .st-product-images__grid--2 {
           grid-template-columns: repeat(2, 1fr);
+          grid-template-rows: repeat(2, auto);
+        }
+
+        .st-product-images__grid--3 {
+          grid-template-columns: repeat(3, 1fr);
+          grid-template-rows: repeat(3, auto);
         }
       }
 
       .st-product-images__cell {
         position: relative;
-        overflow: hidden;
-        border-radius: 1.25rem;
         cursor: pointer;
+        z-index: 10;
+        width: 100%;
+        aspect-ratio: 1 / 1;
+        min-width: 85%;
+        max-height: 486px;
+        background: #F1F1F1;
+        border-radius: 0.5rem;
+      }
+
+      @media (min-width: 768px) {
+        .st-product-images__cell {
+          min-width: 50%;
+          max-height: 596px;
+        }
+      }
+
+      @media (min-width: 1024px) {
+        .st-product-images__cell { min-width: 0; }
       }
 
       .st-product-images__img {
         width: 100%;
-        aspect-ratio: 4/3;
+        height: 100%;
         object-fit: cover;
         display: block;
-        transition: transform 0.3s ease;
+        border-radius: 0.5rem;
       }
 
-      .st-product-images__cell:hover .st-product-images__img {
-        transform: scale(1.03);
-      }
-
-      /* Overlay */
+      /* Overlay — flat 50% primary cover, heading-size text (matches source) */
       .st-product-images__overlay {
         position: absolute;
         inset: 0;
+        z-index: 20;
         opacity: 0;
         transition: opacity 0.3s ease;
         display: flex;
-        align-items: flex-end;
-        padding: 1rem;
+        padding: 3rem;
+        color: #ffffff;
+        font-weight: 700;
+        font-size: 1.5rem;
+        line-height: 160%;
+      }
+
+      @media (min-width: 768px) {
+        .st-product-images__overlay { font-size: 2.25rem; }
+      }
+
+      @media (min-width: 1024px) {
+        .st-product-images__overlay { font-size: 40px; }
       }
 
       .st-product-images__overlay.is-always-visible,
@@ -196,38 +264,37 @@ export default class StProductImages extends LitElement {
         opacity: 1;
       }
 
+      /* Logical alignment matching source RTL variants:
+         'right' = inline start, 'left' = inline end */
       .st-product-images__overlay--top-left {
         align-items: flex-start;
-        justify-content: flex-start;
+        justify-content: flex-end;
       }
 
       .st-product-images__overlay--top-right {
         align-items: flex-start;
-        justify-content: flex-end;
+        justify-content: flex-start;
       }
 
       .st-product-images__overlay--bottom-left {
         align-items: flex-end;
-        justify-content: flex-start;
+        justify-content: flex-end;
       }
 
       .st-product-images__overlay--bottom-right {
         align-items: flex-end;
-        justify-content: flex-end;
+        justify-content: flex-start;
       }
 
       .st-product-images__overlay-bg {
         position: absolute;
         inset: 0;
-        background: linear-gradient(to top, rgba(0, 0, 0, 0.6), transparent);
+        background: rgba(5, 5, 5, 0.5);
       }
 
       .st-product-images__overlay-text {
         position: relative;
         z-index: 1;
-        color: white;
-        font-weight: 600;
-        font-size: 0.875rem;
       }
 
       /* Expand hint */
@@ -339,7 +406,7 @@ export default class StProductImages extends LitElement {
     return html`
       <section
         class="st-product-images"
-        style="background: ${bgColor}; color: ${textColor};"
+        style="background: ${bgColor}; color: ${textColor}; --st-product-images-brand: ${brandColor};"
       >
         <div class="st-product-images__container">
           ${this.config.section_title ? html`

@@ -9,7 +9,7 @@ class AnimateOnScroll {
 
   init() {
     if (this.initialized) return;
-    
+
     this.injectGlobalStyles();
     this.setupObserver();
     this.initialized = true;
@@ -134,6 +134,15 @@ class AnimateOnScroll {
       [data-animate].aos-animate {
         will-change: auto;
       }
+
+      /* Reduced motion: show content instantly, no transforms */
+      @media (prefers-reduced-motion: reduce) {
+        [data-animate] {
+          opacity: 1 !important;
+          transform: none !important;
+          transition: none !important;
+        }
+      }
     `;
 
     document.head.appendChild(style);
@@ -143,14 +152,17 @@ class AnimateOnScroll {
     this.observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
+          const element = entry.target as HTMLElement;
+
           if (entry.isIntersecting) {
-            const element = entry.target as HTMLElement;
             const delay = parseInt(element.getAttribute('data-delay') || '0');
-            
+
             setTimeout(() => {
               element.classList.add('aos-animate');
-              this.observer?.unobserve(element);
             }, delay);
+          } else {
+            // Replay on re-entry (matches Framer Motion whileInView without once:true)
+            element.classList.remove('aos-animate');
           }
         });
       },
@@ -162,7 +174,7 @@ class AnimateOnScroll {
 
     // Observe all existing elements
     this.observeElements();
-    
+
     // Watch for new elements (for dynamic components)
     this.watchForNewElements();
   }
@@ -183,12 +195,12 @@ class AnimateOnScroll {
         mutation.addedNodes.forEach((node) => {
           if (node.nodeType === Node.ELEMENT_NODE) {
             const element = node as Element;
-            
+
             // Check if the element itself has data-animate
             if (element.hasAttribute('data-animate')) {
               this.observer?.observe(element);
             }
-            
+
             // Check for child elements with data-animate
             const animatedChildren = element.querySelectorAll('[data-animate]');
             animatedChildren.forEach(child => {
@@ -219,7 +231,7 @@ class AnimateOnScroll {
       this.observer = null;
     }
     this.initialized = false;
-    
+
     const styles = document.getElementById('aos-styles');
     if (styles) {
       styles.remove();

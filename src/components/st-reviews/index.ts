@@ -1,6 +1,7 @@
 import { html, LitElement } from 'lit';
 import { property, state } from 'lit/decorators.js';
 import AOS from '../../utils/animate-on-scroll';
+import '../../utils/fonts';
 
 export default class StReviews extends LitElement {
   @property({ type: Object })
@@ -28,22 +29,51 @@ export default class StReviews extends LitElement {
   @state() private currentIndex = 0;
   @state() private expandedSet: Set<number> = new Set();
   @state() private playingIndex: number | null = null;
+  // Source: textCutout is 95 below 1440px and 160 at >=1440px
+  @state() private textLimit = window.innerWidth >= 1440 ? 160 : 95;
 
   createRenderRoot() { return this; }
 
   private styleElement: HTMLStyleElement | null = null;
   private instanceId = Math.random().toString(36).slice(2, 8);
+  private touchStartX: number | null = null;
+
+  private resizeHandler = () => {
+    const limit = window.innerWidth >= 1440 ? 160 : 95;
+    if (limit !== this.textLimit) this.textLimit = limit;
+  };
 
   connectedCallback() {
     super.connectedCallback();
     this.injectStyles();
+    window.addEventListener('resize', this.resizeHandler, { passive: true });
     AOS.init();
   }
 
   disconnectedCallback() {
     super.disconnectedCallback();
+    window.removeEventListener('resize', this.resizeHandler);
     this.styleElement?.remove();
   }
+
+  // Swipe gestures (replaces source's Swiper touch support)
+  private onTouchStart = (e: TouchEvent) => {
+    this.touchStartX = e.touches[0]?.clientX ?? null;
+  };
+
+  private onTouchEnd = (e: TouchEvent) => {
+    if (this.touchStartX === null) return;
+    const endX = e.changedTouches[0]?.clientX ?? this.touchStartX;
+    const delta = endX - this.touchStartX;
+    this.touchStartX = null;
+    if (Math.abs(delta) < 50) return;
+    const isRtl = (document.documentElement.dir || 'rtl') === 'rtl';
+    if (delta < 0) {
+      this.go(isRtl ? -1 : 1);
+    } else {
+      this.go(isRtl ? 1 : -1);
+    }
+  };
 
   updated(changedProperties: Map<string, unknown>) {
     super.updated(changedProperties);
@@ -67,13 +97,21 @@ export default class StReviews extends LitElement {
       }
 
       .st-reviews__inner {
-        max-width: 1280px;
+        max-width: 1440px;
         margin: 0 auto;
-        padding: 3.5rem 1.5rem 4rem;
+        padding: 3.5rem 0.5rem 4rem;
+      }
+
+      @media (min-width: 768px) {
+        .st-reviews__inner { padding: 3.5rem 1rem 4rem; }
       }
 
       @media (min-width: 1024px) {
-        .st-reviews__inner { padding: 3.5rem 4.5rem 4rem; }
+        .st-reviews__inner { padding: 3.5rem 2.5rem 4rem; }
+      }
+
+      @media (min-width: 1280px) {
+        .st-reviews__inner { padding: 3.5rem 88px 4rem; }
       }
 
       /* ── Slide ──────────────────────────────────── */
@@ -357,7 +395,7 @@ export default class StReviews extends LitElement {
     const stars = [];
     for (let i = 0; i < 5; i++) {
       stars.push(i < full
-        ? html`<i class="${this.config?.rating_icon || 'sicon-star2'}" style="color:#F5A623;"></i>`
+        ? html`<i class="${this.config?.rating_icon || 'sicon-star2'}" style="color:#F6D52A;"></i>`
         : html`<i class="${this.config?.rating_icon || 'sicon-star2'}" style="opacity:0.3;"></i>`
       );
     }
@@ -371,12 +409,16 @@ export default class StReviews extends LitElement {
     const total = reviews.length;
     const icon = this.config.section_icon || 'sicon-quote-close';
     const subheader = this.config.subheader || 'تجارب ملهمة من عملائنا';
-    const TEXT_LIMIT = 160;
+    const TEXT_LIMIT = this.textLimit;
 
     return html`
       <section class="st-reviews" style="background:${this.bg};" data-animate="fade-up">
         <div class="st-reviews__inner">
-          <div class="st-reviews__slides">
+          <div
+            class="st-reviews__slides"
+            @touchstart="${this.onTouchStart}"
+            @touchend="${this.onTouchEnd}"
+          >
             ${reviews.map((review, i) => {
               const isActive = i === this.currentIndex;
               const expanded = this.expandedSet.has(i);

@@ -1,6 +1,7 @@
 import { html, LitElement } from 'lit';
 import { property, state } from 'lit/decorators.js';
 import AOS from '../../utils/animate-on-scroll';
+import '../../utils/fonts';
 
 export default class StVariants extends LitElement {
   @property({ type: Object })
@@ -53,6 +54,8 @@ export default class StVariants extends LitElement {
     const bgColor = this.config?.bg_color || '#ffffff';
     const primaryColor = this.config?.primary_color || '#050505';
     const brandColor = this.config?.brand_color || '#0071E3';
+    const grayColor = '#F8F8F8';
+    const darkGrayColor = '#DDDDDD';
 
     this.styleElement = document.createElement('style');
     this.styleElement.textContent = `
@@ -61,84 +64,190 @@ export default class StVariants extends LitElement {
         width: 100%;
         background: ${bgColor};
         color: ${primaryColor};
-        padding: 5rem 1.5rem;
         overflow: hidden;
       }
 
       .st-variants__container {
-        max-width: 1200px;
+        max-width: 1440px;
         margin: 0 auto;
+        padding: 2.5rem 0.5rem 2rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+      }
+
+      @media (min-width: 768px) {
+        .st-variants__container { padding: 52px 1rem 3rem; gap: 2rem; }
+      }
+
+      @media (min-width: 1024px) {
+        .st-variants__container { padding: 52px 2.5rem 3rem; }
+      }
+
+      @media (min-width: 1280px) {
+        .st-variants__container { padding: 52px 88px 3rem; }
       }
 
       .st-variants__title {
-        font-size: clamp(1.5rem, 3vw, 3rem);
-        font-weight: 700;
-        margin-bottom: 3rem;
+        font-size: 1.5rem;
+        font-weight: 800;
+        line-height: 1.35;
+        margin: 0;
+        text-align: start;
       }
 
+      @media (min-width: 768px) {
+        .st-variants__title { font-size: 1.875rem; line-height: 40px; }
+      }
+
+      @media (min-width: 1024px) {
+        .st-variants__title { font-size: 2.25rem; line-height: 48px; }
+      }
+
+      @media (min-width: 1280px) {
+        .st-variants__title { font-size: 40px; line-height: 64px; }
+      }
+
+      /* Split layout: selector panel 42% / lifestyle image 58%, fixed 654px on lg */
       .st-variants__layout {
-        display: grid;
-        grid-template-columns: 1fr 2fr;
-        gap: 3rem;
-        align-items: center;
+        display: flex;
+        position: relative;
       }
 
-      @media (max-width: 768px) {
-        .st-variants__layout {
-          grid-template-columns: 1fr;
-        }
+      @media (min-width: 1024px) {
+        .st-variants__layout { height: 654px; }
       }
 
-      [dir="rtl"] .st-variants__layout {
-        direction: rtl;
-      }
-
+      /* Selector panel — gray bg + border + asymmetric rounding (matches source) */
       .st-variants__selector {
+        background: ${grayColor};
+        border: 1px solid ${darkGrayColor};
+        border-start-start-radius: 0.75rem;
+        border-start-end-radius: 0.75rem;
+        width: 100%;
+        min-width: 35%;
+        padding: 2rem 0.5rem;
         display: flex;
         flex-direction: column;
-        gap: 2rem;
+        gap: 1rem;
+        overflow-x: hidden;
+        overflow-y: hidden;
       }
 
-      .st-variants__selector-label {
-        font-size: 1rem;
-        opacity: 0.7;
-        font-weight: 500;
-        margin: 0;
+      @media (min-width: 768px) {
+        .st-variants__selector { padding: 2rem 1.5rem; }
+      }
+
+      @media (min-width: 1024px) {
+        .st-variants__selector {
+          width: 42%;
+          padding: 2rem 38px;
+          border-start-end-radius: 0;
+          border-end-start-radius: 0.75rem;
+        }
       }
 
       .st-variants__product-wrap {
         display: flex;
+        position: relative;
         align-items: center;
-        justify-content: center;
+        flex-grow: 1;
+        width: 100%;
+        overflow-x: auto;
+        padding: 0.25rem;
       }
 
-      @media (min-width: 769px) {
-        .st-variants__product-wrap {
-          display: block;
-        }
+      @media (min-width: 640px) {
+        .st-variants__product-wrap { padding: 1rem; }
+      }
+
+      @media (min-width: 1024px) {
+        .st-variants__product-wrap { justify-content: center; }
       }
 
       .st-variants__product-image,
-      .st-variants__side-image {
-        width: 100%;
-        object-fit: contain;
-        transition: opacity 0.175s ease;
+      .st-variants__mobile-side-image {
+        transition: opacity 0.35s ease;
       }
 
       .st-variants__product-image.is-transitioning,
+      .st-variants__mobile-side-image.is-transitioning,
       .st-variants__side-image.is-transitioning {
-        opacity: 0.2;
+        opacity: 0.3;
       }
 
+      /* Mobile: product shot floats as a circular badge over the lifestyle image */
       .st-variants__product-image {
-        max-height: 300px;
+        position: absolute;
+        top: 6%;
+        inset-inline-start: 2%;
+        width: 10rem;
+        height: 10rem;
+        border-radius: 9999px;
         object-fit: contain;
+        cursor: pointer;
       }
 
-      .st-variants__color-buttons {
+      @media (min-width: 1024px) {
+        .st-variants__product-image {
+          position: relative;
+          top: 0;
+          inset-inline-start: 0;
+          width: 100%;
+          min-width: 100%;
+          max-width: 100%;
+          height: auto;
+          max-height: 400px;
+          border-radius: 0;
+        }
+      }
+
+      .st-variants__mobile-side-image {
+        width: 100%;
+        min-width: 100%;
+        max-width: 100%;
+        object-fit: cover;
+        max-height: max(55vh, 375px);
+        border-radius: 0.75rem;
+        cursor: pointer;
+      }
+
+      .st-variants__mobile-side-image:hover { opacity: 0.9; }
+
+      @media (min-width: 1024px) {
+        .st-variants__mobile-side-image { display: none; }
+      }
+
+      .st-variants__selector-footer {
         display: flex;
         flex-direction: column;
-        gap: 0.75rem;
+        gap: 1rem;
+        width: 100%;
+      }
+
+      .st-variants__selector-label {
+        font-size: 1.125rem;
+        line-height: 1.75rem;
+        font-weight: 700;
+        margin: 0;
+      }
+
+      @media (min-width: 768px) {
+        .st-variants__selector-label { font-size: 1.25rem; line-height: 2rem; }
+      }
+
+      @media (min-width: 1024px) {
+        .st-variants__selector-label { font-size: 1.5rem; line-height: 2.25rem; }
+      }
+
+      /* Color buttons — horizontal scrollable row (matches source) */
+      .st-variants__color-buttons {
+        display: flex;
+        flex-direction: row;
+        gap: 0.5rem;
+        overflow-x: auto;
+        scrollbar-width: thin;
+        scrollbar-color: ${brandColor} #F1F1F1;
       }
 
       .st-variants__color-btn {
@@ -147,26 +256,28 @@ export default class StVariants extends LitElement {
         background: transparent;
         border: none;
         cursor: pointer;
-        padding: 0.5rem;
-        border-radius: 9999px;
-        transition: background 0.2s;
+        padding: 0.25rem 0;
+        flex-shrink: 0;
       }
 
-      .st-variants__color-btn:hover {
-        background: rgba(0, 0, 0, 0.05);
-      }
+      .st-variants__color-btn:first-of-type { padding-inline-start: 0.25rem; }
 
       .st-variants__color-dot {
-        width: 28px;
-        height: 28px;
-        border-radius: 50%;
+        width: 2.5rem;
+        height: 2.5rem;
+        border-radius: 9999px;
+        position: relative;
+        z-index: 20;
         flex-shrink: 0;
-        box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.1);
-        transition: box-shadow 0.2s;
+        transition: width 0.2s, height 0.2s, outline 0.2s;
+        outline: 0 solid transparent;
       }
 
       .st-variants__color-btn.is-active .st-variants__color-dot {
-        box-shadow: 0 0 0 3px ${bgColor}, 0 0 0 5px ${brandColor};
+        width: 2.25rem;
+        height: 2.25rem;
+        outline: 1.5px solid ${brandColor};
+        outline-offset: 2.5px;
       }
 
       .st-variants__color-label {
@@ -178,7 +289,11 @@ export default class StVariants extends LitElement {
         color: ${brandColor};
         font-size: 0.875rem;
         font-weight: 700;
-        transition: max-width 0.5s ease, margin-inline-start 0.5s ease, opacity 0.5s ease;
+        transition: max-width 0.5s ease-in-out, margin-inline-start 0.5s ease-in-out, opacity 0.5s ease-in-out;
+      }
+
+      @media (min-width: 1024px) {
+        .st-variants__color-label { font-size: 1rem; }
       }
 
       .st-variants__color-btn.is-active .st-variants__color-label {
@@ -187,30 +302,59 @@ export default class StVariants extends LitElement {
         margin-inline-start: 8px;
       }
 
+      /* Desktop lifestyle panel — 58%, gray bg, end-side rounding */
       .st-variants__side-panel {
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        display: none;
+        cursor: pointer;
+        width: 58%;
+        height: 100%;
+        background: ${grayColor};
+        border-start-end-radius: 0.75rem;
+        border-end-end-radius: 0.75rem;
+        overflow: hidden;
       }
+
+      @media (min-width: 1024px) {
+        .st-variants__side-panel { display: block; }
+      }
+
+      .st-variants__side-panel:hover { opacity: 0.9; }
 
       .st-variants__side-image {
         width: 100%;
-        max-height: 600px;
+        height: 100%;
         object-fit: cover;
-        border-radius: 2rem;
-        cursor: pointer;
-        transition: transform 0.3s ease, opacity 0.175s ease;
+        transition: opacity 0.35s ease;
       }
 
-      .st-variants__side-image:hover {
-        transform: scale(1.02);
+      /* Decorative pointer arrow (desktop only, matches source) */
+      .st-variants__pointer {
+        position: absolute;
+        top: -2rem;
+        inset-inline-end: -2px;
+        width: 101px;
+        height: 103px;
+        display: none;
+        align-items: center;
+        justify-content: center;
+        pointer-events: none;
+      }
+
+      @media (min-width: 1024px) {
+        .st-variants__pointer { display: flex; }
+      }
+
+      .st-variants__pointer img {
+        width: 101px;
+        height: 103px;
+        display: block;
       }
 
       .st-variants__lightbox {
         position: fixed;
         inset: 0;
         z-index: 1000;
-        background: rgba(0, 0, 0, 0.85);
+        background: rgba(34, 34, 34, 0.5);
         display: flex;
         align-items: center;
         justify-content: center;
@@ -222,11 +366,16 @@ export default class StVariants extends LitElement {
         max-height: 85vh;
       }
 
+      @media (min-width: 1024px) {
+        .st-variants__lightbox-inner { max-width: 75vw; }
+      }
+
       .st-variants__lightbox-img {
         width: 100%;
         height: 100%;
         object-fit: contain;
         border-radius: 12px;
+        max-height: 85vh;
       }
 
       .st-variants__lightbox-close {
@@ -284,65 +433,72 @@ export default class StVariants extends LitElement {
     return html`
       <section class="st-variants">
         <div class="st-variants__container">
-          <h2 class="st-variants__title" data-animate="fade-up">
+          <h3 class="st-variants__title" data-animate="fade-up">
             ${this.config.section_title}
-          </h2>
+          </h3>
 
-          <div class="st-variants__layout">
+          <div class="st-variants__layout" data-animate="fade-up">
+            <!-- Selector panel -->
             <div class="st-variants__selector">
-              <p
-                class="st-variants__selector-label"
-                data-animate="fade-up"
-                data-delay="150"
-              >
-                ${this.config.selector_label}
-              </p>
-
               <div class="st-variants__product-wrap">
                 <img
                   src="${currentVariant.product_image}"
                   alt="${currentVariant.color_title}"
                   loading="lazy"
                   class="st-variants__product-image ${transitioningClass}"
-                  data-animate="fade-up"
-                  data-delay="100"
+                  @click="${() => this.openLightbox(currentVariant.product_image)}"
+                />
+                <img
+                  src="${currentVariant.side_image}"
+                  alt="${currentVariant.color_title}"
+                  loading="lazy"
+                  class="st-variants__mobile-side-image ${transitioningClass}"
+                  @click="${() => this.openLightbox(currentVariant.side_image)}"
                 />
               </div>
 
-              <div
-                class="st-variants__color-buttons"
-                data-animate="fade-up"
-                data-delay="300"
-              >
-                ${variants.map(
-                  (variant, index) => html`
-                    <button
-                      type="button"
-                      class="st-variants__color-btn ${index === safeIndex ? 'is-active' : ''}"
-                      aria-label="${variant.color_title}"
-                      @click="${() => this.selectVariant(index)}"
-                    >
-                      <span
-                        class="st-variants__color-dot"
-                        style="background: ${variant.color_hex}"
-                      ></span>
-                      <span class="st-variants__color-label">${variant.color_title}</span>
-                    </button>
-                  `
-                )}
+              <div class="st-variants__selector-footer">
+                <h4 class="st-variants__selector-label">
+                  ${this.config.selector_label}
+                </h4>
+
+                <div class="st-variants__color-buttons">
+                  ${variants.map(
+                    (variant, index) => html`
+                      <button
+                        type="button"
+                        class="st-variants__color-btn ${index === safeIndex ? 'is-active' : ''}"
+                        aria-label="${variant.color_title}"
+                        @click="${() => this.selectVariant(index)}"
+                      >
+                        <span
+                          class="st-variants__color-dot"
+                          style="background: ${variant.color_hex}"
+                        ></span>
+                        <span class="st-variants__color-label">${variant.color_title}</span>
+                      </button>
+                    `
+                  )}
+                </div>
               </div>
             </div>
 
-            <div class="st-variants__side-panel">
+            <!-- Desktop lifestyle panel -->
+            <div
+              class="st-variants__side-panel"
+              @click="${() => this.openLightbox(currentVariant.side_image)}"
+            >
               <img
                 src="${currentVariant.side_image}"
                 alt="${currentVariant.color_title}"
-                loading="lazy"
+                loading="eager"
                 class="st-variants__side-image ${transitioningClass}"
-                data-animate="zoom-in"
-                data-delay="200"
-                @click="${() => this.openLightbox(currentVariant.side_image)}"
               />
+            </div>
+
+            <!-- Decorative pointer arrow -->
+            <div class="st-variants__pointer">
+              <img src="/assets/pointer.svg" alt="" title="إشارة للمنتج" />
             </div>
           </div>
         </div>

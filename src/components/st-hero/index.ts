@@ -1,5 +1,6 @@
 import { html, LitElement } from 'lit';
 import { property, state } from 'lit/decorators.js';
+import '../../utils/fonts';
 
 export default class StHero extends LitElement {
   @property({ type: Object })
@@ -11,6 +12,7 @@ export default class StHero extends LitElement {
     title: string;
     subtitle: string;
     button_label: string;
+    button_price: string;
     button_link: string;
     video_url: string;
     bg_image: string;
@@ -187,6 +189,19 @@ export default class StHero extends LitElement {
         align-items: center;
         gap: 0.75rem;
         flex-shrink: 0;
+      }
+
+      /* Cart button (navbar) */
+      .st-hero__nav-cart {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        background: none;
+        border: none;
+        padding: 0.25rem;
+        font-size: 1.5rem;
+        cursor: pointer;
+        line-height: 1;
       }
 
       /* CTA pill button (navbar) */
@@ -487,6 +502,10 @@ export default class StHero extends LitElement {
         ? this.config.overlay_opacity
         : 60) / 100;
 
+    const buttonText = [this.config.button_label, this.config.button_price]
+      .filter(Boolean)
+      .join(' ');
+
     const navLinks = [
       { label: this.config.nav1_label, href: this.config.nav1_href },
       { label: this.config.nav2_label, href: this.config.nav2_href },
@@ -533,16 +552,25 @@ export default class StHero extends LitElement {
               `)}
             </ul>
 
-            <!-- Actions: CTA + hamburger -->
+            <!-- Actions: cart + CTA + hamburger -->
             <div class="st-hero__nav-actions">
+              <button
+                type="button"
+                class="st-hero__nav-cart"
+                title="السلة"
+                style="color:${textColor};"
+              >
+                <i class="sicon-cart"></i>
+              </button>
+
               ${this.config.button_label ? html`
                 <a
                   href="${this.config.button_link || '#'}"
                   class="st-hero__nav-btn"
                   style="color:${textColor};"
                 >
-                  <span class="st-hero__nav-btn-text-a">${this.config.button_label}</span>
-                  <span class="st-hero__nav-btn-text-b">${this.config.button_label}</span>
+                  <span class="st-hero__nav-btn-text-a">${buttonText}</span>
+                  <span class="st-hero__nav-btn-text-b">${buttonText}</span>
                 </a>
               ` : ''}
 
@@ -612,8 +640,8 @@ export default class StHero extends LitElement {
                     class="st-hero__main-btn"
                     style="background:${brandColor}; color:#fff;"
                   >
-                    <span class="st-hero__main-btn-text-a">${this.config.button_label}</span>
-                    <span class="st-hero__main-btn-text-b">${this.config.button_label}</span>
+                    <span class="st-hero__main-btn-text-a">${buttonText}</span>
+                    <span class="st-hero__main-btn-text-b">${buttonText}</span>
                   </a>
                 </div>
               ` : ''}

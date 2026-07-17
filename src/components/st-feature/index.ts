@@ -1,6 +1,7 @@
 import { html, LitElement } from 'lit';
 import { property, state } from 'lit/decorators.js';
 import AOS from '../../utils/animate-on-scroll';
+import '../../utils/fonts';
 
 export default class StFeature extends LitElement {
   @property({ type: Object })
@@ -59,61 +60,142 @@ export default class StFeature extends LitElement {
         display: block;
         width: 100%;
         background: ${bgColor};
-        padding: 5rem 1.5rem;
+        padding: 2.5rem 0;
         color: ${primaryColor};
       }
 
-      .st-feature__container {
-        max-width: 1200px;
-        margin: 0 auto;
+      @media (min-width: 768px) {
+        .st-feature { padding: 4rem 0; }
       }
 
+      .st-feature__container {
+        max-width: 1440px;
+        margin: 0 auto;
+        padding: 0 0.5rem;
+      }
+
+      @media (min-width: 768px) {
+        .st-feature__container { padding: 0 1rem; }
+      }
+
+      @media (min-width: 1024px) {
+        .st-feature__container { padding: 0 2.5rem; }
+      }
+
+      @media (min-width: 1280px) {
+        .st-feature__container { padding: 0 88px; }
+      }
+
+      /* Rounded shade card wrapper (matches source rounded-[32px] shade panel) */
       .st-feature__layout {
         display: flex;
         flex-direction: column-reverse;
-        gap: 4rem;
+        justify-content: space-between;
+        background: ${shadeColor};
+        border-radius: 32px;
+        padding: 1rem;
+        overflow-y: hidden;
       }
 
       @media (min-width: 768px) {
         .st-feature__layout {
           flex-direction: row;
-          align-items: center;
+          padding: 1.75rem;
         }
+      }
 
-        [dir="rtl"] .st-feature__layout {
-          flex-direction: row-reverse;
-        }
+      @media (min-width: 1024px) {
+        .st-feature__layout { padding: 2.5rem; }
       }
 
       .st-feature__content {
-        flex: 1;
-        max-width: 36rem;
+        width: 100%;
+        max-width: 528px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+        text-align: center;
+      }
+
+      @media (min-width: 768px) {
+        .st-feature__content {
+          margin: 0;
+          text-align: start;
+          padding-inline-end: 1rem;
+        }
+      }
+
+      @media (min-width: 1024px) {
+        .st-feature__content { width: 50%; }
       }
 
       .st-feature__icon {
-        display: block;
-        font-size: 2.5rem;
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        font-size: 3rem;
         line-height: 1;
-        margin-bottom: 1.5rem;
-        padding: 0.75rem;
-        background: ${shadeColor};
-        border-radius: 50%;
-        width: fit-content;
+      }
+
+      @media (min-width: 768px) {
+        .st-feature__icon { justify-content: flex-start; }
       }
 
       .st-feature__title {
-        font-size: clamp(1.5rem, 3vw, 3rem);
-        font-weight: 700;
-        line-height: 1.3;
-        margin-bottom: 1.5rem;
+        font-size: 1.5rem;
+        font-weight: 800;
+        line-height: 1.35;
+        width: 100%;
+        margin: 0;
         color: ${primaryColor};
       }
 
+      @media (min-width: 768px) {
+        .st-feature__title { font-size: 1.875rem; line-height: 40px; }
+      }
+
+      @media (min-width: 1024px) {
+        .st-feature__title { font-size: 2.25rem; line-height: 48px; }
+      }
+
+      @media (min-width: 1280px) {
+        .st-feature__title { font-size: 40px; line-height: 64px; }
+      }
+
+      .st-feature__bodies {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+      }
+
       .st-feature__body {
-        font-size: 1rem;
+        font-size: 0.75rem;
+        font-weight: 400;
         line-height: 1.8;
-        margin-bottom: 1rem;
+        margin: 0;
+        width: 100%;
         color: #525252;
+      }
+
+      @media (min-width: 768px) {
+        .st-feature__body { font-size: 0.875rem; }
+      }
+
+      @media (min-width: 1024px) {
+        .st-feature__body { font-size: 1rem; }
+      }
+
+      .st-feature__btn-row {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+      }
+
+      @media (min-width: 768px) {
+        .st-feature__btn-row { justify-content: flex-start; }
       }
 
       .st-feature__btn {
@@ -164,22 +246,31 @@ export default class StFeature extends LitElement {
       }
 
       .st-feature__image-col {
-        flex: 1;
+        width: 100%;
+        max-width: 528px;
+        margin: 0 auto 2rem;
         display: flex;
         align-items: center;
-        justify-content: center;
+        justify-content: flex-end;
+        cursor: pointer;
+        border-radius: 1rem;
+        overflow: hidden;
+        background: #F1F1F1;
+      }
+
+      @media (min-width: 768px) {
+        .st-feature__image-col { margin: 0; max-width: none; }
+      }
+
+      @media (min-width: 1024px) {
+        .st-feature__image-col { width: 50%; }
       }
 
       .st-feature__image {
         width: 100%;
-        max-width: 500px;
-        border-radius: 1.5rem;
-        cursor: pointer;
-        transition: transform 0.3s ease;
-      }
-
-      .st-feature__image:hover {
-        transform: scale(1.02);
+        height: 100%;
+        object-fit: cover;
+        display: block;
       }
 
       .st-feature__lightbox {
@@ -254,20 +345,15 @@ export default class StFeature extends LitElement {
                 ${title}
               </h2>
 
-              ${body1 ? html`
-                <p class="st-feature__body" data-animate="slide-right" data-delay="400">
-                  ${body1}
-                </p>
-              ` : ''}
-
-              ${body2 ? html`
-                <p class="st-feature__body" data-animate="slide-right" data-delay="500">
-                  ${body2}
-                </p>
+              ${body1 || body2 ? html`
+                <div class="st-feature__bodies" data-animate="slide-right" data-delay="400">
+                  ${body1 ? html`<p class="st-feature__body">${body1}</p>` : ''}
+                  ${body2 ? html`<p class="st-feature__body">${body2}</p>` : ''}
+                </div>
               ` : ''}
 
               ${button_label ? html`
-                <div data-animate="slide-right" data-delay="600">
+                <div class="st-feature__btn-row" data-animate="slide-right" data-delay="600">
                   <a href="${button_link || '#'}" class="st-feature__btn">
                     <span class="st-feature__btn-text-a">
                       ${button_label}

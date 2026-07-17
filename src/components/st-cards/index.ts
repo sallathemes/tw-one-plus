@@ -1,6 +1,7 @@
 import { html, LitElement } from 'lit';
 import { property } from 'lit/decorators.js';
 import AOS from '../../utils/animate-on-scroll';
+import '../../utils/fonts';
 
 export default class StCards extends LitElement {
   @property({ type: Object })
@@ -46,14 +47,27 @@ export default class StCards extends LitElement {
       .st-cards {
         display: block;
         width: 100%;
-        padding: 3.5rem 1.5rem;
+        padding: 3.5rem 0;
         background: var(--st-cards-bg, #ffffff);
         overflow: visible;
       }
 
       .st-cards__container {
-        max-width: 1200px;
+        max-width: 1440px;
         margin: 0 auto;
+        padding: 0 0.5rem;
+      }
+
+      @media (min-width: 768px) {
+        .st-cards__container { padding: 0 1rem; }
+      }
+
+      @media (min-width: 1024px) {
+        .st-cards__container { padding: 0 2.5rem; }
+      }
+
+      @media (min-width: 1280px) {
+        .st-cards__container { padding: 0 88px; }
       }
 
       .st-cards__header {
@@ -63,11 +77,23 @@ export default class StCards extends LitElement {
       }
 
       .st-cards__header h2 {
-        font-size: clamp(1.75rem, 3vw, 2.25rem);
-        font-weight: 700;
-        line-height: 1.3;
+        font-size: 1.5rem;
+        font-weight: 800;
+        line-height: 1.35;
         color: var(--st-cards-primary, #050505);
         margin: 0;
+      }
+
+      @media (min-width: 768px) {
+        .st-cards__header h2 { font-size: 1.875rem; line-height: 40px; }
+      }
+
+      @media (min-width: 1024px) {
+        .st-cards__header h2 { font-size: 2.25rem; line-height: 48px; }
+      }
+
+      @media (min-width: 1280px) {
+        .st-cards__header h2 { font-size: 40px; line-height: 64px; }
       }
 
       /* Cards grid: 2 cols mobile, 3 cols desktop */
@@ -115,7 +141,7 @@ export default class StCards extends LitElement {
         width: 56px;
         height: 56px;
         border-radius: 9999px;
-        background: rgba(0, 113, 227, 0.08);
+        background: #F7F7F7;
         margin-bottom: 1.25rem;
         font-size: 1.5rem;
         line-height: 1;
