@@ -1,5 +1,6 @@
 import { html, LitElement } from 'lit';
 import { property, state } from 'lit/decorators.js';
+import { ScrollScene } from '../../utils/scroll-scene';
 import '../../utils/fonts';
 
 export default class StImagesSlider extends LitElement {
@@ -21,27 +22,34 @@ export default class StImagesSlider extends LitElement {
   }
 
   private styleElement: HTMLStyleElement | null = null;
-
-  private scrollHandler = () => this.updateParallax();
+  private scene: ScrollScene | null = null;
 
   connectedCallback() {
     super.connectedCallback();
     this.injectStyles();
-    window.addEventListener('scroll', this.scrollHandler, { passive: true });
-    window.addEventListener('resize', this.scrollHandler, { passive: true });
     window.addEventListener('keydown', this.keyHandler);
   }
 
   disconnectedCallback() {
     super.disconnectedCallback();
-    window.removeEventListener('scroll', this.scrollHandler);
-    window.removeEventListener('resize', this.scrollHandler);
     window.removeEventListener('keydown', this.keyHandler);
+    this.scene?.destroy();
+    this.scene = null;
     this.styleElement?.remove();
   }
 
   firstUpdated() {
-    this.updateParallax();
+    this.syncScene();
+  }
+
+  // Self-driving rAF loop (not a 'scroll' listener) so the parallax still
+  // animates inside editor-preview shells that scroll via a transformed
+  // wrapper or a non-composed shadow-DOM scroller.
+  private syncScene() {
+    if (this.scene) return;
+    const wrap = this.querySelector('.st-images-slider__parallax') as HTMLElement | null;
+    if (!wrap) return;
+    this.scene = new ScrollScene(wrap, this.updateParallax);
   }
 
   /**
@@ -49,7 +57,7 @@ export default class StImagesSlider extends LitElement {
    * x goes from -100% to 0% as the track scrolls from viewport bottom
    * (offset ['0 1', '1 1']).
    */
-  private updateParallax() {
+  private updateParallax = (_p: number, rect: DOMRect, viewportHeight: number) => {
     const wrap = this.querySelector('.st-images-slider__parallax') as HTMLElement | null;
     if (!wrap) return;
 
@@ -58,11 +66,10 @@ export default class StImagesSlider extends LitElement {
       return;
     }
 
-    const rect = wrap.getBoundingClientRect();
-    const vh = window.innerHeight;
-    const progress = Math.min(1, Math.max(0, (vh - rect.top) / rect.height));
+    const progress =
+      rect.height > 0 ? Math.min(1, Math.max(0, (viewportHeight - rect.top) / rect.height)) : 0;
     wrap.style.transform = `translateX(${(1 - progress) * -100}%)`;
-  }
+  };
 
   private keyHandler = (e: KeyboardEvent) => {
     if (!this.lightboxOpen) return;

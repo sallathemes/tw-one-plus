@@ -1,5 +1,6 @@
 import { html, LitElement } from 'lit';
 import { property, state } from 'lit/decorators.js';
+import { ScrollScene } from '../../utils/scroll-scene';
 import '../../utils/fonts';
 
 export default class StHero extends LitElement {
@@ -34,22 +35,37 @@ export default class StHero extends LitElement {
   createRenderRoot() { return this; }
 
   private styleElement: HTMLStyleElement | null = null;
+  private scene: ScrollScene | null = null;
 
-  private navScrollHandler = () => {
+  // Self-driving rAF loop (not a 'scroll' listener) so the sticky nav still
+  // triggers inside editor-preview shells that scroll via a transformed
+  // wrapper or a non-composed shadow-DOM scroller.
+  private navSceneProgress = (_p: number, rect: DOMRect) => {
     const wasFixed = this.navFixed;
-    this.navFixed = window.scrollY > 80;
+    this.navFixed = rect.top < -80;
     if (wasFixed !== this.navFixed) this.requestUpdate();
   };
 
+  private syncScene() {
+    if (this.scene) return;
+    const section = this.querySelector('.st-hero') as HTMLElement | null;
+    if (!section) return;
+    this.scene = new ScrollScene(section, this.navSceneProgress);
+  }
+
   connectedCallback() {
     super.connectedCallback();
-    window.addEventListener('scroll', this.navScrollHandler, { passive: true });
     this.injectStyles();
+  }
+
+  firstUpdated() {
+    this.syncScene();
   }
 
   disconnectedCallback() {
     super.disconnectedCallback();
-    window.removeEventListener('scroll', this.navScrollHandler);
+    this.scene?.destroy();
+    this.scene = null;
     this.styleElement?.remove();
   }
 

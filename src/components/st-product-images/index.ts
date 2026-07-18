@@ -1,6 +1,7 @@
 import { html, LitElement } from 'lit';
 import { property, state } from 'lit/decorators.js';
 import AOS from '../../utils/animate-on-scroll';
+import { ScrollScene } from '../../utils/scroll-scene';
 import '../../utils/fonts';
 
 export default class StProductImages extends LitElement {
@@ -30,20 +31,20 @@ export default class StProductImages extends LitElement {
   }
 
   private styleElement: HTMLStyleElement | null = null;
+  private scene: ScrollScene | null = null;
 
   connectedCallback() {
     super.connectedCallback();
     this.injectStyles();
     AOS.init();
-    window.addEventListener('scroll', this.handleScroll, { passive: true });
     window.addEventListener('keydown', this.handleKeydown);
-    requestAnimationFrame(() => this.handleScroll());
   }
 
   disconnectedCallback() {
     super.disconnectedCallback();
-    window.removeEventListener('scroll', this.handleScroll);
     window.removeEventListener('keydown', this.handleKeydown);
+    this.scene?.destroy();
+    this.scene = null;
     this.styleElement?.remove();
     this.styleElement = null;
   }
@@ -51,21 +52,27 @@ export default class StProductImages extends LitElement {
   updated(changedProperties: Map<string, unknown>) {
     super.updated(changedProperties);
     AOS.refresh();
-    this.handleScroll();
+    this.syncScene();
+  }
+
+  // Self-driving rAF loop (not a 'scroll' listener) so the tilt still
+  // animates inside editor-preview shells that scroll via a transformed
+  // wrapper or a non-composed shadow-DOM scroller.
+  private syncScene() {
+    if (this.scene) return;
+    const section = this.querySelector('.st-product-images') as HTMLElement | null;
+    if (!section) return;
+    this.scene = new ScrollScene(section, this.handleSceneProgress);
   }
 
   // 3D scroll perspective: tilts the grid from a 45deg perspective angle
   // (pushed 500px away) to flat as the section scrolls into view.
-  private handleScroll = () => {
-    const wrapper = this.querySelector('.st-product-images__perspective') as HTMLElement;
-    const section = this.querySelector('.st-product-images') as HTMLElement;
-    if (!section || !wrapper) return;
-
-    const rect = section.getBoundingClientRect();
-    const windowH = window.innerHeight;
+  private handleSceneProgress = (_p: number, rect: DOMRect, viewportHeight: number) => {
+    const wrapper = this.querySelector('.st-product-images__perspective') as HTMLElement | null;
+    if (!wrapper) return;
 
     // progress: 0 when bottom enters viewport, 1 when section has scrolled fully in
-    const progress = Math.min(1, Math.max(0, (windowH - rect.top) / (windowH * 0.8)));
+    const progress = Math.min(1, Math.max(0, (viewportHeight - rect.top) / (viewportHeight * 0.8)));
 
     const rotateX = 45 * (1 - progress);
     const translateZ = 500 * (1 - progress);

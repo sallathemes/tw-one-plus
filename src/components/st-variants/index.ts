@@ -2,7 +2,7 @@ import { html, LitElement } from 'lit';
 import { property, state } from 'lit/decorators.js';
 import { classMap } from 'lit/directives/class-map.js';
 import AOS from '../../utils/animate-on-scroll';
-import { ScrollScene, getScrollParent } from '../../utils/scroll-scene';
+import { ScrollScene, projectToScrollingWindow, scrollElementBy } from '../../utils/scroll-scene';
 import { clamp, easeInOutCubic, holdEase, mixHex } from '../../utils/motion';
 import '../../utils/fonts';
 
@@ -125,35 +125,22 @@ export default class StVariants extends LitElement {
   };
 
   /**
-   * JS pinning (GSAP ScrollTrigger-style): the stage rides fixed while the
-   * wrapper scrolls through, parked absolute at either end. Unlike sticky,
-   * this survives `overflow: hidden` ancestors and nested scroll containers.
+   * JS pinning via transform (not `position: fixed`): the stage stays
+   * `position: absolute; inset-inline: 0; top: 0` at all times and rides
+   * along with a `translateY` that cancels the wrapper's own scroll offset.
+   * `position: fixed` breaks under any transformed/filtered ancestor (a
+   * common editor-preview wrapper), and CSS `transform` establishes a
+   * containing block for `position: fixed` descendants per spec — so
+   * `fixed` there resolves against the wrapper, not the viewport. A plain
+   * transform offset has no such caveat and survives `overflow: hidden`
+   * ancestors, nested scroll containers, and transformed wrappers alike.
    */
-  private updatePin(p: number, rect: DOMRect) {
-    const s = this.stageEl?.style;
-    if (!s) return;
-    if (p <= 0) {
-      s.position = 'absolute';
-      s.top = '0';
-      s.bottom = 'auto';
-      s.left = '0';
-      s.right = '0';
-      s.width = 'auto';
-    } else if (p >= 1) {
-      s.position = 'absolute';
-      s.top = 'auto';
-      s.bottom = '0';
-      s.left = '0';
-      s.right = '0';
-      s.width = 'auto';
-    } else {
-      s.position = 'fixed';
-      s.top = '0';
-      s.bottom = 'auto';
-      s.left = `${rect.left}px`;
-      s.width = `${rect.width}px`;
-      s.right = 'auto';
-    }
+  private updatePin(_p: number, rect: DOMRect) {
+    const stage = this.stageEl;
+    if (!stage) return;
+    const maxOffset = Math.max(0, (this.wrapEl?.offsetHeight || 0) - stage.offsetHeight);
+    const offset = clamp(-rect.top, 0, maxOffset);
+    stage.style.transform = `translate3d(0, ${offset}px, 0)`;
   }
 
   private applyTimeline(t: number) {
@@ -247,15 +234,11 @@ export default class StVariants extends LitElement {
       this.applyTimeline(index);
       return;
     }
-    const scrollable = wrap.offsetHeight - window.innerHeight;
+    const { top, height, win } = projectToScrollingWindow(wrap);
+    const scrollable = height - win.innerHeight;
     if (scrollable <= 0) return;
-    const offset = wrap.getBoundingClientRect().top + (index / this.span) * scrollable;
-    const scroller = getScrollParent(wrap);
-    if (scroller) {
-      scroller.scrollTo({ top: scroller.scrollTop + offset, behavior: 'smooth' });
-    } else {
-      window.scrollTo({ top: window.scrollY + offset, behavior: 'smooth' });
-    }
+    const offset = top + (index / this.span) * scrollable;
+    scrollElementBy(wrap, offset);
   }
 
   private openLightbox(src: string) {
@@ -310,6 +293,7 @@ export default class StVariants extends LitElement {
         display: flex;
         flex-direction: column;
         justify-content: center;
+        will-change: transform;
       }
 
       .st-variants__scroll.is-static .st-variants__stage {
