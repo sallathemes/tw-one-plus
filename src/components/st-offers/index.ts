@@ -17,23 +17,20 @@ export default class StOffers extends LitElement {
     section_subtitle: string;
     badge_label: string;
     badge_icon: string;
-    cta_normal: string;
-    cta_added: string;
+    cta_label: string;
     offers: Array<{
       image: string;
       name: string;
       price_after: number;
       price_before: number;
       currency: string;
+      link: string;
     }>;
   };
 
   // Matches source: no offer selected until the shopper picks one
   @state()
   private selectedOffer: number | null = null;
-
-  @state()
-  private addedToCart: boolean = false;
 
   private styleElement: HTMLStyleElement | null = null;
 
@@ -59,10 +56,9 @@ export default class StOffers extends LitElement {
     AOS.refresh();
   }
 
-  private handleAddToCart() {
-    if (this.selectedOffer === null) return;
-    this.addedToCart = true;
-    this.requestUpdate();
+  // No offer picked yet: block navigation instead of following an empty/"#" link
+  private handleBuyClick(e: Event) {
+    if (this.selectedOffer === null) e.preventDefault();
   }
 
   private handleSelectOffer(index: number) {
@@ -79,7 +75,6 @@ export default class StOffers extends LitElement {
     const brandColor = this.config?.brand_color || '#0071E3';
     const greenColor = this.config?.green_color || '#20A535';
     const redColor = this.config?.red_color || '#F62A33';
-    const shadeColor = '#F7F7F7';
     const lightColor = '#EEEEEE';
 
     this.styleElement = document.createElement('style');
@@ -286,7 +281,7 @@ export default class StOffers extends LitElement {
         color: ${primaryColor};
       }
 
-      /* Add-to-cart button (shade pill, gated on selection — matches source) */
+      /* Buy button — links out to the merchant's real store to complete the purchase */
       .st-offers__cta {
         display: flex;
         align-items: center;
@@ -300,48 +295,38 @@ export default class StOffers extends LitElement {
         gap: 0.5rem;
         width: 100%;
         max-width: 373px;
-        padding: 0.5rem 1rem;
+        padding: 0.75rem 1rem;
         border-radius: 1000px;
-        border: 1px solid ${shadeColor};
-        background: ${shadeColor};
+        border: 1px solid ${brandColor};
+        background: ${brandColor};
         cursor: pointer;
-        transition: background-color 0.3s ease, border-color 0.3s ease;
+        text-decoration: none;
+        transition: opacity 0.3s ease;
       }
 
       @media (min-width: 1024px) {
         .st-offers__btn { padding: 1rem; }
       }
 
-      .st-offers__btn:disabled { cursor: not-allowed; }
-
-      .st-offers__btn--added {
-        border-color: ${brandColor};
-        background: ${brandColor}1A;
+      .st-offers__btn.is-disabled {
+        cursor: not-allowed;
+        opacity: 0.5;
       }
 
       .st-offers__btn-label {
         font-size: 0.875rem;
         font-weight: 800;
-        color: ${primaryColor};
-        transition: color 0.3s ease, opacity 0.3s ease;
+        color: #ffffff;
       }
 
       @media (min-width: 1024px) {
         .st-offers__btn-label { font-size: 1rem; }
       }
 
-      .st-offers__btn:disabled .st-offers__btn-label { opacity: 0.7; }
-
-      .st-offers__btn--added .st-offers__btn-label { color: ${brandColor}; }
-
-      .st-offers__checkmark-path {
-        stroke-dasharray: 30;
-        stroke-dashoffset: 30;
-      }
-
-      .st-offers__checkmark-path.is-drawn {
-        stroke-dashoffset: 0;
-        transition: stroke-dashoffset 0.3s ease;
+      .st-offers__btn i {
+        font-size: 1.125rem;
+        line-height: 1;
+        color: #ffffff;
       }
     `;
     document.head.appendChild(this.styleElement);
@@ -352,8 +337,8 @@ export default class StOffers extends LitElement {
       return html`<div>Configuration is required</div>`;
     }
 
-    const brandColor = this.config.brand_color || '#0071E3';
     const offers = (this.config.offers || []).slice(0, 3);
+    const selected = this.selectedOffer !== null ? offers[this.selectedOffer] : null;
 
     return html`
       <section id="st-offers" class="st-offers">
@@ -414,39 +399,19 @@ export default class StOffers extends LitElement {
             )}
           </div>
 
-          <!-- Add to cart (disabled until an offer is selected — matches source) -->
+          <!-- Buy: links out to the merchant's store to complete the purchase.
+               Disabled (no navigation) until an offer is selected. -->
           <div class="st-offers__cta">
-            <button
-              class="st-offers__btn ${this.addedToCart ? 'st-offers__btn--added' : ''}"
-              type="button"
-              ?disabled="${this.selectedOffer === null}"
-              title="${this.selectedOffer === null ? 'إختر عرض لتفعيل الزر' : 'أضف'}"
-              @click="${this.handleAddToCart.bind(this)}"
+            <a
+              class="${classMap({ 'st-offers__btn': true, 'is-disabled': !selected })}"
+              href="${selected?.link || '#'}"
+              aria-disabled="${!selected}"
+              title="${!selected ? 'إختر عرض لتفعيل الزر' : ''}"
+              @click="${this.handleBuyClick}"
             >
-              <span class="st-offers__btn-label">
-                ${this.addedToCart ? this.config.cta_added : this.config.cta_normal}
-              </span>
-              ${this.addedToCart
-                ? html`
-                    <svg
-                      width="21"
-                      height="20"
-                      viewBox="0 0 21 20"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        class="st-offers__checkmark-path is-drawn"
-                        d="M5 10.833L8.33333 14.1663L16.6667 5.83301"
-                        stroke="${brandColor}"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                    </svg>
-                  `
-                : ''}
-            </button>
+              <span class="st-offers__btn-label">${this.config.cta_label}</span>
+              <i class="sicon-caret-left-double"></i>
+            </a>
           </div>
         </div>
       </section>
