@@ -1,14 +1,14 @@
 {
     "name": {
-        "ar": "ون بلس",
-        "en": "One Plus"
+        "ar": "tw-one-plus",
+        "en": "tw-one-plus"
     },
     "description": {
-        "ar": "حزمة صفحة المنتج الشاملة بتصميم عصري وتأثيرات بصرية احترافية",
-        "en": "Full product landing page bundle with modern design and premium animations"
+        "ar": null,
+        "en": null
     },
     "author_email": "sallathemes@gmail.com",
-    "support_url": "",
+    "support_url": null,
     "repository": "https://github.com/sallathemes/tw-one-plus",
     "components": [
         {
