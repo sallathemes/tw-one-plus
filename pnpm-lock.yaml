@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@salla.sa/twilight-bundles':
-        specifier: 0.1.43
-        version: 0.1.43
+        specifier: 0.1.46
+        version: 0.1.46
       '@salla.sa/twilight-bundles-starter-kit':
         specifier: ^0.1.37
         version: 0.1.37
@@ -602,6 +602,11 @@ packages:
 
   '@salla.sa/twilight-bundles@0.1.43':
     resolution: {integrity: sha512-1VWbe+YhN+e6/nqER45CP/h1wTImP8Kb4cdx6toTZ+7z7bcCjltBV4QZ0eK8g6fOJpmzVtxHbyhFGMWojrV2WA==}
+    engines: {node: '>=16.0.0', pnpm: '>=9.0.0'}
+    hasBin: true
+
+  '@salla.sa/twilight-bundles@0.1.46':
+    resolution: {integrity: sha512-CHvkiao6LTxIqICdQcVObKpqri4h6LrjqjE2rXSgyGOlKP95TapsNgMay1Jlcp1c7zVPHkMOI/vQNuwQJq12OA==}
     engines: {node: '>=16.0.0', pnpm: '>=9.0.0'}
     hasBin: true
 
@@ -2073,6 +2078,12 @@ snapshots:
       lit: 3.3.3
 
   '@salla.sa/twilight-bundles@0.1.43':
+    dependencies:
+      glob: 11.1.0
+      lit: 3.3.3
+      uuid: 11.1.1
+
+  '@salla.sa/twilight-bundles@0.1.46':
     dependencies:
       glob: 11.1.0
       lit: 3.3.3

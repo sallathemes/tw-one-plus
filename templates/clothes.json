@@ -1,21 +1,11 @@
 {
-    "name": {
-        "ar": "ون بلس",
-        "en": "One Plus"
-    },
-    "description": {
-        "ar": "حزمة صفحة المنتج الشاملة بتصميم عصري وتأثيرات بصرية احترافية",
-        "en": "Full product landing page bundle with modern design and premium animations"
-    },
-    "author_email": "sallathemes@gmail.com",
-    "support_url": "",
-    "repository": "https://github.com/sallathemes/tw-one-plus",
+    "id": "794f125a-f892-4ce7-b8a8-c2502171e664",
     "components": [
         {
-            "title": "قسم البطل",
+            "title": "قسم البطل - المجموعة",
             "icon": "sicon-image-landscape",
             "name": "st-hero",
-            "key": "1a2b3c4d-5e6f-7a8b-9c0d-1e2f3a4b5c6d",
+            "key": "bcc37b34-0189-4f65-81de-851bdd7a5ad1",
             "image": "https://cdn.salla.network/images/themes/raed/preview-images/getting-started.png",
             "fields": [
                 {
@@ -23,7 +13,7 @@
                     "type": "string",
                     "format": "color",
                     "label": "لون الخلفية",
-                    "value": "#050505"
+                    "value": "#14100D"
                 },
                 {
                     "id": "text_color",
@@ -37,7 +27,7 @@
                     "type": "string",
                     "format": "color",
                     "label": "لون العلامة التجارية",
-                    "value": "#0071E3"
+                    "value": "#B4643C"
                 },
                 {
                     "id": "overlay_opacity",
@@ -47,7 +37,7 @@
                     "minimum": 0,
                     "maximum": 100,
                     "step": 1,
-                    "value": 60
+                    "value": 55
                 },
                 {
                     "id": "title",
@@ -56,7 +46,7 @@
                     "label": "العنوان الرئيسي",
                     "required": true,
                     "maxLength": 150,
-                    "value": "ايـر بـودز جديدة بقوة العزل المضاعفة."
+                    "value": "مجموعة الخريف. قُصّت لتُلبس كل يوم."
                 },
                 {
                     "id": "subtitle",
@@ -64,21 +54,21 @@
                     "format": "textarea",
                     "label": "النص الفرعي",
                     "rows": 3,
-                    "value": "أداء رهيب. شاشات مذهلة بتطورها. اتصال لاسلكي فائق السرعة. قدرات أكبر لقلم Apple. ميزات قوية وجديدة في iPadOS. إنه iPad بأعلى مستوى من الإمكانيات.أداء رهيب. شاشات مذهلة بتطورها. أداء رهيب. شاشات مذهلة بتطورها. اتصال لاسلكي فائق السرعة. قدرات أكبر لقلم Apple. ميزات قوية وجديدة في iPadOS. إنه iPad بأعلى مستوى من الإمكانيات.أداء رهيب. شاشات مذهلة بتطورها."
+                    "value": "قطن مُمشّط بوزن 240 غرام، مغسول مسبقاً حتى لا ينكمش بعد أول غسلة. قصّة مستقيمة تريح الكتف ولا تشدّ عند الخصر، وحياكة مزدوجة عند الأطراف تحفظ شكل القطعة موسماً بعد موسم. خمسة ألوان ثابتة، ومقاسات من S إلى 3XL."
                 },
                 {
                     "id": "button_label",
                     "type": "string",
                     "format": "text",
                     "label": "نص زر الشراء",
-                    "value": "إشتر الآن ب"
+                    "value": "اشترِ الآن بـ"
                 },
                 {
                     "id": "button_price",
                     "type": "string",
                     "format": "text",
                     "label": "سعر زر الشراء",
-                    "value": "199 ر.س"
+                    "value": "249 ر.س"
                 },
                 {
                     "id": "button_link",
@@ -93,7 +83,7 @@
                     "format": "url",
                     "label": "رابط الفيديو الخلفي",
                     "required": false,
-                    "value": "/assets/hero-video.mp4"
+                    "value": ""
                 },
                 {
                     "id": "bg_image",
@@ -101,7 +91,7 @@
                     "format": "image",
                     "label": "صورة الخلفية (بديل الفيديو)",
                     "required": false,
-                    "value": ""
+                    "value": "/assets/clothes/worn-olive-jacket.jpg"
                 },
                 {
                     "id": "logo",
@@ -116,56 +106,56 @@
                     "type": "string",
                     "format": "text",
                     "label": "اسم المتجر",
-                    "value": "oneplus"
+                    "value": "atelier"
                 },
                 {
                     "id": "nav1_label",
                     "type": "string",
                     "format": "text",
                     "label": "الرابط الأول - النص",
-                    "value": "مواصفات المنتج"
+                    "value": "الألوان"
                 },
                 {
                     "id": "nav1_href",
                     "type": "string",
                     "format": "text",
                     "label": "الرابط الأول - الوجهة",
-                    "value": "#st-cards"
+                    "value": "#st-variants"
                 },
                 {
                     "id": "nav2_label",
                     "type": "string",
                     "format": "text",
                     "label": "الرابط الثاني - النص",
-                    "value": "لماذا اير بودز"
+                    "value": "اللوك بوك"
                 },
                 {
                     "id": "nav2_href",
                     "type": "string",
                     "format": "text",
                     "label": "الرابط الثاني - الوجهة",
-                    "value": "#st-feature"
+                    "value": "#st-images-slider"
                 },
                 {
                     "id": "nav3_label",
                     "type": "string",
                     "format": "text",
                     "label": "الرابط الثالث - النص",
-                    "value": "لمحة عامة"
+                    "value": "الخامة"
                 },
                 {
                     "id": "nav3_href",
                     "type": "string",
                     "format": "text",
                     "label": "الرابط الثالث - الوجهة",
-                    "value": "#st-demo"
+                    "value": "#st-feature"
                 },
                 {
                     "id": "nav4_label",
                     "type": "string",
                     "format": "text",
                     "label": "الرابط الرابع - النص",
-                    "value": "المواصفات التقنية"
+                    "value": "دليل المقاسات"
                 },
                 {
                     "id": "nav4_href",
@@ -177,10 +167,10 @@
             ]
         },
         {
-            "title": "قسم مميزات المنتج - بطاقات",
-            "icon": "sicon-layout-grid",
-            "name": "st-cards",
-            "key": "2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e",
+            "title": "ألوان المجموعة",
+            "icon": "sicon-color-palette",
+            "name": "st-variants",
+            "key": "c4a7a2d6-f908-47d3-8ce8-8e8044939bba",
             "image": "https://cdn.salla.network/images/themes/raed/preview-images/getting-started.png",
             "fields": [
                 {
@@ -195,21 +185,333 @@
                     "type": "string",
                     "format": "color",
                     "label": "اللون الأساسي",
-                    "value": "#050505"
+                    "value": "#1A1613"
                 },
                 {
                     "id": "brand_color",
                     "type": "string",
                     "format": "color",
                     "label": "لون العلامة التجارية",
-                    "value": "#0071E3"
+                    "value": "#B4643C"
                 },
                 {
                     "id": "section_title",
                     "type": "string",
                     "format": "text",
                     "label": "عنوان القسم",
-                    "value": "مميزات المنتج"
+                    "value": "لون واحد لا يكفي أبداً."
+                },
+                {
+                    "id": "selector_label",
+                    "type": "string",
+                    "format": "text",
+                    "label": "تسمية اختيار اللون",
+                    "value": "اختر لونك المفضّل."
+                },
+                {
+                    "id": "variants",
+                    "type": "collection",
+                    "format": "collection",
+                    "label": "المتغيرات",
+                    "item_label": "لون",
+                    "minLength": 1,
+                    "maxLength": 8,
+                    "value": [
+                        {
+                            "product_image": "/assets/clothes/tee-white-product.jpg",
+                            "side_image": "/assets/clothes/worn-white-tee.jpg",
+                            "color_hex": "#F2F0EC",
+                            "color_title": "أبيض ناصع"
+                        },
+                        {
+                            "product_image": "/assets/clothes/tee-black-product.jpg",
+                            "side_image": "/assets/clothes/worn-black-tee.jpg",
+                            "color_hex": "#1A1613",
+                            "color_title": "أسود فحمي"
+                        },
+                        {
+                            "product_image": "/assets/clothes/tee-sand-product.jpg",
+                            "side_image": "/assets/clothes/worn-white-blouse.jpg",
+                            "color_hex": "#D9C7AC",
+                            "color_title": "رملي"
+                        },
+                        {
+                            "product_image": "/assets/clothes/jacket-rust-product.jpg",
+                            "side_image": "/assets/clothes/worn-tan-jacket.jpg",
+                            "color_hex": "#B4643C",
+                            "color_title": "كراميل"
+                        },
+                        {
+                            "product_image": "/assets/clothes/sweatshirt-white-product.jpg",
+                            "side_image": "/assets/clothes/worn-orange-sweater.jpg",
+                            "color_hex": "#E08A2E",
+                            "color_title": "برتقالي محروق"
+                        }
+                    ],
+                    "fields": [
+                        {
+                            "id": "product_image",
+                            "type": "string",
+                            "format": "image",
+                            "label": "صورة المنتج",
+                            "required": true
+                        },
+                        {
+                            "id": "side_image",
+                            "type": "string",
+                            "format": "image",
+                            "label": "صورة الارتداء",
+                            "required": false
+                        },
+                        {
+                            "id": "color_hex",
+                            "type": "string",
+                            "format": "color",
+                            "label": "لون الزر",
+                            "value": "#2E3642"
+                        },
+                        {
+                            "id": "color_title",
+                            "type": "string",
+                            "format": "text",
+                            "label": "اسم اللون",
+                            "maxLength": 50
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "اللوك بوك",
+            "icon": "sicon-images",
+            "name": "st-images-slider",
+            "key": "a49af8bb-fac3-4387-9978-3e03916572c8",
+            "image": "https://cdn.salla.network/images/themes/raed/preview-images/getting-started.png",
+            "fields": [
+                {
+                    "id": "bg_color",
+                    "type": "string",
+                    "format": "color",
+                    "label": "لون الخلفية",
+                    "value": "#F6F1EA"
+                },
+                {
+                    "id": "primary_color",
+                    "type": "string",
+                    "format": "color",
+                    "label": "لون النص",
+                    "value": "#1A1613"
+                },
+                {
+                    "id": "brand_color",
+                    "type": "string",
+                    "format": "color",
+                    "label": "لون العلامة التجارية",
+                    "value": "#B4643C"
+                },
+                {
+                    "id": "section_title",
+                    "type": "string",
+                    "format": "text",
+                    "label": "عنوان القسم",
+                    "value": "اللوك بوك — إطلالات جاهزة من مجموعة هذا الموسم."
+                },
+                {
+                    "id": "images",
+                    "type": "collection",
+                    "format": "collection",
+                    "label": "الصور",
+                    "item_label": "صورة",
+                    "minLength": 1,
+                    "maxLength": 10,
+                    "value": [
+                        {
+                            "src": "/assets/clothes/worn-white-tee.jpg",
+                            "title": "الأبيض الأساسي"
+                        },
+                        {
+                            "src": "/assets/clothes/worn-black-tee.jpg",
+                            "title": "الأسود الجرافيكي"
+                        },
+                        {
+                            "src": "/assets/clothes/worn-olive-jacket.jpg",
+                            "title": "طبقات الخريف"
+                        },
+                        {
+                            "src": "/assets/clothes/worn-blue-shirt.jpg",
+                            "title": "إطلالة رسمية"
+                        },
+                        {
+                            "src": "/assets/clothes/worn-yellow-tracksuit.jpg",
+                            "title": "راحة الشارع"
+                        },
+                        {
+                            "src": "/assets/clothes/worn-white-blouse.jpg",
+                            "title": "أناقة الدوام"
+                        },
+                        {
+                            "src": "/assets/clothes/worn-tan-jacket.jpg",
+                            "title": "الجاكيت الجلدي"
+                        },
+                        {
+                            "src": "/assets/clothes/worn-kids-outfit.jpg",
+                            "title": "مجموعة الأطفال"
+                        }
+                    ],
+                    "fields": [
+                        {
+                            "id": "src",
+                            "type": "string",
+                            "format": "image",
+                            "label": "الصورة",
+                            "required": true
+                        },
+                        {
+                            "id": "title",
+                            "type": "string",
+                            "format": "text",
+                            "label": "عنوان الصورة",
+                            "maxLength": 80,
+                            "required": false
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "قصة الخامة",
+            "icon": "sicon-star",
+            "name": "st-feature",
+            "key": "d9422702-c776-4b3f-9e6e-f25ad73a7641",
+            "image": "https://cdn.salla.network/images/themes/raed/preview-images/getting-started.png",
+            "fields": [
+                {
+                    "id": "bg_color",
+                    "type": "string",
+                    "format": "color",
+                    "label": "لون الخلفية",
+                    "value": "#ffffff"
+                },
+                {
+                    "id": "shade_color",
+                    "type": "string",
+                    "format": "color",
+                    "label": "لون الخلفية الداخلية",
+                    "value": "#F6F1EA"
+                },
+                {
+                    "id": "primary_color",
+                    "type": "string",
+                    "format": "color",
+                    "label": "لون النص",
+                    "value": "#1A1613"
+                },
+                {
+                    "id": "brand_color",
+                    "type": "string",
+                    "format": "color",
+                    "label": "لون العلامة التجارية",
+                    "value": "#B4643C"
+                },
+                {
+                    "id": "icon",
+                    "type": "string",
+                    "format": "icon",
+                    "label": "الأيقونة",
+                    "value": "sicon-shield-check"
+                },
+                {
+                    "id": "title",
+                    "type": "string",
+                    "format": "text",
+                    "label": "العنوان",
+                    "required": true,
+                    "maxLength": 150,
+                    "value": "خامة تُحسّ باليد قبل أن تُرى بالعين."
+                },
+                {
+                    "id": "body1",
+                    "type": "string",
+                    "format": "textarea",
+                    "label": "الفقرة الأولى",
+                    "rows": 3,
+                    "value": "نبدأ من القطن المُمشّط طويل التيلة، حيث تُنزع الألياف القصيرة قبل الغزل. النتيجة نسيج أنعم على البشرة، أقل تنميشاً بعد الغسيل، ويحافظ على لونه بعد عشرات الدورات في الغسالة."
+                },
+                {
+                    "id": "body2",
+                    "type": "string",
+                    "format": "textarea",
+                    "label": "الفقرة الثانية",
+                    "rows": 3,
+                    "required": false,
+                    "value": "كل قطعة تُغسل مسبقاً قبل الخياطة، فلا تفاجئك بانكماش بعد أول غسلة. الأطراف مُحاكة بغرزة مزدوجة، والرقبة مدعّمة بشريط قطني يمنع تمددها مع الوقت."
+                },
+                {
+                    "id": "button_label",
+                    "type": "string",
+                    "format": "text",
+                    "label": "نص الزر",
+                    "value": "تسوّق المجموعة"
+                },
+                {
+                    "id": "button_link",
+                    "type": "string",
+                    "format": "text",
+                    "label": "رابط الزر",
+                    "value": "#st-offers"
+                },
+                {
+                    "id": "button_icon",
+                    "type": "string",
+                    "format": "icon",
+                    "label": "أيقونة الزر",
+                    "value": "sicon-caret-left-double",
+                    "required": false
+                },
+                {
+                    "id": "side_image",
+                    "type": "string",
+                    "format": "image",
+                    "label": "الصورة الجانبية",
+                    "required": false,
+                    "value": "/assets/clothes/rack-green-tees.jpg"
+                }
+            ]
+        },
+        {
+            "title": "لماذا تتسوق معنا",
+            "icon": "sicon-layout-grid",
+            "name": "st-cards",
+            "key": "5f970a26-fd90-4483-b002-1016c088f31e",
+            "image": "https://cdn.salla.network/images/themes/raed/preview-images/getting-started.png",
+            "fields": [
+                {
+                    "id": "bg_color",
+                    "type": "string",
+                    "format": "color",
+                    "label": "لون الخلفية",
+                    "value": "#ffffff"
+                },
+                {
+                    "id": "primary_color",
+                    "type": "string",
+                    "format": "color",
+                    "label": "اللون الأساسي",
+                    "value": "#1A1613"
+                },
+                {
+                    "id": "brand_color",
+                    "type": "string",
+                    "format": "color",
+                    "label": "لون العلامة التجارية",
+                    "value": "#B4643C"
+                },
+                {
+                    "id": "section_title",
+                    "type": "string",
+                    "format": "text",
+                    "label": "عنوان القسم",
+                    "value": "لماذا تتسوق معنا"
                 },
                 {
                     "id": "section_image",
@@ -217,7 +519,7 @@
                     "format": "image",
                     "label": "صورة القسم الرئيسية",
                     "required": false,
-                    "value": "/assets/airpod-skateboard.jpeg"
+                    "value": "/assets/clothes/flatlay-outfit.jpg"
                 },
                 {
                     "id": "cards",
@@ -229,34 +531,34 @@
                     "maxLength": 6,
                     "value": [
                         {
-                            "icon": "sicon-battery-charge",
-                            "title": "بطارية تدوم 30 ساعة",
-                            "body": "استمتع بالموسيقى طوال اليوم مع شحن سريع — 5 دقائق تمنحك ساعة استماع كاملة."
-                        },
-                        {
-                            "icon": "sicon-ear",
-                            "title": "إلغاء الضوضاء الفعّال",
-                            "body": "تقنية متقدمة تحجب ضجيج الخلفية بنسبة تصل إلى 99% لتجربة صوتية نقية تماماً."
-                        },
-                        {
-                            "icon": "sicon-pause",
-                            "title": "الإيقاف المؤقت والتشغيل التلقائي",
-                            "body": "يكتشف جهازك ويوقف تشغيل الصوت تلقائياً عند إزالة السماعة من أذنك."
-                        },
-                        {
                             "icon": "sicon-shield-check",
-                            "title": "مقاوم للماء والعرق",
-                            "body": "تصميم مقاوم للماء IPX4 يناسب التمارين الرياضية والاستخدام اليومي في أي ظرف."
+                            "title": "قطن مُمشّط 100%",
+                            "body": "خامة طبيعية بوزن 240 غرام/م²، مغسولة مسبقاً فلا تنكمش ولا يبهت لونها."
                         },
                         {
-                            "icon": "sicon-bluetooth",
-                            "title": "اتصال لاسلكي فائق السرعة",
-                            "body": "تقنية Bluetooth المتقدمة تضمن اتصالاً فورياً بجميع أجهزتك بنقرة واحدة."
+                            "icon": "sicon-rotate",
+                            "title": "استبدال مجاني خلال 14 يوم",
+                            "body": "لم يناسبك المقاس؟ استبدله بمقاس آخر مجاناً، دون أسئلة ودون رسوم شحن."
                         },
                         {
-                            "icon": "sicon-audio-wave",
-                            "title": "صوت محيطي ثلاثي الأبعاد",
-                            "body": "تقنية الصوت المكاني تنقل المؤثرات الصوتية حولك لتجربة سينمائية حقيقية."
+                            "icon": "sicon-cart",
+                            "title": "شحن مجاني فوق 200 ر.س",
+                            "body": "توصيل خلال يومين إلى ثلاثة أيام عمل لجميع مدن المملكة، مع تتبّع لحظي للشحنة."
+                        },
+                        {
+                            "icon": "sicon-color-palette",
+                            "title": "ألوان ثابتة لا تبهت",
+                            "body": "صبغة تفاعلية عالية الثبات، اجتازت اختبار 40 دورة غسيل دون تغيّر ملحوظ في اللون."
+                        },
+                        {
+                            "icon": "sicon-layout-grid",
+                            "title": "مقاسات من S إلى 3XL",
+                            "body": "جدول مقاسات مبني على قياسات حقيقية، مع نصيحة مقاس عند كل قطعة."
+                        },
+                        {
+                            "icon": "sicon-star",
+                            "title": "تقييم 4.8 من 5",
+                            "body": "أكثر من 3,400 عميل قيّموا المجموعة، و٩٢٪ منهم أعادوا الشراء مرة أخرى."
                         }
                     ],
                     "fields": [
@@ -289,7 +591,7 @@
                     "type": "string",
                     "format": "text",
                     "label": "نص الزر السفلي",
-                    "value": "عرض التفاصيل التقنية"
+                    "value": "اعرف المزيد عن الخامة"
                 },
                 {
                     "id": "footer_button_href",
@@ -301,110 +603,10 @@
             ]
         },
         {
-            "title": "قسم تفصيل الميزة",
-            "icon": "sicon-star",
-            "name": "st-feature",
-            "key": "3c4d5e6f-7a8b-9c0d-1e2f-3a4b5c6d7e8f",
-            "image": "https://cdn.salla.network/images/themes/raed/preview-images/getting-started.png",
-            "fields": [
-                {
-                    "id": "bg_color",
-                    "type": "string",
-                    "format": "color",
-                    "label": "لون الخلفية",
-                    "value": "#ffffff"
-                },
-                {
-                    "id": "shade_color",
-                    "type": "string",
-                    "format": "color",
-                    "label": "لون الخلفية الداخلية",
-                    "value": "#F7F7F7"
-                },
-                {
-                    "id": "primary_color",
-                    "type": "string",
-                    "format": "color",
-                    "label": "لون النص",
-                    "value": "#050505"
-                },
-                {
-                    "id": "brand_color",
-                    "type": "string",
-                    "format": "color",
-                    "label": "لون العلامة التجارية",
-                    "value": "#0071E3"
-                },
-                {
-                    "id": "icon",
-                    "type": "string",
-                    "format": "icon",
-                    "label": "الأيقونة",
-                    "value": "sicon-signal-range"
-                },
-                {
-                    "id": "title",
-                    "type": "string",
-                    "format": "text",
-                    "label": "العنوان",
-                    "required": true,
-                    "maxLength": 150,
-                    "value": "قم برفع مستوى روتين اللياقة البدنية الخاص بك مع Fitbit Premium."
-                },
-                {
-                    "id": "body1",
-                    "type": "string",
-                    "format": "textarea",
-                    "label": "الفقرة الأولى",
-                    "rows": 3,
-                    "value": "يتميز جهاز MacBook Air بخفة الوزن الفائقة وسمك يزيد قليلاً عن سنتيمتر واحد، وهو يتناسب بسهولة مع حياتك وقد تم تصميمه مع وضع الكوكب في الاعتبار."
-                },
-                {
-                    "id": "body2",
-                    "type": "string",
-                    "format": "textarea",
-                    "label": "الفقرة الثانية",
-                    "rows": 3,
-                    "required": false,
-                    "value": "تم تصنيع جهاز MacBook Air المزود بـ M3 من مواد معاد تدويرها بنسبة 50 بالمائة، وهي الأولى من نوعها التي تقدمها Apple. وتتميز جميع أجهزة الكمبيوتر المحمولة MacBook Air بغلاف متين من الألومنيوم المعاد تدويره."
-                },
-                {
-                    "id": "button_label",
-                    "type": "string",
-                    "format": "text",
-                    "label": "نص الزر",
-                    "value": "اشترها الآن"
-                },
-                {
-                    "id": "button_link",
-                    "type": "string",
-                    "format": "text",
-                    "label": "رابط الزر",
-                    "value": "#st-offers"
-                },
-                {
-                    "id": "button_icon",
-                    "type": "string",
-                    "format": "icon",
-                    "label": "أيقونة الزر",
-                    "value": "sicon-caret-left-double",
-                    "required": false
-                },
-                {
-                    "id": "side_image",
-                    "type": "string",
-                    "format": "image",
-                    "label": "الصورة الجانبية",
-                    "required": false,
-                    "value": "/assets/airpods-laptop.png"
-                }
-            ]
-        },
-        {
-            "title": "قسم العرض التفاعلي",
+            "title": "عارض القطعة",
             "icon": "sicon-rotate-3d",
             "name": "st-demo",
-            "key": "4d5e6f7a-8b9c-0d1e-2f3a-4b5c6d7e8f9a",
+            "key": "d86eefac-deb6-4c28-9d93-a5a565ad3856",
             "image": "https://cdn.salla.network/images/themes/raed/preview-images/getting-started.png",
             "fields": [
                 {
@@ -412,7 +614,7 @@
                     "type": "string",
                     "format": "color",
                     "label": "لون الخلفية",
-                    "value": "#050505"
+                    "value": "#14100D"
                 },
                 {
                     "id": "text_color",
@@ -426,14 +628,14 @@
                     "type": "string",
                     "format": "color",
                     "label": "لون العلامة التجارية",
-                    "value": "#0071E3"
+                    "value": "#B4643C"
                 },
                 {
                     "id": "panel1_title",
                     "type": "string",
                     "format": "text",
                     "label": "عنوان اللوحة الأولى",
-                    "value": "بطارية بعمر اطول."
+                    "value": "قصّة تحترم الجسم."
                 },
                 {
                     "id": "panel1_body1",
@@ -441,7 +643,7 @@
                     "format": "textarea",
                     "label": "نص اللوحة الأولى - الفقرة 1",
                     "rows": 3,
-                    "value": "يتميز جهاز MacBook Air بخفة الوزن الفائقة وسمك يزيد قليلاً عن سنتيمتر واحد، وهو يتناسب بسهولة مع حياتك وقد تم تصميمه مع وضع الكوكب في الاعتبار."
+                    "value": "قصّة مستقيمة تنسدل من الكتف دون أن تشدّ عند الصدر أو تتجمّع عند الخصر. جرّبناها على أكثر من 40 جسماً مختلفاً قبل أن نعتمد الباترون النهائي."
                 },
                 {
                     "id": "panel1_body2",
@@ -450,7 +652,7 @@
                     "label": "نص اللوحة الأولى - الفقرة 2",
                     "rows": 3,
                     "required": false,
-                    "value": "تم تصنيع جهاز MacBook Air المزود بـ M3 من مواد معاد تدويرها بنسبة 50 بالمائة، وهي الأولى من نوعها التي تقدمها Apple. وتتميز جميع أجهزة الكمبيوتر المحمولة MacBook Air بغلاف متين من الألومنيوم المعاد تدويره."
+                    "value": "طول الجسم مدروس ليبقى في مكانه عند رفع اليدين، والكم ينتهي عند منتصف العضد تماماً — لا أقصر ولا أطول."
                 },
                 {
                     "id": "panel1_image",
@@ -458,14 +660,14 @@
                     "format": "image",
                     "label": "صورة اللوحة الأولى",
                     "required": false,
-                    "value": "/assets/feature-1.png"
+                    "value": "/assets/clothes/tee-white-product.jpg"
                 },
                 {
                     "id": "panel2_title",
                     "type": "string",
                     "format": "text",
                     "label": "عنوان اللوحة الثانية",
-                    "value": "بطارية بعمر اطول."
+                    "value": "تفاصيل تظهر مع الاستعمال."
                 },
                 {
                     "id": "panel2_body1",
@@ -473,7 +675,7 @@
                     "format": "textarea",
                     "label": "نص اللوحة الثانية - الفقرة 1",
                     "rows": 3,
-                    "value": "يتميز جهاز MacBook Air بخفة الوزن الفائقة وسمك يزيد قليلاً عن سنتيمتر واحد، وهو يتناسب بسهولة مع حياتك وقد تم تصميمه مع وضع الكوكب في الاعتبار."
+                    "value": "غرزة مزدوجة عند الأطراف والأكمام تمنع التفكك، ورقبة مدعّمة بشريط قطني يحفظ استدارتها بعد كل غسلة."
                 },
                 {
                     "id": "panel2_body2",
@@ -482,7 +684,7 @@
                     "label": "نص اللوحة الثانية - الفقرة 2",
                     "rows": 3,
                     "required": false,
-                    "value": "تم تصنيع جهاز MacBook Air المزود بـ M3 من مواد معاد تدويرها بنسبة 50 بالمائة، وهي الأولى من نوعها التي تقدمها Apple. وتتميز جميع أجهزة الكمبيوتر المحمولة MacBook Air بغلاف متين من الألومنيوم المعاد تدويره."
+                    "value": "دون علامة داخلية تخدش الرقبة — المقاس وتعليمات العناية مطبوعة مباشرة على النسيج بحبر مائي ناعم."
                 },
                 {
                     "id": "panel2_image",
@@ -490,14 +692,14 @@
                     "format": "image",
                     "label": "صورة اللوحة الثانية",
                     "required": false,
-                    "value": "/assets/feature-1.png"
+                    "value": "/assets/clothes/sweatshirt-white-product.jpg"
                 },
                 {
                     "id": "panel2_button_label",
                     "type": "string",
                     "format": "text",
                     "label": "نص زر اللوحة الثانية",
-                    "value": "احجزها الآن"
+                    "value": "احجز قطعتك الآن"
                 },
                 {
                     "id": "panel2_button_link",
@@ -516,24 +718,28 @@
                     "maxLength": 6,
                     "value": [
                         {
-                            "image": "/assets/airpod.png",
-                            "label": "الأمامي"
+                            "image": "/assets/clothes/tee-white-product.jpg",
+                            "label": "أبيض"
                         },
                         {
-                            "image": "/assets/airpod-side.png",
-                            "label": "الأمامي"
+                            "image": "/assets/clothes/tee-sand-product.jpg",
+                            "label": "رملي"
                         },
                         {
-                            "image": "/assets/airpod.png",
-                            "label": "الأمامي"
+                            "image": "/assets/clothes/tee-black-product.jpg",
+                            "label": "أسود"
                         },
                         {
-                            "image": "/assets/airpod.png",
-                            "label": "الأمامي"
+                            "image": "/assets/clothes/shirt-chambray-product.jpg",
+                            "label": "قميص"
                         },
                         {
-                            "image": "/assets/airpod.png",
-                            "label": "الأمامي"
+                            "image": "/assets/clothes/jacket-rust-product.jpg",
+                            "label": "جاكيت"
+                        },
+                        {
+                            "image": "/assets/clothes/knit-poncho-product.jpg",
+                            "label": "تريكو"
                         }
                     ],
                     "fields": [
@@ -558,15 +764,15 @@
                     "type": "string",
                     "format": "text",
                     "label": "نص خلفية العارض",
-                    "value": "عرض ثلاثي الأبعاد"
+                    "value": "استعرض القطعة"
                 }
             ]
         },
         {
-            "title": "معرض صور المنتج",
+            "title": "صور العملاء",
             "icon": "sicon-album-photo",
             "name": "st-product-images",
-            "key": "5e6f7a8b-9c0d-1e2f-3a4b-5c6d7e8f9a0b",
+            "key": "fe20aca9-4611-4718-9a2a-52bbde35f943",
             "image": "https://cdn.salla.network/images/themes/raed/preview-images/getting-started.png",
             "fields": [
                 {
@@ -581,21 +787,21 @@
                     "type": "string",
                     "format": "color",
                     "label": "لون النص",
-                    "value": "#050505"
+                    "value": "#1A1613"
                 },
                 {
                     "id": "brand_color",
                     "type": "string",
                     "format": "color",
                     "label": "لون العلامة التجارية",
-                    "value": "#0071E3"
+                    "value": "#B4643C"
                 },
                 {
                     "id": "section_title",
                     "type": "string",
                     "format": "text",
                     "label": "عنوان القسم",
-                    "value": "صورة حقيقة من عملائنا"
+                    "value": "صور حقيقية من عملائنا"
                 },
                 {
                     "id": "grid_columns",
@@ -614,35 +820,51 @@
                     "maxLength": 6,
                     "value": [
                         {
-                            "src": "/assets/product_image_1.jpeg",
-                            "alt": "صورة دعائية",
-                            "overlay_text": "إير بودز",
+                            "src": "/assets/clothes/worn-white-tee.jpg",
+                            "alt": "عميل يرتدي التيشيرت الأبيض",
+                            "overlay_text": "التيشيرت الأبيض — مقاس M",
+                            "overlay_position": "bottom-right",
+                            "always_show": false,
+                            "show_overlay_bg": true
+                        },
+                        {
+                            "src": "/assets/clothes/worn-orange-sweater.jpg",
+                            "alt": "عميل يرتدي كنزة برتقالية",
+                            "overlay_text": "كنزة برتقالي محروق — مقاس S",
                             "overlay_position": "top-right",
                             "always_show": false,
                             "show_overlay_bg": true
                         },
                         {
-                            "src": "/assets/product_image_2.jpeg",
-                            "alt": "صورة دعائية",
-                            "overlay_text": "إير بودز",
-                            "overlay_position": "bottom-right",
-                            "always_show": true,
-                            "show_overlay_bg": true
-                        },
-                        {
-                            "src": "/assets/product_image_3.jpeg",
-                            "alt": "صورة دعائية",
-                            "overlay_text": "إير بودز",
-                            "overlay_position": "top-left",
-                            "always_show": true,
-                            "show_overlay_bg": true
-                        },
-                        {
-                            "src": "/assets/product_image_4.jpeg",
-                            "alt": "صورة دعائية",
-                            "overlay_text": "إير بودز",
+                            "src": "/assets/clothes/worn-blue-shirt.jpg",
+                            "alt": "عميل يرتدي قميصاً أزرق",
+                            "overlay_text": "القميص الأزرق — مقاس L",
                             "overlay_position": "bottom-left",
-                            "always_show": true,
+                            "always_show": false,
+                            "show_overlay_bg": true
+                        },
+                        {
+                            "src": "/assets/clothes/worn-yellow-tracksuit.jpg",
+                            "alt": "عميل يرتدي طقماً رياضياً",
+                            "overlay_text": "الطقم الرياضي — مقاس M",
+                            "overlay_position": "top-left",
+                            "always_show": false,
+                            "show_overlay_bg": true
+                        },
+                        {
+                            "src": "/assets/clothes/worn-green-top.jpg",
+                            "alt": "عميل يرتدي تيشيرت أخضر",
+                            "overlay_text": "التوب الأخضر — مقاس S",
+                            "overlay_position": "bottom-right",
+                            "always_show": false,
+                            "show_overlay_bg": true
+                        },
+                        {
+                            "src": "/assets/clothes/worn-kids-outfit.jpg",
+                            "alt": "طفل يرتدي طقم الأطفال",
+                            "overlay_text": "مجموعة الأطفال — 4 سنوات",
+                            "overlay_position": "bottom-left",
+                            "always_show": false,
                             "show_overlay_bg": true
                         }
                     ],
@@ -696,119 +918,10 @@
             ]
         },
         {
-            "title": "قسم ألوان وأنواع المنتج",
-            "icon": "sicon-color-palette",
-            "name": "st-variants",
-            "key": "6f7a8b9c-0d1e-2f3a-4b5c-6d7e8f9a0b1c",
-            "image": "https://cdn.salla.network/images/themes/raed/preview-images/getting-started.png",
-            "fields": [
-                {
-                    "id": "bg_color",
-                    "type": "string",
-                    "format": "color",
-                    "label": "لون الخلفية",
-                    "value": "#ffffff"
-                },
-                {
-                    "id": "primary_color",
-                    "type": "string",
-                    "format": "color",
-                    "label": "اللون الأساسي",
-                    "value": "#050505"
-                },
-                {
-                    "id": "brand_color",
-                    "type": "string",
-                    "format": "color",
-                    "label": "لون العلامة التجارية",
-                    "value": "#0071E3"
-                },
-                {
-                    "id": "section_title",
-                    "type": "string",
-                    "format": "text",
-                    "label": "عنوان القسم",
-                    "value": "ألوان مميزة وفريدة من نوعها."
-                },
-                {
-                    "id": "selector_label",
-                    "type": "string",
-                    "format": "text",
-                    "label": "تسمية اختيار اللون",
-                    "value": "اختر من الوان المنتج."
-                },
-                {
-                    "id": "variants",
-                    "type": "collection",
-                    "format": "collection",
-                    "label": "المتغيرات",
-                    "item_label": "لون",
-                    "minLength": 1,
-                    "maxLength": 8,
-                    "value": [
-                        {
-                            "product_image": "/assets/variant-white-product.png",
-                            "side_image": "/assets/variant-white-lifestyle.png",
-                            "color_hex": "#E8E8E8",
-                            "color_title": "أبيض"
-                        },
-                        {
-                            "product_image": "/assets/variant-black-product.png",
-                            "side_image": "/assets/variant-black-lifestyle.png",
-                            "color_hex": "#1D1D1F",
-                            "color_title": "أسود"
-                        },
-                        {
-                            "product_image": "/assets/variant-pink-product.png",
-                            "side_image": "/assets/variant-pink-lifestyle.png",
-                            "color_hex": "#C9948A",
-                            "color_title": "وردي"
-                        },
-                        {
-                            "product_image": "/assets/variant-blue-product.png",
-                            "side_image": "/assets/variant-blue-lifestyle.png",
-                            "color_hex": "#2B5778",
-                            "color_title": "أزرق"
-                        }
-                    ],
-                    "fields": [
-                        {
-                            "id": "product_image",
-                            "type": "string",
-                            "format": "image",
-                            "label": "صورة المنتج",
-                            "required": true
-                        },
-                        {
-                            "id": "side_image",
-                            "type": "string",
-                            "format": "image",
-                            "label": "صورة الارتداء",
-                            "required": false
-                        },
-                        {
-                            "id": "color_hex",
-                            "type": "string",
-                            "format": "color",
-                            "label": "لون الزر",
-                            "value": "#2E3642"
-                        },
-                        {
-                            "id": "color_title",
-                            "type": "string",
-                            "format": "text",
-                            "label": "اسم اللون",
-                            "maxLength": 50
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "title": "المواصفات التقنية",
+            "title": "دليل المقاسات",
             "icon": "sicon-layout-grid-rearrange",
             "name": "st-specification",
-            "key": "7a8b9c0d-1e2f-3a4b-5c6d-7e8f9a0b1c2d",
+            "key": "ad7a729b-1abe-4c51-8435-a78fd254d6c5",
             "image": "https://cdn.salla.network/images/themes/raed/preview-images/getting-started.png",
             "fields": [
                 {
@@ -816,42 +929,42 @@
                     "type": "string",
                     "format": "color",
                     "label": "لون الخلفية",
-                    "value": "#ffffff"
+                    "value": "#F6F1EA"
                 },
                 {
                     "id": "primary_color",
                     "type": "string",
                     "format": "color",
                     "label": "لون النص الأساسي",
-                    "value": "#050505"
+                    "value": "#1A1613"
                 },
                 {
                     "id": "secondary_color",
                     "type": "string",
                     "format": "color",
                     "label": "لون النص الثانوي",
-                    "value": "#525252"
+                    "value": "#6B6259"
                 },
                 {
                     "id": "border_color",
                     "type": "string",
                     "format": "color",
                     "label": "لون الحدود",
-                    "value": "#E9E9E9"
+                    "value": "#E6DED4"
                 },
                 {
                     "id": "brand_color",
                     "type": "string",
                     "format": "color",
                     "label": "لون العلامة التجارية",
-                    "value": "#0071E3"
+                    "value": "#B4643C"
                 },
                 {
                     "id": "section_title",
                     "type": "string",
                     "format": "text",
                     "label": "عنوان القسم",
-                    "value": "المواصفات التقنية"
+                    "value": "دليل المقاسات"
                 },
                 {
                     "id": "section_subtitle",
@@ -860,7 +973,7 @@
                     "label": "النص الفرعي",
                     "rows": 2,
                     "required": false,
-                    "value": "يتميز جهاز MacBook Air بخفة الوزن الفائقة وسمك يزيد قليلاً عن سنتيمتر واحد، وهو يتناسب بسهولة مع حياتك وقد تم تصميمه مع وضع الكوكب في الاعتبار."
+                    "value": "جميع القياسات بالسنتيمتر ومأخوذة من القطعة مسطّحة، بهامش اختلاف ±1 سم. إذا كان قياسك بين مقاسين، ننصحك باختيار المقاس الأكبر للحصول على قصّة مريحة."
                 },
                 {
                     "id": "rows",
@@ -872,48 +985,70 @@
                     "maxLength": 20,
                     "value": [
                         {
-                            "header": "معلومات اساسية:",
-                            "col1_title": "اسم المنتج",
-                            "col1_value": "ون بلس نورد بودز 2",
-                            "col2_title": "اسم المنتج",
-                            "col2_value": "ون بلس نورد بودز 2",
-                            "col3_title": "اسم المنتج",
-                            "col3_value": "ون بلس نورد بودز 2",
-                            "col4_title": "اسم المنتج",
-                            "col4_value": "ون بلس نورد بودز 2"
+                            "header": "المقاس S:",
+                            "col1_title": "الصدر",
+                            "col1_value": "96 سم",
+                            "col2_title": "طول الجسم",
+                            "col2_value": "68 سم",
+                            "col3_title": "عرض الكتف",
+                            "col3_value": "43 سم",
+                            "col4_title": "طول الكم",
+                            "col4_value": "20 سم"
                         },
                         {
-                            "header": "معلومات اساسية:",
-                            "col1_title": "اسم المنتج",
-                            "col1_value": "ون بلس نورد بودز 2",
-                            "col2_title": "اسم المنتج",
-                            "col2_value": "ون بلس نورد بودز 2",
-                            "col3_title": "اسم المنتج",
-                            "col3_value": "ون بلس نورد بودز 2",
-                            "col4_title": "اسم المنتج",
-                            "col4_value": "ون بلس نورد بودز 2"
+                            "header": "المقاس M:",
+                            "col1_title": "الصدر",
+                            "col1_value": "102 سم",
+                            "col2_title": "طول الجسم",
+                            "col2_value": "70 سم",
+                            "col3_title": "عرض الكتف",
+                            "col3_value": "45 سم",
+                            "col4_title": "طول الكم",
+                            "col4_value": "21 سم"
                         },
                         {
-                            "header": "معلومات اساسية:",
-                            "col1_title": "اسم المنتج",
-                            "col1_value": "ون بلس نورد بودز 2",
-                            "col2_title": "",
-                            "col2_value": "",
-                            "col3_title": "",
-                            "col3_value": "",
-                            "col4_title": "",
-                            "col4_value": ""
+                            "header": "المقاس L:",
+                            "col1_title": "الصدر",
+                            "col1_value": "108 سم",
+                            "col2_title": "طول الجسم",
+                            "col2_value": "72 سم",
+                            "col3_title": "عرض الكتف",
+                            "col3_value": "47 سم",
+                            "col4_title": "طول الكم",
+                            "col4_value": "22 سم"
                         },
                         {
-                            "header": "معلومات اساسية:",
-                            "col1_title": "اسم المنتج",
-                            "col1_value": "ون بلس نورد بودز 2",
-                            "col2_title": "",
-                            "col2_value": "",
-                            "col3_title": "",
-                            "col3_value": "",
-                            "col4_title": "",
-                            "col4_value": ""
+                            "header": "المقاس XL:",
+                            "col1_title": "الصدر",
+                            "col1_value": "114 سم",
+                            "col2_title": "طول الجسم",
+                            "col2_value": "74 سم",
+                            "col3_title": "عرض الكتف",
+                            "col3_value": "49 سم",
+                            "col4_title": "طول الكم",
+                            "col4_value": "23 سم"
+                        },
+                        {
+                            "header": "المقاس 2XL:",
+                            "col1_title": "الصدر",
+                            "col1_value": "120 سم",
+                            "col2_title": "طول الجسم",
+                            "col2_value": "76 سم",
+                            "col3_title": "عرض الكتف",
+                            "col3_value": "51 سم",
+                            "col4_title": "طول الكم",
+                            "col4_value": "24 سم"
+                        },
+                        {
+                            "header": "الخامة والعناية:",
+                            "col1_title": "التركيب",
+                            "col1_value": "قطن مُمشّط 100%",
+                            "col2_title": "وزن النسيج",
+                            "col2_value": "240 غم/م²",
+                            "col3_title": "الغسيل",
+                            "col3_value": "30° برنامج لطيف",
+                            "col4_title": "الكي",
+                            "col4_value": "حرارة متوسطة"
                         }
                     ],
                     "fields": [
@@ -985,10 +1120,10 @@
             ]
         },
         {
-            "title": "قسم العروض الخاصة",
+            "title": "عروض الأطقم",
             "icon": "sicon-discount",
             "name": "st-offers",
-            "key": "8b9c0d1e-2f3a-4b5c-6d7e-8f9a0b1c2d3e",
+            "key": "35775178-4123-48bd-af60-59c45422f802",
             "image": "https://cdn.salla.network/images/themes/raed/preview-images/getting-started.png",
             "fields": [
                 {
@@ -1003,21 +1138,21 @@
                     "type": "string",
                     "format": "color",
                     "label": "اللون الأساسي",
-                    "value": "#050505"
+                    "value": "#1A1613"
                 },
                 {
                     "id": "brand_color",
                     "type": "string",
                     "format": "color",
                     "label": "لون العلامة التجارية",
-                    "value": "#0071E3"
+                    "value": "#B4643C"
                 },
                 {
                     "id": "secondary_color",
                     "type": "string",
                     "format": "color",
                     "label": "لون النص الثانوي",
-                    "value": "#525252"
+                    "value": "#6B6259"
                 },
                 {
                     "id": "green_color",
@@ -1038,7 +1173,7 @@
                     "type": "string",
                     "format": "text",
                     "label": "عنوان القسم",
-                    "value": "اختر ما يناسبك من أفضل عروضنا."
+                    "value": "اختر الطقم الذي يناسب خزانتك."
                 },
                 {
                     "id": "section_subtitle",
@@ -1047,14 +1182,14 @@
                     "label": "النص الفرعي",
                     "rows": 2,
                     "required": false,
-                    "value": "يتميز جهاز MacBook Air بخفة الوزن الفائقة وسمك يزيد قليلاً عن سنتيمتر واحد، وهو يتناسب بسهولة مع حياتك وقد تم تصميمه مع وضع الكوكب في الاعتبار."
+                    "value": "كل طقم يشمل الشحن المجاني والاستبدال خلال 14 يوماً. اختر ألوانك ومقاساتك بعد إضافة الطقم إلى العربة."
                 },
                 {
                     "id": "badge_label",
                     "type": "string",
                     "format": "text",
                     "label": "نص الشارة",
-                    "value": "اختر من أفضل العروض",
+                    "value": "عروض الموسم",
                     "required": false
                 },
                 {
@@ -1070,7 +1205,7 @@
                     "type": "string",
                     "format": "text",
                     "label": "نص زر الشراء",
-                    "value": "اشتري الآن"
+                    "value": "أضف إلى العربة"
                 },
                 {
                     "id": "offers",
@@ -1082,28 +1217,25 @@
                     "maxLength": 3,
                     "value": [
                         {
-                            "image": "/assets/airpods.jpeg",
-                            "name": "اير بودز برو 3 - لون رمادي",
-                            "price_after": 1990,
-                            "price_before": 2500,
-                            "currency": "ر.س",
-                            "link": "#"
+                            "image": "/assets/clothes/tee-white-product.jpg",
+                            "name": "القطعة الواحدة — تيشيرت قطن مُمشّط",
+                            "price_after": 249,
+                            "price_before": 320,
+                            "currency": "ر.س"
                         },
                         {
-                            "image": "/assets/airpods.jpeg",
-                            "name": "اير بودز برو 3 - لون رمادي",
-                            "price_after": 1990,
-                            "price_before": 2500,
-                            "currency": "ر.س",
-                            "link": "#"
+                            "image": "/assets/clothes/rack-colorful.jpg",
+                            "name": "طقم الأساسيات — 3 تيشيرتات بألوانك",
+                            "price_after": 599,
+                            "price_before": 960,
+                            "currency": "ر.س"
                         },
                         {
-                            "image": "/assets/airpods.jpeg",
-                            "name": "اير بودز برو 3 - لون رمادي",
-                            "price_after": 1990,
-                            "price_before": 2500,
-                            "currency": "ر.س",
-                            "link": "#"
+                            "image": "/assets/clothes/flatlay-outfit.jpg",
+                            "name": "الإطلالة الكاملة — تيشيرت وجينز وجاكيت",
+                            "price_after": 899,
+                            "price_before": 1340,
+                            "currency": "ر.س"
                         }
                     ],
                     "fields": [
@@ -1155,99 +1287,10 @@
             ]
         },
         {
-            "title": "معرض الصور المتحرك",
-            "icon": "sicon-images",
-            "name": "st-images-slider",
-            "key": "9c0d1e2f-3a4b-5c6d-7e8f-9a0b1c2d3e4f",
-            "image": "https://cdn.salla.network/images/themes/raed/preview-images/getting-started.png",
-            "fields": [
-                {
-                    "id": "bg_color",
-                    "type": "string",
-                    "format": "color",
-                    "label": "لون الخلفية",
-                    "value": "#ffffff"
-                },
-                {
-                    "id": "primary_color",
-                    "type": "string",
-                    "format": "color",
-                    "label": "لون النص",
-                    "value": "#050505"
-                },
-                {
-                    "id": "brand_color",
-                    "type": "string",
-                    "format": "color",
-                    "label": "لون العلامة التجارية",
-                    "value": "#0071E3"
-                },
-                {
-                    "id": "section_title",
-                    "type": "string",
-                    "format": "text",
-                    "label": "عنوان القسم",
-                    "value": "قم برفع مستوى روتين اللياقة البدنية الخاص بك مع Fitbit Premium."
-                },
-                {
-                    "id": "images",
-                    "type": "collection",
-                    "format": "collection",
-                    "label": "الصور",
-                    "item_label": "صورة",
-                    "minLength": 1,
-                    "maxLength": 10,
-                    "value": [
-                        {
-                            "src": "/assets/person-with-airpod-side.jpeg",
-                            "title": "تجربة مذهلة"
-                        },
-                        {
-                            "src": "/assets/person-with-airpod-side-2.jpeg",
-                            "title": "صوت مثالي"
-                        },
-                        {
-                            "src": "/assets/person-with-airpod-front.jpeg",
-                            "title": "راحة فائقة"
-                        },
-                        {
-                            "src": "/assets/person-wearing-airpod.jpeg",
-                            "title": "لحظة إبداعية"
-                        },
-                        {
-                            "src": "/assets/happy-person-with-airpods.jpeg",
-                            "title": "يوم مثالي"
-                        },
-                        {
-                            "src": "/assets/airpods-laptop.png",
-                            "title": "في كل مكان"
-                        }
-                    ],
-                    "fields": [
-                        {
-                            "id": "src",
-                            "type": "string",
-                            "format": "image",
-                            "label": "الصورة",
-                            "required": true
-                        },
-                        {
-                            "id": "title",
-                            "type": "string",
-                            "format": "text",
-                            "label": "عنوان الصورة",
-                            "maxLength": 80,
-                            "required": false
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "title": "قسم آراء العملاء",
+            "title": "آراء العملاء",
             "icon": "sicon-quote-close",
             "name": "st-reviews",
-            "key": "0d1e2f3a-4b5c-6d7e-8f9a-0b1c2d3e4f5a",
+            "key": "565edeed-91d5-4c77-8cf4-1d378a1f41a1",
             "image": "https://cdn.salla.network/images/themes/raed/preview-images/getting-started.png",
             "fields": [
                 {
@@ -1262,28 +1305,28 @@
                     "type": "string",
                     "format": "color",
                     "label": "لون النص الأساسي",
-                    "value": "#050505"
+                    "value": "#1A1613"
                 },
                 {
                     "id": "brand_color",
                     "type": "string",
                     "format": "color",
                     "label": "لون العلامة التجارية",
-                    "value": "#0071E3"
+                    "value": "#B4643C"
                 },
                 {
                     "id": "secondary_color",
                     "type": "string",
                     "format": "color",
                     "label": "لون النص الثانوي",
-                    "value": "#525252"
+                    "value": "#6B6259"
                 },
                 {
                     "id": "shade_color",
                     "type": "string",
                     "format": "color",
                     "label": "لون خلفية الترقيم",
-                    "value": "rgba(0,0,0,0.04)"
+                    "value": "rgba(26,22,19,0.04)"
                 },
                 {
                     "id": "section_icon",
@@ -1304,7 +1347,7 @@
                     "type": "string",
                     "format": "text",
                     "label": "العنوان الفرعي",
-                    "value": "تجارب ملهمة من عملائنا"
+                    "value": "تجارب حقيقية من خزائن عملائنا"
                 },
                 {
                     "id": "prev_icon",
@@ -1330,36 +1373,44 @@
                     "maxLength": 10,
                     "value": [
                         {
-                            "body": "نحن نحب كان مصممونا يستخدمونه في مشاريعهم، لذا كان العملاء يعرفون بالفعل ما هو وكيفية استخدامه. نحن نحب كان مصممونا يستخدمونه في مشاريعهم، لذا كان العملاء يعرفون بالفعل ما هو وكيفية استخدامه. نحن نحب كان مصممونا يستخدمونه في مشاريعهم، لذا كان العملاء يعرفون بالفعل ما هو وكيفية استخدامه. نحن نحب كان مصممونا يستخدمونه في مشاريعهم، لذا كان العملاء يعرفون بالفعل ما هو وكيفية استخدامه.",
-                            "user": "الشيخ محمد ابو زيد",
-                            "stars": 4.8,
-                            "audio_url": "/assets/Al-Fatiha.mp3",
-                            "media_type": "video",
-                            "media_src": "/assets/hero-video.mp4"
-                        },
-                        {
-                            "body": "نحن نحب كان مصممونا يستخدمونه في مشاريعهم، لذا كان العملاء يعرفون بالفعل ما هو وكيفية استخدامه.",
-                            "user": "الشيخ محمد ابو زيد",
-                            "stars": 4.5,
-                            "audio_url": "",
-                            "media_type": "iframe",
-                            "media_src": "https://www.youtube.com/embed/ZY-aR1xi9Hs"
-                        },
-                        {
-                            "body": "نحن نحب كان مصممونا يستخدمونه في مشاريعهم، لذا كان العملاء يعرفون بالفعل ما هو وكيفية استخدامه.",
-                            "user": "الشيخ محمد ابو زيد",
-                            "stars": 4,
-                            "audio_url": "",
-                            "media_type": "iframe",
-                            "media_src": "https://www.openstreetmap.org/export/embed.html?bbox=-0.004017949104309083%2C51.47612752641776%2C0.00030577182769775396%2C51.478569861898606&layer=mapnik"
-                        },
-                        {
-                            "body": "نحن نحب كان مصممونا يستخدمونه في مشاريعهم، لذا كان العملاء يعرفون بالفعل ما هو وكيفية استخدامه.",
-                            "user": "الشيخ محمد ابو زيد",
-                            "stars": 4.1,
+                            "body": "طلبت مقاس M حسب الجدول وجاء مضبوط تماماً على القياس. الخامة سميكة بشكل مريح — ليست شفافة أبداً مثل التيشيرتات الرخيصة. غسلته أربع مرات حتى الآن ولم ينكمش ولا فقد لونه الأسود. أول مرة أطلب قطعة أونلاين وتجي مثل الصور بالضبط.",
+                            "user": "نورة العتيبي",
+                            "stars": 5,
                             "audio_url": "",
                             "media_type": "image",
-                            "media_src": "/assets/happy-person-with-airpods.jpeg"
+                            "media_src": "/assets/clothes/worn-black-tee.jpg"
+                        },
+                        {
+                            "body": "اشتريت طقم الأساسيات الثلاثة بعد تردد طويل، والصراحة صار خياري اليومي. القصّة مستقيمة ولا تشد عند البطن، وهذا بالضبط اللي كنت أدور عليه. الكم بطول مثالي لا قصير ولا طويل. الشحن وصلني خلال يومين فقط للرياض.",
+                            "user": "عبدالله القحطاني",
+                            "stars": 5,
+                            "audio_url": "",
+                            "media_type": "image",
+                            "media_src": "/assets/clothes/worn-white-tee.jpg"
+                        },
+                        {
+                            "body": "اللون الكراميل أجمل بكثير على الطبيعة من الصورة. طلبت مقاسي المعتاد S وكان واسع شوي عليّ، فاستبدلته بدون أي رسوم والعملية أخذت ثلاثة أيام فقط. خدمة العملاء ردت عليّ خلال دقائق. تجربة مريحة من أولها لآخرها.",
+                            "user": "لمى الشهري",
+                            "stars": 4.5,
+                            "audio_url": "",
+                            "media_type": "image",
+                            "media_src": "/assets/clothes/worn-tan-jacket.jpg"
+                        },
+                        {
+                            "body": "القميص الأزرق صار قطعتي الرسمية المفضلة للدوام. الياقة تحافظ على شكلها طول اليوم ولا تترهل، والكي سهل جداً — تقريباً يخرج من الغسالة مستوي. الطباعة الداخلية بدل العلامة فكرة ذكية، ما عدت أحس بشي يخربش رقبتي.",
+                            "user": "فيصل الدوسري",
+                            "stars": 5,
+                            "audio_url": "",
+                            "media_type": "image",
+                            "media_src": "/assets/clothes/worn-blue-shirt.jpg"
+                        },
+                        {
+                            "body": "طلبت الكنزة البرتقالية لبنتي والطقم للولد. الخامة نفسها المذكورة بالوصف تماماً — قطن ناعم ما يهيّج بشرة الأطفال. المقاسات جاءت مضبوطة حسب الجدول، وهذا نادر بصراحة مع ملابس الأطفال أونلاين.",
+                            "user": "هند المطيري",
+                            "stars": 5,
+                            "audio_url": "",
+                            "media_type": "image",
+                            "media_src": "/assets/clothes/worn-kids-outfit.jpg"
                         }
                     ],
                     "fields": [
@@ -1419,7 +1470,7 @@
             "title": "تذييل الصفحة",
             "icon": "sicon-footer",
             "name": "st-footer",
-            "key": "1e2f3a4b-5c6d-7e8f-9a0b-1c2d3e4f5a6b",
+            "key": "52cc5498-346e-4ea4-9f95-ad5646d36123",
             "image": "https://cdn.salla.network/images/themes/raed/preview-images/getting-started.png",
             "fields": [
                 {
@@ -1427,7 +1478,7 @@
                     "type": "string",
                     "format": "color",
                     "label": "لون الخلفية",
-                    "value": "#050505"
+                    "value": "#14100D"
                 },
                 {
                     "id": "bottom_bg_color",
@@ -1448,14 +1499,14 @@
                     "type": "string",
                     "format": "color",
                     "label": "لون العلامة التجارية",
-                    "value": "#0071E3"
+                    "value": "#B4643C"
                 },
                 {
                     "id": "newsletter_title",
                     "type": "string",
                     "format": "text",
                     "label": "عنوان النشرة البريدية",
-                    "value": "اشترك في نشرتنا الإخبارية الآن!"
+                    "value": "كن أول من يعرف بالمجموعة القادمة!"
                 },
                 {
                     "id": "newsletter_subtitle",
@@ -1464,7 +1515,7 @@
                     "label": "النص الفرعي للنشرة البريدية",
                     "rows": 2,
                     "required": false,
-                    "value": "استمتع بمزايا فريدة تقدمها متجرنا لتلبي احتياجاتك بأسلوب لا مثيل له. نحن نقدم مجموعة من المزايا التي تجعل تجربة التسوق لدينا استثنائية."
+                    "value": "اشترك لتصلك المجموعات الجديدة قبل نفادها، ودعوات التخفيضات الخاصة، ونصائح العناية بقطعك حتى تدوم أطول. رسالة واحدة كل أسبوع فقط — بلا إزعاج."
                 },
                 {
                     "id": "newsletter_placeholder",
@@ -1486,7 +1537,7 @@
                     "type": "string",
                     "format": "text",
                     "label": "نص زر الاشتراك",
-                    "value": "اشترها الأن"
+                    "value": "اشترك الآن"
                 },
                 {
                     "id": "newsletter_button_icon",
@@ -1501,7 +1552,7 @@
                     "type": "string",
                     "format": "text",
                     "label": "اسم المتجر",
-                    "value": "متجر تجريبي"
+                    "value": "أتيليه للأزياء"
                 },
                 {
                     "id": "store_description",
@@ -1509,7 +1560,7 @@
                     "format": "textarea",
                     "label": "وصف المتجر",
                     "rows": 3,
-                    "value": "متجر سلة من افضل المتاجر التى تقوم ببيع المنتجات الرقمية بأفضل الاسعار وماركات عالمية تسوق الان واطلع على المزيد من التصاميم واستمتع بأفضل العروض والخصومات"
+                    "value": "متجر سعودي متخصص في الملابس القطنية اليومية للرجال والنساء والأطفال. نصنع قطعاً بخامات مختارة وقصّات مدروسة، بأسعار عادلة وسياسة استبدال مريحة."
                 },
                 {
                     "id": "nav_columns",
@@ -1520,55 +1571,37 @@
                     "maxLength": 6,
                     "value": [
                         {
-                            "header": "تواصل معنا",
-                            "link1_label": "8001111210",
-                            "link1_href": "#",
-                            "link2_label": "ThemeMatjar",
+                            "header": "تسوّق",
+                            "link1_label": "ملابس رجالية",
+                            "link1_href": "#st-variants",
+                            "link2_label": "ملابس نسائية",
+                            "link2_href": "#st-images-slider",
+                            "link3_label": "ملابس أطفال",
+                            "link3_href": "#st-product-images"
+                        },
+                        {
+                            "header": "المساعدة",
+                            "link1_label": "دليل المقاسات",
+                            "link1_href": "#st-specification",
+                            "link2_label": "سياسة الاستبدال والإرجاع",
                             "link2_href": "#",
-                            "link3_label": "sallathemes@gmail.com",
+                            "link3_label": "تتبع شحنتك",
+                            "link3_href": "#"
+                        },
+                        {
+                            "header": "العناية بالقطعة",
+                            "link1_label": "تعليمات الغسيل",
+                            "link1_href": "#st-feature",
+                            "link2_label": "كيف تختار مقاسك",
+                            "link2_href": "#st-specification",
+                            "link3_label": "الأسئلة الشائعة",
                             "link3_href": "#"
                         },
                         {
                             "header": "تواصل معنا",
                             "link1_label": "8001111210",
                             "link1_href": "#",
-                            "link2_label": "ThemeMatjar",
-                            "link2_href": "#",
-                            "link3_label": "sallathemes@gmail.com",
-                            "link3_href": "#"
-                        },
-                        {
-                            "header": "تواصل معنا",
-                            "link1_label": "8001111210",
-                            "link1_href": "#",
-                            "link2_label": "ThemeMatjar",
-                            "link2_href": "#",
-                            "link3_label": "sallathemes@gmail.com",
-                            "link3_href": "#"
-                        },
-                        {
-                            "header": "تواصل معنا",
-                            "link1_label": "8001111210",
-                            "link1_href": "#",
-                            "link2_label": "ThemeMatjar",
-                            "link2_href": "#",
-                            "link3_label": "sallathemes@gmail.com",
-                            "link3_href": "#"
-                        },
-                        {
-                            "header": "تواصل معنا",
-                            "link1_label": "8001111210",
-                            "link1_href": "#",
-                            "link2_label": "ThemeMatjar",
-                            "link2_href": "#",
-                            "link3_label": "sallathemes@gmail.com",
-                            "link3_href": "#"
-                        },
-                        {
-                            "header": "تواصل معنا",
-                            "link1_label": "8001111210",
-                            "link1_href": "#",
-                            "link2_label": "ThemeMatjar",
+                            "link2_label": "واتساب المتجر",
                             "link2_href": "#",
                             "link3_label": "sallathemes@gmail.com",
                             "link3_href": "#"
@@ -1784,24 +1817,6 @@
                     ]
                 }
             ]
-        }
-    ],
-    "templates": [
-        {
-            "id": "06d8fe70-741f-4810-831d-cebb2d95345d",
-            "path": "templates.airpods",
-            "category_id": "1939592358",
-            "primary_color": "",
-            "thumbnail": "templates-thumbs/airpods.jpg",
-            "is_default": true
-        },
-        {
-            "id": "794f125a-f892-4ce7-b8a8-c2502171e664",
-            "path": "templates.clothes",
-            "category_id": "814202285",
-            "primary_color": "#B4643C",
-            "thumbnail": "templates-thumbs/clothes.jpg",
-            "is_default": false
         }
     ]
 }

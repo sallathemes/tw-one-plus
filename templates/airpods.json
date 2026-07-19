@@ -1,0 +1,1776 @@
+{
+  "id": "06d8fe70-741f-4810-831d-cebb2d95345d",
+  "components": [
+    {
+      "title": "قسم البطل",
+      "icon": "sicon-image-landscape",
+      "name": "st-hero",
+      "key": "1a2b3c4d-5e6f-7a8b-9c0d-1e2f3a4b5c6d",
+      "image": "https://cdn.salla.network/images/themes/raed/preview-images/getting-started.png",
+      "fields": [
+        {
+          "id": "bg_color",
+          "type": "string",
+          "format": "color",
+          "label": "لون الخلفية",
+          "value": "#050505"
+        },
+        {
+          "id": "text_color",
+          "type": "string",
+          "format": "color",
+          "label": "لون النص",
+          "value": "#ffffff"
+        },
+        {
+          "id": "brand_color",
+          "type": "string",
+          "format": "color",
+          "label": "لون العلامة التجارية",
+          "value": "#0071E3"
+        },
+        {
+          "id": "overlay_opacity",
+          "type": "number",
+          "format": "slider",
+          "label": "درجة تعتيم الخلفية",
+          "minimum": 0,
+          "maximum": 100,
+          "step": 1,
+          "value": 60
+        },
+        {
+          "id": "title",
+          "type": "string",
+          "format": "text",
+          "label": "العنوان الرئيسي",
+          "required": true,
+          "maxLength": 150,
+          "value": "ايـر بـودز جديدة بقوة العزل المضاعفة."
+        },
+        {
+          "id": "subtitle",
+          "type": "string",
+          "format": "textarea",
+          "label": "النص الفرعي",
+          "rows": 3,
+          "value": "أداء رهيب. شاشات مذهلة بتطورها. اتصال لاسلكي فائق السرعة. قدرات أكبر لقلم Apple. ميزات قوية وجديدة في iPadOS. إنه iPad بأعلى مستوى من الإمكانيات.أداء رهيب. شاشات مذهلة بتطورها. أداء رهيب. شاشات مذهلة بتطورها. اتصال لاسلكي فائق السرعة. قدرات أكبر لقلم Apple. ميزات قوية وجديدة في iPadOS. إنه iPad بأعلى مستوى من الإمكانيات.أداء رهيب. شاشات مذهلة بتطورها."
+        },
+        {
+          "id": "button_label",
+          "type": "string",
+          "format": "text",
+          "label": "نص زر الشراء",
+          "value": "إشتر الآن ب"
+        },
+        {
+          "id": "button_price",
+          "type": "string",
+          "format": "text",
+          "label": "سعر زر الشراء",
+          "value": "199 ر.س"
+        },
+        {
+          "id": "button_link",
+          "type": "string",
+          "format": "text",
+          "label": "رابط زر الشراء",
+          "value": "#st-offers"
+        },
+        {
+          "id": "video_url",
+          "type": "string",
+          "format": "url",
+          "label": "رابط الفيديو الخلفي",
+          "required": false,
+          "value": "/assets/hero-video.mp4"
+        },
+        {
+          "id": "bg_image",
+          "type": "string",
+          "format": "image",
+          "label": "صورة الخلفية (بديل الفيديو)",
+          "required": false,
+          "value": ""
+        },
+        {
+          "id": "logo",
+          "type": "string",
+          "format": "image",
+          "label": "الشعار",
+          "required": false,
+          "value": "/assets/logo.svg"
+        },
+        {
+          "id": "store_name",
+          "type": "string",
+          "format": "text",
+          "label": "اسم المتجر",
+          "value": "oneplus"
+        },
+        {
+          "id": "nav1_label",
+          "type": "string",
+          "format": "text",
+          "label": "الرابط الأول - النص",
+          "value": "مواصفات المنتج"
+        },
+        {
+          "id": "nav1_href",
+          "type": "string",
+          "format": "text",
+          "label": "الرابط الأول - الوجهة",
+          "value": "#st-cards"
+        },
+        {
+          "id": "nav2_label",
+          "type": "string",
+          "format": "text",
+          "label": "الرابط الثاني - النص",
+          "value": "لماذا اير بودز"
+        },
+        {
+          "id": "nav2_href",
+          "type": "string",
+          "format": "text",
+          "label": "الرابط الثاني - الوجهة",
+          "value": "#st-feature"
+        },
+        {
+          "id": "nav3_label",
+          "type": "string",
+          "format": "text",
+          "label": "الرابط الثالث - النص",
+          "value": "لمحة عامة"
+        },
+        {
+          "id": "nav3_href",
+          "type": "string",
+          "format": "text",
+          "label": "الرابط الثالث - الوجهة",
+          "value": "#st-demo"
+        },
+        {
+          "id": "nav4_label",
+          "type": "string",
+          "format": "text",
+          "label": "الرابط الرابع - النص",
+          "value": "المواصفات التقنية"
+        },
+        {
+          "id": "nav4_href",
+          "type": "string",
+          "format": "text",
+          "label": "الرابط الرابع - الوجهة",
+          "value": "#st-specification"
+        }
+      ]
+    },
+    {
+      "title": "قسم مميزات المنتج - بطاقات",
+      "icon": "sicon-layout-grid",
+      "name": "st-cards",
+      "key": "2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e",
+      "image": "https://cdn.salla.network/images/themes/raed/preview-images/getting-started.png",
+      "fields": [
+        {
+          "id": "bg_color",
+          "type": "string",
+          "format": "color",
+          "label": "لون الخلفية",
+          "value": "#ffffff"
+        },
+        {
+          "id": "primary_color",
+          "type": "string",
+          "format": "color",
+          "label": "اللون الأساسي",
+          "value": "#050505"
+        },
+        {
+          "id": "brand_color",
+          "type": "string",
+          "format": "color",
+          "label": "لون العلامة التجارية",
+          "value": "#0071E3"
+        },
+        {
+          "id": "section_title",
+          "type": "string",
+          "format": "text",
+          "label": "عنوان القسم",
+          "value": "مميزات المنتج"
+        },
+        {
+          "id": "section_image",
+          "type": "string",
+          "format": "image",
+          "label": "صورة القسم الرئيسية",
+          "required": false,
+          "value": "/assets/airpod-skateboard.jpeg"
+        },
+        {
+          "id": "cards",
+          "type": "collection",
+          "format": "collection",
+          "label": "البطاقات",
+          "item_label": "بطاقة",
+          "minLength": 1,
+          "maxLength": 6,
+          "value": [
+            {
+              "icon": "sicon-battery-charge",
+              "title": "بطارية تدوم 30 ساعة",
+              "body": "استمتع بالموسيقى طوال اليوم مع شحن سريع — 5 دقائق تمنحك ساعة استماع كاملة."
+            },
+            {
+              "icon": "sicon-ear",
+              "title": "إلغاء الضوضاء الفعّال",
+              "body": "تقنية متقدمة تحجب ضجيج الخلفية بنسبة تصل إلى 99% لتجربة صوتية نقية تماماً."
+            },
+            {
+              "icon": "sicon-pause",
+              "title": "الإيقاف المؤقت والتشغيل التلقائي",
+              "body": "يكتشف جهازك ويوقف تشغيل الصوت تلقائياً عند إزالة السماعة من أذنك."
+            },
+            {
+              "icon": "sicon-shield-check",
+              "title": "مقاوم للماء والعرق",
+              "body": "تصميم مقاوم للماء IPX4 يناسب التمارين الرياضية والاستخدام اليومي في أي ظرف."
+            },
+            {
+              "icon": "sicon-bluetooth",
+              "title": "اتصال لاسلكي فائق السرعة",
+              "body": "تقنية Bluetooth المتقدمة تضمن اتصالاً فورياً بجميع أجهزتك بنقرة واحدة."
+            },
+            {
+              "icon": "sicon-audio-wave",
+              "title": "صوت محيطي ثلاثي الأبعاد",
+              "body": "تقنية الصوت المكاني تنقل المؤثرات الصوتية حولك لتجربة سينمائية حقيقية."
+            }
+          ],
+          "fields": [
+            {
+              "id": "icon",
+              "type": "string",
+              "format": "icon",
+              "label": "الأيقونة",
+              "value": "sicon-pause"
+            },
+            {
+              "id": "title",
+              "type": "string",
+              "format": "text",
+              "label": "عنوان البطاقة",
+              "required": true,
+              "maxLength": 100
+            },
+            {
+              "id": "body",
+              "type": "string",
+              "format": "textarea",
+              "label": "نص البطاقة",
+              "maxLength": 300
+            }
+          ]
+        },
+        {
+          "id": "footer_button_label",
+          "type": "string",
+          "format": "text",
+          "label": "نص الزر السفلي",
+          "value": "عرض التفاصيل التقنية"
+        },
+        {
+          "id": "footer_button_href",
+          "type": "string",
+          "format": "text",
+          "label": "رابط الزر السفلي",
+          "value": "#st-feature"
+        }
+      ]
+    },
+    {
+      "title": "قسم تفصيل الميزة",
+      "icon": "sicon-star",
+      "name": "st-feature",
+      "key": "3c4d5e6f-7a8b-9c0d-1e2f-3a4b5c6d7e8f",
+      "image": "https://cdn.salla.network/images/themes/raed/preview-images/getting-started.png",
+      "fields": [
+        {
+          "id": "bg_color",
+          "type": "string",
+          "format": "color",
+          "label": "لون الخلفية",
+          "value": "#ffffff"
+        },
+        {
+          "id": "shade_color",
+          "type": "string",
+          "format": "color",
+          "label": "لون الخلفية الداخلية",
+          "value": "#F7F7F7"
+        },
+        {
+          "id": "primary_color",
+          "type": "string",
+          "format": "color",
+          "label": "لون النص",
+          "value": "#050505"
+        },
+        {
+          "id": "brand_color",
+          "type": "string",
+          "format": "color",
+          "label": "لون العلامة التجارية",
+          "value": "#0071E3"
+        },
+        {
+          "id": "icon",
+          "type": "string",
+          "format": "icon",
+          "label": "الأيقونة",
+          "value": "sicon-signal-range"
+        },
+        {
+          "id": "title",
+          "type": "string",
+          "format": "text",
+          "label": "العنوان",
+          "required": true,
+          "maxLength": 150,
+          "value": "قم برفع مستوى روتين اللياقة البدنية الخاص بك مع Fitbit Premium."
+        },
+        {
+          "id": "body1",
+          "type": "string",
+          "format": "textarea",
+          "label": "الفقرة الأولى",
+          "rows": 3,
+          "value": "يتميز جهاز MacBook Air بخفة الوزن الفائقة وسمك يزيد قليلاً عن سنتيمتر واحد، وهو يتناسب بسهولة مع حياتك وقد تم تصميمه مع وضع الكوكب في الاعتبار."
+        },
+        {
+          "id": "body2",
+          "type": "string",
+          "format": "textarea",
+          "label": "الفقرة الثانية",
+          "rows": 3,
+          "required": false,
+          "value": "تم تصنيع جهاز MacBook Air المزود بـ M3 من مواد معاد تدويرها بنسبة 50 بالمائة، وهي الأولى من نوعها التي تقدمها Apple. وتتميز جميع أجهزة الكمبيوتر المحمولة MacBook Air بغلاف متين من الألومنيوم المعاد تدويره."
+        },
+        {
+          "id": "button_label",
+          "type": "string",
+          "format": "text",
+          "label": "نص الزر",
+          "value": "اشترها الآن"
+        },
+        {
+          "id": "button_link",
+          "type": "string",
+          "format": "text",
+          "label": "رابط الزر",
+          "value": "#st-offers"
+        },
+        {
+          "id": "button_icon",
+          "type": "string",
+          "format": "icon",
+          "label": "أيقونة الزر",
+          "value": "sicon-caret-left-double",
+          "required": false
+        },
+        {
+          "id": "side_image",
+          "type": "string",
+          "format": "image",
+          "label": "الصورة الجانبية",
+          "required": false,
+          "value": "/assets/airpods-laptop.png"
+        }
+      ]
+    },
+    {
+      "title": "قسم العرض التفاعلي",
+      "icon": "sicon-rotate-3d",
+      "name": "st-demo",
+      "key": "4d5e6f7a-8b9c-0d1e-2f3a-4b5c6d7e8f9a",
+      "image": "https://cdn.salla.network/images/themes/raed/preview-images/getting-started.png",
+      "fields": [
+        {
+          "id": "bg_color",
+          "type": "string",
+          "format": "color",
+          "label": "لون الخلفية",
+          "value": "#050505"
+        },
+        {
+          "id": "text_color",
+          "type": "string",
+          "format": "color",
+          "label": "لون النص",
+          "value": "#ffffff"
+        },
+        {
+          "id": "brand_color",
+          "type": "string",
+          "format": "color",
+          "label": "لون العلامة التجارية",
+          "value": "#0071E3"
+        },
+        {
+          "id": "panel1_title",
+          "type": "string",
+          "format": "text",
+          "label": "عنوان اللوحة الأولى",
+          "value": "بطارية بعمر اطول."
+        },
+        {
+          "id": "panel1_body1",
+          "type": "string",
+          "format": "textarea",
+          "label": "نص اللوحة الأولى - الفقرة 1",
+          "rows": 3,
+          "value": "يتميز جهاز MacBook Air بخفة الوزن الفائقة وسمك يزيد قليلاً عن سنتيمتر واحد، وهو يتناسب بسهولة مع حياتك وقد تم تصميمه مع وضع الكوكب في الاعتبار."
+        },
+        {
+          "id": "panel1_body2",
+          "type": "string",
+          "format": "textarea",
+          "label": "نص اللوحة الأولى - الفقرة 2",
+          "rows": 3,
+          "required": false,
+          "value": "تم تصنيع جهاز MacBook Air المزود بـ M3 من مواد معاد تدويرها بنسبة 50 بالمائة، وهي الأولى من نوعها التي تقدمها Apple. وتتميز جميع أجهزة الكمبيوتر المحمولة MacBook Air بغلاف متين من الألومنيوم المعاد تدويره."
+        },
+        {
+          "id": "panel1_image",
+          "type": "string",
+          "format": "image",
+          "label": "صورة اللوحة الأولى",
+          "required": false,
+          "value": "/assets/feature-1.png"
+        },
+        {
+          "id": "panel2_title",
+          "type": "string",
+          "format": "text",
+          "label": "عنوان اللوحة الثانية",
+          "value": "بطارية بعمر اطول."
+        },
+        {
+          "id": "panel2_body1",
+          "type": "string",
+          "format": "textarea",
+          "label": "نص اللوحة الثانية - الفقرة 1",
+          "rows": 3,
+          "value": "يتميز جهاز MacBook Air بخفة الوزن الفائقة وسمك يزيد قليلاً عن سنتيمتر واحد، وهو يتناسب بسهولة مع حياتك وقد تم تصميمه مع وضع الكوكب في الاعتبار."
+        },
+        {
+          "id": "panel2_body2",
+          "type": "string",
+          "format": "textarea",
+          "label": "نص اللوحة الثانية - الفقرة 2",
+          "rows": 3,
+          "required": false,
+          "value": "تم تصنيع جهاز MacBook Air المزود بـ M3 من مواد معاد تدويرها بنسبة 50 بالمائة، وهي الأولى من نوعها التي تقدمها Apple. وتتميز جميع أجهزة الكمبيوتر المحمولة MacBook Air بغلاف متين من الألومنيوم المعاد تدويره."
+        },
+        {
+          "id": "panel2_image",
+          "type": "string",
+          "format": "image",
+          "label": "صورة اللوحة الثانية",
+          "required": false,
+          "value": "/assets/feature-1.png"
+        },
+        {
+          "id": "panel2_button_label",
+          "type": "string",
+          "format": "text",
+          "label": "نص زر اللوحة الثانية",
+          "value": "احجزها الآن"
+        },
+        {
+          "id": "panel2_button_link",
+          "type": "string",
+          "format": "text",
+          "label": "رابط زر اللوحة الثانية",
+          "value": "#st-offers"
+        },
+        {
+          "id": "viewer_images",
+          "type": "collection",
+          "format": "collection",
+          "label": "صور العارض الدوار",
+          "item_label": "صورة",
+          "minLength": 1,
+          "maxLength": 6,
+          "value": [
+            {
+              "image": "/assets/airpod.png",
+              "label": "الأمامي"
+            },
+            {
+              "image": "/assets/airpod-side.png",
+              "label": "الأمامي"
+            },
+            {
+              "image": "/assets/airpod.png",
+              "label": "الأمامي"
+            },
+            {
+              "image": "/assets/airpod.png",
+              "label": "الأمامي"
+            },
+            {
+              "image": "/assets/airpod.png",
+              "label": "الأمامي"
+            }
+          ],
+          "fields": [
+            {
+              "id": "image",
+              "type": "string",
+              "format": "image",
+              "label": "الصورة",
+              "required": true
+            },
+            {
+              "id": "label",
+              "type": "string",
+              "format": "text",
+              "label": "التسمية",
+              "maxLength": 50
+            }
+          ]
+        },
+        {
+          "id": "viewer_bg_text",
+          "type": "string",
+          "format": "text",
+          "label": "نص خلفية العارض",
+          "value": "عرض ثلاثي الأبعاد"
+        }
+      ]
+    },
+    {
+      "title": "معرض صور المنتج",
+      "icon": "sicon-album-photo",
+      "name": "st-product-images",
+      "key": "5e6f7a8b-9c0d-1e2f-3a4b-5c6d7e8f9a0b",
+      "image": "https://cdn.salla.network/images/themes/raed/preview-images/getting-started.png",
+      "fields": [
+        {
+          "id": "bg_color",
+          "type": "string",
+          "format": "color",
+          "label": "لون الخلفية",
+          "value": "#ffffff"
+        },
+        {
+          "id": "text_color",
+          "type": "string",
+          "format": "color",
+          "label": "لون النص",
+          "value": "#050505"
+        },
+        {
+          "id": "brand_color",
+          "type": "string",
+          "format": "color",
+          "label": "لون العلامة التجارية",
+          "value": "#0071E3"
+        },
+        {
+          "id": "section_title",
+          "type": "string",
+          "format": "text",
+          "label": "عنوان القسم",
+          "value": "صورة حقيقة من عملائنا"
+        },
+        {
+          "id": "grid_columns",
+          "type": "string",
+          "format": "text",
+          "label": "عدد الأعمدة (2 أو 3)",
+          "value": "2"
+        },
+        {
+          "id": "images",
+          "type": "collection",
+          "format": "collection",
+          "label": "الصور",
+          "item_label": "صورة",
+          "minLength": 1,
+          "maxLength": 6,
+          "value": [
+            {
+              "src": "/assets/product_image_1.jpeg",
+              "alt": "صورة دعائية",
+              "overlay_text": "إير بودز",
+              "overlay_position": "top-right",
+              "always_show": false,
+              "show_overlay_bg": true
+            },
+            {
+              "src": "/assets/product_image_2.jpeg",
+              "alt": "صورة دعائية",
+              "overlay_text": "إير بودز",
+              "overlay_position": "bottom-right",
+              "always_show": true,
+              "show_overlay_bg": true
+            },
+            {
+              "src": "/assets/product_image_3.jpeg",
+              "alt": "صورة دعائية",
+              "overlay_text": "إير بودز",
+              "overlay_position": "top-left",
+              "always_show": true,
+              "show_overlay_bg": true
+            },
+            {
+              "src": "/assets/product_image_4.jpeg",
+              "alt": "صورة دعائية",
+              "overlay_text": "إير بودز",
+              "overlay_position": "bottom-left",
+              "always_show": true,
+              "show_overlay_bg": true
+            }
+          ],
+          "fields": [
+            {
+              "id": "src",
+              "type": "string",
+              "format": "image",
+              "label": "الصورة",
+              "required": true
+            },
+            {
+              "id": "alt",
+              "type": "string",
+              "format": "text",
+              "label": "النص البديل للصورة",
+              "maxLength": 100
+            },
+            {
+              "id": "overlay_text",
+              "type": "string",
+              "format": "text",
+              "label": "نص التراكب",
+              "maxLength": 80,
+              "required": false
+            },
+            {
+              "id": "overlay_position",
+              "type": "string",
+              "format": "text",
+              "label": "موضع التراكب (top-left / top-right / bottom-left / bottom-right)",
+              "value": "bottom-right",
+              "required": false
+            },
+            {
+              "id": "always_show",
+              "type": "boolean",
+              "format": "switch",
+              "label": "إظهار التراكب دائماً",
+              "value": false
+            },
+            {
+              "id": "show_overlay_bg",
+              "type": "boolean",
+              "format": "switch",
+              "label": "إظهار خلفية التراكب",
+              "value": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "قسم ألوان وأنواع المنتج",
+      "icon": "sicon-color-palette",
+      "name": "st-variants",
+      "key": "6f7a8b9c-0d1e-2f3a-4b5c-6d7e8f9a0b1c",
+      "image": "https://cdn.salla.network/images/themes/raed/preview-images/getting-started.png",
+      "fields": [
+        {
+          "id": "bg_color",
+          "type": "string",
+          "format": "color",
+          "label": "لون الخلفية",
+          "value": "#ffffff"
+        },
+        {
+          "id": "primary_color",
+          "type": "string",
+          "format": "color",
+          "label": "اللون الأساسي",
+          "value": "#050505"
+        },
+        {
+          "id": "brand_color",
+          "type": "string",
+          "format": "color",
+          "label": "لون العلامة التجارية",
+          "value": "#0071E3"
+        },
+        {
+          "id": "section_title",
+          "type": "string",
+          "format": "text",
+          "label": "عنوان القسم",
+          "value": "ألوان مميزة وفريدة من نوعها."
+        },
+        {
+          "id": "selector_label",
+          "type": "string",
+          "format": "text",
+          "label": "تسمية اختيار اللون",
+          "value": "اختر من الوان المنتج."
+        },
+        {
+          "id": "variants",
+          "type": "collection",
+          "format": "collection",
+          "label": "المتغيرات",
+          "item_label": "لون",
+          "minLength": 1,
+          "maxLength": 8,
+          "value": [
+            {
+              "product_image": "/assets/variant-white-product.png",
+              "side_image": "/assets/variant-white-lifestyle.png",
+              "color_hex": "#E8E8E8",
+              "color_title": "أبيض"
+            },
+            {
+              "product_image": "/assets/variant-black-product.png",
+              "side_image": "/assets/variant-black-lifestyle.png",
+              "color_hex": "#1D1D1F",
+              "color_title": "أسود"
+            },
+            {
+              "product_image": "/assets/variant-pink-product.png",
+              "side_image": "/assets/variant-pink-lifestyle.png",
+              "color_hex": "#C9948A",
+              "color_title": "وردي"
+            },
+            {
+              "product_image": "/assets/variant-blue-product.png",
+              "side_image": "/assets/variant-blue-lifestyle.png",
+              "color_hex": "#2B5778",
+              "color_title": "أزرق"
+            }
+          ],
+          "fields": [
+            {
+              "id": "product_image",
+              "type": "string",
+              "format": "image",
+              "label": "صورة المنتج",
+              "required": true
+            },
+            {
+              "id": "side_image",
+              "type": "string",
+              "format": "image",
+              "label": "صورة الارتداء",
+              "required": false
+            },
+            {
+              "id": "color_hex",
+              "type": "string",
+              "format": "color",
+              "label": "لون الزر",
+              "value": "#2E3642"
+            },
+            {
+              "id": "color_title",
+              "type": "string",
+              "format": "text",
+              "label": "اسم اللون",
+              "maxLength": 50
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "المواصفات التقنية",
+      "icon": "sicon-layout-grid-rearrange",
+      "name": "st-specification",
+      "key": "7a8b9c0d-1e2f-3a4b-5c6d-7e8f9a0b1c2d",
+      "image": "https://cdn.salla.network/images/themes/raed/preview-images/getting-started.png",
+      "fields": [
+        {
+          "id": "bg_color",
+          "type": "string",
+          "format": "color",
+          "label": "لون الخلفية",
+          "value": "#ffffff"
+        },
+        {
+          "id": "primary_color",
+          "type": "string",
+          "format": "color",
+          "label": "لون النص الأساسي",
+          "value": "#050505"
+        },
+        {
+          "id": "secondary_color",
+          "type": "string",
+          "format": "color",
+          "label": "لون النص الثانوي",
+          "value": "#525252"
+        },
+        {
+          "id": "border_color",
+          "type": "string",
+          "format": "color",
+          "label": "لون الحدود",
+          "value": "#E9E9E9"
+        },
+        {
+          "id": "brand_color",
+          "type": "string",
+          "format": "color",
+          "label": "لون العلامة التجارية",
+          "value": "#0071E3"
+        },
+        {
+          "id": "section_title",
+          "type": "string",
+          "format": "text",
+          "label": "عنوان القسم",
+          "value": "المواصفات التقنية"
+        },
+        {
+          "id": "section_subtitle",
+          "type": "string",
+          "format": "textarea",
+          "label": "النص الفرعي",
+          "rows": 2,
+          "required": false,
+          "value": "يتميز جهاز MacBook Air بخفة الوزن الفائقة وسمك يزيد قليلاً عن سنتيمتر واحد، وهو يتناسب بسهولة مع حياتك وقد تم تصميمه مع وضع الكوكب في الاعتبار."
+        },
+        {
+          "id": "rows",
+          "type": "collection",
+          "format": "collection",
+          "label": "صفوف الجدول",
+          "item_label": "صف",
+          "minLength": 1,
+          "maxLength": 20,
+          "value": [
+            {
+              "header": "معلومات اساسية:",
+              "col1_title": "اسم المنتج",
+              "col1_value": "ون بلس نورد بودز 2",
+              "col2_title": "اسم المنتج",
+              "col2_value": "ون بلس نورد بودز 2",
+              "col3_title": "اسم المنتج",
+              "col3_value": "ون بلس نورد بودز 2",
+              "col4_title": "اسم المنتج",
+              "col4_value": "ون بلس نورد بودز 2"
+            },
+            {
+              "header": "معلومات اساسية:",
+              "col1_title": "اسم المنتج",
+              "col1_value": "ون بلس نورد بودز 2",
+              "col2_title": "اسم المنتج",
+              "col2_value": "ون بلس نورد بودز 2",
+              "col3_title": "اسم المنتج",
+              "col3_value": "ون بلس نورد بودز 2",
+              "col4_title": "اسم المنتج",
+              "col4_value": "ون بلس نورد بودز 2"
+            },
+            {
+              "header": "معلومات اساسية:",
+              "col1_title": "اسم المنتج",
+              "col1_value": "ون بلس نورد بودز 2",
+              "col2_title": "",
+              "col2_value": "",
+              "col3_title": "",
+              "col3_value": "",
+              "col4_title": "",
+              "col4_value": ""
+            },
+            {
+              "header": "معلومات اساسية:",
+              "col1_title": "اسم المنتج",
+              "col1_value": "ون بلس نورد بودز 2",
+              "col2_title": "",
+              "col2_value": "",
+              "col3_title": "",
+              "col3_value": "",
+              "col4_title": "",
+              "col4_value": ""
+            }
+          ],
+          "fields": [
+            {
+              "id": "header",
+              "type": "string",
+              "format": "text",
+              "label": "عنوان الصف",
+              "required": true
+            },
+            {
+              "id": "col1_title",
+              "type": "string",
+              "format": "text",
+              "label": "العمود 1 - التسمية",
+              "required": false
+            },
+            {
+              "id": "col1_value",
+              "type": "string",
+              "format": "text",
+              "label": "العمود 1 - القيمة",
+              "required": false
+            },
+            {
+              "id": "col2_title",
+              "type": "string",
+              "format": "text",
+              "label": "العمود 2 - التسمية",
+              "required": false
+            },
+            {
+              "id": "col2_value",
+              "type": "string",
+              "format": "text",
+              "label": "العمود 2 - القيمة",
+              "required": false
+            },
+            {
+              "id": "col3_title",
+              "type": "string",
+              "format": "text",
+              "label": "العمود 3 - التسمية",
+              "required": false
+            },
+            {
+              "id": "col3_value",
+              "type": "string",
+              "format": "text",
+              "label": "العمود 3 - القيمة",
+              "required": false
+            },
+            {
+              "id": "col4_title",
+              "type": "string",
+              "format": "text",
+              "label": "العمود 4 - التسمية",
+              "required": false
+            },
+            {
+              "id": "col4_value",
+              "type": "string",
+              "format": "text",
+              "label": "العمود 4 - القيمة",
+              "required": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "قسم العروض الخاصة",
+      "icon": "sicon-discount",
+      "name": "st-offers",
+      "key": "8b9c0d1e-2f3a-4b5c-6d7e-8f9a0b1c2d3e",
+      "image": "https://cdn.salla.network/images/themes/raed/preview-images/getting-started.png",
+      "fields": [
+        {
+          "id": "bg_color",
+          "type": "string",
+          "format": "color",
+          "label": "لون الخلفية",
+          "value": "#ffffff"
+        },
+        {
+          "id": "primary_color",
+          "type": "string",
+          "format": "color",
+          "label": "اللون الأساسي",
+          "value": "#050505"
+        },
+        {
+          "id": "brand_color",
+          "type": "string",
+          "format": "color",
+          "label": "لون العلامة التجارية",
+          "value": "#0071E3"
+        },
+        {
+          "id": "secondary_color",
+          "type": "string",
+          "format": "color",
+          "label": "لون النص الثانوي",
+          "value": "#525252"
+        },
+        {
+          "id": "green_color",
+          "type": "string",
+          "format": "color",
+          "label": "لون الشارة",
+          "value": "#20A535"
+        },
+        {
+          "id": "red_color",
+          "type": "string",
+          "format": "color",
+          "label": "لون سعر الخصم",
+          "value": "#F62A33"
+        },
+        {
+          "id": "section_title",
+          "type": "string",
+          "format": "text",
+          "label": "عنوان القسم",
+          "value": "اختر ما يناسبك من أفضل عروضنا."
+        },
+        {
+          "id": "section_subtitle",
+          "type": "string",
+          "format": "textarea",
+          "label": "النص الفرعي",
+          "rows": 2,
+          "required": false,
+          "value": "يتميز جهاز MacBook Air بخفة الوزن الفائقة وسمك يزيد قليلاً عن سنتيمتر واحد، وهو يتناسب بسهولة مع حياتك وقد تم تصميمه مع وضع الكوكب في الاعتبار."
+        },
+        {
+          "id": "badge_label",
+          "type": "string",
+          "format": "text",
+          "label": "نص الشارة",
+          "value": "اختر من أفضل العروض",
+          "required": false
+        },
+        {
+          "id": "badge_icon",
+          "type": "string",
+          "format": "icon",
+          "label": "أيقونة الشارة",
+          "value": "sicon-bolt",
+          "required": false
+        },
+        {
+          "id": "cta_normal",
+          "type": "string",
+          "format": "text",
+          "label": "نص زر الإضافة",
+          "value": "اضف الي العربة"
+        },
+        {
+          "id": "cta_added",
+          "type": "string",
+          "format": "text",
+          "label": "نص بعد الإضافة",
+          "value": "تم الأضافة الي العربة"
+        },
+        {
+          "id": "offers",
+          "type": "collection",
+          "format": "collection",
+          "label": "العروض",
+          "item_label": "عرض",
+          "minLength": 1,
+          "maxLength": 3,
+          "value": [
+            {
+              "image": "/assets/airpods.jpeg",
+              "name": "اير بودز برو 3 - لون رمادي",
+              "price_after": 1990,
+              "price_before": 2500,
+              "currency": "ر.س"
+            },
+            {
+              "image": "/assets/airpods.jpeg",
+              "name": "اير بودز برو 3 - لون رمادي",
+              "price_after": 1990,
+              "price_before": 2500,
+              "currency": "ر.س"
+            },
+            {
+              "image": "/assets/airpods.jpeg",
+              "name": "اير بودز برو 3 - لون رمادي",
+              "price_after": 1990,
+              "price_before": 2500,
+              "currency": "ر.س"
+            }
+          ],
+          "fields": [
+            {
+              "id": "image",
+              "type": "string",
+              "format": "image",
+              "label": "صورة العرض",
+              "required": false
+            },
+            {
+              "id": "name",
+              "type": "string",
+              "format": "text",
+              "label": "اسم العرض",
+              "required": true,
+              "maxLength": 100
+            },
+            {
+              "id": "price_after",
+              "type": "number",
+              "format": "number",
+              "label": "السعر بعد الخصم",
+              "required": true
+            },
+            {
+              "id": "price_before",
+              "type": "number",
+              "format": "number",
+              "label": "السعر قبل الخصم",
+              "required": false
+            },
+            {
+              "id": "currency",
+              "type": "string",
+              "format": "text",
+              "label": "رمز العملة",
+              "value": "ر.س"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "معرض الصور المتحرك",
+      "icon": "sicon-images",
+      "name": "st-images-slider",
+      "key": "9c0d1e2f-3a4b-5c6d-7e8f-9a0b1c2d3e4f",
+      "image": "https://cdn.salla.network/images/themes/raed/preview-images/getting-started.png",
+      "fields": [
+        {
+          "id": "bg_color",
+          "type": "string",
+          "format": "color",
+          "label": "لون الخلفية",
+          "value": "#ffffff"
+        },
+        {
+          "id": "primary_color",
+          "type": "string",
+          "format": "color",
+          "label": "لون النص",
+          "value": "#050505"
+        },
+        {
+          "id": "brand_color",
+          "type": "string",
+          "format": "color",
+          "label": "لون العلامة التجارية",
+          "value": "#0071E3"
+        },
+        {
+          "id": "section_title",
+          "type": "string",
+          "format": "text",
+          "label": "عنوان القسم",
+          "value": "قم برفع مستوى روتين اللياقة البدنية الخاص بك مع Fitbit Premium."
+        },
+        {
+          "id": "images",
+          "type": "collection",
+          "format": "collection",
+          "label": "الصور",
+          "item_label": "صورة",
+          "minLength": 1,
+          "maxLength": 10,
+          "value": [
+            {
+              "src": "/assets/person-with-airpod-side.jpeg",
+              "title": "تجربة مذهلة"
+            },
+            {
+              "src": "/assets/person-with-airpod-side-2.jpeg",
+              "title": "صوت مثالي"
+            },
+            {
+              "src": "/assets/person-with-airpod-front.jpeg",
+              "title": "راحة فائقة"
+            },
+            {
+              "src": "/assets/person-wearing-airpod.jpeg",
+              "title": "لحظة إبداعية"
+            },
+            {
+              "src": "/assets/happy-person-with-airpods.jpeg",
+              "title": "يوم مثالي"
+            },
+            {
+              "src": "/assets/airpods-laptop.png",
+              "title": "في كل مكان"
+            }
+          ],
+          "fields": [
+            {
+              "id": "src",
+              "type": "string",
+              "format": "image",
+              "label": "الصورة",
+              "required": true
+            },
+            {
+              "id": "title",
+              "type": "string",
+              "format": "text",
+              "label": "عنوان الصورة",
+              "maxLength": 80,
+              "required": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "قسم آراء العملاء",
+      "icon": "sicon-quote-close",
+      "name": "st-reviews",
+      "key": "0d1e2f3a-4b5c-6d7e-8f9a-0b1c2d3e4f5a",
+      "image": "https://cdn.salla.network/images/themes/raed/preview-images/getting-started.png",
+      "fields": [
+        {
+          "id": "bg_color",
+          "type": "string",
+          "format": "color",
+          "label": "لون الخلفية",
+          "value": "#ffffff"
+        },
+        {
+          "id": "primary_color",
+          "type": "string",
+          "format": "color",
+          "label": "لون النص الأساسي",
+          "value": "#050505"
+        },
+        {
+          "id": "brand_color",
+          "type": "string",
+          "format": "color",
+          "label": "لون العلامة التجارية",
+          "value": "#0071E3"
+        },
+        {
+          "id": "secondary_color",
+          "type": "string",
+          "format": "color",
+          "label": "لون النص الثانوي",
+          "value": "#525252"
+        },
+        {
+          "id": "shade_color",
+          "type": "string",
+          "format": "color",
+          "label": "لون خلفية الترقيم",
+          "value": "rgba(0,0,0,0.04)"
+        },
+        {
+          "id": "section_icon",
+          "type": "string",
+          "format": "icon",
+          "label": "أيقونة الاقتباس",
+          "value": "sicon-quote-close"
+        },
+        {
+          "id": "rating_icon",
+          "type": "string",
+          "format": "icon",
+          "label": "أيقونة التقييم",
+          "value": "sicon-star2"
+        },
+        {
+          "id": "subheader",
+          "type": "string",
+          "format": "text",
+          "label": "العنوان الفرعي",
+          "value": "تجارب ملهمة من عملائنا"
+        },
+        {
+          "id": "prev_icon",
+          "type": "string",
+          "format": "icon",
+          "label": "أيقونة السابق",
+          "value": "sicon-arrow-left"
+        },
+        {
+          "id": "next_icon",
+          "type": "string",
+          "format": "icon",
+          "label": "أيقونة التالي",
+          "value": "sicon-arrow-right"
+        },
+        {
+          "id": "reviews",
+          "type": "collection",
+          "format": "collection",
+          "label": "التقييمات",
+          "item_label": "تقييم",
+          "minLength": 1,
+          "maxLength": 10,
+          "value": [
+            {
+              "body": "نحن نحب كان مصممونا يستخدمونه في مشاريعهم، لذا كان العملاء يعرفون بالفعل ما هو وكيفية استخدامه. نحن نحب كان مصممونا يستخدمونه في مشاريعهم، لذا كان العملاء يعرفون بالفعل ما هو وكيفية استخدامه. نحن نحب كان مصممونا يستخدمونه في مشاريعهم، لذا كان العملاء يعرفون بالفعل ما هو وكيفية استخدامه. نحن نحب كان مصممونا يستخدمونه في مشاريعهم، لذا كان العملاء يعرفون بالفعل ما هو وكيفية استخدامه.",
+              "user": "الشيخ محمد ابو زيد",
+              "stars": 4.8,
+              "audio_url": "/assets/Al-Fatiha.mp3",
+              "media_type": "video",
+              "media_src": "/assets/hero-video.mp4"
+            },
+            {
+              "body": "نحن نحب كان مصممونا يستخدمونه في مشاريعهم، لذا كان العملاء يعرفون بالفعل ما هو وكيفية استخدامه.",
+              "user": "الشيخ محمد ابو زيد",
+              "stars": 4.5,
+              "audio_url": "",
+              "media_type": "iframe",
+              "media_src": "https://www.youtube.com/embed/ZY-aR1xi9Hs"
+            },
+            {
+              "body": "نحن نحب كان مصممونا يستخدمونه في مشاريعهم، لذا كان العملاء يعرفون بالفعل ما هو وكيفية استخدامه.",
+              "user": "الشيخ محمد ابو زيد",
+              "stars": 4,
+              "audio_url": "",
+              "media_type": "iframe",
+              "media_src": "https://www.openstreetmap.org/export/embed.html?bbox=-0.004017949104309083%2C51.47612752641776%2C0.00030577182769775396%2C51.478569861898606&layer=mapnik"
+            },
+            {
+              "body": "نحن نحب كان مصممونا يستخدمونه في مشاريعهم، لذا كان العملاء يعرفون بالفعل ما هو وكيفية استخدامه.",
+              "user": "الشيخ محمد ابو زيد",
+              "stars": 4.1,
+              "audio_url": "",
+              "media_type": "image",
+              "media_src": "/assets/happy-person-with-airpods.jpeg"
+            }
+          ],
+          "fields": [
+            {
+              "id": "body",
+              "type": "string",
+              "format": "textarea",
+              "label": "نص التقييم",
+              "required": true,
+              "maxLength": 800
+            },
+            {
+              "id": "user",
+              "type": "string",
+              "format": "text",
+              "label": "اسم العميل",
+              "required": true,
+              "maxLength": 80
+            },
+            {
+              "id": "stars",
+              "type": "number",
+              "format": "slider",
+              "label": "التقييم (نجوم)",
+              "minimum": 0,
+              "maximum": 5,
+              "step": 0.5,
+              "value": 5
+            },
+            {
+              "id": "audio_url",
+              "type": "string",
+              "format": "text",
+              "label": "رابط الصوت (اختياري)",
+              "required": false
+            },
+            {
+              "id": "media_type",
+              "type": "string",
+              "format": "text",
+              "label": "نوع الوسائط: image / video / iframe (اتركه فارغاً بلا وسائط)",
+              "value": "",
+              "required": false
+            },
+            {
+              "id": "media_src",
+              "type": "string",
+              "format": "text",
+              "label": "مصدر الوسائط (رابط أو مسار)",
+              "required": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "تذييل الصفحة",
+      "icon": "sicon-footer",
+      "name": "st-footer",
+      "key": "1e2f3a4b-5c6d-7e8f-9a0b-1c2d3e4f5a6b",
+      "image": "https://cdn.salla.network/images/themes/raed/preview-images/getting-started.png",
+      "fields": [
+        {
+          "id": "bg_color",
+          "type": "string",
+          "format": "color",
+          "label": "لون الخلفية",
+          "value": "#050505"
+        },
+        {
+          "id": "bottom_bg_color",
+          "type": "string",
+          "format": "color",
+          "label": "لون الشريط السفلي",
+          "value": "#ffffff"
+        },
+        {
+          "id": "text_color",
+          "type": "string",
+          "format": "color",
+          "label": "لون النص",
+          "value": "#ffffff"
+        },
+        {
+          "id": "brand_color",
+          "type": "string",
+          "format": "color",
+          "label": "لون العلامة التجارية",
+          "value": "#0071E3"
+        },
+        {
+          "id": "newsletter_title",
+          "type": "string",
+          "format": "text",
+          "label": "عنوان النشرة البريدية",
+          "value": "اشترك في نشرتنا الإخبارية الآن!"
+        },
+        {
+          "id": "newsletter_subtitle",
+          "type": "string",
+          "format": "textarea",
+          "label": "النص الفرعي للنشرة البريدية",
+          "rows": 2,
+          "required": false,
+          "value": "استمتع بمزايا فريدة تقدمها متجرنا لتلبي احتياجاتك بأسلوب لا مثيل له. نحن نقدم مجموعة من المزايا التي تجعل تجربة التسوق لدينا استثنائية."
+        },
+        {
+          "id": "newsletter_placeholder",
+          "type": "string",
+          "format": "text",
+          "label": "نص حقل البريد",
+          "value": "بريدك الالكتروني"
+        },
+        {
+          "id": "newsletter_icon",
+          "type": "string",
+          "format": "icon",
+          "label": "أيقونة حقل البريد",
+          "value": "sicon-mail",
+          "required": false
+        },
+        {
+          "id": "newsletter_button_label",
+          "type": "string",
+          "format": "text",
+          "label": "نص زر الاشتراك",
+          "value": "اشترها الأن"
+        },
+        {
+          "id": "newsletter_button_icon",
+          "type": "string",
+          "format": "icon",
+          "label": "أيقونة زر الاشتراك",
+          "value": "sicon-caret-left-double",
+          "required": false
+        },
+        {
+          "id": "store_title",
+          "type": "string",
+          "format": "text",
+          "label": "اسم المتجر",
+          "value": "متجر تجريبي"
+        },
+        {
+          "id": "store_description",
+          "type": "string",
+          "format": "textarea",
+          "label": "وصف المتجر",
+          "rows": 3,
+          "value": "متجر سلة من افضل المتاجر التى تقوم ببيع المنتجات الرقمية بأفضل الاسعار وماركات عالمية تسوق الان واطلع على المزيد من التصاميم واستمتع بأفضل العروض والخصومات"
+        },
+        {
+          "id": "nav_columns",
+          "type": "collection",
+          "format": "collection",
+          "label": "أعمدة الروابط",
+          "item_label": "عمود",
+          "maxLength": 6,
+          "value": [
+            {
+              "header": "تواصل معنا",
+              "link1_label": "8001111210",
+              "link1_href": "#",
+              "link2_label": "ThemeMatjar",
+              "link2_href": "#",
+              "link3_label": "sallathemes@gmail.com",
+              "link3_href": "#"
+            },
+            {
+              "header": "تواصل معنا",
+              "link1_label": "8001111210",
+              "link1_href": "#",
+              "link2_label": "ThemeMatjar",
+              "link2_href": "#",
+              "link3_label": "sallathemes@gmail.com",
+              "link3_href": "#"
+            },
+            {
+              "header": "تواصل معنا",
+              "link1_label": "8001111210",
+              "link1_href": "#",
+              "link2_label": "ThemeMatjar",
+              "link2_href": "#",
+              "link3_label": "sallathemes@gmail.com",
+              "link3_href": "#"
+            },
+            {
+              "header": "تواصل معنا",
+              "link1_label": "8001111210",
+              "link1_href": "#",
+              "link2_label": "ThemeMatjar",
+              "link2_href": "#",
+              "link3_label": "sallathemes@gmail.com",
+              "link3_href": "#"
+            },
+            {
+              "header": "تواصل معنا",
+              "link1_label": "8001111210",
+              "link1_href": "#",
+              "link2_label": "ThemeMatjar",
+              "link2_href": "#",
+              "link3_label": "sallathemes@gmail.com",
+              "link3_href": "#"
+            },
+            {
+              "header": "تواصل معنا",
+              "link1_label": "8001111210",
+              "link1_href": "#",
+              "link2_label": "ThemeMatjar",
+              "link2_href": "#",
+              "link3_label": "sallathemes@gmail.com",
+              "link3_href": "#"
+            }
+          ],
+          "fields": [
+            {
+              "id": "header",
+              "type": "string",
+              "format": "text",
+              "label": "عنوان العمود",
+              "required": true
+            },
+            {
+              "id": "link1_label",
+              "type": "string",
+              "format": "text",
+              "label": "الرابط 1 - النص",
+              "required": false
+            },
+            {
+              "id": "link1_href",
+              "type": "string",
+              "format": "text",
+              "label": "الرابط 1 - الوجهة",
+              "value": "#",
+              "required": false
+            },
+            {
+              "id": "link2_label",
+              "type": "string",
+              "format": "text",
+              "label": "الرابط 2 - النص",
+              "required": false
+            },
+            {
+              "id": "link2_href",
+              "type": "string",
+              "format": "text",
+              "label": "الرابط 2 - الوجهة",
+              "value": "#",
+              "required": false
+            },
+            {
+              "id": "link3_label",
+              "type": "string",
+              "format": "text",
+              "label": "الرابط 3 - النص",
+              "required": false
+            },
+            {
+              "id": "link3_href",
+              "type": "string",
+              "format": "text",
+              "label": "الرابط 3 - الوجهة",
+              "value": "#",
+              "required": false
+            }
+          ]
+        },
+        {
+          "id": "meta1_image",
+          "type": "string",
+          "format": "image",
+          "label": "صورة شارة الثقة 1",
+          "required": false,
+          "value": "/assets/vat.jpeg"
+        },
+        {
+          "id": "meta1_title",
+          "type": "string",
+          "format": "text",
+          "label": "عنوان شارة الثقة 1",
+          "required": false,
+          "value": "546987552"
+        },
+        {
+          "id": "meta1_subtitle",
+          "type": "string",
+          "format": "text",
+          "label": "نص شارة الثقة 1",
+          "required": false,
+          "value": "سجل ضريبي"
+        },
+        {
+          "id": "meta1_link",
+          "type": "string",
+          "format": "url",
+          "label": "رابط شارة الثقة 1",
+          "value": "",
+          "required": false
+        },
+        {
+          "id": "meta2_image",
+          "type": "string",
+          "format": "image",
+          "label": "صورة شارة الثقة 2",
+          "required": false,
+          "value": "/assets/sbc.png"
+        },
+        {
+          "id": "meta2_title",
+          "type": "string",
+          "format": "text",
+          "label": "عنوان شارة الثقة 2",
+          "required": false,
+          "value": "منصة الأعمال"
+        },
+        {
+          "id": "meta2_subtitle",
+          "type": "string",
+          "format": "text",
+          "label": "نص شارة الثقة 2",
+          "required": false,
+          "value": "موثق لدي"
+        },
+        {
+          "id": "meta2_link",
+          "type": "string",
+          "format": "url",
+          "label": "رابط شارة الثقة 2",
+          "value": "https://google.com",
+          "required": false
+        },
+        {
+          "id": "copyright",
+          "type": "string",
+          "format": "text",
+          "label": "نص حقوق النشر",
+          "value": "صنع بإتقان على | {{year}} منصة سلة"
+        },
+        {
+          "id": "social1_icon",
+          "type": "string",
+          "format": "icon",
+          "label": "أيقونة التواصل 1",
+          "value": "sicon-facebook",
+          "required": false
+        },
+        {
+          "id": "social1_link",
+          "type": "string",
+          "format": "url",
+          "label": "رابط التواصل 1",
+          "value": "http://localhost:5175/node_modules/.salla-temp/index.html",
+          "required": false
+        },
+        {
+          "id": "social2_icon",
+          "type": "string",
+          "format": "icon",
+          "label": "أيقونة التواصل 2",
+          "value": "sicon-facebook",
+          "required": false
+        },
+        {
+          "id": "social2_link",
+          "type": "string",
+          "format": "url",
+          "label": "رابط التواصل 2",
+          "value": "http://localhost:5175/node_modules/.salla-temp/index.html",
+          "required": false
+        },
+        {
+          "id": "social3_icon",
+          "type": "string",
+          "format": "icon",
+          "label": "أيقونة التواصل 3",
+          "value": "sicon-facebook",
+          "required": false
+        },
+        {
+          "id": "social3_link",
+          "type": "string",
+          "format": "url",
+          "label": "رابط التواصل 3",
+          "value": "http://localhost:5175/node_modules/.salla-temp/index.html",
+          "required": false
+        },
+        {
+          "id": "side_icons",
+          "type": "collection",
+          "format": "collection",
+          "label": "شعارات الدفع",
+          "item_label": "شعار",
+          "maxLength": 6,
+          "value": [
+            {
+              "image": "/assets/bank-icon.png",
+              "link": "#ddd"
+            },
+            {
+              "image": "/assets/bank-icon.png",
+              "link": "#ddd"
+            }
+          ],
+          "fields": [
+            {
+              "id": "image",
+              "type": "string",
+              "format": "image",
+              "label": "الصورة",
+              "required": true
+            },
+            {
+              "id": "link",
+              "type": "string",
+              "format": "text",
+              "label": "الرابط",
+              "value": "#",
+              "required": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
