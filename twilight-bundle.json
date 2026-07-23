@@ -1791,9 +1791,10 @@
             "id": "06d8fe70-741f-4810-831d-cebb2d95345d",
             "path": "templates.airpods",
             "category_id": "1939592358",
-            "primary_color": "",
+            "primary_color": "#000000",
             "thumbnail": "templates-thumbs/airpods.jpg",
-            "is_default": true
+            "is_default": true,
+            "public_preview_url": "https://salla.design/preview/s/uhvqocmjhqh7/airpods"
         },
         {
             "id": "794f125a-f892-4ce7-b8a8-c2502171e664",
@@ -1801,7 +1802,8 @@
             "category_id": "814202285",
             "primary_color": "#B4643C",
             "thumbnail": "templates-thumbs/clothes.jpg",
-            "is_default": false
+            "is_default": false,
+            "public_preview_url": "https://salla.design/preview/s/uhvqocmjhqh7/clothes"
         }
     ]
 }
