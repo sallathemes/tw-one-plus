@@ -3,7 +3,7 @@
   "components": [
     {
       "title": "قسم مقدمة الصفحة",
-      "icon": "sicon-image-landscape",
+      "icon": "sicon-image-carousel",
       "name": "st-hero",
       "key": "1a2b3c4d-5e6f-7a8b-9c0d-1e2f3a4b5c6d",
       "image": "https://cdn.salla.network/images/themes/raed/preview-images/getting-started.png",
@@ -168,7 +168,7 @@
     },
     {
       "title": "قسم ألوان وأنواع المنتج",
-      "icon": "sicon-color-palette",
+      "icon": "sicon-gameboy",
       "name": "st-variants",
       "key": "6f7a8b9c-0d1e-2f3a-4b5c-6d7e8f9a0b1c",
       "image": "https://cdn.salla.network/images/themes/raed/preview-images/getting-started.png",
@@ -546,7 +546,7 @@
               "body": "توصيل خلال يومين إلى ثلاثة أيام عمل لجميع مدن المملكة، مع تتبّع لحظي للشحنة."
             },
             {
-              "icon": "sicon-color-palette",
+              "icon": "sicon-gameboy",
               "title": "ألوان ثابتة لا تبهت",
               "body": "صبغة تفاعلية عالية الثبات، اجتازت اختبار 40 دورة غسيل دون تغيّر ملحوظ في اللون."
             },
@@ -604,7 +604,7 @@
     },
     {
       "title": "قسم العرض التفاعلي",
-      "icon": "sicon-rotate-3d",
+      "icon": "sicon-image-carousel",
       "name": "st-demo",
       "key": "4d5e6f7a-8b9c-0d1e-2f3a-4b5c6d7e8f9a",
       "image": "https://cdn.salla.network/images/themes/raed/preview-images/getting-started.png",
@@ -1121,7 +1121,7 @@
     },
     {
       "title": "قسم العروض الخاصة",
-      "icon": "sicon-discount",
+      "icon": "sicon-award-ribbon",
       "name": "st-offers",
       "key": "8b9c0d1e-2f3a-4b5c-6d7e-8f9a0b1c2d3e",
       "image": "https://cdn.salla.network/images/themes/raed/preview-images/getting-started.png",
@@ -1468,7 +1468,7 @@
     },
     {
       "title": "تذييل الصفحة",
-      "icon": "sicon-footer",
+      "icon": "sicon-layout-grid",
       "name": "st-footer",
       "key": "1e2f3a4b-5c6d-7e8f-9a0b-1c2d3e4f5a6b",
       "image": "https://cdn.salla.network/images/themes/raed/preview-images/getting-started.png",
