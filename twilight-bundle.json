@@ -1,14 +1,14 @@
 {
     "name": {
-        "ar": "tw-one-plus",
-        "en": "tw-one-plus"
+        "ar": "ون بلس",
+        "en": "One Plus"
     },
     "description": {
         "ar": null,
         "en": null
     },
     "author_email": "sallathemes@gmail.com",
-    "support_url": null,
+    "support_url": "https://twitter.com/SallaThemes",
     "repository": "https://github.com/sallathemes/tw-one-plus",
     "components": [
         {
