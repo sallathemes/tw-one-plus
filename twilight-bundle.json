@@ -1805,5 +1805,8 @@
             "is_default": false,
             "public_preview_url": "https://salla.design/preview/s/uhvqocmjhqh7/clothes"
         }
+    ],
+    "features": [
+        "landing-page-templates"
     ]
 }
