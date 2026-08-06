@@ -1792,7 +1792,7 @@
             "path": "templates.airpods",
             "category_id": "1939592358",
             "primary_color": "#000000",
-            "thumbnail": "templates-thumbs/airpods.jpg",
+            "thumbnail": "https://cdn.assets.salla.network/previews/uhvqocmjhqh7/assets/65647fd06f0d6c1189a5010d132b1e5c463f3cfb17d1d471e7d4e258c05f1cff/templates-thumbs/airpods.jpg",
             "is_default": true,
             "public_preview_url": "https://salla.design/preview/s/uhvqocmjhqh7/airpods"
         },
@@ -1801,7 +1801,7 @@
             "path": "templates.clothes",
             "category_id": "814202285",
             "primary_color": "#B4643C",
-            "thumbnail": "templates-thumbs/clothes.jpg",
+            "thumbnail": "https://cdn.assets.salla.network/previews/uhvqocmjhqh7/assets/77877bb73509066a6aec17f7e6acfdacfcbf70dfe3beb3670eab894ca65ec7cf/templates-thumbs/clothes.jpg",
             "is_default": false,
             "public_preview_url": "https://salla.design/preview/s/uhvqocmjhqh7/clothes"
         }

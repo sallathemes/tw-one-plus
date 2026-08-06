@@ -32,7 +32,7 @@
   },
   "private": true,
   "dependencies": {
-    "@salla.sa/twilight-bundles": "0.1.54",
+    "@salla.sa/twilight-bundles": "^0.1.62",
     "@salla.sa/twilight-bundles-starter-kit": "^0.1.37",
     "lit": "^3.2.1"
   }
