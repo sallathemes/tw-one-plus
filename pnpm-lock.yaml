@@ -4,13 +4,16 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
+overrides:
+  '@salla.sa/twilight-bundles': link:../../twilight-bundles/packages/core
+
 importers:
 
   .:
     dependencies:
       '@salla.sa/twilight-bundles':
-        specifier: 0.1.54
-        version: 0.1.54
+        specifier: link:../../twilight-bundles/packages/core
+        version: link:../../twilight-bundles/packages/core
       '@salla.sa/twilight-bundles-starter-kit':
         specifier: ^0.1.37
         version: 0.1.37
@@ -612,16 +615,6 @@ packages:
   '@salla.sa/twilight-bundles-starter-kit@0.1.37':
     resolution: {integrity: sha512-4ZrqG0BiF7Nw9oeAEbcUh2Oah9ugrQD3OEse/Y5kDsyrLLx43RMrjYxdEkgPZfiGRQij6G1YTOGPaGTKpXnaQw==}
     engines: {node: '>=16.0.0', pnpm: '>=9.0.0'}
-
-  '@salla.sa/twilight-bundles@0.1.43':
-    resolution: {integrity: sha512-1VWbe+YhN+e6/nqER45CP/h1wTImP8Kb4cdx6toTZ+7z7bcCjltBV4QZ0eK8g6fOJpmzVtxHbyhFGMWojrV2WA==}
-    engines: {node: '>=16.0.0', pnpm: '>=9.0.0'}
-    hasBin: true
-
-  '@salla.sa/twilight-bundles@0.1.54':
-    resolution: {integrity: sha512-k5ewEmLUvRrlnKN0FKzTmMJrN8mn0pMgjEfZdrWwkDrBXRLpvpI7IfqcSIF46yQTN3XzegpE2s1dTS3/XH+dKw==}
-    engines: {node: '>=16.0.0', pnpm: '>=9.0.0'}
-    hasBin: true
 
   '@testing-library/dom@9.3.4':
     resolution: {integrity: sha512-FlS4ZWlp97iiNWig0Muq8p+3rVDjRiYE+YKGbAqXOu9nwJFFOdL00kFpz42M+4huzYi86vAK1sOOfyOG45muIQ==}
@@ -1611,10 +1604,6 @@ packages:
   url-parse@1.5.10:
     resolution: {integrity: sha512-WypcfiRhfeUP9vvF0j6rw0J3hrWrw6iZv3+22h6iRMJ/8z1Tj6XfLP4DsUix5MhMPnXpiHDoKyoZ/bdCkwBCiQ==}
 
-  uuid@11.1.1:
-    resolution: {integrity: sha512-vIYxrBCC/N/K+Js3qSN88go7kIfNPssr/hHCesKCQNAjmgvYS2oqr69kIufEG+O4+PfezOH4EbIeHCfFov8ZgQ==}
-    hasBin: true
-
   vite-node@3.2.4:
     resolution: {integrity: sha512-EbKSKh+bh1E1IFxeO0pg1n4dvoOTt0UDiXMd/qn++r98+jPO1xtJilvXldeuQ8giIB5IkpjCgMleHMNEsGH6pg==}
     engines: {node: ^18.0.0 || ^20.0.0 || >=22.0.0}
@@ -2087,19 +2076,8 @@ snapshots:
 
   '@salla.sa/twilight-bundles-starter-kit@0.1.37':
     dependencies:
-      '@salla.sa/twilight-bundles': 0.1.43
+      '@salla.sa/twilight-bundles': link:../../twilight-bundles/packages/core
       lit: 3.3.3
-
-  '@salla.sa/twilight-bundles@0.1.43':
-    dependencies:
-      glob: 11.1.0
-      lit: 3.3.3
-      uuid: 11.1.1
-
-  '@salla.sa/twilight-bundles@0.1.54':
-    dependencies:
-      lit: 3.3.3
-      uuid: 11.1.1
 
   '@testing-library/dom@9.3.4':
     dependencies:
@@ -3237,8 +3215,6 @@ snapshots:
     dependencies:
       querystringify: 2.2.0
       requires-port: 1.0.0
-
-  uuid@11.1.1: {}
 
   vite-node@3.2.4(@types/node@22.20.0):
     dependencies:

@@ -1,0 +1,2 @@
+overrides:
+  '@salla.sa/twilight-bundles': link:../../twilight-bundles/packages/core
