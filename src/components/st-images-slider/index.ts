@@ -325,7 +325,7 @@ export default class StImagesSlider extends LitElement {
     const images = this.config.images || [];
 
     return html`
-      <section class="st-images-slider" style="background: ${bgColor};">
+      <section id="st-images-slider" class="st-images-slider" style="background: ${bgColor};">
         <!-- Section header (start-aligned, matches source SectionHeader) -->
         <div class="st-images-slider__header-wrap">
           <h3 class="st-images-slider__title">${this.config.section_title}</h3>

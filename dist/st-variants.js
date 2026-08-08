@@ -388,7 +388,7 @@ class n extends _ {
       return l`<div>Configuration is required</div>`;
     const t = this.config.variants, r = Math.min(this.currentVariantIndex, t.length - 1), i = t[r], e = this.isTransitioning ? "is-transitioning" : "";
     return l`
-      <section class="st-variants">
+      <section id="st-variants" class="st-variants">
         <div class="st-variants__container">
           <h3 class="st-variants__title" data-animate="fade-up">
             ${this.config.section_title}

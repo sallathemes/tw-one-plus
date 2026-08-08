@@ -1,5 +1,5 @@
 {
-  "id": "794f125a-f892-4ce7-b8a8-c2502171e664",
+  "id": "60da85e5-58ce-4d12-a0c0-baec6ec62a34",
   "components": [
     {
       "title": "قسم مقدمة الصفحة",
@@ -13,21 +13,21 @@
           "type": "string",
           "format": "color",
           "label": "لون الخلفية",
-          "value": "#14100D"
+          "value": "#211B14"
         },
         {
           "id": "text_color",
           "type": "string",
           "format": "color",
           "label": "لون النص",
-          "value": "#ffffff"
+          "value": "#FFFFFF"
         },
         {
           "id": "brand_color",
           "type": "string",
           "format": "color",
           "label": "لون العلامة التجارية",
-          "value": "#B4643C"
+          "value": "#B08D57"
         },
         {
           "id": "overlay_opacity",
@@ -46,7 +46,7 @@
           "label": "العنوان الرئيسي",
           "required": true,
           "maxLength": 150,
-          "value": "مجموعة الخريف. قُصّت لتُلبس كل يوم."
+          "value": "لأن بيتك يستحق الأفضل — اكتشف تشكيلتنا الفاخرة من مستلزمات المنزل"
         },
         {
           "id": "subtitle",
@@ -54,28 +54,57 @@
           "format": "textarea",
           "label": "النص الفرعي",
           "rows": 3,
-          "value": "قطن مُمشّط بوزن 240 غرام، مغسول مسبقاً حتى لا ينكمش بعد أول غسلة. قصّة مستقيمة تريح الكتف ولا تشدّ عند الخصر، وحياكة مزدوجة عند الأطراف تحفظ شكل القطعة موسماً بعد موسم. خمسة ألوان ثابتة، ومقاسات من S إلى 3XL."
+          "value": "من أواني الطهي الفاخرة إلى أدق تفاصيل الديكور والمفروشات، كل قطعة في مجموعتنا اختيرت بعناية لتمنح منزلك لمسة من الأناقة والدفء. جودة تدوم طويلاً، وتصاميم تُلهمك في كل ركن."
         },
         {
           "id": "button_label",
           "type": "string",
           "format": "text",
           "label": "نص زر الشراء",
-          "value": "اشترِ الآن بـ"
-        },
-        {
-          "id": "button_price",
-          "type": "string",
-          "format": "text",
-          "label": "سعر زر الشراء",
-          "value": "249 ر.س"
+          "value": "تسوّق الطقم المميز"
         },
         {
           "id": "button_link",
           "type": "string",
           "format": "text",
           "label": "رابط زر الشراء",
-          "value": "#st-offers"
+          "value": "#st-feature"
+        },
+        {
+          "id": "product_price",
+          "type": "number",
+          "format": "number",
+          "label": "سعر المنتج",
+          "value": 349
+        },
+        {
+          "id": "product_regular_price",
+          "type": "number",
+          "format": "number",
+          "label": "السعر قبل الخصم",
+          "required": false,
+          "value": 499
+        },
+        {
+          "id": "product_currency",
+          "type": "string",
+          "format": "text",
+          "label": "رمز العملة",
+          "value": "ر.س"
+        },
+        {
+          "id": "product_is_on_sale",
+          "type": "boolean",
+          "format": "switch",
+          "label": "هل يوجد خصم على المنتج",
+          "value": true
+        },
+        {
+          "id": "product_out_of_stock",
+          "type": "boolean",
+          "format": "switch",
+          "label": "المنتج غير متوفر",
+          "value": false
         },
         {
           "id": "video_url",
@@ -91,7 +120,7 @@
           "format": "image",
           "label": "صورة الخلفية (بديل الفيديو)",
           "required": false,
-          "value": "/assets/clothes/worn-olive-jacket.jpg"
+          "value": "https://images.unsplash.com/photo-1556909212-d5b604d0c90d?w=1800&q=80&auto=format&fit=crop"
         },
         {
           "id": "logo",
@@ -106,62 +135,286 @@
           "type": "string",
           "format": "text",
           "label": "اسم المتجر",
-          "value": "atelier"
+          "value": "بيت الأناقة"
         },
         {
           "id": "nav1_label",
           "type": "string",
           "format": "text",
           "label": "الرابط الأول - النص",
-          "value": "الألوان"
+          "value": "المنتج المميز"
         },
         {
           "id": "nav1_href",
           "type": "string",
           "format": "text",
           "label": "الرابط الأول - الوجهة",
-          "value": "#st-variants"
+          "value": "#st-feature"
         },
         {
           "id": "nav2_label",
           "type": "string",
           "format": "text",
           "label": "الرابط الثاني - النص",
-          "value": "اللوك بوك"
+          "value": "تسوّق حسب القسم"
         },
         {
           "id": "nav2_href",
           "type": "string",
           "format": "text",
           "label": "الرابط الثاني - الوجهة",
-          "value": "#st-images-slider"
+          "value": "#st-variants"
         },
         {
           "id": "nav3_label",
           "type": "string",
           "format": "text",
           "label": "الرابط الثالث - النص",
-          "value": "الخامة"
+          "value": "جولة داخل المنزل"
         },
         {
           "id": "nav3_href",
           "type": "string",
           "format": "text",
           "label": "الرابط الثالث - الوجهة",
-          "value": "#st-feature"
+          "value": "#st-demo"
         },
         {
           "id": "nav4_label",
           "type": "string",
           "format": "text",
           "label": "الرابط الرابع - النص",
-          "value": "دليل المقاسات"
+          "value": "المواصفات"
         },
         {
           "id": "nav4_href",
           "type": "string",
           "format": "text",
           "label": "الرابط الرابع - الوجهة",
+          "value": "#st-specification"
+        }
+      ]
+    },
+    {
+      "title": "قسم تفصيل الميزة",
+      "icon": "sicon-star",
+      "name": "st-feature",
+      "key": "3c4d5e6f-7a8b-9c0d-1e2f-3a4b5c6d7e8f",
+      "image": "https://cdn.salla.sa/qAyGK/products/VDYhBmwAG0hLbnAqleLctup4ozHiOc0b2ljn8I4c.jpg",
+      "fields": [
+        {
+          "id": "bg_color",
+          "type": "string",
+          "format": "color",
+          "label": "لون الخلفية",
+          "value": "#FFFFFF"
+        },
+        {
+          "id": "shade_color",
+          "type": "string",
+          "format": "color",
+          "label": "لون الخلفية الداخلية",
+          "value": "#F5F1EA"
+        },
+        {
+          "id": "primary_color",
+          "type": "string",
+          "format": "color",
+          "label": "لون النص",
+          "value": "#2B2620"
+        },
+        {
+          "id": "brand_color",
+          "type": "string",
+          "format": "color",
+          "label": "لون العلامة التجارية",
+          "value": "#B08D57"
+        },
+        {
+          "id": "icon",
+          "type": "string",
+          "format": "icon",
+          "label": "الأيقونة",
+          "value": "sicon-star"
+        },
+        {
+          "id": "title",
+          "type": "string",
+          "format": "text",
+          "label": "العنوان",
+          "required": true,
+          "maxLength": 150,
+          "value": "طقم أواني الطهي السيراميك — رفيقك اليومي في المطبخ"
+        },
+        {
+          "id": "body1",
+          "type": "string",
+          "format": "textarea",
+          "label": "الفقرة الأولى",
+          "rows": 3,
+          "value": "طبقة سيراميك غير لاصقة وخالية من المواد الكيميائية الضارة، توزّع الحرارة بتساوٍ وتحافظ على نكهة الطعام. تصميم أنيق يليق بمطبخك ويدوم معك سنوات طويلة."
+        },
+        {
+          "id": "body2",
+          "type": "string",
+          "format": "textarea",
+          "label": "الفقرة الثانية",
+          "rows": 3,
+          "required": false,
+          "value": "مقبض من خشب الزان الطبيعي يبقى بارداً أثناء الطهي، وغطاء زجاجي مقاوم للحرارة يتيح لك متابعة الطبخ دون رفعه. يتوافق مع جميع أنواع المواقد بما فيها الإندكشن."
+        },
+        {
+          "id": "button_label",
+          "type": "string",
+          "format": "text",
+          "label": "نص الزر",
+          "value": "اطلبيه الآن"
+        },
+        {
+          "id": "button_link",
+          "type": "string",
+          "format": "text",
+          "label": "رابط الزر",
+          "value": "#st-offers"
+        },
+        {
+          "id": "button_icon",
+          "type": "string",
+          "format": "icon",
+          "label": "أيقونة الزر",
+          "value": "sicon-caret-left-double",
+          "required": false
+        },
+        {
+          "id": "side_image",
+          "type": "string",
+          "format": "image",
+          "label": "الصورة الجانبية",
+          "required": false,
+          "value": "https://images.pexels.com/photos/4781419/pexels-photo-4781419.jpeg?auto=compress&cs=tinysrgb&w=1000&q=80"
+        }
+      ]
+    },
+    {
+      "title": "قسم مميزات المنتج - بطاقات",
+      "icon": "sicon-layout-grid",
+      "name": "st-cards",
+      "key": "2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e",
+      "image": "https://cdn.salla.sa/qAyGK/products/COyZjADBoD2ijmCaGrXpfKLPWijMwN2MElx1G4qk.jpg",
+      "fields": [
+        {
+          "id": "bg_color",
+          "type": "string",
+          "format": "color",
+          "label": "لون الخلفية",
+          "value": "#FFFFFF"
+        },
+        {
+          "id": "primary_color",
+          "type": "string",
+          "format": "color",
+          "label": "اللون الأساسي",
+          "value": "#2B2620"
+        },
+        {
+          "id": "brand_color",
+          "type": "string",
+          "format": "color",
+          "label": "لون العلامة التجارية",
+          "value": "#B08D57"
+        },
+        {
+          "id": "section_title",
+          "type": "string",
+          "format": "text",
+          "label": "عنوان القسم",
+          "value": "لماذا تختار بيت الأناقة"
+        },
+        {
+          "id": "section_image",
+          "type": "string",
+          "format": "image",
+          "label": "صورة القسم الرئيسية",
+          "required": false,
+          "value": "https://images.unsplash.com/photo-1600166898405-da9535204843?w=900&q=80&auto=format&fit=crop"
+        },
+        {
+          "id": "cards",
+          "type": "collection",
+          "format": "collection",
+          "label": "البطاقات",
+          "item_label": "بطاقة",
+          "minLength": 1,
+          "maxLength": 6,
+          "value": [
+            {
+              "icon": "sicon-shield-check",
+              "title": "مواد آمنة 100%",
+              "body": "جميع منتجاتنا مصنوعة من خامات آمنة وخالية من المواد الضارة، لضمان سلامة أسرتك."
+            },
+            {
+              "icon": "sicon-star",
+              "title": "جودة تدوم طويلاً",
+              "body": "نختار كل قطعة بعناية فائقة لتبقى معك سنوات، دون أن تفقد أناقتها أو متانتها."
+            },
+            {
+              "icon": "sicon-store",
+              "title": "صناعة يدوية متقنة",
+              "body": "قطع فخارية ونسيجية مصنوعة يدوياً بواسطة حرفيين مهرة، تحمل بصمة فنية فريدة."
+            },
+            {
+              "icon": "sicon-truck",
+              "title": "توصيل سريع وآمن",
+              "body": "تغليف محكم وشحن سريع لجميع مناطق المملكة، لتصل مقتنياتك بأفضل حالة."
+            },
+            {
+              "icon": "sicon-color-palette",
+              "title": "تصاميم لكل الأذواق",
+              "body": "تشكيلة واسعة من الألوان والأنماط تناسب كل الديكورات، من الكلاسيكي إلى العصري."
+            },
+            {
+              "icon": "sicon-check-circle",
+              "title": "ضمان استبدال 14 يوم",
+              "body": "لم يعجبك المنتج؟ يمكنك استبداله أو استرجاعه بكل سهولة خلال 14 يوماً من الاستلام."
+            }
+          ],
+          "fields": [
+            {
+              "id": "icon",
+              "type": "string",
+              "format": "icon",
+              "label": "الأيقونة",
+              "value": "sicon-pause"
+            },
+            {
+              "id": "title",
+              "type": "string",
+              "format": "text",
+              "label": "عنوان البطاقة",
+              "required": true,
+              "maxLength": 100
+            },
+            {
+              "id": "body",
+              "type": "string",
+              "format": "textarea",
+              "label": "نص البطاقة",
+              "maxLength": 300
+            }
+          ]
+        },
+        {
+          "id": "footer_button_label",
+          "type": "string",
+          "format": "text",
+          "label": "نص الزر السفلي",
+          "value": "تعرّف على تفاصيل المجموعة"
+        },
+        {
+          "id": "footer_button_href",
+          "type": "string",
+          "format": "text",
+          "label": "رابط الزر السفلي",
           "value": "#st-specification"
         }
       ]
@@ -178,35 +431,35 @@
           "type": "string",
           "format": "color",
           "label": "لون الخلفية",
-          "value": "#ffffff"
+          "value": "#FFFFFF"
         },
         {
           "id": "primary_color",
           "type": "string",
           "format": "color",
           "label": "اللون الأساسي",
-          "value": "#1A1613"
+          "value": "#2B2620"
         },
         {
           "id": "brand_color",
           "type": "string",
           "format": "color",
           "label": "لون العلامة التجارية",
-          "value": "#B4643C"
+          "value": "#B08D57"
         },
         {
           "id": "section_title",
           "type": "string",
           "format": "text",
           "label": "عنوان القسم",
-          "value": "لون واحد لا يكفي أبداً."
+          "value": "تسوّق حسب القسم الذي يناسب بيتك"
         },
         {
           "id": "selector_label",
           "type": "string",
           "format": "text",
           "label": "تسمية اختيار اللون",
-          "value": "اختر لونك المفضّل."
+          "value": "اختر القسم الذي يهمك"
         },
         {
           "id": "variants",
@@ -218,34 +471,28 @@
           "maxLength": 8,
           "value": [
             {
-              "product_image": "/assets/clothes/tee-white-product.jpg",
-              "side_image": "/assets/clothes/worn-white-tee.jpg",
-              "color_hex": "#F2F0EC",
-              "color_title": "أبيض ناصع"
+              "product_image": "https://images.pexels.com/photos/4781419/pexels-photo-4781419.jpeg?auto=compress&cs=tinysrgb&w=700&q=80",
+              "side_image": "https://images.pexels.com/photos/4253298/pexels-photo-4253298.jpeg?auto=compress&cs=tinysrgb&w=900&q=80",
+              "color_hex": "#B5533C",
+              "color_title": "أدوات المطبخ"
             },
             {
-              "product_image": "/assets/clothes/tee-black-product.jpg",
-              "side_image": "/assets/clothes/worn-black-tee.jpg",
-              "color_hex": "#1A1613",
-              "color_title": "أسود فحمي"
+              "product_image": "https://images.unsplash.com/photo-1610701596007-11502861dcfa?w=700&q=80&auto=format&fit=crop",
+              "side_image": "https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?w=900&q=80&auto=format&fit=crop",
+              "color_hex": "#C9A66B",
+              "color_title": "السيراميك والفخار"
             },
             {
-              "product_image": "/assets/clothes/tee-sand-product.jpg",
-              "side_image": "/assets/clothes/worn-white-blouse.jpg",
-              "color_hex": "#D9C7AC",
-              "color_title": "رملي"
+              "product_image": "https://images.unsplash.com/photo-1600166898405-da9535204843?w=700&q=80&auto=format&fit=crop",
+              "side_image": "https://images.unsplash.com/photo-1616627561950-9f746e330187?w=900&q=80&auto=format&fit=crop",
+              "color_hex": "#8C7355",
+              "color_title": "المفروشات والسجاد"
             },
             {
-              "product_image": "/assets/clothes/jacket-rust-product.jpg",
-              "side_image": "/assets/clothes/worn-tan-jacket.jpg",
-              "color_hex": "#B4643C",
-              "color_title": "كراميل"
-            },
-            {
-              "product_image": "/assets/clothes/sweatshirt-white-product.jpg",
-              "side_image": "/assets/clothes/worn-orange-sweater.jpg",
-              "color_hex": "#E08A2E",
-              "color_title": "برتقالي محروق"
+              "product_image": "https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?w=700&q=80&auto=format&fit=crop",
+              "side_image": "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=900&q=80&auto=format&fit=crop",
+              "color_hex": "#3F4A3D",
+              "color_title": "الأثاث والديكور"
             }
           ],
           "fields": [
@@ -282,327 +529,6 @@
       ]
     },
     {
-      "title": "معرض الصور المتحرك",
-      "icon": "sicon-images",
-      "name": "st-images-slider",
-      "key": "9c0d1e2f-3a4b-5c6d-7e8f-9a0b1c2d3e4f",
-      "image": "https://cdn.salla.sa/qAyGK/products/nNUJFeg1t2IYMTjGOednr4WsjHdpocbLnsuOwENI.jpg",
-      "fields": [
-        {
-          "id": "bg_color",
-          "type": "string",
-          "format": "color",
-          "label": "لون الخلفية",
-          "value": "#F6F1EA"
-        },
-        {
-          "id": "primary_color",
-          "type": "string",
-          "format": "color",
-          "label": "لون النص",
-          "value": "#1A1613"
-        },
-        {
-          "id": "brand_color",
-          "type": "string",
-          "format": "color",
-          "label": "لون العلامة التجارية",
-          "value": "#B4643C"
-        },
-        {
-          "id": "section_title",
-          "type": "string",
-          "format": "text",
-          "label": "عنوان القسم",
-          "value": "اللوك بوك — إطلالات جاهزة من مجموعة هذا الموسم."
-        },
-        {
-          "id": "images",
-          "type": "collection",
-          "format": "collection",
-          "label": "الصور",
-          "item_label": "صورة",
-          "minLength": 1,
-          "maxLength": 10,
-          "value": [
-            {
-              "src": "/assets/clothes/worn-white-tee.jpg",
-              "title": "الأبيض الأساسي"
-            },
-            {
-              "src": "/assets/clothes/worn-black-tee.jpg",
-              "title": "الأسود الجرافيكي"
-            },
-            {
-              "src": "/assets/clothes/worn-olive-jacket.jpg",
-              "title": "طبقات الخريف"
-            },
-            {
-              "src": "/assets/clothes/worn-blue-shirt.jpg",
-              "title": "إطلالة رسمية"
-            },
-            {
-              "src": "/assets/clothes/worn-yellow-tracksuit.jpg",
-              "title": "راحة الشارع"
-            },
-            {
-              "src": "/assets/clothes/worn-white-blouse.jpg",
-              "title": "أناقة الدوام"
-            },
-            {
-              "src": "/assets/clothes/worn-tan-jacket.jpg",
-              "title": "الجاكيت الجلدي"
-            },
-            {
-              "src": "/assets/clothes/worn-kids-outfit.jpg",
-              "title": "مجموعة الأطفال"
-            }
-          ],
-          "fields": [
-            {
-              "id": "src",
-              "type": "string",
-              "format": "image",
-              "label": "الصورة",
-              "required": true
-            },
-            {
-              "id": "title",
-              "type": "string",
-              "format": "text",
-              "label": "عنوان الصورة",
-              "maxLength": 80,
-              "required": false
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "title": "قسم تفصيل الميزة",
-      "icon": "sicon-star",
-      "name": "st-feature",
-      "key": "3c4d5e6f-7a8b-9c0d-1e2f-3a4b5c6d7e8f",
-      "image": "https://cdn.salla.sa/qAyGK/products/VDYhBmwAG0hLbnAqleLctup4ozHiOc0b2ljn8I4c.jpg",
-      "fields": [
-        {
-          "id": "bg_color",
-          "type": "string",
-          "format": "color",
-          "label": "لون الخلفية",
-          "value": "#ffffff"
-        },
-        {
-          "id": "shade_color",
-          "type": "string",
-          "format": "color",
-          "label": "لون الخلفية الداخلية",
-          "value": "#F6F1EA"
-        },
-        {
-          "id": "primary_color",
-          "type": "string",
-          "format": "color",
-          "label": "لون النص",
-          "value": "#1A1613"
-        },
-        {
-          "id": "brand_color",
-          "type": "string",
-          "format": "color",
-          "label": "لون العلامة التجارية",
-          "value": "#B4643C"
-        },
-        {
-          "id": "icon",
-          "type": "string",
-          "format": "icon",
-          "label": "الأيقونة",
-          "value": "sicon-shield-check"
-        },
-        {
-          "id": "title",
-          "type": "string",
-          "format": "text",
-          "label": "العنوان",
-          "required": true,
-          "maxLength": 150,
-          "value": "خامة تُحسّ باليد قبل أن تُرى بالعين."
-        },
-        {
-          "id": "body1",
-          "type": "string",
-          "format": "textarea",
-          "label": "الفقرة الأولى",
-          "rows": 3,
-          "value": "نبدأ من القطن المُمشّط طويل التيلة، حيث تُنزع الألياف القصيرة قبل الغزل. النتيجة نسيج أنعم على البشرة، أقل تنميشاً بعد الغسيل، ويحافظ على لونه بعد عشرات الدورات في الغسالة."
-        },
-        {
-          "id": "body2",
-          "type": "string",
-          "format": "textarea",
-          "label": "الفقرة الثانية",
-          "rows": 3,
-          "required": false,
-          "value": "كل قطعة تُغسل مسبقاً قبل الخياطة، فلا تفاجئك بانكماش بعد أول غسلة. الأطراف مُحاكة بغرزة مزدوجة، والرقبة مدعّمة بشريط قطني يمنع تمددها مع الوقت."
-        },
-        {
-          "id": "button_label",
-          "type": "string",
-          "format": "text",
-          "label": "نص الزر",
-          "value": "تسوّق المجموعة"
-        },
-        {
-          "id": "button_link",
-          "type": "string",
-          "format": "text",
-          "label": "رابط الزر",
-          "value": "#st-offers"
-        },
-        {
-          "id": "button_icon",
-          "type": "string",
-          "format": "icon",
-          "label": "أيقونة الزر",
-          "value": "sicon-caret-left-double",
-          "required": false
-        },
-        {
-          "id": "side_image",
-          "type": "string",
-          "format": "image",
-          "label": "الصورة الجانبية",
-          "required": false,
-          "value": "/assets/clothes/rack-green-tees.jpg"
-        }
-      ]
-    },
-    {
-      "title": "قسم مميزات المنتج - بطاقات",
-      "icon": "sicon-layout-grid",
-      "name": "st-cards",
-      "key": "2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e",
-      "image": "https://cdn.salla.sa/qAyGK/products/COyZjADBoD2ijmCaGrXpfKLPWijMwN2MElx1G4qk.jpg",
-      "fields": [
-        {
-          "id": "bg_color",
-          "type": "string",
-          "format": "color",
-          "label": "لون الخلفية",
-          "value": "#ffffff"
-        },
-        {
-          "id": "primary_color",
-          "type": "string",
-          "format": "color",
-          "label": "اللون الأساسي",
-          "value": "#1A1613"
-        },
-        {
-          "id": "brand_color",
-          "type": "string",
-          "format": "color",
-          "label": "لون العلامة التجارية",
-          "value": "#B4643C"
-        },
-        {
-          "id": "section_title",
-          "type": "string",
-          "format": "text",
-          "label": "عنوان القسم",
-          "value": "لماذا تتسوق معنا"
-        },
-        {
-          "id": "section_image",
-          "type": "string",
-          "format": "image",
-          "label": "صورة القسم الرئيسية",
-          "required": false,
-          "value": "/assets/clothes/flatlay-outfit.jpg"
-        },
-        {
-          "id": "cards",
-          "type": "collection",
-          "format": "collection",
-          "label": "البطاقات",
-          "item_label": "بطاقة",
-          "minLength": 1,
-          "maxLength": 6,
-          "value": [
-            {
-              "icon": "sicon-shield-check",
-              "title": "قطن مُمشّط 100%",
-              "body": "خامة طبيعية بوزن 240 غرام/م²، مغسولة مسبقاً فلا تنكمش ولا يبهت لونها."
-            },
-            {
-              "icon": "sicon-rotate",
-              "title": "استبدال مجاني خلال 14 يوم",
-              "body": "لم يناسبك المقاس؟ استبدله بمقاس آخر مجاناً، دون أسئلة ودون رسوم شحن."
-            },
-            {
-              "icon": "sicon-cart",
-              "title": "شحن مجاني فوق 200 ر.س",
-              "body": "توصيل خلال يومين إلى ثلاثة أيام عمل لجميع مدن المملكة، مع تتبّع لحظي للشحنة."
-            },
-            {
-              "icon": "sicon-gameboy",
-              "title": "ألوان ثابتة لا تبهت",
-              "body": "صبغة تفاعلية عالية الثبات، اجتازت اختبار 40 دورة غسيل دون تغيّر ملحوظ في اللون."
-            },
-            {
-              "icon": "sicon-layout-grid",
-              "title": "مقاسات من S إلى 3XL",
-              "body": "جدول مقاسات مبني على قياسات حقيقية، مع نصيحة مقاس عند كل قطعة."
-            },
-            {
-              "icon": "sicon-star",
-              "title": "تقييم 4.8 من 5",
-              "body": "أكثر من 3,400 عميل قيّموا المجموعة، و٩٢٪ منهم أعادوا الشراء مرة أخرى."
-            }
-          ],
-          "fields": [
-            {
-              "id": "icon",
-              "type": "string",
-              "format": "icon",
-              "label": "الأيقونة",
-              "value": "sicon-pause"
-            },
-            {
-              "id": "title",
-              "type": "string",
-              "format": "text",
-              "label": "عنوان البطاقة",
-              "required": true,
-              "maxLength": 100
-            },
-            {
-              "id": "body",
-              "type": "string",
-              "format": "textarea",
-              "label": "نص البطاقة",
-              "maxLength": 300
-            }
-          ]
-        },
-        {
-          "id": "footer_button_label",
-          "type": "string",
-          "format": "text",
-          "label": "نص الزر السفلي",
-          "value": "اعرف المزيد عن الخامة"
-        },
-        {
-          "id": "footer_button_href",
-          "type": "string",
-          "format": "text",
-          "label": "رابط الزر السفلي",
-          "value": "#st-feature"
-        }
-      ]
-    },
-    {
       "title": "قسم العرض التفاعلي",
       "icon": "sicon-image-carousel",
       "name": "st-demo",
@@ -614,28 +540,28 @@
           "type": "string",
           "format": "color",
           "label": "لون الخلفية",
-          "value": "#14100D"
+          "value": "#211B14"
         },
         {
           "id": "text_color",
           "type": "string",
           "format": "color",
           "label": "لون النص",
-          "value": "#ffffff"
+          "value": "#FFFFFF"
         },
         {
           "id": "brand_color",
           "type": "string",
           "format": "color",
           "label": "لون العلامة التجارية",
-          "value": "#B4643C"
+          "value": "#B08D57"
         },
         {
           "id": "panel1_title",
           "type": "string",
           "format": "text",
           "label": "عنوان اللوحة الأولى",
-          "value": "قصّة تحترم الجسم."
+          "value": "صالة أكثر دفئاً وأناقة"
         },
         {
           "id": "panel1_body1",
@@ -643,7 +569,7 @@
           "format": "textarea",
           "label": "نص اللوحة الأولى - الفقرة 1",
           "rows": 3,
-          "value": "قصّة مستقيمة تنسدل من الكتف دون أن تشدّ عند الصدر أو تتجمّع عند الخصر. جرّبناها على أكثر من 40 جسماً مختلفاً قبل أن نعتمد الباترون النهائي."
+          "value": "وسائد ناعمة، سجاد فاخر، وقطع ديكور مختارة بعناية تمنح صالتك طابعاً مريحاً وأنيقاً في آن واحد."
         },
         {
           "id": "panel1_body2",
@@ -652,7 +578,7 @@
           "label": "نص اللوحة الأولى - الفقرة 2",
           "rows": 3,
           "required": false,
-          "value": "طول الجسم مدروس ليبقى في مكانه عند رفع اليدين، والكم ينتهي عند منتصف العضد تماماً — لا أقصر ولا أطول."
+          "value": "نستخدم أقمشة عالية الجودة ومقاومة للاهتراء، لتحافظ مفروشاتك على مظهرها الجميل لسنوات طويلة."
         },
         {
           "id": "panel1_image",
@@ -660,14 +586,14 @@
           "format": "image",
           "label": "صورة اللوحة الأولى",
           "required": false,
-          "value": "/assets/clothes/tee-white-product.jpg"
+          "value": "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=1000&q=80&auto=format&fit=crop"
         },
         {
           "id": "panel2_title",
           "type": "string",
           "format": "text",
           "label": "عنوان اللوحة الثانية",
-          "value": "تفاصيل تظهر مع الاستعمال."
+          "value": "مطبخ أكثر تنظيماً وعملية"
         },
         {
           "id": "panel2_body1",
@@ -675,7 +601,7 @@
           "format": "textarea",
           "label": "نص اللوحة الثانية - الفقرة 1",
           "rows": 3,
-          "value": "غرزة مزدوجة عند الأطراف والأكمام تمنع التفكك، ورقبة مدعّمة بشريط قطني يحفظ استدارتها بعد كل غسلة."
+          "value": "أواني طهي متعددة الاستخدامات وأدوات تخزين ذكية تجعل يومك في المطبخ أسهل وأكثر متعة."
         },
         {
           "id": "panel2_body2",
@@ -684,7 +610,7 @@
           "label": "نص اللوحة الثانية - الفقرة 2",
           "rows": 3,
           "required": false,
-          "value": "دون علامة داخلية تخدش الرقبة — المقاس وتعليمات العناية مطبوعة مباشرة على النسيج بحبر مائي ناعم."
+          "value": "تصاميم عملية تراعي أدق التفاصيل، من سهولة التنظيف إلى الاستخدام الآمن على جميع أنواع المواقد."
         },
         {
           "id": "panel2_image",
@@ -692,14 +618,14 @@
           "format": "image",
           "label": "صورة اللوحة الثانية",
           "required": false,
-          "value": "/assets/clothes/sweatshirt-white-product.jpg"
+          "value": "https://images.unsplash.com/photo-1571175443880-49e1d25b2bc5?w=1000&q=80&auto=format&fit=crop"
         },
         {
           "id": "panel2_button_label",
           "type": "string",
           "format": "text",
           "label": "نص زر اللوحة الثانية",
-          "value": "احجز قطعتك الآن"
+          "value": "تسوّق أدوات المطبخ"
         },
         {
           "id": "panel2_button_link",
@@ -718,28 +644,24 @@
           "maxLength": 6,
           "value": [
             {
-              "image": "/assets/clothes/tee-white-product.jpg",
-              "label": "أبيض"
+              "image": "https://images.unsplash.com/photo-1610701596007-11502861dcfa?w=700&q=80&auto=format&fit=crop",
+              "label": "أطقم فخارية"
             },
             {
-              "image": "/assets/clothes/tee-sand-product.jpg",
-              "label": "رملي"
+              "image": "https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?w=700&q=80&auto=format&fit=crop",
+              "label": "معطرات منزلية"
             },
             {
-              "image": "/assets/clothes/tee-black-product.jpg",
-              "label": "أسود"
+              "image": "https://images.unsplash.com/photo-1600166898405-da9535204843?w=700&q=80&auto=format&fit=crop",
+              "label": "سجاد فاخر"
             },
             {
-              "image": "/assets/clothes/shirt-chambray-product.jpg",
-              "label": "قميص"
+              "image": "https://images.unsplash.com/photo-1616627561950-9f746e330187?w=700&q=80&auto=format&fit=crop",
+              "label": "مفروشات ناعمة"
             },
             {
-              "image": "/assets/clothes/jacket-rust-product.jpg",
-              "label": "جاكيت"
-            },
-            {
-              "image": "/assets/clothes/knit-poncho-product.jpg",
-              "label": "تريكو"
+              "image": "https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?w=700&q=80&auto=format&fit=crop",
+              "label": "كراسي عصرية"
             }
           ],
           "fields": [
@@ -764,7 +686,7 @@
           "type": "string",
           "format": "text",
           "label": "نص خلفية العارض",
-          "value": "استعرض القطعة"
+          "value": "استكشف تفاصيل التصميم"
         }
       ]
     },
@@ -780,28 +702,28 @@
           "type": "string",
           "format": "color",
           "label": "لون الخلفية",
-          "value": "#ffffff"
+          "value": "#FFFFFF"
         },
         {
           "id": "text_color",
           "type": "string",
           "format": "color",
           "label": "لون النص",
-          "value": "#1A1613"
+          "value": "#2B2620"
         },
         {
           "id": "brand_color",
           "type": "string",
           "format": "color",
           "label": "لون العلامة التجارية",
-          "value": "#B4643C"
+          "value": "#B08D57"
         },
         {
           "id": "section_title",
           "type": "string",
           "format": "text",
           "label": "عنوان القسم",
-          "value": "صور حقيقية من عملائنا"
+          "value": "لحظات حقيقية من بيوت عملائنا"
         },
         {
           "id": "grid_columns",
@@ -820,51 +742,35 @@
           "maxLength": 6,
           "value": [
             {
-              "src": "/assets/clothes/worn-white-tee.jpg",
-              "alt": "عميل يرتدي التيشيرت الأبيض",
-              "overlay_text": "التيشيرت الأبيض — مقاس M",
-              "overlay_position": "bottom-right",
-              "always_show": false,
-              "show_overlay_bg": true
-            },
-            {
-              "src": "/assets/clothes/worn-orange-sweater.jpg",
-              "alt": "عميل يرتدي كنزة برتقالية",
-              "overlay_text": "كنزة برتقالي محروق — مقاس S",
+              "src": "https://images.unsplash.com/photo-1583845112203-29329902332e?w=900&q=80&auto=format&fit=crop",
+              "alt": "غرفة نوم دافئة",
+              "overlay_text": "غرفة نوم دافئة",
               "overlay_position": "top-right",
-              "always_show": false,
+              "always_show": true,
               "show_overlay_bg": true
             },
             {
-              "src": "/assets/clothes/worn-blue-shirt.jpg",
-              "alt": "عميل يرتدي قميصاً أزرق",
-              "overlay_text": "القميص الأزرق — مقاس L",
-              "overlay_position": "bottom-left",
-              "always_show": false,
-              "show_overlay_bg": true
-            },
-            {
-              "src": "/assets/clothes/worn-yellow-tracksuit.jpg",
-              "alt": "عميل يرتدي طقماً رياضياً",
-              "overlay_text": "الطقم الرياضي — مقاس M",
-              "overlay_position": "top-left",
-              "always_show": false,
-              "show_overlay_bg": true
-            },
-            {
-              "src": "/assets/clothes/worn-green-top.jpg",
-              "alt": "عميل يرتدي تيشيرت أخضر",
-              "overlay_text": "التوب الأخضر — مقاس S",
+              "src": "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=900&q=80&auto=format&fit=crop",
+              "alt": "ركن معيشة أنيق",
+              "overlay_text": "ركن معيشة أنيق",
               "overlay_position": "bottom-right",
-              "always_show": false,
+              "always_show": true,
               "show_overlay_bg": true
             },
             {
-              "src": "/assets/clothes/worn-kids-outfit.jpg",
-              "alt": "طفل يرتدي طقم الأطفال",
-              "overlay_text": "مجموعة الأطفال — 4 سنوات",
+              "src": "https://images.unsplash.com/photo-1519710164239-da123dc03ef4?w=900&q=80&auto=format&fit=crop",
+              "alt": "زاوية إفطار هادئة",
+              "overlay_text": "زاوية إفطار هادئة",
+              "overlay_position": "top-left",
+              "always_show": true,
+              "show_overlay_bg": true
+            },
+            {
+              "src": "https://images.unsplash.com/photo-1521783988139-89397d761dce?w=900&q=80&auto=format&fit=crop",
+              "alt": "لمسة فخامة",
+              "overlay_text": "لمسة فخامة",
               "overlay_position": "bottom-left",
-              "always_show": false,
+              "always_show": true,
               "show_overlay_bg": true
             }
           ],
@@ -918,6 +824,95 @@
       ]
     },
     {
+      "title": "معرض الصور المتحرك",
+      "icon": "sicon-images",
+      "name": "st-images-slider",
+      "key": "9c0d1e2f-3a4b-5c6d-7e8f-9a0b1c2d3e4f",
+      "image": "https://cdn.salla.sa/qAyGK/products/nNUJFeg1t2IYMTjGOednr4WsjHdpocbLnsuOwENI.jpg",
+      "fields": [
+        {
+          "id": "bg_color",
+          "type": "string",
+          "format": "color",
+          "label": "لون الخلفية",
+          "value": "#FFFFFF"
+        },
+        {
+          "id": "primary_color",
+          "type": "string",
+          "format": "color",
+          "label": "لون النص",
+          "value": "#2B2620"
+        },
+        {
+          "id": "brand_color",
+          "type": "string",
+          "format": "color",
+          "label": "لون العلامة التجارية",
+          "value": "#B08D57"
+        },
+        {
+          "id": "section_title",
+          "type": "string",
+          "format": "text",
+          "label": "عنوان القسم",
+          "value": "كل ركن في بيتك يستحق لمسة مميزة"
+        },
+        {
+          "id": "images",
+          "type": "collection",
+          "format": "collection",
+          "label": "الصور",
+          "item_label": "صورة",
+          "minLength": 1,
+          "maxLength": 10,
+          "value": [
+            {
+              "src": "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&q=80&auto=format&fit=crop",
+              "title": "أناقة بسيطة"
+            },
+            {
+              "src": "https://images.unsplash.com/photo-1550581190-9c1c48d21d6c?w=800&q=80&auto=format&fit=crop",
+              "title": "دفء المساء"
+            },
+            {
+              "src": "https://images.unsplash.com/photo-1567016432779-094069958ea5?w=800&q=80&auto=format&fit=crop",
+              "title": "ألوان جريئة"
+            },
+            {
+              "src": "https://images.unsplash.com/photo-1519643381401-22c77e60520e?w=800&q=80&auto=format&fit=crop",
+              "title": "أجواء العائلة"
+            },
+            {
+              "src": "https://images.unsplash.com/photo-1583845112203-29329902332e?w=800&q=80&auto=format&fit=crop",
+              "title": "راحة الصباح"
+            },
+            {
+              "src": "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=800&q=80&auto=format&fit=crop",
+              "title": "لمسة عصرية"
+            }
+          ],
+          "fields": [
+            {
+              "id": "src",
+              "type": "string",
+              "format": "image",
+              "label": "الصورة",
+              "required": true
+            },
+            {
+              "id": "title",
+              "type": "string",
+              "format": "text",
+              "label": "عنوان الصورة",
+              "maxLength": 80,
+              "required": false
+            }
+          ]
+        }
+      ]
+    },
+    {
       "title": "المواصفات التقنية",
       "icon": "sicon-layout-grid-rearrange",
       "name": "st-specification",
@@ -929,42 +924,42 @@
           "type": "string",
           "format": "color",
           "label": "لون الخلفية",
-          "value": "#F6F1EA"
+          "value": "#FFFFFF"
         },
         {
           "id": "primary_color",
           "type": "string",
           "format": "color",
           "label": "لون النص الأساسي",
-          "value": "#1A1613"
+          "value": "#2B2620"
         },
         {
           "id": "secondary_color",
           "type": "string",
           "format": "color",
           "label": "لون النص الثانوي",
-          "value": "#6B6259"
+          "value": "#6B6156"
         },
         {
           "id": "border_color",
           "type": "string",
           "format": "color",
           "label": "لون الحدود",
-          "value": "#E6DED4"
+          "value": "#E7E1D8"
         },
         {
           "id": "brand_color",
           "type": "string",
           "format": "color",
           "label": "لون العلامة التجارية",
-          "value": "#B4643C"
+          "value": "#B08D57"
         },
         {
           "id": "section_title",
           "type": "string",
           "format": "text",
           "label": "عنوان القسم",
-          "value": "دليل المقاسات"
+          "value": "المواصفات التقنية"
         },
         {
           "id": "section_subtitle",
@@ -973,7 +968,7 @@
           "label": "النص الفرعي",
           "rows": 2,
           "required": false,
-          "value": "جميع القياسات بالسنتيمتر ومأخوذة من القطعة مسطّحة، بهامش اختلاف ±1 سم. إذا كان قياسك بين مقاسين، ننصحك باختيار المقاس الأكبر للحصول على قصّة مريحة."
+          "value": "تفاصيل دقيقة عن الخامات والأبعاد، لتختار ما يناسب مطبخك ومنزلك بثقة."
         },
         {
           "id": "rows",
@@ -985,70 +980,48 @@
           "maxLength": 20,
           "value": [
             {
-              "header": "المقاس S:",
-              "col1_title": "الصدر",
-              "col1_value": "96 سم",
-              "col2_title": "طول الجسم",
-              "col2_value": "68 سم",
-              "col3_title": "عرض الكتف",
-              "col3_value": "43 سم",
-              "col4_title": "طول الكم",
-              "col4_value": "20 سم"
+              "header": "الخامات والتصنيع:",
+              "col1_title": "نوع الخامة",
+              "col1_value": "سيراميك مطلي غير لاصق",
+              "col2_title": "المقبض",
+              "col2_value": "خشب زان طبيعي",
+              "col3_title": "الغطاء",
+              "col3_value": "زجاج مقسّى مقاوم للحرارة",
+              "col4_title": "الصناعة",
+              "col4_value": "صناعة يدوية"
             },
             {
-              "header": "المقاس M:",
-              "col1_title": "الصدر",
-              "col1_value": "102 سم",
-              "col2_title": "طول الجسم",
-              "col2_value": "70 سم",
-              "col3_title": "عرض الكتف",
-              "col3_value": "45 سم",
-              "col4_title": "طول الكم",
-              "col4_value": "21 سم"
+              "header": "الأبعاد والوزن:",
+              "col1_title": "القطر",
+              "col1_value": "24 سم",
+              "col2_title": "الارتفاع",
+              "col2_value": "12 سم",
+              "col3_title": "الوزن",
+              "col3_value": "2.1 كجم",
+              "col4_title": "السعة",
+              "col4_value": "4.5 لتر"
             },
             {
-              "header": "المقاس L:",
-              "col1_title": "الصدر",
-              "col1_value": "108 سم",
-              "col2_title": "طول الجسم",
-              "col2_value": "72 سم",
-              "col3_title": "عرض الكتف",
-              "col3_value": "47 سم",
-              "col4_title": "طول الكم",
-              "col4_value": "22 سم"
+              "header": "الاستخدام والعناية:",
+              "col1_title": "آمن للفرن",
+              "col1_value": "حتى 260°م",
+              "col2_title": "غسالة الأواني",
+              "col2_value": "نعم",
+              "col3_title": "التوافق",
+              "col3_value": "جميع أنواع المواقد",
+              "col4_title": "الضمان",
+              "col4_value": "سنتان"
             },
             {
-              "header": "المقاس XL:",
-              "col1_title": "الصدر",
-              "col1_value": "114 سم",
-              "col2_title": "طول الجسم",
-              "col2_value": "74 سم",
-              "col3_title": "عرض الكتف",
-              "col3_value": "49 سم",
-              "col4_title": "طول الكم",
-              "col4_value": "23 سم"
-            },
-            {
-              "header": "المقاس 2XL:",
-              "col1_title": "الصدر",
-              "col1_value": "120 سم",
-              "col2_title": "طول الجسم",
-              "col2_value": "76 سم",
-              "col3_title": "عرض الكتف",
-              "col3_value": "51 سم",
-              "col4_title": "طول الكم",
-              "col4_value": "24 سم"
-            },
-            {
-              "header": "الخامة والعناية:",
-              "col1_title": "التركيب",
-              "col1_value": "قطن مُمشّط 100%",
-              "col2_title": "وزن النسيج",
-              "col2_value": "240 غم/م²",
-              "col3_title": "الغسيل",
-              "col3_value": "30° برنامج لطيف",
-              "col4_title": "الكي",
-              "col4_value": "حرارة متوسطة"
+              "header": "التغليف:",
+              "col1_title": "علبة هدايا فاخرة",
+              "col1_value": "نعم",
+              "col2_title": "",
+              "col2_value": "",
+              "col3_title": "",
+              "col3_value": "",
+              "col4_title": "",
+              "col4_value": ""
             }
           ],
           "fields": [
@@ -1131,28 +1104,28 @@
           "type": "string",
           "format": "color",
           "label": "لون الخلفية",
-          "value": "#ffffff"
+          "value": "#FFFFFF"
         },
         {
           "id": "primary_color",
           "type": "string",
           "format": "color",
           "label": "اللون الأساسي",
-          "value": "#1A1613"
+          "value": "#2B2620"
         },
         {
           "id": "brand_color",
           "type": "string",
           "format": "color",
           "label": "لون العلامة التجارية",
-          "value": "#B4643C"
+          "value": "#B08D57"
         },
         {
           "id": "secondary_color",
           "type": "string",
           "format": "color",
           "label": "لون النص الثانوي",
-          "value": "#6B6259"
+          "value": "#6B6156"
         },
         {
           "id": "green_color",
@@ -1166,14 +1139,14 @@
           "type": "string",
           "format": "color",
           "label": "لون سعر الخصم",
-          "value": "#F62A33"
+          "value": "#C0392B"
         },
         {
           "id": "section_title",
           "type": "string",
           "format": "text",
           "label": "عنوان القسم",
-          "value": "اختر المقاس الذي يناسبك."
+          "value": "اختاري الحجم الذي يناسب مطبخك"
         },
         {
           "id": "section_subtitle",
@@ -1182,14 +1155,14 @@
           "label": "النص الفرعي",
           "rows": 2,
           "required": false,
-          "value": "كل طقم يشمل الشحن المجاني والاستبدال خلال 14 يوماً. اختر ألوانك ومقاساتك بعد إضافة الطقم إلى العربة."
+          "value": "تشكيلة مختارة من أفضل منتجاتنا بأسعار مميزة، لفترة محدودة."
         },
         {
           "id": "badge_label",
           "type": "string",
           "format": "text",
           "label": "نص الشارة",
-          "value": "عروض الموسم",
+          "value": "عروض هذا الأسبوع",
           "required": false
         },
         {
@@ -1197,7 +1170,7 @@
           "type": "string",
           "format": "icon",
           "label": "أيقونة الشارة",
-          "value": "sicon-bolt",
+          "value": "sicon-discount",
           "required": false
         },
         {
@@ -1231,28 +1204,28 @@
           "maxLength": 3,
           "value": [
             {
-              "image": "/assets/clothes/tee-white-product.jpg",
-              "name": "S",
+              "image": "https://images.unsplash.com/photo-1556909212-d5b604d0c90d?w=700&q=80&auto=format&fit=crop",
+              "name": "طقم 6 قطع",
               "price": 249,
-              "regular_price": 320,
+              "regular_price": 349,
               "is_on_sale": true,
               "is_out_of_stock": false
             },
             {
-              "image": "/assets/clothes/tee-white-product.jpg",
-              "name": "M",
-              "price": 249,
-              "regular_price": 320,
+              "image": "https://images.unsplash.com/photo-1556909212-d5b604d0c90d?w=700&q=80&auto=format&fit=crop",
+              "name": "طقم 10 قطع",
+              "price": 349,
+              "regular_price": 499,
               "is_on_sale": true,
               "is_out_of_stock": false
             },
             {
-              "image": "/assets/clothes/tee-white-product.jpg",
-              "name": "L",
-              "price": 249,
-              "regular_price": 320,
+              "image": "https://images.unsplash.com/photo-1556909212-d5b604d0c90d?w=700&q=80&auto=format&fit=crop",
+              "name": "طقم 14 قطع",
+              "price": 459,
+              "regular_price": 649,
               "is_on_sale": true,
-              "is_out_of_stock": true
+              "is_out_of_stock": false
             }
           ],
           "fields": [
@@ -1315,35 +1288,35 @@
           "type": "string",
           "format": "color",
           "label": "لون الخلفية",
-          "value": "#ffffff"
+          "value": "#FFFFFF"
         },
         {
           "id": "primary_color",
           "type": "string",
           "format": "color",
           "label": "لون النص الأساسي",
-          "value": "#1A1613"
+          "value": "#2B2620"
         },
         {
           "id": "brand_color",
           "type": "string",
           "format": "color",
           "label": "لون العلامة التجارية",
-          "value": "#B4643C"
+          "value": "#B08D57"
         },
         {
           "id": "secondary_color",
           "type": "string",
           "format": "color",
           "label": "لون النص الثانوي",
-          "value": "#6B6259"
+          "value": "#6B6156"
         },
         {
           "id": "shade_color",
           "type": "string",
           "format": "color",
           "label": "لون خلفية الترقيم",
-          "value": "rgba(26,22,19,0.04)"
+          "value": "rgba(176,141,87,0.08)"
         },
         {
           "id": "section_icon",
@@ -1364,7 +1337,7 @@
           "type": "string",
           "format": "text",
           "label": "العنوان الفرعي",
-          "value": "تجارب حقيقية من خزائن عملائنا"
+          "value": "آراء حقيقية من عملائنا"
         },
         {
           "id": "prev_icon",
@@ -1390,44 +1363,36 @@
           "maxLength": 10,
           "value": [
             {
-              "body": "طلبت مقاس M حسب الجدول وجاء مضبوط تماماً على القياس. الخامة سميكة بشكل مريح — ليست شفافة أبداً مثل التيشيرتات الرخيصة. غسلته أربع مرات حتى الآن ولم ينكمش ولا فقد لونه الأسود. أول مرة أطلب قطعة أونلاين وتجي مثل الصور بالضبط.",
-              "user": "نورة العتيبي",
+              "body": "جودة طقم الأواني فاقت توقعاتي! توزيع الحرارة ممتاز والتنظيف سهل جداً. أنصح فيه كل صديقة تحب المطبخ.",
+              "user": "أم عبدالله",
               "stars": 5,
               "audio_url": "",
-              "media_type": "image",
-              "media_src": "/assets/clothes/worn-black-tee.jpg"
+              "media_type": "",
+              "media_src": ""
             },
             {
-              "body": "اشتريت طقم الأساسيات الثلاثة بعد تردد طويل، والصراحة صار خياري اليومي. القصّة مستقيمة ولا تشد عند البطن، وهذا بالضبط اللي كنت أدور عليه. الكم بطول مثالي لا قصير ولا طويل. الشحن وصلني خلال يومين فقط للرياض.",
-              "user": "عبدالله القحطاني",
-              "stars": 5,
-              "audio_url": "",
-              "media_type": "image",
-              "media_src": "/assets/clothes/worn-white-tee.jpg"
-            },
-            {
-              "body": "اللون الكراميل أجمل بكثير على الطبيعة من الصورة. طلبت مقاسي المعتاد S وكان واسع شوي عليّ، فاستبدلته بدون أي رسوم والعملية أخذت ثلاثة أيام فقط. خدمة العملاء ردت عليّ خلال دقائق. تجربة مريحة من أولها لآخرها.",
-              "user": "لمى الشهري",
+              "body": "التغليف كان أنيقاً جداً والتوصيل وصل خلال يومين فقط. تجربة شراء ممتازة من البداية للنهاية.",
+              "user": "سارة الحربي",
               "stars": 4.5,
               "audio_url": "",
-              "media_type": "image",
-              "media_src": "/assets/clothes/worn-tan-jacket.jpg"
+              "media_type": "",
+              "media_src": ""
             },
             {
-              "body": "القميص الأزرق صار قطعتي الرسمية المفضلة للدوام. الياقة تحافظ على شكلها طول اليوم ولا تترهل، والكي سهل جداً — تقريباً يخرج من الغسالة مستوي. الطباعة الداخلية بدل العلامة فكرة ذكية، ما عدت أحس بشي يخربش رقبتي.",
-              "user": "فيصل الدوسري",
+              "body": "اشتريت طقم الأكواب الفخارية كهدية، وكانت أجمل من الصور! خامة رائعة ولمسة يدوية واضحة.",
+              "user": "منى القحطاني",
               "stars": 5,
               "audio_url": "",
               "media_type": "image",
-              "media_src": "/assets/clothes/worn-blue-shirt.jpg"
+              "media_src": "https://images.unsplash.com/photo-1591129841117-3adfd313e34f?w=800&q=80&auto=format&fit=crop"
             },
             {
-              "body": "طلبت الكنزة البرتقالية لبنتي والطقم للولد. الخامة نفسها المذكورة بالوصف تماماً — قطن ناعم ما يهيّج بشرة الأطفال. المقاسات جاءت مضبوطة حسب الجدول، وهذا نادر بصراحة مع ملابس الأطفال أونلاين.",
-              "user": "هند المطيري",
-              "stars": 5,
+              "body": "السجادة غيرت شكل الصالة بالكامل، ألوانها ثابتة وخامتها فخمة رغم السعر المناسب.",
+              "user": "خالد العتيبي",
+              "stars": 4.5,
               "audio_url": "",
-              "media_type": "image",
-              "media_src": "/assets/clothes/worn-kids-outfit.jpg"
+              "media_type": "",
+              "media_src": ""
             }
           ],
           "fields": [
@@ -1495,35 +1460,35 @@
           "type": "string",
           "format": "color",
           "label": "لون الخلفية",
-          "value": "#14100D"
+          "value": "#211B14"
         },
         {
           "id": "bottom_bg_color",
           "type": "string",
           "format": "color",
           "label": "لون الشريط السفلي",
-          "value": "#ffffff"
+          "value": "#FFFFFF"
         },
         {
           "id": "text_color",
           "type": "string",
           "format": "color",
           "label": "لون النص",
-          "value": "#ffffff"
+          "value": "#FFFFFF"
         },
         {
           "id": "brand_color",
           "type": "string",
           "format": "color",
           "label": "لون العلامة التجارية",
-          "value": "#B4643C"
+          "value": "#B08D57"
         },
         {
           "id": "newsletter_title",
           "type": "string",
           "format": "text",
           "label": "عنوان النشرة البريدية",
-          "value": "كن أول من يعرف بالمجموعة القادمة!"
+          "value": "اشترك ليصلك كل جديد في عالم المنزل"
         },
         {
           "id": "newsletter_subtitle",
@@ -1532,14 +1497,14 @@
           "label": "النص الفرعي للنشرة البريدية",
           "rows": 2,
           "required": false,
-          "value": "اشترك لتصلك المجموعات الجديدة قبل نفادها، ودعوات التخفيضات الخاصة، ونصائح العناية بقطعك حتى تدوم أطول. رسالة واحدة كل أسبوع فقط — بلا إزعاج."
+          "value": "عروض حصرية، وأفكار ديكور ملهمة، مباشرة إلى بريدك الإلكتروني."
         },
         {
           "id": "newsletter_placeholder",
           "type": "string",
           "format": "text",
           "label": "نص حقل البريد",
-          "value": "بريدك الالكتروني"
+          "value": "بريدك الإلكتروني"
         },
         {
           "id": "newsletter_icon",
@@ -1569,7 +1534,7 @@
           "type": "string",
           "format": "text",
           "label": "اسم المتجر",
-          "value": "أتيليه للأزياء"
+          "value": "بيت الأناقة"
         },
         {
           "id": "store_description",
@@ -1577,7 +1542,7 @@
           "format": "textarea",
           "label": "وصف المتجر",
           "rows": 3,
-          "value": "متجر سعودي متخصص في الملابس القطنية اليومية للرجال والنساء والأطفال. نصنع قطعاً بخامات مختارة وقصّات مدروسة، بأسعار عادلة وسياسة استبدال مريحة."
+          "value": "متجر متخصص في مستلزمات المنزل الفاخرة، من أدوات المطبخ إلى المفروشات وقطع الديكور، نختار لكِ كل قطعة بعناية لتضيف لمسة من الجمال والراحة على منزلك."
         },
         {
           "id": "nav_columns",
@@ -1588,28 +1553,28 @@
           "maxLength": 6,
           "value": [
             {
-              "header": "تسوّق",
-              "link1_label": "ملابس رجالية",
+              "header": "الأقسام",
+              "link1_label": "أدوات المطبخ",
               "link1_href": "#st-variants",
-              "link2_label": "ملابس نسائية",
-              "link2_href": "#st-images-slider",
-              "link3_label": "ملابس أطفال",
-              "link3_href": "#st-product-images"
+              "link2_label": "المفروشات والسجاد",
+              "link2_href": "#st-variants",
+              "link3_label": "الأثاث والديكور",
+              "link3_href": "#st-variants"
             },
             {
-              "header": "المساعدة",
-              "link1_label": "دليل المقاسات",
-              "link1_href": "#st-specification",
-              "link2_label": "سياسة الاستبدال والإرجاع",
+              "header": "روابط سريعة",
+              "link1_label": "من نحن",
+              "link1_href": "#",
+              "link2_label": "سياسة الاستبدال والاسترجاع",
               "link2_href": "#",
-              "link3_label": "تتبع شحنتك",
+              "link3_label": "الأسئلة الشائعة",
               "link3_href": "#"
             },
             {
               "header": "تواصل معنا",
               "link1_label": "8001111210",
               "link1_href": "#",
-              "link2_label": "واتساب المتجر",
+              "link2_label": "BaytElegance",
               "link2_href": "#",
               "link3_label": "sallathemes@gmail.com",
               "link3_href": "#"

@@ -275,7 +275,7 @@ class l extends g {
       return r`<div>Configuration is required</div>`;
     const i = this.config.bg_color || "#ffffff", e = this.config.images || [];
     return r`
-      <section class="st-images-slider" style="background: ${i};">
+      <section id="st-images-slider" class="st-images-slider" style="background: ${i};">
         <!-- Section header (start-aligned, matches source SectionHeader) -->
         <div class="st-images-slider__header-wrap">
           <h3 class="st-images-slider__title">${this.config.section_title}</h3>

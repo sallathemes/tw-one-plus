@@ -188,7 +188,6 @@ export default class StSpecification extends LitElement {
         font-weight: 700;
         font-size: 1rem;
         color: var(--st-specification-primary, #050505);
-        background: var(--st-specification-bg, #ffffff);
       }
 
       [dir="rtl"] .st-specification__row-header {

@@ -440,7 +440,7 @@ export default class StVariants extends LitElement {
     const transitioningClass = this.isTransitioning ? 'is-transitioning' : '';
 
     return html`
-      <section class="st-variants">
+      <section id="st-variants" class="st-variants">
         <div class="st-variants__container">
           <h3 class="st-variants__title" data-animate="fade-up">
             ${this.config.section_title}

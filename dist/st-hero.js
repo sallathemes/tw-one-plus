@@ -1,17 +1,18 @@
-import { LitElement as p, html as n } from "lit";
-import { property as m, state as c } from "lit/decorators.js";
-import { S as b } from "./scroll-scene-DdINwXtt.js";
+import { LitElement as _, html as i } from "lit";
+import { property as b, state as m } from "lit/decorators.js";
+import { S as f } from "./scroll-scene-DdINwXtt.js";
 import "./fonts-CqDo7kag.js";
-var _ = Object.defineProperty, h = (d, t, e, l) => {
-  for (var i = void 0, o = d.length - 1, a; o >= 0; o--)
-    (a = d[o]) && (i = a(t, e, i) || i);
-  return i && _(t, e, i), i;
+import { b as u, m as r, r as g } from "./mock-product-B38SvcvQ.js";
+var v = Object.defineProperty, p = (d, t, e, c) => {
+  for (var o = void 0, n = d.length - 1, s; n >= 0; n--)
+    (s = d[n]) && (o = s(t, e, o) || o);
+  return o && v(t, e, o), o;
 };
-class r extends p {
+class l extends _ {
   constructor() {
     super(...arguments), this.navFixed = !1, this.mobileMenuOpen = !1, this.styleElement = null, this.scene = null, this.navSceneProgress = (t, e) => {
-      const l = this.navFixed;
-      this.navFixed = e.top < -80, l !== this.navFixed && this.requestUpdate();
+      const c = this.navFixed;
+      this.navFixed = e.top < -80, c !== this.navFixed && this.requestUpdate();
     };
   }
   createRenderRoot() {
@@ -20,7 +21,7 @@ class r extends p {
   syncScene() {
     if (this.scene) return;
     const t = this.querySelector(".st-hero");
-    t && (this.scene = new b(t, this.navSceneProgress));
+    t && (this.scene = new f(t, this.navSceneProgress));
   }
   connectedCallback() {
     super.connectedCallback(), this.injectStyles();
@@ -168,21 +169,7 @@ class r extends p {
         flex-shrink: 0;
       }
 
-      /* Cart button (navbar) */
-      .st-hero__nav-cart {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        background: none;
-        border: none;
-        padding: 0.25rem;
-        font-size: 1.5rem;
-        cursor: pointer;
-        line-height: 1;
-      }
-
-      /* CTA pill button (navbar) — hidden on mobile so it doesn't crowd the
-         hamburger out of the viewport (matches source's hidden md:flex) */
+      /* CTA pill button (navbar) */
       .st-hero__nav-btn {
         display: none;
         position: relative;
@@ -469,28 +456,36 @@ class r extends p {
         transform: translateY(0);
         opacity: 1;
       }
+
+      ${u}
     `, document.head.appendChild(this.styleElement));
   }
   render() {
-    if (!this.config) return n``;
-    const t = this.config.bg_color || "#050505", e = this.config.text_color || "#ffffff", l = this.config.brand_color || "#0071E3", i = (typeof this.config.overlay_opacity == "number" ? this.config.overlay_opacity : 60) / 100, o = [this.config.button_label, this.config.button_price].filter(Boolean).join(" "), a = [
+    if (!this.config) return i``;
+    const t = this.config.bg_color || "#050505", e = this.config.text_color || "#ffffff", c = this.config.brand_color || "#0071E3", o = (typeof this.config.overlay_opacity == "number" ? this.config.overlay_opacity : 60) / 100, n = {
+      price: this.config.product_price ?? r.price,
+      regularPrice: this.config.product_regular_price ?? r.regularPrice,
+      currency: this.config.product_currency || r.currency,
+      isOnSale: this.config.product_is_on_sale ?? r.isOnSale,
+      isOutOfStock: this.config.product_out_of_stock ?? r.isOutOfStock
+    }, s = g(n, this.config.button_label), h = [
       { label: this.config.nav1_label, href: this.config.nav1_href },
       { label: this.config.nav2_label, href: this.config.nav2_href },
       { label: this.config.nav3_label, href: this.config.nav3_href },
       { label: this.config.nav4_label, href: this.config.nav4_href }
-    ].filter((s) => s.label);
-    return n`
+    ].filter((a) => a.label);
+    return i`
       <section
         class="st-hero"
         style="background-color:${t}; color:${e};"
       >
         <!-- ── Background ───────────────────────── -->
         <div class="st-hero__bg">
-          ${this.config.video_url ? n`<video autoplay muted loop playsinline preload="none"
-                     src="${this.config.video_url}"></video>` : this.config.bg_image ? n`<img src="${this.config.bg_image}" alt="" loading="eager" />` : ""}
+          ${this.config.video_url ? i`<video autoplay muted loop playsinline preload="none"
+                     src="${this.config.video_url}"></video>` : this.config.bg_image ? i`<img src="${this.config.bg_image}" alt="" loading="eager" />` : ""}
           <div
             class="st-hero__overlay"
-            style="background:${t}; opacity:${i};"
+            style="background:${t}; opacity:${o};"
           ></div>
         </div>
 
@@ -502,39 +497,31 @@ class r extends p {
           <div class="st-hero__nav-inner">
             <!-- Logo -->
             <a class="st-hero__nav-logo" href="#" style="color:${e};">
-              ${this.config.logo ? n`<img src="${this.config.logo}" alt="${this.config.store_name || ""}" />` : n`<span>${this.config.store_name || ""}</span>`}
+              ${this.config.logo ? i`<img src="${this.config.logo}" alt="${this.config.store_name || ""}" />` : i`<span>${this.config.store_name || ""}</span>`}
             </a>
 
             <!-- Desktop nav links -->
             <ul class="st-hero__nav-links">
-              ${a.map((s) => n`
-                <li><a href="${s.href || "#"}">${s.label}</a></li>
+              ${h.map((a) => i`
+                <li><a href="${a.href || "#"}">${a.label}</a></li>
               `)}
             </ul>
 
-            <!-- Actions: cart + CTA + hamburger -->
+            <!-- Actions: CTA + hamburger -->
             <div class="st-hero__nav-actions">
-              <button
-                type="button"
-                class="st-hero__nav-cart"
-                title="السلة"
-                style="color:${e};"
-              >
-                <i class="sicon-cart"></i>
-              </button>
-
-              ${this.config.button_label ? n`
+              ${this.config.button_label ? i`
                 <a
                   href="${this.config.button_link || "#"}"
-                  class="st-hero__nav-btn"
+                  class="st-hero__nav-btn st-buy-btn ${n.isOutOfStock ? "is-out-of-stock" : ""}"
                   style="color:${e};"
+                  aria-disabled="${n.isOutOfStock ? "true" : "false"}"
                 >
-                  <span class="st-hero__nav-btn-text-a">${o}</span>
-                  <span class="st-hero__nav-btn-text-b">${o}</span>
+                  <span class="st-hero__nav-btn-text-a">${s}</span>
+                  <span class="st-hero__nav-btn-text-b">${s}</span>
                 </a>
               ` : ""}
 
-              ${a.length ? n`
+              ${h.length ? i`
                 <button
                   class="st-hero__nav-hamburger"
                   aria-label="فتح القائمة"
@@ -572,14 +559,14 @@ class r extends p {
     }}"
             >✕</button>
             <ul>
-              ${a.map((s) => n`
+              ${h.map((a) => i`
                 <li>
                   <a
-                    href="${s.href || "#"}"
+                    href="${a.href || "#"}"
                     @click="${() => {
       this.mobileMenuOpen = !1, this.requestUpdate();
     }}"
-                  >${s.label}</a>
+                  >${a.label}</a>
                 </li>
               `)}
             </ul>
@@ -590,26 +577,27 @@ class r extends p {
         <div class="st-hero__body">
           <div class="st-hero__container">
             <div class="st-hero__text-wrap">
-              ${this.config.title ? n`
+              ${this.config.title ? i`
                 <h1 class="st-hero__title">${this.config.title}</h1>
               ` : ""}
 
-              ${this.config.subtitle ? n`
+              ${this.config.subtitle ? i`
                 <p
                   class="st-hero__subtitle"
                   style="color:${e}; opacity:0;"
                 >${this.config.subtitle}</p>
               ` : ""}
 
-              ${this.config.button_label ? n`
+              ${this.config.button_label ? i`
                 <div class="st-hero__cta">
                   <a
                     href="${this.config.button_link || "#"}"
-                    class="st-hero__main-btn"
-                    style="background:${l}; color:#fff;"
+                    class="st-hero__main-btn st-buy-btn ${n.isOutOfStock ? "is-out-of-stock" : ""}"
+                    style="background:${c}; color:#fff;"
+                    aria-disabled="${n.isOutOfStock ? "true" : "false"}"
                   >
-                    <span class="st-hero__main-btn-text-a">${o}</span>
-                    <span class="st-hero__main-btn-text-b">${o}</span>
+                    <span class="st-hero__main-btn-text-a">${s}</span>
+                    <span class="st-hero__main-btn-text-b">${s}</span>
                   </a>
                 </div>
               ` : ""}
@@ -620,16 +608,16 @@ class r extends p {
     `;
   }
 }
-h([
-  m({ type: Object })
-], r.prototype, "config");
-h([
-  c()
-], r.prototype, "navFixed");
-h([
-  c()
-], r.prototype, "mobileMenuOpen");
-typeof r < "u" && r.registerSallaComponent("salla-st-hero");
+p([
+  b({ type: Object })
+], l.prototype, "config");
+p([
+  m()
+], l.prototype, "navFixed");
+p([
+  m()
+], l.prototype, "mobileMenuOpen");
+typeof l < "u" && l.registerSallaComponent("salla-st-hero");
 export {
-  r as default
+  l as default
 };

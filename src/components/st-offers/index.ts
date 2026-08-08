@@ -3,6 +3,8 @@ import { property, state } from 'lit/decorators.js';
 import { classMap } from 'lit/directives/class-map.js';
 import AOS from '../../utils/animate-on-scroll';
 import '../../utils/fonts';
+import { buyNowButtonStyles, renderBuyNowLabel } from '../shared/buy-now-button';
+import { mockProduct, type BuyNowProduct } from '../shared/mock-product';
 
 export default class StOffers extends LitElement {
   @property({ type: Object })
@@ -18,19 +20,22 @@ export default class StOffers extends LitElement {
     badge_label: string;
     badge_icon: string;
     cta_label: string;
-    offers: Array<{
+    button_link: string;
+    currency: string;
+    variants: Array<{
       image: string;
       name: string;
-      price_after: number;
-      price_before: number;
-      currency: string;
-      link: string;
+      price: number;
+      regular_price?: number;
+      is_on_sale?: boolean;
+      is_out_of_stock?: boolean;
     }>;
   };
 
-  // Matches source: no offer selected until the shopper picks one
+  // Variants of the same product (size, color, quantity…) — the first one is
+  // selected by default, same as a real product page's option picker.
   @state()
-  private selectedOffer: number | null = null;
+  private selectedVariant: number = 0;
 
   private styleElement: HTMLStyleElement | null = null;
 
@@ -56,13 +61,13 @@ export default class StOffers extends LitElement {
     AOS.refresh();
   }
 
-  // No offer picked yet: block navigation instead of following an empty/"#" link
-  private handleBuyClick(e: Event) {
-    if (this.selectedOffer === null) e.preventDefault();
+  // Out of stock: block navigation instead of following an empty/"#" link
+  private handleBuyClick(e: Event, isOutOfStock: boolean) {
+    if (isOutOfStock) e.preventDefault();
   }
 
-  private handleSelectOffer(index: number) {
-    this.selectedOffer = index;
+  private handleSelectVariant(index: number) {
+    this.selectedVariant = index;
     this.requestUpdate();
   }
 
@@ -179,7 +184,7 @@ export default class StOffers extends LitElement {
         .st-offers__subtitle { font-size: 1rem; }
       }
 
-      /* Offers row: horizontal scroll on mobile, 3-up on desktop (matches source) */
+      /* Variants row: horizontal scroll on mobile, 3-up on desktop (matches source) */
       .st-offers__grid {
         display: flex;
         gap: 1rem;
@@ -225,11 +230,15 @@ export default class StOffers extends LitElement {
         display: flex;
         flex-direction: column;
         gap: 1rem;
-        transition: border-color 0.3s ease;
+        transition: border-color 0.3s ease, opacity 0.3s ease;
       }
 
       .st-offers__card.is-selected .st-offers__card-inner {
         border-color: ${brandColor};
+      }
+
+      .st-offers__card.is-out-of-stock .st-offers__card-inner {
+        opacity: 0.5;
       }
 
       .st-offers__card-img {
@@ -278,12 +287,18 @@ export default class StOffers extends LitElement {
         color: ${redColor};
       }
 
+      .st-offers__price-out-of-stock {
+        font-weight: 700;
+        color: ${secondaryColor};
+      }
+
       .st-offers__price-before {
         text-decoration: line-through;
         color: ${primaryColor};
       }
 
-      /* Buy button — links out to the merchant's real store to complete the purchase */
+      /* Buy button — one shared "buy now" CTA for the whole component (matches
+         the button used across the bundle's other sections, e.g. st-hero) */
       .st-offers__cta {
         display: flex;
         align-items: center;
@@ -310,11 +325,6 @@ export default class StOffers extends LitElement {
         .st-offers__btn { padding: 1rem; }
       }
 
-      .st-offers__btn.is-disabled {
-        cursor: not-allowed;
-        opacity: 0.5;
-      }
-
       .st-offers__btn-label {
         font-size: 0.875rem;
         font-weight: 800;
@@ -330,6 +340,8 @@ export default class StOffers extends LitElement {
         line-height: 1;
         color: #ffffff;
       }
+
+      ${buyNowButtonStyles}
     `;
     document.head.appendChild(this.styleElement);
   }
@@ -339,8 +351,23 @@ export default class StOffers extends LitElement {
       return html`<div>Configuration is required</div>`;
     }
 
-    const offers = (this.config.offers || []).slice(0, 3);
-    const selected = this.selectedOffer !== null ? offers[this.selectedOffer] : null;
+    const variants = (this.config.variants || []).slice(0, 3);
+    const currency = this.config.currency || 'ر.س';
+    const activeIndex = Math.min(this.selectedVariant, Math.max(variants.length - 1, 0));
+    const activeVariant = variants[activeIndex];
+
+    // No live Salla product context in this bundle (static page-builder config),
+    // so unset price fields fall back to mock product data.
+    const product: BuyNowProduct = activeVariant
+      ? {
+          price: activeVariant.price ?? mockProduct.price,
+          regularPrice: activeVariant.regular_price,
+          currency,
+          isOnSale: activeVariant.is_on_sale ?? false,
+          isOutOfStock: activeVariant.is_out_of_stock ?? false,
+        }
+      : mockProduct;
+    const buttonLabel = renderBuyNowLabel(product, this.config.cta_label);
 
     return html`
       <section id="st-offers" class="st-offers">
@@ -365,35 +392,45 @@ export default class StOffers extends LitElement {
             </div>
           </div>
 
-          <!-- Offers row (max 3 cards) -->
+          <!-- Variant options row (max 3 cards, same product) -->
           <div class="st-offers__grid">
-            ${offers.map(
-              (offer, i) => html`
+            ${variants.map(
+              (variant, i) => html`
                 <div
-                  class="${classMap({ 'st-offers__card': true, 'is-selected': i === this.selectedOffer })}"
+                  class="${classMap({
+                    'st-offers__card': true,
+                    'is-selected': i === activeIndex,
+                    'is-out-of-stock': Boolean(variant.is_out_of_stock),
+                  })}"
                   data-animate="bounce-in"
                   data-delay="${i * 300}"
-                  @click="${() => this.handleSelectOffer(i)}"
+                  @click="${() => this.handleSelectVariant(i)}"
                 >
                   <div class="st-offers__card-inner">
                     <img
-                      src="${offer.image}"
-                      alt="${offer.name}"
+                      src="${variant.image}"
+                      alt="${variant.name}"
                       class="st-offers__card-img"
                       loading="lazy"
                     />
-                    <h5 class="st-offers__card-name">${offer.name}</h5>
+                    <h5 class="st-offers__card-name">${variant.name}</h5>
                     <h6 class="st-offers__card-price">
-                      <span class="st-offers__price-after">
-                        ${offer.price_after} ${offer.currency}
-                      </span>
-                      ${offer.price_before > offer.price_after
-                        ? html`
-                            <span class="st-offers__price-before">
-                              ${offer.price_before} ${offer.currency}
+                      ${variant.is_out_of_stock
+                        ? html`<span class="st-offers__price-out-of-stock">نفذت الكمية</span>`
+                        : html`
+                            <span class="st-offers__price-after">
+                              ${variant.price} ${currency}
                             </span>
-                          `
-                        : ''}
+                            ${variant.is_on_sale &&
+                            variant.regular_price &&
+                            variant.regular_price > variant.price
+                              ? html`
+                                  <span class="st-offers__price-before">
+                                    ${variant.regular_price} ${currency}
+                                  </span>
+                                `
+                              : ''}
+                          `}
                     </h6>
                   </div>
                 </div>
@@ -401,17 +438,16 @@ export default class StOffers extends LitElement {
             )}
           </div>
 
-          <!-- Buy: links out to the merchant's store to complete the purchase.
-               Disabled (no navigation) until an offer is selected. -->
+          <!-- Buy: one shared button for every variant above. Reflects whichever
+               card is selected and disables/blocks navigation when it's out of stock. -->
           <div class="st-offers__cta">
             <a
-              class="${classMap({ 'st-offers__btn': true, 'is-disabled': !selected })}"
-              href="${selected?.link || '#'}"
-              aria-disabled="${!selected}"
-              title="${!selected ? 'إختر عرض لتفعيل الزر' : ''}"
-              @click="${this.handleBuyClick}"
+              class="st-offers__btn st-buy-btn ${product.isOutOfStock ? 'is-out-of-stock' : ''}"
+              href="${this.config.button_link || '#'}"
+              aria-disabled="${product.isOutOfStock ? 'true' : 'false'}"
+              @click="${(e: Event) => this.handleBuyClick(e, Boolean(product.isOutOfStock))}"
             >
-              <span class="st-offers__btn-label">${this.config.cta_label}</span>
+              <span class="st-offers__btn-label">${buttonLabel}</span>
               <i class="sicon-caret-left-double"></i>
             </a>
           </div>
