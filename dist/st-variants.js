@@ -240,8 +240,13 @@ class n extends _ {
         position: relative;
         z-index: 20;
         flex-shrink: 0;
-        transition: width 0.2s, height 0.2s, outline 0.2s;
+        transition: width 0.2s, height 0.2s, outline 0.2s, box-shadow 0.2s;
         outline: 0 solid transparent;
+        box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.12) inset;
+      }
+
+      .st-variants__color-btn:not(.is-active):hover .st-variants__color-dot {
+        box-shadow: 0 0 0 1.5px rgba(0, 0, 0, 0.28) inset;
       }
 
       .st-variants__color-btn.is-active .st-variants__color-dot {
@@ -249,6 +254,7 @@ class n extends _ {
         height: 2.25rem;
         outline: 1.5px solid ${i};
         outline-offset: 2.5px;
+        box-shadow: none;
       }
 
       .st-variants__color-label {
@@ -427,6 +433,7 @@ class n extends _ {
                         class="st-variants__color-btn ${s === r ? "is-active" : ""}"
                         aria-label="${a.color_title}"
                         aria-current="${s === r ? "true" : "false"}"
+                        title="${a.color_title}"
                         @click="${() => this.selectVariant(s)}"
                       >
                         <span
