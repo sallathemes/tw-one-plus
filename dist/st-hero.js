@@ -1,11 +1,11 @@
 import { LitElement as p, html as n } from "lit";
-import { property as m, state as h } from "lit/decorators.js";
-import { S as _ } from "./scroll-scene-DdINwXtt.js";
+import { property as m, state as c } from "lit/decorators.js";
+import { S as b } from "./scroll-scene-DdINwXtt.js";
 import "./fonts-CqDo7kag.js";
-var b = Object.defineProperty, c = (d, t, e, l) => {
+var _ = Object.defineProperty, h = (d, t, e, l) => {
   for (var i = void 0, o = d.length - 1, a; o >= 0; o--)
     (a = d[o]) && (i = a(t, e, i) || i);
-  return i && b(t, e, i), i;
+  return i && _(t, e, i), i;
 };
 class r extends p {
   constructor() {
@@ -20,7 +20,7 @@ class r extends p {
   syncScene() {
     if (this.scene) return;
     const t = this.querySelector(".st-hero");
-    t && (this.scene = new _(t, this.navSceneProgress));
+    t && (this.scene = new b(t, this.navSceneProgress));
   }
   connectedCallback() {
     super.connectedCallback(), this.injectStyles();
@@ -181,11 +181,12 @@ class r extends p {
         line-height: 1;
       }
 
-      /* CTA pill button (navbar) */
+      /* CTA pill button (navbar) — hidden on mobile so it doesn't crowd the
+         hamburger out of the viewport (matches source's hidden md:flex) */
       .st-hero__nav-btn {
+        display: none;
         position: relative;
         overflow: hidden;
-        display: inline-flex;
         align-items: center;
         padding: 0.5rem 1.25rem;
         border-radius: 9999px;
@@ -195,6 +196,10 @@ class r extends p {
         text-decoration: none;
         cursor: pointer;
         white-space: nowrap;
+      }
+
+      @media (min-width: 768px) {
+        .st-hero__nav-btn { display: inline-flex; }
       }
 
       .st-hero__nav-btn-text-a,
@@ -615,14 +620,14 @@ class r extends p {
     `;
   }
 }
-c([
+h([
   m({ type: Object })
 ], r.prototype, "config");
-c([
-  h()
+h([
+  c()
 ], r.prototype, "navFixed");
-c([
-  h()
+h([
+  c()
 ], r.prototype, "mobileMenuOpen");
 typeof r < "u" && r.registerSallaComponent("salla-st-hero");
 export {

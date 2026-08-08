@@ -233,9 +233,11 @@ export default class StOffers extends LitElement {
       }
 
       .st-offers__card-img {
-        max-height: 281px;
-        object-fit: contain;
+        height: 281px;
+        object-fit: cover;
         width: 100%;
+        display: block;
+        border-radius: 0.75rem;
       }
 
       .st-offers__card-name {

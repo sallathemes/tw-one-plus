@@ -1,0 +1,1922 @@
+{
+  "id": "bb11f285-a241-4610-a2d6-9a7399eec95c",
+  "components": [
+    {
+      "title": "قسم مقدمة الصفحة",
+      "icon": "sicon-image-carousel",
+      "name": "st-hero",
+      "key": "1a2b3c4d-5e6f-7a8b-9c0d-1e2f3a4b5c6d",
+      "image": "https://cdn.salla.sa/qAyGK/products/4bc21LS52nlbc2SPYuJzGv2YAS6mQaolQymbPdeN.jpg",
+      "fields": [
+        {
+          "id": "bg_color",
+          "type": "string",
+          "format": "color",
+          "label": "لون الخلفية",
+          "value": "#16231B"
+        },
+        {
+          "id": "text_color",
+          "type": "string",
+          "format": "color",
+          "label": "لون النص",
+          "value": "#F3EFE2"
+        },
+        {
+          "id": "brand_color",
+          "type": "string",
+          "format": "color",
+          "label": "لون العلامة التجارية",
+          "value": "#B08A3E"
+        },
+        {
+          "id": "overlay_opacity",
+          "type": "number",
+          "format": "slider",
+          "label": "درجة تعتيم الخلفية",
+          "minimum": 0,
+          "maximum": 100,
+          "step": 1,
+          "value": 60
+        },
+        {
+          "id": "title",
+          "type": "string",
+          "format": "text",
+          "label": "العنوان الرئيسي",
+          "required": true,
+          "maxLength": 150,
+          "value": "أُنس. رائحة تملأ البيت بالدفء."
+        },
+        {
+          "id": "subtitle",
+          "type": "string",
+          "format": "textarea",
+          "label": "النص الفرعي",
+          "rows": 3,
+          "value": "شمع صويا طبيعي 100%، يُسكب يدوياً في قوالب زجاجية قابلة لإعادة الاستخدام. فتيل خشبي يطقطق بهدوء كصوت مدفأة صغيرة، واحتراق نظيف يمتد حتى 45 ساعة دون سواد أو دخان كثيف."
+        },
+        {
+          "id": "button_label",
+          "type": "string",
+          "format": "text",
+          "label": "نص زر الشراء",
+          "value": "اشترِ الآن بـ"
+        },
+        {
+          "id": "button_price",
+          "type": "string",
+          "format": "text",
+          "label": "سعر زر الشراء",
+          "value": "119 ر.س"
+        },
+        {
+          "id": "button_link",
+          "type": "string",
+          "format": "text",
+          "label": "رابط زر الشراء",
+          "value": "#st-offers"
+        },
+        {
+          "id": "video_url",
+          "type": "string",
+          "format": "url",
+          "label": "رابط الفيديو الخلفي",
+          "required": false,
+          "value": ""
+        },
+        {
+          "id": "bg_image",
+          "type": "string",
+          "format": "image",
+          "label": "صورة الخلفية (بديل الفيديو)",
+          "required": false,
+          "value": "/assets/candles/flame-dark-3.jpg"
+        },
+        {
+          "id": "logo",
+          "type": "string",
+          "format": "image",
+          "label": "الشعار",
+          "required": false,
+          "value": "/assets/logo.svg"
+        },
+        {
+          "id": "store_name",
+          "type": "string",
+          "format": "text",
+          "label": "اسم المتجر",
+          "value": "أُنس"
+        },
+        {
+          "id": "nav1_label",
+          "type": "string",
+          "format": "text",
+          "label": "الرابط الأول - النص",
+          "value": "الروائح"
+        },
+        {
+          "id": "nav1_href",
+          "type": "string",
+          "format": "text",
+          "label": "الرابط الأول - الوجهة",
+          "value": "#st-variants"
+        },
+        {
+          "id": "nav2_label",
+          "type": "string",
+          "format": "text",
+          "label": "الرابط الثاني - النص",
+          "value": "الأجواء"
+        },
+        {
+          "id": "nav2_href",
+          "type": "string",
+          "format": "text",
+          "label": "الرابط الثاني - الوجهة",
+          "value": "#st-images-slider"
+        },
+        {
+          "id": "nav3_label",
+          "type": "string",
+          "format": "text",
+          "label": "الرابط الثالث - النص",
+          "value": "الخامة"
+        },
+        {
+          "id": "nav3_href",
+          "type": "string",
+          "format": "text",
+          "label": "الرابط الثالث - الوجهة",
+          "value": "#st-feature"
+        },
+        {
+          "id": "nav4_label",
+          "type": "string",
+          "format": "text",
+          "label": "الرابط الرابع - النص",
+          "value": "طريقة الاستخدام"
+        },
+        {
+          "id": "nav4_href",
+          "type": "string",
+          "format": "text",
+          "label": "الرابط الرابع - الوجهة",
+          "value": "#st-specification"
+        }
+      ]
+    },
+    {
+      "title": "قسم ألوان وأنواع المنتج",
+      "icon": "sicon-gameboy",
+      "name": "st-variants",
+      "key": "6f7a8b9c-0d1e-2f3a-4b5c-6d7e8f9a0b1c",
+      "image": "https://cdn.salla.sa/qAyGK/products/wIbuA2dLogcdgxdmX0UPYvY1xuOQNHe7jGPIiKHo.jpg",
+      "fields": [
+        {
+          "id": "bg_color",
+          "type": "string",
+          "format": "color",
+          "label": "لون الخلفية",
+          "value": "#ffffff"
+        },
+        {
+          "id": "primary_color",
+          "type": "string",
+          "format": "color",
+          "label": "اللون الأساسي",
+          "value": "#1B271F"
+        },
+        {
+          "id": "brand_color",
+          "type": "string",
+          "format": "color",
+          "label": "لون العلامة التجارية",
+          "value": "#B08A3E"
+        },
+        {
+          "id": "section_title",
+          "type": "string",
+          "format": "text",
+          "label": "عنوان القسم",
+          "value": "رائحة واحدة لا تكفي أبداً."
+        },
+        {
+          "id": "selector_label",
+          "type": "string",
+          "format": "text",
+          "label": "تسمية اختيار اللون",
+          "value": "اختر رائحتك المفضّلة."
+        },
+        {
+          "id": "variants",
+          "type": "collection",
+          "format": "collection",
+          "label": "المتغيرات",
+          "item_label": "لون",
+          "minLength": 1,
+          "maxLength": 8,
+          "value": [
+            {
+              "product_image": "/assets/candles/candle-jar-2.jpg",
+              "side_image": "/assets/candles/flame-macro.jpg",
+              "color_hex": "#4A2E1E",
+              "color_title": "عود ملكي"
+            },
+            {
+              "product_image": "/assets/candles/white-candle-glass.jpg",
+              "side_image": "/assets/candles/glass-holder-white.jpg",
+              "color_hex": "#C9A66B",
+              "color_title": "خشب الصندل"
+            },
+            {
+              "product_image": "/assets/candles/glass-holder-white.jpg",
+              "side_image": "/assets/candles/candle-jar-2.jpg",
+              "color_hex": "#E4B673",
+              "color_title": "فانيليا وهيل"
+            }
+          ],
+          "fields": [
+            {
+              "id": "product_image",
+              "type": "string",
+              "format": "image",
+              "label": "صورة المنتج",
+              "required": true
+            },
+            {
+              "id": "side_image",
+              "type": "string",
+              "format": "image",
+              "label": "صورة الارتداء",
+              "required": false
+            },
+            {
+              "id": "color_hex",
+              "type": "string",
+              "format": "color",
+              "label": "لون الزر",
+              "value": "#2E3642"
+            },
+            {
+              "id": "color_title",
+              "type": "string",
+              "format": "text",
+              "label": "اسم اللون",
+              "maxLength": 50
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "قسم هرم الرائحة",
+      "icon": "sicon-fire",
+      "name": "st-scent-notes",
+      "key": "12698d2a-a0c9-4482-9cab-3e0a01f0ad41",
+      "image": "https://cdn.salla.network/images/themes/default/placeholder.jpg",
+      "fields": [
+        {
+          "id": "bg_color",
+          "type": "string",
+          "format": "color",
+          "label": "لون الخلفية",
+          "value": "#ffffff"
+        },
+        {
+          "id": "primary_color",
+          "type": "string",
+          "format": "color",
+          "label": "اللون الأساسي",
+          "value": "#1B271F"
+        },
+        {
+          "id": "secondary_color",
+          "type": "string",
+          "format": "color",
+          "label": "لون النص الثانوي",
+          "value": "#5C6B5E"
+        },
+        {
+          "id": "brand_color",
+          "type": "string",
+          "format": "color",
+          "label": "لون العلامة التجارية",
+          "value": "#B08A3E"
+        },
+        {
+          "id": "border_color",
+          "type": "string",
+          "format": "color",
+          "label": "لون الفواصل",
+          "value": "#DCE2D3"
+        },
+        {
+          "id": "section_title",
+          "type": "string",
+          "format": "text",
+          "label": "عنوان القسم",
+          "value": "هرم الرائحة"
+        },
+        {
+          "id": "section_subtitle",
+          "type": "string",
+          "format": "textarea",
+          "label": "النص الفرعي",
+          "rows": 2,
+          "required": false,
+          "value": "رائحة العود الملكي لا تُشم دفعة واحدة — هي ثلاث طبقات تتكشف تباعاً كل ما طال وقت الاشتعال."
+        },
+        {
+          "id": "notes",
+          "type": "collection",
+          "format": "collection",
+          "label": "طبقات الرائحة",
+          "item_label": "طبقة",
+          "minLength": 1,
+          "maxLength": 5,
+          "value": [
+            {
+              "icon": "sicon-bolt",
+              "step_label": "٠١ — أول 10 دقائق",
+              "title": "انطلاقة حمضية دافئة",
+              "description": "بمجرد إشعال الفتيل، تنطلق رائحة خفيفة ومنعشة تكسر برودة الأجواء وتُحضّر الحاسة الشمّية لما هو قادم.",
+              "ingredients": "برغموت, برتقال مر, فلفل وردي"
+            },
+            {
+              "icon": "sicon-fire",
+              "step_label": "٠٢ — بعد نصف ساعة",
+              "title": "قلب العود الدافئ",
+              "description": "مع ارتفاع حرارة بركة الشمع، تتكشف رائحة العود الأصيل ممزوجة بالورد البلغاري — الهوية الحقيقية لهذه الرائحة طوال معظم وقت الاحتراق.",
+              "ingredients": "عود ملكي, ورد بلغاري, زعفران"
+            },
+            {
+              "icon": "sicon-shield-check",
+              "step_label": "٠٣ — حتى انطفاء الشمعة",
+              "title": "قاعدة خشبية تدوم",
+              "description": "في الساعات الأخيرة، تستقر رائحة العنبر وخشب الصندل كطبقة أساس دافئة تبقى عالقة في الغرفة حتى بعد إطفاء الشمعة.",
+              "ingredients": "عنبر, خشب الصندل, مسك أبيض"
+            }
+          ],
+          "fields": [
+            {
+              "id": "icon",
+              "type": "string",
+              "format": "icon",
+              "label": "الأيقونة",
+              "value": "sicon-fire"
+            },
+            {
+              "id": "step_label",
+              "type": "string",
+              "format": "text",
+              "label": "تسمية الخطوة",
+              "maxLength": 40
+            },
+            {
+              "id": "title",
+              "type": "string",
+              "format": "text",
+              "label": "العنوان",
+              "required": true,
+              "maxLength": 100
+            },
+            {
+              "id": "description",
+              "type": "string",
+              "format": "textarea",
+              "label": "الوصف",
+              "maxLength": 300
+            },
+            {
+              "id": "ingredients",
+              "type": "string",
+              "format": "text",
+              "label": "المكوّنات (مفصولة بفاصلة)",
+              "required": false,
+              "maxLength": 200
+            }
+          ]
+        },
+        {
+          "id": "footer_note",
+          "type": "string",
+          "format": "text",
+          "label": "ملاحظة سفلية",
+          "required": false,
+          "maxLength": 200,
+          "value": "نفس منطق الطبقات الثلاث يتكرر في الروائح الثلاث كلها — كل رائحة تُبنى لتتكشف مع الوقت لا أن تُشم دفعة واحدة."
+        }
+      ]
+    },
+    {
+      "title": "قسم تفصيل الميزة",
+      "icon": "sicon-star",
+      "name": "st-feature",
+      "key": "3c4d5e6f-7a8b-9c0d-1e2f-3a4b5c6d7e8f",
+      "image": "https://cdn.salla.sa/qAyGK/products/VDYhBmwAG0hLbnAqleLctup4ozHiOc0b2ljn8I4c.jpg",
+      "fields": [
+        {
+          "id": "bg_color",
+          "type": "string",
+          "format": "color",
+          "label": "لون الخلفية",
+          "value": "#ffffff"
+        },
+        {
+          "id": "shade_color",
+          "type": "string",
+          "format": "color",
+          "label": "لون الخلفية الداخلية",
+          "value": "#F2F1E4"
+        },
+        {
+          "id": "primary_color",
+          "type": "string",
+          "format": "color",
+          "label": "لون النص",
+          "value": "#1B271F"
+        },
+        {
+          "id": "brand_color",
+          "type": "string",
+          "format": "color",
+          "label": "لون العلامة التجارية",
+          "value": "#B08A3E"
+        },
+        {
+          "id": "icon",
+          "type": "string",
+          "format": "icon",
+          "label": "الأيقونة",
+          "value": "sicon-shield-check"
+        },
+        {
+          "id": "title",
+          "type": "string",
+          "format": "text",
+          "label": "العنوان",
+          "required": true,
+          "maxLength": 150,
+          "value": "شمع يُسكب بيد، لا بخط إنتاج."
+        },
+        {
+          "id": "body1",
+          "type": "string",
+          "format": "textarea",
+          "label": "الفقرة الأولى",
+          "rows": 3,
+          "value": "نبدأ من شمع الصويا الطبيعي الخالي من البارافين والمواد البترولية، ونُذيبه ونسكبه يدوياً في دفعات صغيرة لا تتجاوز 40 قالباً في المرة. حرارة السكب مضبوطة بدقة حتى لا تتشقق الشمعة عند التبريد ولا يتكوّن حولها فراغ هوائي يقصّر عمر احتراقها."
+        },
+        {
+          "id": "body2",
+          "type": "string",
+          "format": "textarea",
+          "label": "الفقرة الثانية",
+          "rows": 3,
+          "required": false,
+          "value": "الفتيل خشبي بالكامل، لا قطني — يُصدر طقطقة هادئة أقرب لصوت المدفأة، ولا يحتاج تقليماً متكرراً. الزجاجة نفسها مصمّمة لتُغسل وتُعاد تعبئتها أو تُستخدم كوعاء صغير بعد انتهاء الشمعة."
+        },
+        {
+          "id": "button_label",
+          "type": "string",
+          "format": "text",
+          "label": "نص الزر",
+          "value": "تسوّق المجموعة"
+        },
+        {
+          "id": "button_link",
+          "type": "string",
+          "format": "text",
+          "label": "رابط الزر",
+          "value": "#st-offers"
+        },
+        {
+          "id": "button_icon",
+          "type": "string",
+          "format": "icon",
+          "label": "أيقونة الزر",
+          "value": "sicon-caret-left-double",
+          "required": false
+        },
+        {
+          "id": "side_image",
+          "type": "string",
+          "format": "image",
+          "label": "الصورة الجانبية",
+          "required": false,
+          "value": "/assets/candles/hand-lighting-match.jpg"
+        }
+      ]
+    },
+    {
+      "title": "معرض الصور المتحرك",
+      "icon": "sicon-images",
+      "name": "st-images-slider",
+      "key": "9c0d1e2f-3a4b-5c6d-7e8f-9a0b1c2d3e4f",
+      "image": "https://cdn.salla.sa/qAyGK/products/nNUJFeg1t2IYMTjGOednr4WsjHdpocbLnsuOwENI.jpg",
+      "fields": [
+        {
+          "id": "bg_color",
+          "type": "string",
+          "format": "color",
+          "label": "لون الخلفية",
+          "value": "#F2F1E4"
+        },
+        {
+          "id": "primary_color",
+          "type": "string",
+          "format": "color",
+          "label": "لون النص",
+          "value": "#1B271F"
+        },
+        {
+          "id": "brand_color",
+          "type": "string",
+          "format": "color",
+          "label": "لون العلامة التجارية",
+          "value": "#B08A3E"
+        },
+        {
+          "id": "section_title",
+          "type": "string",
+          "format": "text",
+          "label": "عنوان القسم",
+          "value": "أجواء أُنس — لحظات تستحق أن تُضاء."
+        },
+        {
+          "id": "images",
+          "type": "collection",
+          "format": "collection",
+          "label": "الصور",
+          "item_label": "صورة",
+          "minLength": 1,
+          "maxLength": 10,
+          "value": [
+            {
+              "src": "/assets/candles/flame-macro.jpg",
+              "title": "لهب هادئ"
+            },
+            {
+              "src": "/assets/candles/candle-jar-2.jpg",
+              "title": "أمسية شتوية"
+            },
+            {
+              "src": "/assets/candles/glass-holder-white.jpg",
+              "title": "استرخاء المساء"
+            },
+            {
+              "src": "/assets/candles/white-candle-glass.jpg",
+              "title": "صفاء اللحظة"
+            },
+            {
+              "src": "/assets/candles/hand-holding-1.jpg",
+              "title": "دفء بين يديك"
+            },
+            {
+              "src": "/assets/candles/flame-dark-1.jpg",
+              "title": "تفاصيل الفتيل"
+            }
+          ],
+          "fields": [
+            {
+              "id": "src",
+              "type": "string",
+              "format": "image",
+              "label": "الصورة",
+              "required": true
+            },
+            {
+              "id": "title",
+              "type": "string",
+              "format": "text",
+              "label": "عنوان الصورة",
+              "maxLength": 80,
+              "required": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "قسم مميزات المنتج - بطاقات",
+      "icon": "sicon-layout-grid",
+      "name": "st-cards",
+      "key": "2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e",
+      "image": "https://cdn.salla.sa/qAyGK/products/COyZjADBoD2ijmCaGrXpfKLPWijMwN2MElx1G4qk.jpg",
+      "fields": [
+        {
+          "id": "bg_color",
+          "type": "string",
+          "format": "color",
+          "label": "لون الخلفية",
+          "value": "#ffffff"
+        },
+        {
+          "id": "primary_color",
+          "type": "string",
+          "format": "color",
+          "label": "اللون الأساسي",
+          "value": "#1B271F"
+        },
+        {
+          "id": "brand_color",
+          "type": "string",
+          "format": "color",
+          "label": "لون العلامة التجارية",
+          "value": "#B08A3E"
+        },
+        {
+          "id": "section_title",
+          "type": "string",
+          "format": "text",
+          "label": "عنوان القسم",
+          "value": "لماذا شموع أُنس"
+        },
+        {
+          "id": "section_image",
+          "type": "string",
+          "format": "image",
+          "label": "صورة القسم الرئيسية",
+          "required": false,
+          "value": "/assets/candles/candle-jar-2.jpg"
+        },
+        {
+          "id": "cards",
+          "type": "collection",
+          "format": "collection",
+          "label": "البطاقات",
+          "item_label": "بطاقة",
+          "minLength": 1,
+          "maxLength": 6,
+          "value": [
+            {
+              "icon": "sicon-shield-check",
+              "title": "صويا طبيعي 100%",
+              "body": "خالٍ من البارافين والمواد البترولية، يحترق بدخان أقل بكثير من الشمع التقليدي."
+            },
+            {
+              "icon": "sicon-bolt",
+              "title": "فتيل خشبي أصلي",
+              "body": "طقطقة هادئة أقرب لصوت المدفأة، واحتراق متساوٍ من الحافة إلى الحافة."
+            },
+            {
+              "icon": "sicon-star",
+              "title": "حتى 45 ساعة احتراق",
+              "body": "قالب واحد يكفي لأكثر من 15 جلسة مسائية بمعدل 3 ساعات لكل استخدام."
+            },
+            {
+              "icon": "sicon-cart",
+              "title": "شحن مجاني فوق 200 ر.س",
+              "body": "توصيل خلال يومين إلى ثلاثة أيام عمل لجميع مدن المملكة، بتغليف يحمي الزجاج."
+            },
+            {
+              "icon": "sicon-rotate",
+              "title": "زجاجة تُعاد تعبئتها",
+              "body": "بعد انتهاء الشمعة، اغسلي الزجاجة واستخدميها كوعاء أو أرسليها لإعادة التعبئة بخصم 20%."
+            },
+            {
+              "icon": "sicon-gameboy",
+              "title": "روائح مركّبة بزيوت حقيقية",
+              "body": "لا عطور صناعية رخيصة — كل رائحة مركّبة من زيوت عطرية طبيعية بنسب مدروسة."
+            }
+          ],
+          "fields": [
+            {
+              "id": "icon",
+              "type": "string",
+              "format": "icon",
+              "label": "الأيقونة",
+              "value": "sicon-pause"
+            },
+            {
+              "id": "title",
+              "type": "string",
+              "format": "text",
+              "label": "عنوان البطاقة",
+              "required": true,
+              "maxLength": 100
+            },
+            {
+              "id": "body",
+              "type": "string",
+              "format": "textarea",
+              "label": "نص البطاقة",
+              "maxLength": 300
+            }
+          ]
+        },
+        {
+          "id": "footer_button_label",
+          "type": "string",
+          "format": "text",
+          "label": "نص الزر السفلي",
+          "value": "اعرف المزيد عن الخامة"
+        },
+        {
+          "id": "footer_button_href",
+          "type": "string",
+          "format": "text",
+          "label": "رابط الزر السفلي",
+          "value": "#st-feature"
+        }
+      ]
+    },
+    {
+      "title": "قسم العرض التفاعلي",
+      "icon": "sicon-image-carousel",
+      "name": "st-demo",
+      "key": "4d5e6f7a-8b9c-0d1e-2f3a-4b5c6d7e8f9a",
+      "image": "https://cdn.salla.sa/qAyGK/products/abIkWxEFmL9rNYjWpw7joATInBPtGCg62yd2Imqt.jpg",
+      "fields": [
+        {
+          "id": "bg_color",
+          "type": "string",
+          "format": "color",
+          "label": "لون الخلفية",
+          "value": "#16231B"
+        },
+        {
+          "id": "text_color",
+          "type": "string",
+          "format": "color",
+          "label": "لون النص",
+          "value": "#F3EFE2"
+        },
+        {
+          "id": "brand_color",
+          "type": "string",
+          "format": "color",
+          "label": "لون العلامة التجارية",
+          "value": "#B08A3E"
+        },
+        {
+          "id": "panel1_title",
+          "type": "string",
+          "format": "text",
+          "label": "عنوان اللوحة الأولى",
+          "value": "فتيل خشبي، لا قطني."
+        },
+        {
+          "id": "panel1_body1",
+          "type": "string",
+          "format": "textarea",
+          "label": "نص اللوحة الأولى - الفقرة 1",
+          "rows": 3,
+          "value": "اخترنا الفتيل الخشبي رغم أن تصنيعه أبطأ وأغلى من الفتيل القطني، لأنه يمنح احتراقاً أهدأ وصوت طقطقة خفيف يشبه المدفأة الحطبية."
+        },
+        {
+          "id": "panel1_body2",
+          "type": "string",
+          "format": "textarea",
+          "label": "نص اللوحة الأولى - الفقرة 2",
+          "rows": 3,
+          "required": false,
+          "value": "لا يحتاج تقليماً متكرراً كالفتيل القطني — قصّة واحدة لأقل من 6 مم قبل كل إشعال كافية للحفاظ على لهب متساوٍ طوال عمر الشمعة."
+        },
+        {
+          "id": "panel1_image",
+          "type": "string",
+          "format": "image",
+          "label": "صورة اللوحة الأولى",
+          "required": false,
+          "value": "/assets/candles/flame-macro.jpg"
+        },
+        {
+          "id": "panel2_title",
+          "type": "string",
+          "format": "text",
+          "label": "عنوان اللوحة الثانية",
+          "value": "زجاج تُعيد استخدامه."
+        },
+        {
+          "id": "panel2_body1",
+          "type": "string",
+          "format": "textarea",
+          "label": "نص اللوحة الثانية - الفقرة 1",
+          "rows": 3,
+          "value": "كل قالب يأتي في زجاجة سميكة قابلة لإعادة الاستخدام — بعد انتهاء الشمعة، اغسليها بالماء الدافئ وحوّليها إلى وعاء لأدوات المكياج أو نبتة صغيرة."
+        },
+        {
+          "id": "panel2_body2",
+          "type": "string",
+          "format": "textarea",
+          "label": "نص اللوحة الثانية - الفقرة 2",
+          "rows": 3,
+          "required": false,
+          "value": "أعيدي تعبئة الزجاجة عبر خدمة إعادة التعبئة داخل المتجر واحصلي على خصم 20% على القالب التالي — أقل نفايات، ورائحة جديدة في كل مرة."
+        },
+        {
+          "id": "panel2_image",
+          "type": "string",
+          "format": "image",
+          "label": "صورة اللوحة الثانية",
+          "required": false,
+          "value": "/assets/candles/white-candle-glass.jpg"
+        },
+        {
+          "id": "panel2_button_label",
+          "type": "string",
+          "format": "text",
+          "label": "نص زر اللوحة الثانية",
+          "value": "احجزي قالبك الآن"
+        },
+        {
+          "id": "panel2_button_link",
+          "type": "string",
+          "format": "text",
+          "label": "رابط زر اللوحة الثانية",
+          "value": "#st-offers"
+        },
+        {
+          "id": "viewer_images",
+          "type": "collection",
+          "format": "collection",
+          "label": "صور العارض الدوار",
+          "item_label": "صورة",
+          "minLength": 1,
+          "maxLength": 6,
+          "value": [
+            {
+              "image": "/assets/candles/candle-jar-2.jpg",
+              "label": "عود ملكي"
+            },
+            {
+              "image": "/assets/candles/white-candle-glass.jpg",
+              "label": "صندل"
+            },
+            {
+              "image": "/assets/candles/glass-holder-white.jpg",
+              "label": "فانيليا"
+            },
+            {
+              "image": "/assets/candles/hand-holding-1.jpg",
+              "label": "دفء"
+            },
+            {
+              "image": "/assets/candles/flame-macro.jpg",
+              "label": "لهب"
+            }
+          ],
+          "fields": [
+            {
+              "id": "image",
+              "type": "string",
+              "format": "image",
+              "label": "الصورة",
+              "required": true
+            },
+            {
+              "id": "label",
+              "type": "string",
+              "format": "text",
+              "label": "التسمية",
+              "maxLength": 50
+            }
+          ]
+        },
+        {
+          "id": "viewer_bg_text",
+          "type": "string",
+          "format": "text",
+          "label": "نص خلفية العارض",
+          "value": "استعرضي الرائحة"
+        }
+      ]
+    },
+    {
+      "title": "معرض صور المنتج",
+      "icon": "sicon-album-photo",
+      "name": "st-product-images",
+      "key": "5e6f7a8b-9c0d-1e2f-3a4b-5c6d7e8f9a0b",
+      "image": "https://cdn.salla.sa/qAyGK/products/VHHeqb0ZwsRHPvGMrozI3zBprGX9dBkWagvPwrmB.jpg",
+      "fields": [
+        {
+          "id": "bg_color",
+          "type": "string",
+          "format": "color",
+          "label": "لون الخلفية",
+          "value": "#ffffff"
+        },
+        {
+          "id": "text_color",
+          "type": "string",
+          "format": "color",
+          "label": "لون النص",
+          "value": "#1B271F"
+        },
+        {
+          "id": "brand_color",
+          "type": "string",
+          "format": "color",
+          "label": "لون العلامة التجارية",
+          "value": "#B08A3E"
+        },
+        {
+          "id": "section_title",
+          "type": "string",
+          "format": "text",
+          "label": "عنوان القسم",
+          "value": "لحظات من بيوت عملائنا"
+        },
+        {
+          "id": "grid_columns",
+          "type": "string",
+          "format": "text",
+          "label": "عدد الأعمدة (2 أو 3)",
+          "value": "2"
+        },
+        {
+          "id": "images",
+          "type": "collection",
+          "format": "collection",
+          "label": "الصور",
+          "item_label": "صورة",
+          "minLength": 1,
+          "maxLength": 6,
+          "value": [
+            {
+              "src": "/assets/candles/glass-holder-white.jpg",
+              "alt": "شمعة أُنس في حمّام مسائي",
+              "overlay_text": "خشب الصندل — أجواء المساء",
+              "overlay_position": "bottom-right",
+              "always_show": false,
+              "show_overlay_bg": true
+            },
+            {
+              "src": "/assets/candles/candle-jar-2.jpg",
+              "alt": "شمعة أُنس بجانب قشور المكسرات",
+              "overlay_text": "عود ملكي — أمسية شتوية",
+              "overlay_position": "top-right",
+              "always_show": false,
+              "show_overlay_bg": true
+            },
+            {
+              "src": "/assets/candles/hand-holding-1.jpg",
+              "alt": "يد تحمل شمعة مضاءة",
+              "overlay_text": "لحظة دفء",
+              "overlay_position": "bottom-left",
+              "always_show": false,
+              "show_overlay_bg": true
+            },
+            {
+              "src": "/assets/candles/white-candle-glass.jpg",
+              "alt": "شمعة أُنس في زجاجة صافية",
+              "overlay_text": "فانيليا وهيل — صفاء اللحظة",
+              "overlay_position": "top-left",
+              "always_show": false,
+              "show_overlay_bg": true
+            }
+          ],
+          "fields": [
+            {
+              "id": "src",
+              "type": "string",
+              "format": "image",
+              "label": "الصورة",
+              "required": true
+            },
+            {
+              "id": "alt",
+              "type": "string",
+              "format": "text",
+              "label": "النص البديل للصورة",
+              "maxLength": 100
+            },
+            {
+              "id": "overlay_text",
+              "type": "string",
+              "format": "text",
+              "label": "نص التراكب",
+              "maxLength": 80,
+              "required": false
+            },
+            {
+              "id": "overlay_position",
+              "type": "string",
+              "format": "text",
+              "label": "موضع التراكب (top-left / top-right / bottom-left / bottom-right)",
+              "value": "bottom-right",
+              "required": false
+            },
+            {
+              "id": "always_show",
+              "type": "boolean",
+              "format": "switch",
+              "label": "إظهار التراكب دائماً",
+              "value": false
+            },
+            {
+              "id": "show_overlay_bg",
+              "type": "boolean",
+              "format": "switch",
+              "label": "إظهار خلفية التراكب",
+              "value": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "المواصفات التقنية",
+      "icon": "sicon-layout-grid-rearrange",
+      "name": "st-specification",
+      "key": "7a8b9c0d-1e2f-3a4b-5c6d-7e8f9a0b1c2d",
+      "image": "https://cdn.salla.sa/qAyGK/products/zqKsr18rbGBz47ke4kpWDcrmLUAmuw7pfGltOk1w.jpg",
+      "fields": [
+        {
+          "id": "bg_color",
+          "type": "string",
+          "format": "color",
+          "label": "لون الخلفية",
+          "value": "#F2F1E4"
+        },
+        {
+          "id": "primary_color",
+          "type": "string",
+          "format": "color",
+          "label": "لون النص الأساسي",
+          "value": "#1B271F"
+        },
+        {
+          "id": "secondary_color",
+          "type": "string",
+          "format": "color",
+          "label": "لون النص الثانوي",
+          "value": "#5C6B5E"
+        },
+        {
+          "id": "border_color",
+          "type": "string",
+          "format": "color",
+          "label": "لون الحدود",
+          "value": "#DCE2D3"
+        },
+        {
+          "id": "brand_color",
+          "type": "string",
+          "format": "color",
+          "label": "لون العلامة التجارية",
+          "value": "#B08A3E"
+        },
+        {
+          "id": "section_title",
+          "type": "string",
+          "format": "text",
+          "label": "عنوان القسم",
+          "value": "دليل الاستخدام والعناية"
+        },
+        {
+          "id": "section_subtitle",
+          "type": "string",
+          "format": "textarea",
+          "label": "النص الفرعي",
+          "rows": 2,
+          "required": false,
+          "value": "بضع دقائق من العناية الصحيحة تُطيل عمر شمعتك وتحافظ على احتراق متساوٍ من أول إشعال حتى آخر قطرة شمع."
+        },
+        {
+          "id": "rows",
+          "type": "collection",
+          "format": "collection",
+          "label": "صفوف الجدول",
+          "item_label": "صف",
+          "minLength": 1,
+          "maxLength": 20,
+          "value": [
+            {
+              "header": "أول إشعال:",
+              "col1_title": "المدة",
+              "col1_value": "ساعتان فأكثر",
+              "col2_title": "السبب",
+              "col2_value": "لضمان ذوبان الشمع حتى الحافة",
+              "col3_title": "",
+              "col3_value": "",
+              "col4_title": "",
+              "col4_value": ""
+            },
+            {
+              "header": "تقليم الفتيل:",
+              "col1_title": "الطول",
+              "col1_value": "6 مم",
+              "col2_title": "التوقيت",
+              "col2_value": "قبل كل إشعال",
+              "col3_title": "",
+              "col3_value": "",
+              "col4_title": "",
+              "col4_value": ""
+            },
+            {
+              "header": "مدة الاحتراق:",
+              "col1_title": "لكل قالب",
+              "col1_value": "45 ساعة",
+              "col2_title": "الجلسة المُوصى بها",
+              "col2_value": "3-4 ساعات",
+              "col3_title": "",
+              "col3_value": "",
+              "col4_title": "",
+              "col4_value": ""
+            },
+            {
+              "header": "التخزين:",
+              "col1_title": "المكان",
+              "col1_value": "بعيداً عن الشمس المباشرة",
+              "col2_title": "الحرارة",
+              "col2_value": "أقل من 25°م",
+              "col3_title": "",
+              "col3_value": "",
+              "col4_title": "",
+              "col4_value": ""
+            },
+            {
+              "header": "السلامة:",
+              "col1_title": "المسافة",
+              "col1_value": "30 سم عن أي قابل للاشتعال",
+              "col2_title": "الإشراف",
+              "col2_value": "لا تُترك دون مراقبة",
+              "col3_title": "",
+              "col3_value": "",
+              "col4_title": "",
+              "col4_value": ""
+            },
+            {
+              "header": "الخامة والمكونات:",
+              "col1_title": "الشمع",
+              "col1_value": "صويا طبيعي 100%",
+              "col2_title": "الفتيل",
+              "col2_value": "خشب طبيعي",
+              "col3_title": "الوزن الصافي",
+              "col3_value": "220 غم",
+              "col4_title": "مدة الاحتراق",
+              "col4_value": "45 ساعة"
+            }
+          ],
+          "fields": [
+            {
+              "id": "header",
+              "type": "string",
+              "format": "text",
+              "label": "عنوان الصف",
+              "required": true
+            },
+            {
+              "id": "col1_title",
+              "type": "string",
+              "format": "text",
+              "label": "العمود 1 - التسمية",
+              "required": false
+            },
+            {
+              "id": "col1_value",
+              "type": "string",
+              "format": "text",
+              "label": "العمود 1 - القيمة",
+              "required": false
+            },
+            {
+              "id": "col2_title",
+              "type": "string",
+              "format": "text",
+              "label": "العمود 2 - التسمية",
+              "required": false
+            },
+            {
+              "id": "col2_value",
+              "type": "string",
+              "format": "text",
+              "label": "العمود 2 - القيمة",
+              "required": false
+            },
+            {
+              "id": "col3_title",
+              "type": "string",
+              "format": "text",
+              "label": "العمود 3 - التسمية",
+              "required": false
+            },
+            {
+              "id": "col3_value",
+              "type": "string",
+              "format": "text",
+              "label": "العمود 3 - القيمة",
+              "required": false
+            },
+            {
+              "id": "col4_title",
+              "type": "string",
+              "format": "text",
+              "label": "العمود 4 - التسمية",
+              "required": false
+            },
+            {
+              "id": "col4_value",
+              "type": "string",
+              "format": "text",
+              "label": "العمود 4 - القيمة",
+              "required": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "قسم العروض الخاصة",
+      "icon": "sicon-award-ribbon",
+      "name": "st-offers",
+      "key": "8b9c0d1e-2f3a-4b5c-6d7e-8f9a0b1c2d3e",
+      "image": "https://cdn.salla.sa/qAyGK/products/NjmylDTEgqGLFsmMsj1PI9S7DL2NTT9K4Z6xMlW7.jpg",
+      "fields": [
+        {
+          "id": "bg_color",
+          "type": "string",
+          "format": "color",
+          "label": "لون الخلفية",
+          "value": "#ffffff"
+        },
+        {
+          "id": "primary_color",
+          "type": "string",
+          "format": "color",
+          "label": "اللون الأساسي",
+          "value": "#1B271F"
+        },
+        {
+          "id": "brand_color",
+          "type": "string",
+          "format": "color",
+          "label": "لون العلامة التجارية",
+          "value": "#B08A3E"
+        },
+        {
+          "id": "secondary_color",
+          "type": "string",
+          "format": "color",
+          "label": "لون النص الثانوي",
+          "value": "#5C6B5E"
+        },
+        {
+          "id": "green_color",
+          "type": "string",
+          "format": "color",
+          "label": "لون الشارة",
+          "value": "#20A535"
+        },
+        {
+          "id": "red_color",
+          "type": "string",
+          "format": "color",
+          "label": "لون سعر الخصم",
+          "value": "#F62A33"
+        },
+        {
+          "id": "section_title",
+          "type": "string",
+          "format": "text",
+          "label": "عنوان القسم",
+          "value": "اختاري المجموعة التي تناسب بيتك."
+        },
+        {
+          "id": "section_subtitle",
+          "type": "string",
+          "format": "textarea",
+          "label": "النص الفرعي",
+          "rows": 2,
+          "required": false,
+          "value": "كل طلب يشمل الشحن المجاني فوق 200 ر.س، وخصم إعادة التعبئة 20% على الزجاجة الفارغة."
+        },
+        {
+          "id": "badge_label",
+          "type": "string",
+          "format": "text",
+          "label": "نص الشارة",
+          "value": "عروض الموسم",
+          "required": false
+        },
+        {
+          "id": "badge_icon",
+          "type": "string",
+          "format": "icon",
+          "label": "أيقونة الشارة",
+          "value": "sicon-bolt",
+          "required": false
+        },
+        {
+          "id": "cta_label",
+          "type": "string",
+          "format": "text",
+          "label": "نص زر الشراء",
+          "value": "أضف إلى العربة"
+        },
+        {
+          "id": "offers",
+          "type": "collection",
+          "format": "collection",
+          "label": "العروض",
+          "item_label": "عرض",
+          "minLength": 1,
+          "maxLength": 3,
+          "value": [
+            {
+              "image": "/assets/candles/candle-jar-2.jpg",
+              "name": "القالب الواحد — عود ملكي 220 غم",
+              "price_after": 119,
+              "price_before": 149,
+              "currency": "ر.س"
+            },
+            {
+              "image": "/assets/candles/white-candle-glass.jpg",
+              "name": "مجموعة الثلاثي — الروائح الثلاث",
+              "price_after": 299,
+              "price_before": 420,
+              "currency": "ر.س"
+            },
+            {
+              "image": "/assets/candles/glass-holder-white.jpg",
+              "name": "علبة الإهداء — قالبان وشمعدان زجاجي",
+              "price_after": 219,
+              "price_before": 280,
+              "currency": "ر.س"
+            }
+          ],
+          "fields": [
+            {
+              "id": "image",
+              "type": "string",
+              "format": "image",
+              "label": "صورة العرض",
+              "required": false
+            },
+            {
+              "id": "name",
+              "type": "string",
+              "format": "text",
+              "label": "اسم العرض",
+              "required": true,
+              "maxLength": 100
+            },
+            {
+              "id": "price_after",
+              "type": "number",
+              "format": "number",
+              "label": "السعر بعد الخصم",
+              "required": true
+            },
+            {
+              "id": "price_before",
+              "type": "number",
+              "format": "number",
+              "label": "السعر قبل الخصم",
+              "required": false
+            },
+            {
+              "id": "currency",
+              "type": "string",
+              "format": "text",
+              "label": "رمز العملة",
+              "value": "ر.س"
+            },
+            {
+              "id": "link",
+              "type": "string",
+              "format": "text",
+              "label": "رابط الشراء (رابط المنتج في المتجر)",
+              "value": "#"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "قسم آراء العملاء",
+      "icon": "sicon-quote-close",
+      "name": "st-reviews",
+      "key": "0d1e2f3a-4b5c-6d7e-8f9a-0b1c2d3e4f5a",
+      "image": "https://cdn.salla.sa/qAyGK/products/nSqS292go5ydqASQslFXS6aqq6WUI5FJ43xnbsFj.jpg",
+      "fields": [
+        {
+          "id": "bg_color",
+          "type": "string",
+          "format": "color",
+          "label": "لون الخلفية",
+          "value": "#ffffff"
+        },
+        {
+          "id": "primary_color",
+          "type": "string",
+          "format": "color",
+          "label": "لون النص الأساسي",
+          "value": "#1B271F"
+        },
+        {
+          "id": "brand_color",
+          "type": "string",
+          "format": "color",
+          "label": "لون العلامة التجارية",
+          "value": "#B08A3E"
+        },
+        {
+          "id": "secondary_color",
+          "type": "string",
+          "format": "color",
+          "label": "لون النص الثانوي",
+          "value": "#5C6B5E"
+        },
+        {
+          "id": "shade_color",
+          "type": "string",
+          "format": "color",
+          "label": "لون خلفية الترقيم",
+          "value": "rgba(22,35,27,0.04)"
+        },
+        {
+          "id": "section_icon",
+          "type": "string",
+          "format": "icon",
+          "label": "أيقونة الاقتباس",
+          "value": "sicon-quote-close"
+        },
+        {
+          "id": "rating_icon",
+          "type": "string",
+          "format": "icon",
+          "label": "أيقونة التقييم",
+          "value": "sicon-star2"
+        },
+        {
+          "id": "subheader",
+          "type": "string",
+          "format": "text",
+          "label": "العنوان الفرعي",
+          "value": "تجارب حقيقية من بيوت عملائنا"
+        },
+        {
+          "id": "prev_icon",
+          "type": "string",
+          "format": "icon",
+          "label": "أيقونة السابق",
+          "value": "sicon-arrow-left"
+        },
+        {
+          "id": "next_icon",
+          "type": "string",
+          "format": "icon",
+          "label": "أيقونة التالي",
+          "value": "sicon-arrow-right"
+        },
+        {
+          "id": "reviews",
+          "type": "collection",
+          "format": "collection",
+          "label": "التقييمات",
+          "item_label": "تقييم",
+          "minLength": 1,
+          "maxLength": 10,
+          "value": [
+            {
+              "body": "طلبت رائحة العود الملكي وما توقعت الفرق يكون بهالوضوح عن الشموع اللي جربتها قبل. الرائحة ثابتة من أول إشعال، وما تسبب صداع مثل بعض الشموع المعطرة الثانية. الفتيل الخشبي فعلاً يطلع صوت طقطقة لطيف يعطي جو هادئ بالغرفة.",
+              "user": "منى الحربي",
+              "stars": 5,
+              "audio_url": "",
+              "media_type": "",
+              "media_src": ""
+            },
+            {
+              "body": "اشتريت مجموعة الثلاثي كهدية لأمي وانتهى بي المطاف أطلب لنفسي طقم ثاني. التغليف أنيق جداً ومافيه أي كسر رغم إنه توصيل. رائحة الصندل تحديداً صارت روتين المساء عندي، تدوم أكثر من 40 ساعة زي ما مكتوب بالضبط.",
+              "user": "سارة القحطاني",
+              "stars": 5,
+              "audio_url": "",
+              "media_type": "",
+              "media_src": ""
+            },
+            {
+              "body": "أول مرة أجرب شمعة صويا وفعلاً فيه فرق واضح عن الشمع العادي — تحترق بالتساوي ومافيه سواد على حواف الزجاجة. طلبت الفانيليا والهيل وريحتها دافئة بدون ما تكون ثقيلة أو تصدع الراس بعد شوي.",
+              "user": "خالد العتيبي",
+              "stars": 4.5,
+              "audio_url": "",
+              "media_type": "",
+              "media_src": ""
+            },
+            {
+              "body": "خدمة إعادة التعبئة فكرة ذكية وفرت علي شراء زجاجة جديدة كل مرة. أرسلت الزجاجة الفارغة واستلمت قالب جديد بخصم فعلي. التواصل مع الدعم كان سريع لما سألت عن مدة التوصيل لمنطقتي.",
+              "user": "ريم الشهري",
+              "stars": 5,
+              "audio_url": "",
+              "media_type": "",
+              "media_src": ""
+            },
+            {
+              "body": "علبة الإهداء وصلت بالضبط بالموعد المتوقع، والشمعدان الزجاجي المرفق نوعية ممتازة مو رخيصة زي بعض العروض الثانية. قلّمت الفتيل زي ما ذكروا في دليل الاستخدام واللهب طلع متساوي من أول إشعال.",
+              "user": "عبدالعزيز الدوسري",
+              "stars": 5,
+              "audio_url": "",
+              "media_type": "",
+              "media_src": ""
+            }
+          ],
+          "fields": [
+            {
+              "id": "body",
+              "type": "string",
+              "format": "textarea",
+              "label": "نص التقييم",
+              "required": true,
+              "maxLength": 800
+            },
+            {
+              "id": "user",
+              "type": "string",
+              "format": "text",
+              "label": "اسم العميل",
+              "required": true,
+              "maxLength": 80
+            },
+            {
+              "id": "stars",
+              "type": "number",
+              "format": "slider",
+              "label": "التقييم (نجوم)",
+              "minimum": 0,
+              "maximum": 5,
+              "step": 0.5,
+              "value": 5
+            },
+            {
+              "id": "audio_url",
+              "type": "string",
+              "format": "text",
+              "label": "رابط الصوت (اختياري)",
+              "required": false
+            },
+            {
+              "id": "media_type",
+              "type": "string",
+              "format": "text",
+              "label": "نوع الوسائط: image / video / iframe (اتركه فارغاً بلا وسائط)",
+              "value": "",
+              "required": false
+            },
+            {
+              "id": "media_src",
+              "type": "string",
+              "format": "text",
+              "label": "مصدر الوسائط (رابط أو مسار)",
+              "required": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "تذييل الصفحة",
+      "icon": "sicon-layout-grid",
+      "name": "st-footer",
+      "key": "1e2f3a4b-5c6d-7e8f-9a0b-1c2d3e4f5a6b",
+      "image": "https://cdn.salla.sa/qAyGK/products/rq9Pbj2xeDhSpso0g3Z0hMsWB7gLug7Jr0CVdSLh.jpg",
+      "fields": [
+        {
+          "id": "bg_color",
+          "type": "string",
+          "format": "color",
+          "label": "لون الخلفية",
+          "value": "#16231B"
+        },
+        {
+          "id": "bottom_bg_color",
+          "type": "string",
+          "format": "color",
+          "label": "لون الشريط السفلي",
+          "value": "#ffffff"
+        },
+        {
+          "id": "text_color",
+          "type": "string",
+          "format": "color",
+          "label": "لون النص",
+          "value": "#F3EFE2"
+        },
+        {
+          "id": "brand_color",
+          "type": "string",
+          "format": "color",
+          "label": "لون العلامة التجارية",
+          "value": "#B08A3E"
+        },
+        {
+          "id": "newsletter_title",
+          "type": "string",
+          "format": "text",
+          "label": "عنوان النشرة البريدية",
+          "value": "كوني أول من يعرف برائحتنا القادمة!"
+        },
+        {
+          "id": "newsletter_subtitle",
+          "type": "string",
+          "format": "textarea",
+          "label": "النص الفرعي للنشرة البريدية",
+          "rows": 2,
+          "required": false,
+          "value": "اشتركي ليصلك إشعار بالروائح الموسمية الجديدة قبل نفادها، ونصائح العناية بشمعتك حتى تدوم أطول. رسالة واحدة كل أسبوع فقط."
+        },
+        {
+          "id": "newsletter_placeholder",
+          "type": "string",
+          "format": "text",
+          "label": "نص حقل البريد",
+          "value": "بريدك الإلكتروني"
+        },
+        {
+          "id": "newsletter_icon",
+          "type": "string",
+          "format": "icon",
+          "label": "أيقونة حقل البريد",
+          "value": "sicon-mail",
+          "required": false
+        },
+        {
+          "id": "newsletter_button_label",
+          "type": "string",
+          "format": "text",
+          "label": "نص زر الاشتراك",
+          "value": "اشتركي الآن"
+        },
+        {
+          "id": "newsletter_button_icon",
+          "type": "string",
+          "format": "icon",
+          "label": "أيقونة زر الاشتراك",
+          "value": "sicon-caret-left-double",
+          "required": false
+        },
+        {
+          "id": "store_title",
+          "type": "string",
+          "format": "text",
+          "label": "اسم المتجر",
+          "value": "أُنس للشموع الطبيعية"
+        },
+        {
+          "id": "store_description",
+          "type": "string",
+          "format": "textarea",
+          "label": "وصف المتجر",
+          "rows": 3,
+          "value": "متجر سعودي متخصص في شموع الصويا الطبيعية المصنوعة يدوياً بفتيل خشبي وروائح مركّبة من زيوت عطرية حقيقية. نصنع دفعات صغيرة بعناية، بأسعار عادلة وخدمة إعادة تعبئة تقلّل الهدر."
+        },
+        {
+          "id": "nav_columns",
+          "type": "collection",
+          "format": "collection",
+          "label": "أعمدة الروابط",
+          "item_label": "عمود",
+          "maxLength": 6,
+          "value": [
+            {
+              "header": "تسوّقي",
+              "link1_label": "الروائح",
+              "link1_href": "#st-variants",
+              "link2_label": "الأجواء",
+              "link2_href": "#st-images-slider",
+              "link3_label": "الهدايا والمجموعات",
+              "link3_href": "#st-offers"
+            },
+            {
+              "header": "المساعدة",
+              "link1_label": "دليل الاستخدام والعناية",
+              "link1_href": "#st-specification",
+              "link2_label": "سياسة الاستبدال والإرجاع",
+              "link2_href": "#",
+              "link3_label": "تتبع شحنتك",
+              "link3_href": "#"
+            },
+            {
+              "header": "العناية بالشمعة",
+              "link1_label": "تقليم الفتيل",
+              "link1_href": "#st-feature",
+              "link2_label": "خدمة إعادة التعبئة",
+              "link2_href": "#st-demo",
+              "link3_label": "الأسئلة الشائعة",
+              "link3_href": "#"
+            },
+            {
+              "header": "تواصل معنا",
+              "link1_label": "8001111210",
+              "link1_href": "#",
+              "link2_label": "واتساب المتجر",
+              "link2_href": "#",
+              "link3_label": "sallathemes@gmail.com",
+              "link3_href": "#"
+            }
+          ],
+          "fields": [
+            {
+              "id": "header",
+              "type": "string",
+              "format": "text",
+              "label": "عنوان العمود",
+              "required": true
+            },
+            {
+              "id": "link1_label",
+              "type": "string",
+              "format": "text",
+              "label": "الرابط 1 - النص",
+              "required": false
+            },
+            {
+              "id": "link1_href",
+              "type": "string",
+              "format": "text",
+              "label": "الرابط 1 - الوجهة",
+              "value": "#",
+              "required": false
+            },
+            {
+              "id": "link2_label",
+              "type": "string",
+              "format": "text",
+              "label": "الرابط 2 - النص",
+              "required": false
+            },
+            {
+              "id": "link2_href",
+              "type": "string",
+              "format": "text",
+              "label": "الرابط 2 - الوجهة",
+              "value": "#",
+              "required": false
+            },
+            {
+              "id": "link3_label",
+              "type": "string",
+              "format": "text",
+              "label": "الرابط 3 - النص",
+              "required": false
+            },
+            {
+              "id": "link3_href",
+              "type": "string",
+              "format": "text",
+              "label": "الرابط 3 - الوجهة",
+              "value": "#",
+              "required": false
+            }
+          ]
+        },
+        {
+          "id": "meta1_image",
+          "type": "string",
+          "format": "image",
+          "label": "صورة شارة الثقة 1",
+          "required": false,
+          "value": "/assets/vat.jpeg"
+        },
+        {
+          "id": "meta1_title",
+          "type": "string",
+          "format": "text",
+          "label": "عنوان شارة الثقة 1",
+          "required": false,
+          "value": "546987552"
+        },
+        {
+          "id": "meta1_subtitle",
+          "type": "string",
+          "format": "text",
+          "label": "نص شارة الثقة 1",
+          "required": false,
+          "value": "سجل ضريبي"
+        },
+        {
+          "id": "meta1_link",
+          "type": "string",
+          "format": "url",
+          "label": "رابط شارة الثقة 1",
+          "value": "",
+          "required": false
+        },
+        {
+          "id": "meta2_image",
+          "type": "string",
+          "format": "image",
+          "label": "صورة شارة الثقة 2",
+          "required": false,
+          "value": "/assets/sbc.png"
+        },
+        {
+          "id": "meta2_title",
+          "type": "string",
+          "format": "text",
+          "label": "عنوان شارة الثقة 2",
+          "required": false,
+          "value": "منصة الأعمال"
+        },
+        {
+          "id": "meta2_subtitle",
+          "type": "string",
+          "format": "text",
+          "label": "نص شارة الثقة 2",
+          "required": false,
+          "value": "موثق لدي"
+        },
+        {
+          "id": "meta2_link",
+          "type": "string",
+          "format": "url",
+          "label": "رابط شارة الثقة 2",
+          "value": "https://google.com",
+          "required": false
+        },
+        {
+          "id": "copyright",
+          "type": "string",
+          "format": "text",
+          "label": "نص حقوق النشر",
+          "value": "صنع بإتقان على | {{year}} منصة سلة"
+        },
+        {
+          "id": "social1_icon",
+          "type": "string",
+          "format": "icon",
+          "label": "أيقونة التواصل 1",
+          "value": "sicon-facebook",
+          "required": false
+        },
+        {
+          "id": "social1_link",
+          "type": "string",
+          "format": "url",
+          "label": "رابط التواصل 1",
+          "value": "#",
+          "required": false
+        },
+        {
+          "id": "social2_icon",
+          "type": "string",
+          "format": "icon",
+          "label": "أيقونة التواصل 2",
+          "value": "sicon-facebook",
+          "required": false
+        },
+        {
+          "id": "social2_link",
+          "type": "string",
+          "format": "url",
+          "label": "رابط التواصل 2",
+          "value": "#",
+          "required": false
+        },
+        {
+          "id": "social3_icon",
+          "type": "string",
+          "format": "icon",
+          "label": "أيقونة التواصل 3",
+          "value": "sicon-facebook",
+          "required": false
+        },
+        {
+          "id": "social3_link",
+          "type": "string",
+          "format": "url",
+          "label": "رابط التواصل 3",
+          "value": "#",
+          "required": false
+        },
+        {
+          "id": "side_icons",
+          "type": "collection",
+          "format": "collection",
+          "label": "شعارات الدفع",
+          "item_label": "شعار",
+          "maxLength": 6,
+          "value": [
+            {
+              "image": "/assets/bank-icon.png",
+              "link": "#"
+            },
+            {
+              "image": "/assets/bank-icon.png",
+              "link": "#"
+            }
+          ],
+          "fields": [
+            {
+              "id": "image",
+              "type": "string",
+              "format": "image",
+              "label": "الصورة",
+              "required": true
+            },
+            {
+              "id": "link",
+              "type": "string",
+              "format": "text",
+              "label": "الرابط",
+              "value": "#",
+              "required": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
