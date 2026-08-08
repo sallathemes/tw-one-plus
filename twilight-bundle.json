@@ -71,14 +71,7 @@
                     "type": "string",
                     "format": "text",
                     "label": "نص زر الشراء",
-                    "value": "إشتر الآن ب"
-                },
-                {
-                    "id": "button_price",
-                    "type": "string",
-                    "format": "text",
-                    "label": "سعر زر الشراء",
-                    "value": "199 ر.س"
+                    "value": "اشتري الآن"
                 },
                 {
                     "id": "button_link",
@@ -86,6 +79,42 @@
                     "format": "text",
                     "label": "رابط زر الشراء",
                     "value": "#st-offers"
+                },
+                {
+                    "id": "product_price",
+                    "type": "number",
+                    "format": "number",
+                    "label": "سعر المنتج",
+                    "value": 1990
+                },
+                {
+                    "id": "product_regular_price",
+                    "type": "number",
+                    "format": "number",
+                    "label": "السعر قبل الخصم",
+                    "required": false,
+                    "value": 2500
+                },
+                {
+                    "id": "product_currency",
+                    "type": "string",
+                    "format": "text",
+                    "label": "رمز العملة",
+                    "value": "ر.س"
+                },
+                {
+                    "id": "product_is_on_sale",
+                    "type": "boolean",
+                    "format": "switch",
+                    "label": "هل يوجد خصم على المنتج",
+                    "value": true
+                },
+                {
+                    "id": "product_out_of_stock",
+                    "type": "boolean",
+                    "format": "switch",
+                    "label": "المنتج غير متوفر",
+                    "value": false
                 },
                 {
                     "id": "video_url",
@@ -1038,7 +1067,7 @@
                     "type": "string",
                     "format": "text",
                     "label": "عنوان القسم",
-                    "value": "اختر ما يناسبك من أفضل عروضنا."
+                    "value": "اختر النوع الذي يناسبك."
                 },
                 {
                     "id": "section_subtitle",
@@ -1073,37 +1102,51 @@
                     "value": "اشتري الآن"
                 },
                 {
-                    "id": "offers",
+                    "id": "button_link",
+                    "type": "string",
+                    "format": "text",
+                    "label": "رابط زر الشراء (رابط المنتج في المتجر)",
+                    "value": "#"
+                },
+                {
+                    "id": "currency",
+                    "type": "string",
+                    "format": "text",
+                    "label": "رمز العملة",
+                    "value": "ر.س"
+                },
+                {
+                    "id": "variants",
                     "type": "collection",
                     "format": "collection",
-                    "label": "العروض",
-                    "item_label": "عرض",
+                    "label": "الأنواع",
+                    "item_label": "نوع",
                     "minLength": 1,
                     "maxLength": 3,
                     "value": [
                         {
-                            "image": "/assets/airpods.jpeg",
-                            "name": "اير بودز برو 3 - لون رمادي",
-                            "price_after": 1990,
-                            "price_before": 2500,
-                            "currency": "ر.س",
-                            "link": "#"
+                            "image": "/assets/variant-white-product.png",
+                            "name": "أبيض",
+                            "price": 1990,
+                            "regular_price": 2500,
+                            "is_on_sale": true,
+                            "is_out_of_stock": false
                         },
                         {
-                            "image": "/assets/airpods.jpeg",
-                            "name": "اير بودز برو 3 - لون رمادي",
-                            "price_after": 1990,
-                            "price_before": 2500,
-                            "currency": "ر.س",
-                            "link": "#"
+                            "image": "/assets/variant-black-product.png",
+                            "name": "أسود",
+                            "price": 1990,
+                            "regular_price": 2500,
+                            "is_on_sale": true,
+                            "is_out_of_stock": false
                         },
                         {
-                            "image": "/assets/airpods.jpeg",
-                            "name": "اير بودز برو 3 - لون رمادي",
-                            "price_after": 1990,
-                            "price_before": 2500,
-                            "currency": "ر.س",
-                            "link": "#"
+                            "image": "/assets/variant-blue-product.png",
+                            "name": "أزرق",
+                            "price": 1990,
+                            "regular_price": 2500,
+                            "is_on_sale": true,
+                            "is_out_of_stock": false
                         }
                     ],
                     "fields": [
@@ -1111,44 +1154,44 @@
                             "id": "image",
                             "type": "string",
                             "format": "image",
-                            "label": "صورة العرض",
+                            "label": "صورة النوع",
                             "required": false
                         },
                         {
                             "id": "name",
                             "type": "string",
                             "format": "text",
-                            "label": "اسم العرض",
+                            "label": "اسم النوع",
                             "required": true,
                             "maxLength": 100
                         },
                         {
-                            "id": "price_after",
+                            "id": "price",
                             "type": "number",
                             "format": "number",
-                            "label": "السعر بعد الخصم",
+                            "label": "السعر",
                             "required": true
                         },
                         {
-                            "id": "price_before",
+                            "id": "regular_price",
                             "type": "number",
                             "format": "number",
                             "label": "السعر قبل الخصم",
                             "required": false
                         },
                         {
-                            "id": "currency",
-                            "type": "string",
-                            "format": "text",
-                            "label": "رمز العملة",
-                            "value": "ر.س"
+                            "id": "is_on_sale",
+                            "type": "boolean",
+                            "format": "switch",
+                            "label": "هل يوجد خصم",
+                            "value": true
                         },
                         {
-                            "id": "link",
-                            "type": "string",
-                            "format": "text",
-                            "label": "رابط الشراء (رابط المنتج في المتجر)",
-                            "value": "#"
+                            "id": "is_out_of_stock",
+                            "type": "boolean",
+                            "format": "switch",
+                            "label": "غير متوفر",
+                            "value": false
                         }
                     ]
                 }
@@ -1804,9 +1847,27 @@
             "thumbnail": "https://cdn.assets.salla.network/previews/uhvqocmjhqh7/assets/77877bb73509066a6aec17f7e6acfdacfcbf70dfe3beb3670eab894ca65ec7cf/templates-thumbs/clothes.jpg",
             "is_default": false,
             "public_preview_url": "https://salla.design/preview/s/uhvqocmjhqh7/clothes"
+        },
+        {
+            "id": "60da85e5-58ce-4d12-a0c0-baec6ec62a34",
+            "path": "templates.home",
+            "category_id": "989286562",
+            "primary_color": "#B08D57",
+            "thumbnail": "https://cdn.assets.salla.network/previews/uhvqocmjhqh7/assets/dff1eda1a39b6b7e133cc184e8f7d51f0154013dd73fac3b34d9e5d3f9ceca4b/templates-thumbs/home.jpg",
+            "is_default": false,
+            "public_preview_url": "https://salla.design/preview/s/uhvqocmjhqh7/home"
         }
     ],
     "features": [
         "landing-page-templates"
-    ]
+    ],
+    "demo_settings": {
+        "mock_product": {
+            "enabled": true,
+            "status": "available",
+            "price": 100,
+            "regularPrice": 150,
+            "isOnSale": true
+        }
+    }
 }

@@ -1028,7 +1028,7 @@
           "type": "string",
           "format": "text",
           "label": "عنوان القسم",
-          "value": "اختر ما يناسبك من أفضل عروضنا."
+          "value": "اختر اللون الذي يناسبك."
         },
         {
           "id": "section_subtitle",
@@ -1056,48 +1056,58 @@
           "required": false
         },
         {
-          "id": "cta_normal",
+          "id": "cta_label",
           "type": "string",
           "format": "text",
-          "label": "نص زر الإضافة",
-          "value": "اضف الي العربة"
+          "label": "نص زر الشراء",
+          "value": "اشتري الآن"
         },
         {
-          "id": "cta_added",
+          "id": "button_link",
           "type": "string",
           "format": "text",
-          "label": "نص بعد الإضافة",
-          "value": "تم الأضافة الي العربة"
+          "label": "رابط زر الشراء (رابط المنتج في المتجر)",
+          "value": "#"
         },
         {
-          "id": "offers",
+          "id": "currency",
+          "type": "string",
+          "format": "text",
+          "label": "رمز العملة",
+          "value": "ر.س"
+        },
+        {
+          "id": "variants",
           "type": "collection",
           "format": "collection",
-          "label": "العروض",
-          "item_label": "عرض",
+          "label": "الأنواع",
+          "item_label": "نوع",
           "minLength": 1,
           "maxLength": 3,
           "value": [
             {
-              "image": "/assets/airpods.jpeg",
-              "name": "اير بودز برو 3 - لون رمادي",
-              "price_after": 1990,
-              "price_before": 2500,
-              "currency": "ر.س"
+              "image": "/assets/variant-white-product.png",
+              "name": "أبيض",
+              "price": 1990,
+              "regular_price": 2500,
+              "is_on_sale": true,
+              "is_out_of_stock": false
             },
             {
-              "image": "/assets/airpods.jpeg",
-              "name": "اير بودز برو 3 - لون رمادي",
-              "price_after": 1990,
-              "price_before": 2500,
-              "currency": "ر.س"
+              "image": "/assets/variant-black-product.png",
+              "name": "أسود",
+              "price": 1990,
+              "regular_price": 2500,
+              "is_on_sale": true,
+              "is_out_of_stock": false
             },
             {
-              "image": "/assets/airpods.jpeg",
-              "name": "اير بودز برو 3 - لون رمادي",
-              "price_after": 1990,
-              "price_before": 2500,
-              "currency": "ر.س"
+              "image": "/assets/variant-blue-product.png",
+              "name": "أزرق",
+              "price": 1990,
+              "regular_price": 2500,
+              "is_on_sale": true,
+              "is_out_of_stock": false
             }
           ],
           "fields": [
@@ -1105,37 +1115,44 @@
               "id": "image",
               "type": "string",
               "format": "image",
-              "label": "صورة العرض",
+              "label": "صورة النوع",
               "required": false
             },
             {
               "id": "name",
               "type": "string",
               "format": "text",
-              "label": "اسم العرض",
+              "label": "اسم النوع",
               "required": true,
               "maxLength": 100
             },
             {
-              "id": "price_after",
+              "id": "price",
               "type": "number",
               "format": "number",
-              "label": "السعر بعد الخصم",
+              "label": "السعر",
               "required": true
             },
             {
-              "id": "price_before",
+              "id": "regular_price",
               "type": "number",
               "format": "number",
               "label": "السعر قبل الخصم",
               "required": false
             },
             {
-              "id": "currency",
-              "type": "string",
-              "format": "text",
-              "label": "رمز العملة",
-              "value": "ر.س"
+              "id": "is_on_sale",
+              "type": "boolean",
+              "format": "switch",
+              "label": "هل يوجد خصم",
+              "value": true
+            },
+            {
+              "id": "is_out_of_stock",
+              "type": "boolean",
+              "format": "switch",
+              "label": "غير متوفر",
+              "value": false
             }
           ]
         }

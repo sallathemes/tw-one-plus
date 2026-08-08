@@ -1,16 +1,17 @@
-import { LitElement as x, html as o } from "lit";
+import { LitElement as x, html as r } from "lit";
 import { property as w, state as y } from "lit/decorators.js";
-import { classMap as h } from "lit/directives/class-map.js";
+import { classMap as $ } from "lit/directives/class-map.js";
 import { A as g } from "./animate-on-scroll-CruvFX6N.js";
 import "./fonts-CqDo7kag.js";
-var $ = Object.defineProperty, u = (f, e, t, s) => {
-  for (var i = void 0, r = f.length - 1, n; r >= 0; r--)
-    (n = f[r]) && (i = n(e, t, i) || i);
-  return i && $(e, t, i), i;
+import { b as v, m as u, r as k } from "./mock-product-B38SvcvQ.js";
+var z = Object.defineProperty, b = (d, e, i, n) => {
+  for (var t = void 0, o = d.length - 1, a; o >= 0; o--)
+    (a = d[o]) && (t = a(e, i, t) || t);
+  return t && z(e, i, t), t;
 };
-class a extends x {
+class c extends x {
   constructor() {
-    super(...arguments), this.selectedOffer = null, this.styleElement = null;
+    super(...arguments), this.selectedVariant = 0, this.styleElement = null;
   }
   // Render in light DOM so Salla styles work correctly
   createRenderRoot() {
@@ -26,21 +27,21 @@ class a extends x {
   updated(e) {
     super.updated(e), g.refresh();
   }
-  // No offer picked yet: block navigation instead of following an empty/"#" link
-  handleBuyClick(e) {
-    this.selectedOffer === null && e.preventDefault();
+  // Out of stock: block navigation instead of following an empty/"#" link
+  handleBuyClick(e, i) {
+    i && e.preventDefault();
   }
-  handleSelectOffer(e) {
-    this.selectedOffer = e, this.requestUpdate();
+  handleSelectVariant(e) {
+    this.selectedVariant = e, this.requestUpdate();
   }
   injectStyles() {
-    var d, l, c, m, _, p;
+    var f, l, m, _, p, h;
     if (this.styleElement) return;
-    const e = ((d = this.config) == null ? void 0 : d.bg_color) || "#ffffff", t = ((l = this.config) == null ? void 0 : l.primary_color) || "#050505", s = ((c = this.config) == null ? void 0 : c.secondary_color) || "#525252", i = ((m = this.config) == null ? void 0 : m.brand_color) || "#0071E3", r = ((_ = this.config) == null ? void 0 : _.green_color) || "#20A535", n = ((p = this.config) == null ? void 0 : p.red_color) || "#F62A33", b = "#EEEEEE";
+    const e = ((f = this.config) == null ? void 0 : f.bg_color) || "#ffffff", i = ((l = this.config) == null ? void 0 : l.primary_color) || "#050505", n = ((m = this.config) == null ? void 0 : m.secondary_color) || "#525252", t = ((_ = this.config) == null ? void 0 : _.brand_color) || "#0071E3", o = ((p = this.config) == null ? void 0 : p.green_color) || "#20A535", a = ((h = this.config) == null ? void 0 : h.red_color) || "#F62A33", s = "#EEEEEE";
     this.styleElement = document.createElement("style"), this.styleElement.textContent = `
       .st-offers {
         background: ${e};
-        color: ${t};
+        color: ${i};
         display: block;
         overflow: hidden;
       }
@@ -86,9 +87,9 @@ class a extends x {
         margin: 0 auto;
         padding: 0.5rem 1rem;
         border-radius: 100px;
-        border: 1px solid ${r};
-        background: ${r}1A;
-        color: ${r};
+        border: 1px solid ${o};
+        background: ${o}1A;
+        color: ${o};
       }
 
       .st-offers__badge i { font-size: 1.25rem; }
@@ -111,7 +112,7 @@ class a extends x {
         font-weight: 800;
         line-height: 1.35;
         margin: 0 0 0.625rem;
-        color: ${t};
+        color: ${i};
       }
 
       @media (min-width: 768px) {
@@ -130,7 +131,7 @@ class a extends x {
         font-size: 0.875rem;
         font-weight: 400;
         line-height: 1.8;
-        color: ${s};
+        color: ${n};
         margin: 0 auto;
       }
 
@@ -138,7 +139,7 @@ class a extends x {
         .st-offers__subtitle { font-size: 1rem; }
       }
 
-      /* Offers row: horizontal scroll on mobile, 3-up on desktop (matches source) */
+      /* Variants row: horizontal scroll on mobile, 3-up on desktop (matches source) */
       .st-offers__grid {
         display: flex;
         gap: 1rem;
@@ -178,17 +179,21 @@ class a extends x {
       }
 
       .st-offers__card-inner {
-        border: 1px solid ${b};
+        border: 1px solid ${s};
         border-radius: 1rem;
         padding: 1rem 1rem 1.5rem;
         display: flex;
         flex-direction: column;
         gap: 1rem;
-        transition: border-color 0.3s ease;
+        transition: border-color 0.3s ease, opacity 0.3s ease;
       }
 
       .st-offers__card.is-selected .st-offers__card-inner {
-        border-color: ${i};
+        border-color: ${t};
+      }
+
+      .st-offers__card.is-out-of-stock .st-offers__card-inner {
+        opacity: 0.5;
       }
 
       .st-offers__card-img {
@@ -201,7 +206,7 @@ class a extends x {
         font-size: 1rem;
         font-weight: 700;
         text-align: center;
-        color: ${t};
+        color: ${i};
         margin: 0;
       }
 
@@ -232,15 +237,21 @@ class a extends x {
 
       .st-offers__price-after {
         font-weight: 800;
+        color: ${a};
+      }
+
+      .st-offers__price-out-of-stock {
+        font-weight: 700;
         color: ${n};
       }
 
       .st-offers__price-before {
         text-decoration: line-through;
-        color: ${t};
+        color: ${i};
       }
 
-      /* Buy button — links out to the merchant's real store to complete the purchase */
+      /* Buy button — one shared "buy now" CTA for the whole component (matches
+         the button used across the bundle's other sections, e.g. st-hero) */
       .st-offers__cta {
         display: flex;
         align-items: center;
@@ -256,8 +267,8 @@ class a extends x {
         max-width: 373px;
         padding: 0.75rem 1rem;
         border-radius: 1000px;
-        border: 1px solid ${i};
-        background: ${i};
+        border: 1px solid ${t};
+        background: ${t};
         cursor: pointer;
         text-decoration: none;
         transition: opacity 0.3s ease;
@@ -265,11 +276,6 @@ class a extends x {
 
       @media (min-width: 1024px) {
         .st-offers__btn { padding: 1rem; }
-      }
-
-      .st-offers__btn.is-disabled {
-        cursor: not-allowed;
-        opacity: 0.5;
       }
 
       .st-offers__btn-label {
@@ -287,38 +293,50 @@ class a extends x {
         line-height: 1;
         color: #ffffff;
       }
+
+      ${v}
     `, document.head.appendChild(this.styleElement);
   }
   render() {
     if (!this.config)
-      return o`<div>Configuration is required</div>`;
-    const e = (this.config.offers || []).slice(0, 3), t = this.selectedOffer !== null ? e[this.selectedOffer] : null;
-    return o`
+      return r`<div>Configuration is required</div>`;
+    const e = (this.config.variants || []).slice(0, 3), i = this.config.currency || "ر.س", n = Math.min(this.selectedVariant, Math.max(e.length - 1, 0)), t = e[n], o = t ? {
+      price: t.price ?? u.price,
+      regularPrice: t.regular_price,
+      currency: i,
+      isOnSale: t.is_on_sale ?? !1,
+      isOutOfStock: t.is_out_of_stock ?? !1
+    } : u, a = k(o, this.config.cta_label);
+    return r`
       <section id="st-offers" class="st-offers">
         <div class="st-offers__container" data-animate="fade-up">
           <!-- Section header: badge above title (matches source SectionHeader) -->
           <div class="st-offers__header">
-            ${this.config.badge_label ? o`
+            ${this.config.badge_label ? r`
                   <div class="st-offers__badge">
-                    ${this.config.badge_icon ? o`<i class="${this.config.badge_icon}"></i>` : ""}
+                    ${this.config.badge_icon ? r`<i class="${this.config.badge_icon}"></i>` : ""}
                     <span>${this.config.badge_label}</span>
                   </div>
                 ` : ""}
             <div>
               <h3 class="st-offers__title">${this.config.section_title}</h3>
-              ${this.config.section_subtitle ? o`<h4 class="st-offers__subtitle">${this.config.section_subtitle}</h4>` : ""}
+              ${this.config.section_subtitle ? r`<h4 class="st-offers__subtitle">${this.config.section_subtitle}</h4>` : ""}
             </div>
           </div>
 
-          <!-- Offers row (max 3 cards) -->
+          <!-- Variant options row (max 3 cards, same product) -->
           <div class="st-offers__grid">
             ${e.map(
-      (s, i) => o`
+      (s, f) => r`
                 <div
-                  class="${h({ "st-offers__card": !0, "is-selected": i === this.selectedOffer })}"
+                  class="${$({
+        "st-offers__card": !0,
+        "is-selected": f === n,
+        "is-out-of-stock": !!s.is_out_of_stock
+      })}"
                   data-animate="bounce-in"
-                  data-delay="${i * 300}"
-                  @click="${() => this.handleSelectOffer(i)}"
+                  data-delay="${f * 300}"
+                  @click="${() => this.handleSelectVariant(f)}"
                 >
                   <div class="st-offers__card-inner">
                     <img
@@ -329,14 +347,16 @@ class a extends x {
                     />
                     <h5 class="st-offers__card-name">${s.name}</h5>
                     <h6 class="st-offers__card-price">
-                      <span class="st-offers__price-after">
-                        ${s.price_after} ${s.currency}
-                      </span>
-                      ${s.price_before > s.price_after ? o`
-                            <span class="st-offers__price-before">
-                              ${s.price_before} ${s.currency}
+                      ${s.is_out_of_stock ? r`<span class="st-offers__price-out-of-stock">نفذت الكمية</span>` : r`
+                            <span class="st-offers__price-after">
+                              ${s.price} ${i}
                             </span>
-                          ` : ""}
+                            ${s.is_on_sale && s.regular_price && s.regular_price > s.price ? r`
+                                  <span class="st-offers__price-before">
+                                    ${s.regular_price} ${i}
+                                  </span>
+                                ` : ""}
+                          `}
                     </h6>
                   </div>
                 </div>
@@ -344,17 +364,16 @@ class a extends x {
     )}
           </div>
 
-          <!-- Buy: links out to the merchant's store to complete the purchase.
-               Disabled (no navigation) until an offer is selected. -->
+          <!-- Buy: one shared button for every variant above. Reflects whichever
+               card is selected and disables/blocks navigation when it's out of stock. -->
           <div class="st-offers__cta">
             <a
-              class="${h({ "st-offers__btn": !0, "is-disabled": !t })}"
-              href="${(t == null ? void 0 : t.link) || "#"}"
-              aria-disabled="${!t}"
-              title="${t ? "" : "إختر عرض لتفعيل الزر"}"
-              @click="${this.handleBuyClick}"
+              class="st-offers__btn st-buy-btn ${o.isOutOfStock ? "is-out-of-stock" : ""}"
+              href="${this.config.button_link || "#"}"
+              aria-disabled="${o.isOutOfStock ? "true" : "false"}"
+              @click="${(s) => this.handleBuyClick(s, !!o.isOutOfStock)}"
             >
-              <span class="st-offers__btn-label">${this.config.cta_label}</span>
+              <span class="st-offers__btn-label">${a}</span>
               <i class="sicon-caret-left-double"></i>
             </a>
           </div>
@@ -363,13 +382,13 @@ class a extends x {
     `;
   }
 }
-u([
+b([
   w({ type: Object })
-], a.prototype, "config");
-u([
+], c.prototype, "config");
+b([
   y()
-], a.prototype, "selectedOffer");
-typeof a < "u" && a.registerSallaComponent("salla-st-offers");
+], c.prototype, "selectedVariant");
+typeof c < "u" && c.registerSallaComponent("salla-st-offers");
 export {
-  a as default
+  c as default
 };
