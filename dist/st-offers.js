@@ -1,7 +1,7 @@
 import { LitElement as x, html as r } from "lit";
 import { property as w, state as y } from "lit/decorators.js";
 import { classMap as $ } from "lit/directives/class-map.js";
-import { A as g } from "./animate-on-scroll-CruvFX6N.js";
+import { A as g } from "./animate-on-scroll-ROUn9sF1.js";
 import "./fonts-CqDo7kag.js";
 import { b as v, m as u, r as k } from "./mock-product-B38SvcvQ.js";
 var z = Object.defineProperty, b = (d, e, i, n) => {
@@ -309,9 +309,11 @@ class c extends x {
     } : u, a = k(o, this.config.cta_label);
     return r`
       <section id="st-offers" class="st-offers">
-        <div class="st-offers__container" data-animate="fade-up">
-          <!-- Section header: badge above title (matches source SectionHeader) -->
-          <div class="st-offers__header">
+        <div class="st-offers__container">
+          <!-- Section header: badge above title (matches source SectionHeader).
+               Animated on its own — the grid below stages the cards separately,
+               so the two don't fade in on top of each other. -->
+          <div class="st-offers__header" data-animate="fade-up" data-delay="0">
             ${this.config.badge_label ? r`
                   <div class="st-offers__badge">
                     ${this.config.badge_icon ? r`<i class="${this.config.badge_icon}"></i>` : ""}

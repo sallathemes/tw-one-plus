@@ -1,6 +1,6 @@
-import { LitElement as u, html as a } from "lit";
+import { LitElement as u, html as c } from "lit";
 import { property as x } from "lit/decorators.js";
-import { A as f } from "./animate-on-scroll-CruvFX6N.js";
+import { A as f } from "./animate-on-scroll-ROUn9sF1.js";
 import "./fonts-CqDo7kag.js";
 var b = Object.defineProperty, g = (n, i, t, r) => {
   for (var e = void 0, s = n.length - 1, o; s >= 0; s--)
@@ -244,9 +244,9 @@ class l extends u {
     return i.col1_title && t.push({ title: i.col1_title, value: i.col1_value }), i.col2_title && t.push({ title: i.col2_title, value: i.col2_value }), i.col3_title && t.push({ title: i.col3_title, value: i.col3_value }), i.col4_title && t.push({ title: i.col4_title, value: i.col4_value }), t;
   }
   render() {
-    if (!this.config) return a``;
+    if (!this.config) return c``;
     const i = this.config.bg_color || "#ffffff", t = this.config.primary_color || "#050505", r = this.config.secondary_color || "#525252", e = this.config.border_color || "#E9E9E9", s = this.config.brand_color || "#0071E3", o = this.config.rows || [];
-    return a`
+    return c`
       <section
         id="st-specification"
         class="st-specification"
@@ -257,7 +257,6 @@ class l extends u {
           --st-specification-border: ${e};
           --st-specification-brand: ${s};
         "
-        data-animate="slide-up"
       >
         <div class="st-specification__container">
           <div class="st-specification__header">
@@ -281,25 +280,25 @@ class l extends u {
             ${(() => {
       const m = Math.max(
         0,
-        ...o.map((c) => this.getColumns(c).length)
+        ...o.map((a) => this.getColumns(a).length)
       );
-      return o.map((c, _) => {
-        const p = this.getColumns(c), h = Array(Math.max(0, m - p.length)).fill(null);
-        return a`
+      return o.map((a, _) => {
+        const p = this.getColumns(a), h = Array(Math.max(0, m - p.length)).fill(null);
+        return c`
                   <div
                     class="st-specification__row"
-                    data-animate="fade-up"
+                    data-animate="fade-in"
                     data-delay="${_ * 150}"
                   >
-                    <div class="st-specification__row-header">${c.header}</div>
+                    <div class="st-specification__row-header">${a.header}</div>
                     <div class="st-specification__cols">
-                      ${p.map((d) => a`
+                      ${p.map((d) => c`
                         <div class="st-specification__col">
                           <span class="st-specification__col-title">${d.title}</span>
                           <span class="st-specification__col-value">${d.value}</span>
                         </div>
                       `)}
-                      ${h.map(() => a`<div class="st-specification__col"></div>`)}
+                      ${h.map(() => c`<div class="st-specification__col"></div>`)}
                     </div>
                   </div>
                 `;

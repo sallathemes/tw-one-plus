@@ -369,9 +369,11 @@ export default class StOffers extends LitElement {
 
     return html`
       <section id="st-offers" class="st-offers">
-        <div class="st-offers__container" data-animate="fade-up">
-          <!-- Section header: badge above title (matches source SectionHeader) -->
-          <div class="st-offers__header">
+        <div class="st-offers__container">
+          <!-- Section header: badge above title (matches source SectionHeader).
+               Animated on its own — the grid below stages the cards separately,
+               so the two don't fade in on top of each other. -->
+          <div class="st-offers__header" data-animate="fade-up" data-delay="0">
             ${this.config.badge_label
               ? html`
                   <div class="st-offers__badge">

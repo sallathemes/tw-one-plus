@@ -9,11 +9,14 @@ class l {
     if (document.getElementById("aos-styles")) return;
     const a = document.createElement("style");
     a.id = "aos-styles", a.textContent = `
-      /* Initial state - elements are invisible until animated */
+      /* Initial state - elements are invisible until animated.
+         Transition only opacity/transform (not "all") so the browser can run
+         this on the compositor thread instead of triggering layout/paint. */
       [data-animate] {
         opacity: 0;
         will-change: transform, opacity;
-        transition: all 0.7s cubic-bezier(0.4, 0.0, 0.2, 1);
+        transition: opacity 0.6s cubic-bezier(0.4, 0.0, 0.2, 1),
+                    transform 0.6s cubic-bezier(0.4, 0.0, 0.2, 1);
       }
 
       /* Animation classes applied by observer */
@@ -112,7 +115,8 @@ class l {
       /* Bounce animation */
       [data-animate="bounce-in"] {
         transform: scale(0.3);
-        transition: all 0.7s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        transition: opacity 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55),
+                    transform 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
       }
       [data-animate="bounce-in"].aos-animate {
         transform: scale(1);
