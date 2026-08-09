@@ -215,9 +215,9 @@ export default class StHero extends LitElement {
 
       /* CTA pill button (navbar) */
       .st-hero__nav-btn {
+        display: none;
         position: relative;
         overflow: hidden;
-        display: inline-flex;
         align-items: center;
         padding: 0.5rem 1.25rem;
         border-radius: 9999px;
@@ -227,6 +227,10 @@ export default class StHero extends LitElement {
         text-decoration: none;
         cursor: pointer;
         white-space: nowrap;
+      }
+
+      @media (min-width: 768px) {
+        .st-hero__nav-btn { display: inline-flex; }
       }
 
       .st-hero__nav-btn-text-a,

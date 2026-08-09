@@ -1827,6 +1827,124 @@
                     ]
                 }
             ]
+        },
+        {
+            "title": "قسم هرم الرائحة",
+            "icon": "sicon-fire",
+            "name": "st-scent-notes",
+            "key": "12698d2a-a0c9-4482-9cab-3e0a01f0ad41",
+            "image": "https://cdn.salla.network/images/themes/default/placeholder.jpg",
+            "fields": [
+                {
+                    "id": "bg_color",
+                    "type": "string",
+                    "format": "color",
+                    "label": "لون الخلفية",
+                    "value": "#ffffff"
+                },
+                {
+                    "id": "primary_color",
+                    "type": "string",
+                    "format": "color",
+                    "label": "اللون الأساسي",
+                    "value": "#1A1613"
+                },
+                {
+                    "id": "secondary_color",
+                    "type": "string",
+                    "format": "color",
+                    "label": "لون النص الثانوي",
+                    "value": "#6B6259"
+                },
+                {
+                    "id": "brand_color",
+                    "type": "string",
+                    "format": "color",
+                    "label": "لون العلامة التجارية",
+                    "value": "#B4643C"
+                },
+                {
+                    "id": "border_color",
+                    "type": "string",
+                    "format": "color",
+                    "label": "لون الفواصل",
+                    "value": "#E6DED4"
+                },
+                {
+                    "id": "section_title",
+                    "type": "string",
+                    "format": "text",
+                    "label": "عنوان القسم",
+                    "value": "هرم الرائحة"
+                },
+                {
+                    "id": "section_subtitle",
+                    "type": "string",
+                    "format": "textarea",
+                    "label": "النص الفرعي",
+                    "rows": 2,
+                    "required": false,
+                    "value": ""
+                },
+                {
+                    "id": "notes",
+                    "type": "collection",
+                    "format": "collection",
+                    "label": "طبقات الرائحة",
+                    "item_label": "طبقة",
+                    "minLength": 1,
+                    "maxLength": 5,
+                    "value": [],
+                    "fields": [
+                        {
+                            "id": "icon",
+                            "type": "string",
+                            "format": "icon",
+                            "label": "الأيقونة",
+                            "value": "sicon-fire"
+                        },
+                        {
+                            "id": "step_label",
+                            "type": "string",
+                            "format": "text",
+                            "label": "تسمية الخطوة",
+                            "maxLength": 40
+                        },
+                        {
+                            "id": "title",
+                            "type": "string",
+                            "format": "text",
+                            "label": "العنوان",
+                            "required": true,
+                            "maxLength": 100
+                        },
+                        {
+                            "id": "description",
+                            "type": "string",
+                            "format": "textarea",
+                            "label": "الوصف",
+                            "maxLength": 300
+                        },
+                        {
+                            "id": "ingredients",
+                            "type": "string",
+                            "format": "text",
+                            "label": "المكوّنات (مفصولة بفاصلة)",
+                            "required": false,
+                            "maxLength": 200
+                        }
+                    ]
+                },
+                {
+                    "id": "footer_note",
+                    "type": "string",
+                    "format": "text",
+                    "label": "ملاحظة سفلية",
+                    "required": false,
+                    "maxLength": 200,
+                    "value": ""
+                }
+            ]
         }
     ],
     "templates": [
@@ -1847,6 +1965,15 @@
             "thumbnail": "https://cdn.assets.salla.network/previews/uhvqocmjhqh7/assets/77877bb73509066a6aec17f7e6acfdacfcbf70dfe3beb3670eab894ca65ec7cf/templates-thumbs/clothes.jpg",
             "is_default": false,
             "public_preview_url": "https://salla.design/preview/s/uhvqocmjhqh7/clothes"
+        },
+        {
+            "id": "bb11f285-a241-4610-a2d6-9a7399eec95c",
+            "path": "templates.candles",
+            "category_id": "915304371",
+            "primary_color": "#C17A3D",
+            "thumbnail": "templates-thumbs/candles.jpg",
+            "is_default": false,
+            "public_preview_url": ""
         },
         {
             "id": "60da85e5-58ce-4d12-a0c0-baec6ec62a34",

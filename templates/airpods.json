@@ -506,24 +506,16 @@
           "maxLength": 6,
           "value": [
             {
-              "image": "/assets/airpod.png",
-              "label": "الأمامي"
-            },
-            {
               "image": "/assets/airpod-side.png",
               "label": "الأمامي"
             },
             {
               "image": "/assets/airpod.png",
-              "label": "الأمامي"
+              "label": "الجانبي"
             },
             {
-              "image": "/assets/airpod.png",
-              "label": "الأمامي"
-            },
-            {
-              "image": "/assets/airpod.png",
-              "label": "الأمامي"
+              "image": "/assets/airpod-right.png",
+              "label": "الزاوية"
             }
           ],
           "fields": [
@@ -1524,49 +1516,22 @@
           "maxLength": 6,
           "value": [
             {
-              "header": "تواصل معنا",
-              "link1_label": "8001111210",
-              "link1_href": "#",
-              "link2_label": "ThemeMatjar",
-              "link2_href": "#",
-              "link3_label": "sallathemes@gmail.com",
-              "link3_href": "#"
+              "header": "المنتج",
+              "link1_label": "المواصفات",
+              "link1_href": "#st-specification",
+              "link2_label": "الألوان والفئات",
+              "link2_href": "#st-variants",
+              "link3_label": "العروض",
+              "link3_href": "#st-offers"
             },
             {
-              "header": "تواصل معنا",
-              "link1_label": "8001111210",
-              "link1_href": "#",
-              "link2_label": "ThemeMatjar",
-              "link2_href": "#",
-              "link3_label": "sallathemes@gmail.com",
-              "link3_href": "#"
-            },
-            {
-              "header": "تواصل معنا",
-              "link1_label": "8001111210",
-              "link1_href": "#",
-              "link2_label": "ThemeMatjar",
-              "link2_href": "#",
-              "link3_label": "sallathemes@gmail.com",
-              "link3_href": "#"
-            },
-            {
-              "header": "تواصل معنا",
-              "link1_label": "8001111210",
-              "link1_href": "#",
-              "link2_label": "ThemeMatjar",
-              "link2_href": "#",
-              "link3_label": "sallathemes@gmail.com",
-              "link3_href": "#"
-            },
-            {
-              "header": "تواصل معنا",
-              "link1_label": "8001111210",
-              "link1_href": "#",
-              "link2_label": "ThemeMatjar",
-              "link2_href": "#",
-              "link3_label": "sallathemes@gmail.com",
-              "link3_href": "#"
+              "header": "روابط سريعة",
+              "link1_label": "آراء العملاء",
+              "link1_href": "#st-reviews",
+              "link2_label": "معرض الصور",
+              "link2_href": "#st-images-slider",
+              "link3_label": "المميزات",
+              "link3_href": "#st-feature"
             },
             {
               "header": "تواصل معنا",

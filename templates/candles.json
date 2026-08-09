@@ -1,5 +1,5 @@
 {
-  "id": "794f125a-f892-4ce7-b8a8-c2502171e664",
+  "id": "bb11f285-a241-4610-a2d6-9a7399eec95c",
   "components": [
     {
       "title": "قسم مقدمة الصفحة",
@@ -13,21 +13,21 @@
           "type": "string",
           "format": "color",
           "label": "لون الخلفية",
-          "value": "#14100D"
+          "value": "#16231B"
         },
         {
           "id": "text_color",
           "type": "string",
           "format": "color",
           "label": "لون النص",
-          "value": "#ffffff"
+          "value": "#F3EFE2"
         },
         {
           "id": "brand_color",
           "type": "string",
           "format": "color",
           "label": "لون العلامة التجارية",
-          "value": "#B4643C"
+          "value": "#B08A3E"
         },
         {
           "id": "overlay_opacity",
@@ -37,7 +37,7 @@
           "minimum": 0,
           "maximum": 100,
           "step": 1,
-          "value": 55
+          "value": 60
         },
         {
           "id": "title",
@@ -46,7 +46,7 @@
           "label": "العنوان الرئيسي",
           "required": true,
           "maxLength": 150,
-          "value": "مجموعة الخريف. قُصّت لتُلبس كل يوم."
+          "value": "أُنس. رائحة تملأ البيت بالدفء."
         },
         {
           "id": "subtitle",
@@ -54,7 +54,7 @@
           "format": "textarea",
           "label": "النص الفرعي",
           "rows": 3,
-          "value": "قطن مُمشّط بوزن 240 غرام، مغسول مسبقاً حتى لا ينكمش بعد أول غسلة. قصّة مستقيمة تريح الكتف ولا تشدّ عند الخصر، وحياكة مزدوجة عند الأطراف تحفظ شكل القطعة موسماً بعد موسم. خمسة ألوان ثابتة، ومقاسات من S إلى 3XL."
+          "value": "شمع صويا طبيعي 100%، يُسكب يدوياً في قوالب زجاجية قابلة لإعادة الاستخدام. فتيل خشبي يطقطق بهدوء كصوت مدفأة صغيرة، واحتراق نظيف يمتد حتى 45 ساعة دون سواد أو دخان كثيف."
         },
         {
           "id": "button_label",
@@ -68,7 +68,7 @@
           "type": "string",
           "format": "text",
           "label": "سعر زر الشراء",
-          "value": "249 ر.س"
+          "value": "119 ر.س"
         },
         {
           "id": "button_link",
@@ -91,7 +91,7 @@
           "format": "image",
           "label": "صورة الخلفية (بديل الفيديو)",
           "required": false,
-          "value": "/assets/clothes/worn-olive-jacket.jpg"
+          "value": "/assets/candles/flame-dark-3.jpg"
         },
         {
           "id": "logo",
@@ -106,14 +106,14 @@
           "type": "string",
           "format": "text",
           "label": "اسم المتجر",
-          "value": "atelier"
+          "value": "أُنس"
         },
         {
           "id": "nav1_label",
           "type": "string",
           "format": "text",
           "label": "الرابط الأول - النص",
-          "value": "الألوان"
+          "value": "الروائح"
         },
         {
           "id": "nav1_href",
@@ -127,7 +127,7 @@
           "type": "string",
           "format": "text",
           "label": "الرابط الثاني - النص",
-          "value": "اللوك بوك"
+          "value": "الأجواء"
         },
         {
           "id": "nav2_href",
@@ -155,7 +155,7 @@
           "type": "string",
           "format": "text",
           "label": "الرابط الرابع - النص",
-          "value": "دليل المقاسات"
+          "value": "طريقة الاستخدام"
         },
         {
           "id": "nav4_href",
@@ -185,28 +185,28 @@
           "type": "string",
           "format": "color",
           "label": "اللون الأساسي",
-          "value": "#1A1613"
+          "value": "#1B271F"
         },
         {
           "id": "brand_color",
           "type": "string",
           "format": "color",
           "label": "لون العلامة التجارية",
-          "value": "#B4643C"
+          "value": "#B08A3E"
         },
         {
           "id": "section_title",
           "type": "string",
           "format": "text",
           "label": "عنوان القسم",
-          "value": "لون واحد لا يكفي أبداً."
+          "value": "رائحة واحدة لا تكفي أبداً."
         },
         {
           "id": "selector_label",
           "type": "string",
           "format": "text",
           "label": "تسمية اختيار اللون",
-          "value": "اختر لونك المفضّل."
+          "value": "اختر رائحتك المفضّلة."
         },
         {
           "id": "variants",
@@ -218,34 +218,22 @@
           "maxLength": 8,
           "value": [
             {
-              "product_image": "/assets/clothes/tee-white-product.jpg",
-              "side_image": "/assets/clothes/worn-white-tee.jpg",
-              "color_hex": "#F2F0EC",
-              "color_title": "أبيض ناصع"
+              "product_image": "/assets/candles/candle-jar-2.jpg",
+              "side_image": "/assets/candles/flame-macro.jpg",
+              "color_hex": "#4A2E1E",
+              "color_title": "عود ملكي"
             },
             {
-              "product_image": "/assets/clothes/tee-black-product.jpg",
-              "side_image": "/assets/clothes/worn-black-tee.jpg",
-              "color_hex": "#1A1613",
-              "color_title": "أسود فحمي"
+              "product_image": "/assets/candles/white-candle-glass.jpg",
+              "side_image": "/assets/candles/glass-holder-white.jpg",
+              "color_hex": "#C9A66B",
+              "color_title": "خشب الصندل"
             },
             {
-              "product_image": "/assets/clothes/tee-sand-product.jpg",
-              "side_image": "/assets/clothes/worn-white-blouse.jpg",
-              "color_hex": "#D9C7AC",
-              "color_title": "رملي"
-            },
-            {
-              "product_image": "/assets/clothes/jacket-rust-product.jpg",
-              "side_image": "/assets/clothes/worn-tan-jacket.jpg",
-              "color_hex": "#B4643C",
-              "color_title": "كراميل"
-            },
-            {
-              "product_image": "/assets/clothes/sweatshirt-white-product.jpg",
-              "side_image": "/assets/clothes/worn-orange-sweater.jpg",
-              "color_hex": "#E08A2E",
-              "color_title": "برتقالي محروق"
+              "product_image": "/assets/candles/glass-holder-white.jpg",
+              "side_image": "/assets/candles/candle-jar-2.jpg",
+              "color_hex": "#E4B673",
+              "color_title": "فانيليا وهيل"
             }
           ],
           "fields": [
@@ -282,99 +270,142 @@
       ]
     },
     {
-      "title": "معرض الصور المتحرك",
-      "icon": "sicon-images",
-      "name": "st-images-slider",
-      "key": "9c0d1e2f-3a4b-5c6d-7e8f-9a0b1c2d3e4f",
-      "image": "https://cdn.salla.sa/qAyGK/products/nNUJFeg1t2IYMTjGOednr4WsjHdpocbLnsuOwENI.jpg",
+      "title": "قسم هرم الرائحة",
+      "icon": "sicon-fire",
+      "name": "st-scent-notes",
+      "key": "12698d2a-a0c9-4482-9cab-3e0a01f0ad41",
+      "image": "https://cdn.salla.network/images/themes/default/placeholder.jpg",
       "fields": [
         {
           "id": "bg_color",
           "type": "string",
           "format": "color",
           "label": "لون الخلفية",
-          "value": "#F6F1EA"
+          "value": "#ffffff"
         },
         {
           "id": "primary_color",
           "type": "string",
           "format": "color",
-          "label": "لون النص",
-          "value": "#1A1613"
+          "label": "اللون الأساسي",
+          "value": "#1B271F"
+        },
+        {
+          "id": "secondary_color",
+          "type": "string",
+          "format": "color",
+          "label": "لون النص الثانوي",
+          "value": "#5C6B5E"
         },
         {
           "id": "brand_color",
           "type": "string",
           "format": "color",
           "label": "لون العلامة التجارية",
-          "value": "#B4643C"
+          "value": "#B08A3E"
+        },
+        {
+          "id": "border_color",
+          "type": "string",
+          "format": "color",
+          "label": "لون الفواصل",
+          "value": "#DCE2D3"
         },
         {
           "id": "section_title",
           "type": "string",
           "format": "text",
           "label": "عنوان القسم",
-          "value": "اللوك بوك — إطلالات جاهزة من مجموعة هذا الموسم."
+          "value": "هرم الرائحة"
         },
         {
-          "id": "images",
+          "id": "section_subtitle",
+          "type": "string",
+          "format": "textarea",
+          "label": "النص الفرعي",
+          "rows": 2,
+          "required": false,
+          "value": "رائحة العود الملكي لا تُشم دفعة واحدة — هي ثلاث طبقات تتكشف تباعاً كل ما طال وقت الاشتعال."
+        },
+        {
+          "id": "notes",
           "type": "collection",
           "format": "collection",
-          "label": "الصور",
-          "item_label": "صورة",
+          "label": "طبقات الرائحة",
+          "item_label": "طبقة",
           "minLength": 1,
-          "maxLength": 10,
+          "maxLength": 5,
           "value": [
             {
-              "src": "/assets/clothes/worn-white-tee.jpg",
-              "title": "الأبيض الأساسي"
+              "icon": "sicon-bolt",
+              "step_label": "٠١ — أول 10 دقائق",
+              "title": "انطلاقة حمضية دافئة",
+              "description": "بمجرد إشعال الفتيل، تنطلق رائحة خفيفة ومنعشة تكسر برودة الأجواء وتُحضّر الحاسة الشمّية لما هو قادم.",
+              "ingredients": "برغموت, برتقال مر, فلفل وردي"
             },
             {
-              "src": "/assets/clothes/worn-black-tee.jpg",
-              "title": "الأسود الجرافيكي"
+              "icon": "sicon-fire",
+              "step_label": "٠٢ — بعد نصف ساعة",
+              "title": "قلب العود الدافئ",
+              "description": "مع ارتفاع حرارة بركة الشمع، تتكشف رائحة العود الأصيل ممزوجة بالورد البلغاري — الهوية الحقيقية لهذه الرائحة طوال معظم وقت الاحتراق.",
+              "ingredients": "عود ملكي, ورد بلغاري, زعفران"
             },
             {
-              "src": "/assets/clothes/worn-olive-jacket.jpg",
-              "title": "طبقات الخريف"
-            },
-            {
-              "src": "/assets/clothes/worn-blue-shirt.jpg",
-              "title": "إطلالة رسمية"
-            },
-            {
-              "src": "/assets/clothes/worn-yellow-tracksuit.jpg",
-              "title": "راحة الشارع"
-            },
-            {
-              "src": "/assets/clothes/worn-white-blouse.jpg",
-              "title": "أناقة الدوام"
-            },
-            {
-              "src": "/assets/clothes/worn-tan-jacket.jpg",
-              "title": "الجاكيت الجلدي"
-            },
-            {
-              "src": "/assets/clothes/worn-kids-outfit.jpg",
-              "title": "مجموعة الأطفال"
+              "icon": "sicon-shield-check",
+              "step_label": "٠٣ — حتى انطفاء الشمعة",
+              "title": "قاعدة خشبية تدوم",
+              "description": "في الساعات الأخيرة، تستقر رائحة العنبر وخشب الصندل كطبقة أساس دافئة تبقى عالقة في الغرفة حتى بعد إطفاء الشمعة.",
+              "ingredients": "عنبر, خشب الصندل, مسك أبيض"
             }
           ],
           "fields": [
             {
-              "id": "src",
+              "id": "icon",
               "type": "string",
-              "format": "image",
-              "label": "الصورة",
-              "required": true
+              "format": "icon",
+              "label": "الأيقونة",
+              "value": "sicon-fire"
+            },
+            {
+              "id": "step_label",
+              "type": "string",
+              "format": "text",
+              "label": "تسمية الخطوة",
+              "maxLength": 40
             },
             {
               "id": "title",
               "type": "string",
               "format": "text",
-              "label": "عنوان الصورة",
-              "maxLength": 80,
-              "required": false
+              "label": "العنوان",
+              "required": true,
+              "maxLength": 100
+            },
+            {
+              "id": "description",
+              "type": "string",
+              "format": "textarea",
+              "label": "الوصف",
+              "maxLength": 300
+            },
+            {
+              "id": "ingredients",
+              "type": "string",
+              "format": "text",
+              "label": "المكوّنات (مفصولة بفاصلة)",
+              "required": false,
+              "maxLength": 200
             }
           ]
+        },
+        {
+          "id": "footer_note",
+          "type": "string",
+          "format": "text",
+          "label": "ملاحظة سفلية",
+          "required": false,
+          "maxLength": 200,
+          "value": "نفس منطق الطبقات الثلاث يتكرر في الروائح الثلاث كلها — كل رائحة تُبنى لتتكشف مع الوقت لا أن تُشم دفعة واحدة."
         }
       ]
     },
@@ -397,21 +428,21 @@
           "type": "string",
           "format": "color",
           "label": "لون الخلفية الداخلية",
-          "value": "#F6F1EA"
+          "value": "#F2F1E4"
         },
         {
           "id": "primary_color",
           "type": "string",
           "format": "color",
           "label": "لون النص",
-          "value": "#1A1613"
+          "value": "#1B271F"
         },
         {
           "id": "brand_color",
           "type": "string",
           "format": "color",
           "label": "لون العلامة التجارية",
-          "value": "#B4643C"
+          "value": "#B08A3E"
         },
         {
           "id": "icon",
@@ -427,7 +458,7 @@
           "label": "العنوان",
           "required": true,
           "maxLength": 150,
-          "value": "خامة تُحسّ باليد قبل أن تُرى بالعين."
+          "value": "شمع يُسكب بيد، لا بخط إنتاج."
         },
         {
           "id": "body1",
@@ -435,7 +466,7 @@
           "format": "textarea",
           "label": "الفقرة الأولى",
           "rows": 3,
-          "value": "نبدأ من القطن المُمشّط طويل التيلة، حيث تُنزع الألياف القصيرة قبل الغزل. النتيجة نسيج أنعم على البشرة، أقل تنميشاً بعد الغسيل، ويحافظ على لونه بعد عشرات الدورات في الغسالة."
+          "value": "نبدأ من شمع الصويا الطبيعي الخالي من البارافين والمواد البترولية، ونُذيبه ونسكبه يدوياً في دفعات صغيرة لا تتجاوز 40 قالباً في المرة. حرارة السكب مضبوطة بدقة حتى لا تتشقق الشمعة عند التبريد ولا يتكوّن حولها فراغ هوائي يقصّر عمر احتراقها."
         },
         {
           "id": "body2",
@@ -444,7 +475,7 @@
           "label": "الفقرة الثانية",
           "rows": 3,
           "required": false,
-          "value": "كل قطعة تُغسل مسبقاً قبل الخياطة، فلا تفاجئك بانكماش بعد أول غسلة. الأطراف مُحاكة بغرزة مزدوجة، والرقبة مدعّمة بشريط قطني يمنع تمددها مع الوقت."
+          "value": "الفتيل خشبي بالكامل، لا قطني — يُصدر طقطقة هادئة أقرب لصوت المدفأة، ولا يحتاج تقليماً متكرراً. الزجاجة نفسها مصمّمة لتُغسل وتُعاد تعبئتها أو تُستخدم كوعاء صغير بعد انتهاء الشمعة."
         },
         {
           "id": "button_label",
@@ -474,7 +505,96 @@
           "format": "image",
           "label": "الصورة الجانبية",
           "required": false,
-          "value": "/assets/clothes/rack-green-tees.jpg"
+          "value": "/assets/candles/hand-lighting-match.jpg"
+        }
+      ]
+    },
+    {
+      "title": "معرض الصور المتحرك",
+      "icon": "sicon-images",
+      "name": "st-images-slider",
+      "key": "9c0d1e2f-3a4b-5c6d-7e8f-9a0b1c2d3e4f",
+      "image": "https://cdn.salla.sa/qAyGK/products/nNUJFeg1t2IYMTjGOednr4WsjHdpocbLnsuOwENI.jpg",
+      "fields": [
+        {
+          "id": "bg_color",
+          "type": "string",
+          "format": "color",
+          "label": "لون الخلفية",
+          "value": "#F2F1E4"
+        },
+        {
+          "id": "primary_color",
+          "type": "string",
+          "format": "color",
+          "label": "لون النص",
+          "value": "#1B271F"
+        },
+        {
+          "id": "brand_color",
+          "type": "string",
+          "format": "color",
+          "label": "لون العلامة التجارية",
+          "value": "#B08A3E"
+        },
+        {
+          "id": "section_title",
+          "type": "string",
+          "format": "text",
+          "label": "عنوان القسم",
+          "value": "أجواء أُنس — لحظات تستحق أن تُضاء."
+        },
+        {
+          "id": "images",
+          "type": "collection",
+          "format": "collection",
+          "label": "الصور",
+          "item_label": "صورة",
+          "minLength": 1,
+          "maxLength": 10,
+          "value": [
+            {
+              "src": "/assets/candles/flame-macro.jpg",
+              "title": "لهب هادئ"
+            },
+            {
+              "src": "/assets/candles/candle-jar-2.jpg",
+              "title": "أمسية شتوية"
+            },
+            {
+              "src": "/assets/candles/glass-holder-white.jpg",
+              "title": "استرخاء المساء"
+            },
+            {
+              "src": "/assets/candles/white-candle-glass.jpg",
+              "title": "صفاء اللحظة"
+            },
+            {
+              "src": "/assets/candles/hand-holding-1.jpg",
+              "title": "دفء بين يديك"
+            },
+            {
+              "src": "/assets/candles/flame-dark-1.jpg",
+              "title": "تفاصيل الفتيل"
+            }
+          ],
+          "fields": [
+            {
+              "id": "src",
+              "type": "string",
+              "format": "image",
+              "label": "الصورة",
+              "required": true
+            },
+            {
+              "id": "title",
+              "type": "string",
+              "format": "text",
+              "label": "عنوان الصورة",
+              "maxLength": 80,
+              "required": false
+            }
+          ]
         }
       ]
     },
@@ -497,21 +617,21 @@
           "type": "string",
           "format": "color",
           "label": "اللون الأساسي",
-          "value": "#1A1613"
+          "value": "#1B271F"
         },
         {
           "id": "brand_color",
           "type": "string",
           "format": "color",
           "label": "لون العلامة التجارية",
-          "value": "#B4643C"
+          "value": "#B08A3E"
         },
         {
           "id": "section_title",
           "type": "string",
           "format": "text",
           "label": "عنوان القسم",
-          "value": "لماذا تتسوق معنا"
+          "value": "لماذا شموع أُنس"
         },
         {
           "id": "section_image",
@@ -519,7 +639,7 @@
           "format": "image",
           "label": "صورة القسم الرئيسية",
           "required": false,
-          "value": "/assets/clothes/flatlay-outfit.jpg"
+          "value": "/assets/candles/candle-jar-2.jpg"
         },
         {
           "id": "cards",
@@ -532,33 +652,33 @@
           "value": [
             {
               "icon": "sicon-shield-check",
-              "title": "قطن مُمشّط 100%",
-              "body": "خامة طبيعية بوزن 240 غرام/م²، مغسولة مسبقاً فلا تنكمش ولا يبهت لونها."
+              "title": "صويا طبيعي 100%",
+              "body": "خالٍ من البارافين والمواد البترولية، يحترق بدخان أقل بكثير من الشمع التقليدي."
             },
             {
-              "icon": "sicon-rotate",
-              "title": "استبدال مجاني خلال 14 يوم",
-              "body": "لم يناسبك المقاس؟ استبدله بمقاس آخر مجاناً، دون أسئلة ودون رسوم شحن."
+              "icon": "sicon-bolt",
+              "title": "فتيل خشبي أصلي",
+              "body": "طقطقة هادئة أقرب لصوت المدفأة، واحتراق متساوٍ من الحافة إلى الحافة."
+            },
+            {
+              "icon": "sicon-star",
+              "title": "حتى 45 ساعة احتراق",
+              "body": "قالب واحد يكفي لأكثر من 15 جلسة مسائية بمعدل 3 ساعات لكل استخدام."
             },
             {
               "icon": "sicon-cart",
               "title": "شحن مجاني فوق 200 ر.س",
-              "body": "توصيل خلال يومين إلى ثلاثة أيام عمل لجميع مدن المملكة، مع تتبّع لحظي للشحنة."
+              "body": "توصيل خلال يومين إلى ثلاثة أيام عمل لجميع مدن المملكة، بتغليف يحمي الزجاج."
+            },
+            {
+              "icon": "sicon-rotate",
+              "title": "زجاجة تُعاد تعبئتها",
+              "body": "بعد انتهاء الشمعة، اغسلي الزجاجة واستخدميها كوعاء أو أرسليها لإعادة التعبئة بخصم 20%."
             },
             {
               "icon": "sicon-gameboy",
-              "title": "ألوان ثابتة لا تبهت",
-              "body": "صبغة تفاعلية عالية الثبات، اجتازت اختبار 40 دورة غسيل دون تغيّر ملحوظ في اللون."
-            },
-            {
-              "icon": "sicon-layout-grid",
-              "title": "مقاسات من S إلى 3XL",
-              "body": "جدول مقاسات مبني على قياسات حقيقية، مع نصيحة مقاس عند كل قطعة."
-            },
-            {
-              "icon": "sicon-star",
-              "title": "تقييم 4.8 من 5",
-              "body": "أكثر من 3,400 عميل قيّموا المجموعة، و٩٢٪ منهم أعادوا الشراء مرة أخرى."
+              "title": "روائح مركّبة بزيوت حقيقية",
+              "body": "لا عطور صناعية رخيصة — كل رائحة مركّبة من زيوت عطرية طبيعية بنسب مدروسة."
             }
           ],
           "fields": [
@@ -614,28 +734,28 @@
           "type": "string",
           "format": "color",
           "label": "لون الخلفية",
-          "value": "#14100D"
+          "value": "#16231B"
         },
         {
           "id": "text_color",
           "type": "string",
           "format": "color",
           "label": "لون النص",
-          "value": "#ffffff"
+          "value": "#F3EFE2"
         },
         {
           "id": "brand_color",
           "type": "string",
           "format": "color",
           "label": "لون العلامة التجارية",
-          "value": "#B4643C"
+          "value": "#B08A3E"
         },
         {
           "id": "panel1_title",
           "type": "string",
           "format": "text",
           "label": "عنوان اللوحة الأولى",
-          "value": "قصّة تحترم الجسم."
+          "value": "فتيل خشبي، لا قطني."
         },
         {
           "id": "panel1_body1",
@@ -643,7 +763,7 @@
           "format": "textarea",
           "label": "نص اللوحة الأولى - الفقرة 1",
           "rows": 3,
-          "value": "قصّة مستقيمة تنسدل من الكتف دون أن تشدّ عند الصدر أو تتجمّع عند الخصر. جرّبناها على أكثر من 40 جسماً مختلفاً قبل أن نعتمد الباترون النهائي."
+          "value": "اخترنا الفتيل الخشبي رغم أن تصنيعه أبطأ وأغلى من الفتيل القطني، لأنه يمنح احتراقاً أهدأ وصوت طقطقة خفيف يشبه المدفأة الحطبية."
         },
         {
           "id": "panel1_body2",
@@ -652,7 +772,7 @@
           "label": "نص اللوحة الأولى - الفقرة 2",
           "rows": 3,
           "required": false,
-          "value": "طول الجسم مدروس ليبقى في مكانه عند رفع اليدين، والكم ينتهي عند منتصف العضد تماماً — لا أقصر ولا أطول."
+          "value": "لا يحتاج تقليماً متكرراً كالفتيل القطني — قصّة واحدة لأقل من 6 مم قبل كل إشعال كافية للحفاظ على لهب متساوٍ طوال عمر الشمعة."
         },
         {
           "id": "panel1_image",
@@ -660,14 +780,14 @@
           "format": "image",
           "label": "صورة اللوحة الأولى",
           "required": false,
-          "value": "/assets/clothes/tee-white-product.jpg"
+          "value": "/assets/candles/flame-macro.jpg"
         },
         {
           "id": "panel2_title",
           "type": "string",
           "format": "text",
           "label": "عنوان اللوحة الثانية",
-          "value": "تفاصيل تظهر مع الاستعمال."
+          "value": "زجاج تُعيد استخدامه."
         },
         {
           "id": "panel2_body1",
@@ -675,7 +795,7 @@
           "format": "textarea",
           "label": "نص اللوحة الثانية - الفقرة 1",
           "rows": 3,
-          "value": "غرزة مزدوجة عند الأطراف والأكمام تمنع التفكك، ورقبة مدعّمة بشريط قطني يحفظ استدارتها بعد كل غسلة."
+          "value": "كل قالب يأتي في زجاجة سميكة قابلة لإعادة الاستخدام — بعد انتهاء الشمعة، اغسليها بالماء الدافئ وحوّليها إلى وعاء لأدوات المكياج أو نبتة صغيرة."
         },
         {
           "id": "panel2_body2",
@@ -684,7 +804,7 @@
           "label": "نص اللوحة الثانية - الفقرة 2",
           "rows": 3,
           "required": false,
-          "value": "دون علامة داخلية تخدش الرقبة — المقاس وتعليمات العناية مطبوعة مباشرة على النسيج بحبر مائي ناعم."
+          "value": "أعيدي تعبئة الزجاجة عبر خدمة إعادة التعبئة داخل المتجر واحصلي على خصم 20% على القالب التالي — أقل نفايات، ورائحة جديدة في كل مرة."
         },
         {
           "id": "panel2_image",
@@ -692,14 +812,14 @@
           "format": "image",
           "label": "صورة اللوحة الثانية",
           "required": false,
-          "value": "/assets/clothes/sweatshirt-white-product.jpg"
+          "value": "/assets/candles/white-candle-glass.jpg"
         },
         {
           "id": "panel2_button_label",
           "type": "string",
           "format": "text",
           "label": "نص زر اللوحة الثانية",
-          "value": "احجز قطعتك الآن"
+          "value": "احجزي قالبك الآن"
         },
         {
           "id": "panel2_button_link",
@@ -718,28 +838,24 @@
           "maxLength": 6,
           "value": [
             {
-              "image": "/assets/clothes/tee-white-product.jpg",
-              "label": "أبيض"
+              "image": "/assets/candles/candle-jar-2.jpg",
+              "label": "عود ملكي"
             },
             {
-              "image": "/assets/clothes/tee-sand-product.jpg",
-              "label": "رملي"
+              "image": "/assets/candles/white-candle-glass.jpg",
+              "label": "صندل"
             },
             {
-              "image": "/assets/clothes/tee-black-product.jpg",
-              "label": "أسود"
+              "image": "/assets/candles/glass-holder-white.jpg",
+              "label": "فانيليا"
             },
             {
-              "image": "/assets/clothes/shirt-chambray-product.jpg",
-              "label": "قميص"
+              "image": "/assets/candles/hand-holding-1.jpg",
+              "label": "دفء"
             },
             {
-              "image": "/assets/clothes/jacket-rust-product.jpg",
-              "label": "جاكيت"
-            },
-            {
-              "image": "/assets/clothes/knit-poncho-product.jpg",
-              "label": "تريكو"
+              "image": "/assets/candles/flame-macro.jpg",
+              "label": "لهب"
             }
           ],
           "fields": [
@@ -764,7 +880,7 @@
           "type": "string",
           "format": "text",
           "label": "نص خلفية العارض",
-          "value": "استعرض القطعة"
+          "value": "استعرضي الرائحة"
         }
       ]
     },
@@ -787,21 +903,21 @@
           "type": "string",
           "format": "color",
           "label": "لون النص",
-          "value": "#1A1613"
+          "value": "#1B271F"
         },
         {
           "id": "brand_color",
           "type": "string",
           "format": "color",
           "label": "لون العلامة التجارية",
-          "value": "#B4643C"
+          "value": "#B08A3E"
         },
         {
           "id": "section_title",
           "type": "string",
           "format": "text",
           "label": "عنوان القسم",
-          "value": "صور حقيقية من عملائنا"
+          "value": "لحظات من بيوت عملائنا"
         },
         {
           "id": "grid_columns",
@@ -820,50 +936,34 @@
           "maxLength": 6,
           "value": [
             {
-              "src": "/assets/clothes/worn-white-tee.jpg",
-              "alt": "عميل يرتدي التيشيرت الأبيض",
-              "overlay_text": "التيشيرت الأبيض — مقاس M",
+              "src": "/assets/candles/glass-holder-white.jpg",
+              "alt": "شمعة أُنس في حمّام مسائي",
+              "overlay_text": "خشب الصندل — أجواء المساء",
               "overlay_position": "bottom-right",
               "always_show": false,
               "show_overlay_bg": true
             },
             {
-              "src": "/assets/clothes/worn-orange-sweater.jpg",
-              "alt": "عميل يرتدي كنزة برتقالية",
-              "overlay_text": "كنزة برتقالي محروق — مقاس S",
+              "src": "/assets/candles/candle-jar-2.jpg",
+              "alt": "شمعة أُنس بجانب قشور المكسرات",
+              "overlay_text": "عود ملكي — أمسية شتوية",
               "overlay_position": "top-right",
               "always_show": false,
               "show_overlay_bg": true
             },
             {
-              "src": "/assets/clothes/worn-blue-shirt.jpg",
-              "alt": "عميل يرتدي قميصاً أزرق",
-              "overlay_text": "القميص الأزرق — مقاس L",
+              "src": "/assets/candles/hand-holding-1.jpg",
+              "alt": "يد تحمل شمعة مضاءة",
+              "overlay_text": "لحظة دفء",
               "overlay_position": "bottom-left",
               "always_show": false,
               "show_overlay_bg": true
             },
             {
-              "src": "/assets/clothes/worn-yellow-tracksuit.jpg",
-              "alt": "عميل يرتدي طقماً رياضياً",
-              "overlay_text": "الطقم الرياضي — مقاس M",
+              "src": "/assets/candles/white-candle-glass.jpg",
+              "alt": "شمعة أُنس في زجاجة صافية",
+              "overlay_text": "فانيليا وهيل — صفاء اللحظة",
               "overlay_position": "top-left",
-              "always_show": false,
-              "show_overlay_bg": true
-            },
-            {
-              "src": "/assets/clothes/worn-green-top.jpg",
-              "alt": "عميل يرتدي تيشيرت أخضر",
-              "overlay_text": "التوب الأخضر — مقاس S",
-              "overlay_position": "bottom-right",
-              "always_show": false,
-              "show_overlay_bg": true
-            },
-            {
-              "src": "/assets/clothes/worn-kids-outfit.jpg",
-              "alt": "طفل يرتدي طقم الأطفال",
-              "overlay_text": "مجموعة الأطفال — 4 سنوات",
-              "overlay_position": "bottom-left",
               "always_show": false,
               "show_overlay_bg": true
             }
@@ -929,42 +1029,42 @@
           "type": "string",
           "format": "color",
           "label": "لون الخلفية",
-          "value": "#F6F1EA"
+          "value": "#F2F1E4"
         },
         {
           "id": "primary_color",
           "type": "string",
           "format": "color",
           "label": "لون النص الأساسي",
-          "value": "#1A1613"
+          "value": "#1B271F"
         },
         {
           "id": "secondary_color",
           "type": "string",
           "format": "color",
           "label": "لون النص الثانوي",
-          "value": "#6B6259"
+          "value": "#5C6B5E"
         },
         {
           "id": "border_color",
           "type": "string",
           "format": "color",
           "label": "لون الحدود",
-          "value": "#E6DED4"
+          "value": "#DCE2D3"
         },
         {
           "id": "brand_color",
           "type": "string",
           "format": "color",
           "label": "لون العلامة التجارية",
-          "value": "#B4643C"
+          "value": "#B08A3E"
         },
         {
           "id": "section_title",
           "type": "string",
           "format": "text",
           "label": "عنوان القسم",
-          "value": "دليل المقاسات"
+          "value": "دليل الاستخدام والعناية"
         },
         {
           "id": "section_subtitle",
@@ -973,7 +1073,7 @@
           "label": "النص الفرعي",
           "rows": 2,
           "required": false,
-          "value": "جميع القياسات بالسنتيمتر ومأخوذة من القطعة مسطّحة، بهامش اختلاف ±1 سم. إذا كان قياسك بين مقاسين، ننصحك باختيار المقاس الأكبر للحصول على قصّة مريحة."
+          "value": "بضع دقائق من العناية الصحيحة تُطيل عمر شمعتك وتحافظ على احتراق متساوٍ من أول إشعال حتى آخر قطرة شمع."
         },
         {
           "id": "rows",
@@ -985,70 +1085,70 @@
           "maxLength": 20,
           "value": [
             {
-              "header": "المقاس S:",
-              "col1_title": "الصدر",
-              "col1_value": "96 سم",
-              "col2_title": "طول الجسم",
-              "col2_value": "68 سم",
-              "col3_title": "عرض الكتف",
-              "col3_value": "43 سم",
-              "col4_title": "طول الكم",
-              "col4_value": "20 سم"
+              "header": "أول إشعال:",
+              "col1_title": "المدة",
+              "col1_value": "ساعتان فأكثر",
+              "col2_title": "السبب",
+              "col2_value": "لضمان ذوبان الشمع حتى الحافة",
+              "col3_title": "",
+              "col3_value": "",
+              "col4_title": "",
+              "col4_value": ""
             },
             {
-              "header": "المقاس M:",
-              "col1_title": "الصدر",
-              "col1_value": "102 سم",
-              "col2_title": "طول الجسم",
-              "col2_value": "70 سم",
-              "col3_title": "عرض الكتف",
-              "col3_value": "45 سم",
-              "col4_title": "طول الكم",
-              "col4_value": "21 سم"
+              "header": "تقليم الفتيل:",
+              "col1_title": "الطول",
+              "col1_value": "6 مم",
+              "col2_title": "التوقيت",
+              "col2_value": "قبل كل إشعال",
+              "col3_title": "",
+              "col3_value": "",
+              "col4_title": "",
+              "col4_value": ""
             },
             {
-              "header": "المقاس L:",
-              "col1_title": "الصدر",
-              "col1_value": "108 سم",
-              "col2_title": "طول الجسم",
-              "col2_value": "72 سم",
-              "col3_title": "عرض الكتف",
-              "col3_value": "47 سم",
-              "col4_title": "طول الكم",
-              "col4_value": "22 سم"
+              "header": "مدة الاحتراق:",
+              "col1_title": "لكل قالب",
+              "col1_value": "45 ساعة",
+              "col2_title": "الجلسة المُوصى بها",
+              "col2_value": "3-4 ساعات",
+              "col3_title": "",
+              "col3_value": "",
+              "col4_title": "",
+              "col4_value": ""
             },
             {
-              "header": "المقاس XL:",
-              "col1_title": "الصدر",
-              "col1_value": "114 سم",
-              "col2_title": "طول الجسم",
-              "col2_value": "74 سم",
-              "col3_title": "عرض الكتف",
-              "col3_value": "49 سم",
-              "col4_title": "طول الكم",
-              "col4_value": "23 سم"
+              "header": "التخزين:",
+              "col1_title": "المكان",
+              "col1_value": "بعيداً عن الشمس المباشرة",
+              "col2_title": "الحرارة",
+              "col2_value": "أقل من 25°م",
+              "col3_title": "",
+              "col3_value": "",
+              "col4_title": "",
+              "col4_value": ""
             },
             {
-              "header": "المقاس 2XL:",
-              "col1_title": "الصدر",
-              "col1_value": "120 سم",
-              "col2_title": "طول الجسم",
-              "col2_value": "76 سم",
-              "col3_title": "عرض الكتف",
-              "col3_value": "51 سم",
-              "col4_title": "طول الكم",
-              "col4_value": "24 سم"
+              "header": "السلامة:",
+              "col1_title": "المسافة",
+              "col1_value": "30 سم عن أي قابل للاشتعال",
+              "col2_title": "الإشراف",
+              "col2_value": "لا تُترك دون مراقبة",
+              "col3_title": "",
+              "col3_value": "",
+              "col4_title": "",
+              "col4_value": ""
             },
             {
-              "header": "الخامة والعناية:",
-              "col1_title": "التركيب",
-              "col1_value": "قطن مُمشّط 100%",
-              "col2_title": "وزن النسيج",
-              "col2_value": "240 غم/م²",
-              "col3_title": "الغسيل",
-              "col3_value": "30° برنامج لطيف",
-              "col4_title": "الكي",
-              "col4_value": "حرارة متوسطة"
+              "header": "الخامة والمكونات:",
+              "col1_title": "الشمع",
+              "col1_value": "صويا طبيعي 100%",
+              "col2_title": "الفتيل",
+              "col2_value": "خشب طبيعي",
+              "col3_title": "الوزن الصافي",
+              "col3_value": "220 غم",
+              "col4_title": "مدة الاحتراق",
+              "col4_value": "45 ساعة"
             }
           ],
           "fields": [
@@ -1138,21 +1238,21 @@
           "type": "string",
           "format": "color",
           "label": "اللون الأساسي",
-          "value": "#1A1613"
+          "value": "#1B271F"
         },
         {
           "id": "brand_color",
           "type": "string",
           "format": "color",
           "label": "لون العلامة التجارية",
-          "value": "#B4643C"
+          "value": "#B08A3E"
         },
         {
           "id": "secondary_color",
           "type": "string",
           "format": "color",
           "label": "لون النص الثانوي",
-          "value": "#6B6259"
+          "value": "#5C6B5E"
         },
         {
           "id": "green_color",
@@ -1173,7 +1273,7 @@
           "type": "string",
           "format": "text",
           "label": "عنوان القسم",
-          "value": "اختر المقاس الذي يناسبك."
+          "value": "اختاري المجموعة التي تناسب بيتك."
         },
         {
           "id": "section_subtitle",
@@ -1182,7 +1282,7 @@
           "label": "النص الفرعي",
           "rows": 2,
           "required": false,
-          "value": "كل طقم يشمل الشحن المجاني والاستبدال خلال 14 يوماً. اختر ألوانك ومقاساتك بعد إضافة الطقم إلى العربة."
+          "value": "كل طلب يشمل الشحن المجاني فوق 200 ر.س، وخصم إعادة التعبئة 20% على الزجاجة الفارغة."
         },
         {
           "id": "badge_label",
@@ -1205,54 +1305,37 @@
           "type": "string",
           "format": "text",
           "label": "نص زر الشراء",
-          "value": "اشتري الآن"
+          "value": "أضف إلى العربة"
         },
         {
-          "id": "button_link",
-          "type": "string",
-          "format": "text",
-          "label": "رابط زر الشراء (رابط المنتج في المتجر)",
-          "value": "#"
-        },
-        {
-          "id": "currency",
-          "type": "string",
-          "format": "text",
-          "label": "رمز العملة",
-          "value": "ر.س"
-        },
-        {
-          "id": "variants",
+          "id": "offers",
           "type": "collection",
           "format": "collection",
-          "label": "الأنواع",
-          "item_label": "نوع",
+          "label": "العروض",
+          "item_label": "عرض",
           "minLength": 1,
           "maxLength": 3,
           "value": [
             {
-              "image": "/assets/clothes/tee-white-product.jpg",
-              "name": "S",
-              "price": 249,
-              "regular_price": 320,
-              "is_on_sale": true,
-              "is_out_of_stock": false
+              "image": "/assets/candles/candle-jar-2.jpg",
+              "name": "القالب الواحد — عود ملكي 220 غم",
+              "price_after": 119,
+              "price_before": 149,
+              "currency": "ر.س"
             },
             {
-              "image": "/assets/clothes/tee-white-product.jpg",
-              "name": "M",
-              "price": 249,
-              "regular_price": 320,
-              "is_on_sale": true,
-              "is_out_of_stock": false
+              "image": "/assets/candles/white-candle-glass.jpg",
+              "name": "مجموعة الثلاثي — الروائح الثلاث",
+              "price_after": 299,
+              "price_before": 420,
+              "currency": "ر.س"
             },
             {
-              "image": "/assets/clothes/tee-white-product.jpg",
-              "name": "L",
-              "price": 249,
-              "regular_price": 320,
-              "is_on_sale": true,
-              "is_out_of_stock": true
+              "image": "/assets/candles/glass-holder-white.jpg",
+              "name": "علبة الإهداء — قالبان وشمعدان زجاجي",
+              "price_after": 219,
+              "price_before": 280,
+              "currency": "ر.س"
             }
           ],
           "fields": [
@@ -1260,44 +1343,44 @@
               "id": "image",
               "type": "string",
               "format": "image",
-              "label": "صورة النوع",
+              "label": "صورة العرض",
               "required": false
             },
             {
               "id": "name",
               "type": "string",
               "format": "text",
-              "label": "اسم النوع",
+              "label": "اسم العرض",
               "required": true,
               "maxLength": 100
             },
             {
-              "id": "price",
+              "id": "price_after",
               "type": "number",
               "format": "number",
-              "label": "السعر",
+              "label": "السعر بعد الخصم",
               "required": true
             },
             {
-              "id": "regular_price",
+              "id": "price_before",
               "type": "number",
               "format": "number",
               "label": "السعر قبل الخصم",
               "required": false
             },
             {
-              "id": "is_on_sale",
-              "type": "boolean",
-              "format": "switch",
-              "label": "هل يوجد خصم",
-              "value": true
+              "id": "currency",
+              "type": "string",
+              "format": "text",
+              "label": "رمز العملة",
+              "value": "ر.س"
             },
             {
-              "id": "is_out_of_stock",
-              "type": "boolean",
-              "format": "switch",
-              "label": "غير متوفر",
-              "value": false
+              "id": "link",
+              "type": "string",
+              "format": "text",
+              "label": "رابط الشراء (رابط المنتج في المتجر)",
+              "value": "#"
             }
           ]
         }
@@ -1322,28 +1405,28 @@
           "type": "string",
           "format": "color",
           "label": "لون النص الأساسي",
-          "value": "#1A1613"
+          "value": "#1B271F"
         },
         {
           "id": "brand_color",
           "type": "string",
           "format": "color",
           "label": "لون العلامة التجارية",
-          "value": "#B4643C"
+          "value": "#B08A3E"
         },
         {
           "id": "secondary_color",
           "type": "string",
           "format": "color",
           "label": "لون النص الثانوي",
-          "value": "#6B6259"
+          "value": "#5C6B5E"
         },
         {
           "id": "shade_color",
           "type": "string",
           "format": "color",
           "label": "لون خلفية الترقيم",
-          "value": "rgba(26,22,19,0.04)"
+          "value": "rgba(22,35,27,0.04)"
         },
         {
           "id": "section_icon",
@@ -1364,7 +1447,7 @@
           "type": "string",
           "format": "text",
           "label": "العنوان الفرعي",
-          "value": "تجارب حقيقية من خزائن عملائنا"
+          "value": "تجارب حقيقية من بيوت عملائنا"
         },
         {
           "id": "prev_icon",
@@ -1390,44 +1473,44 @@
           "maxLength": 10,
           "value": [
             {
-              "body": "طلبت مقاس M حسب الجدول وجاء مضبوط تماماً على القياس. الخامة سميكة بشكل مريح — ليست شفافة أبداً مثل التيشيرتات الرخيصة. غسلته أربع مرات حتى الآن ولم ينكمش ولا فقد لونه الأسود. أول مرة أطلب قطعة أونلاين وتجي مثل الصور بالضبط.",
-              "user": "نورة العتيبي",
+              "body": "طلبت رائحة العود الملكي وما توقعت الفرق يكون بهالوضوح عن الشموع اللي جربتها قبل. الرائحة ثابتة من أول إشعال، وما تسبب صداع مثل بعض الشموع المعطرة الثانية. الفتيل الخشبي فعلاً يطلع صوت طقطقة لطيف يعطي جو هادئ بالغرفة.",
+              "user": "منى الحربي",
               "stars": 5,
               "audio_url": "",
-              "media_type": "image",
-              "media_src": "/assets/clothes/worn-black-tee.jpg"
+              "media_type": "",
+              "media_src": ""
             },
             {
-              "body": "اشتريت طقم الأساسيات الثلاثة بعد تردد طويل، والصراحة صار خياري اليومي. القصّة مستقيمة ولا تشد عند البطن، وهذا بالضبط اللي كنت أدور عليه. الكم بطول مثالي لا قصير ولا طويل. الشحن وصلني خلال يومين فقط للرياض.",
-              "user": "عبدالله القحطاني",
+              "body": "اشتريت مجموعة الثلاثي كهدية لأمي وانتهى بي المطاف أطلب لنفسي طقم ثاني. التغليف أنيق جداً ومافيه أي كسر رغم إنه توصيل. رائحة الصندل تحديداً صارت روتين المساء عندي، تدوم أكثر من 40 ساعة زي ما مكتوب بالضبط.",
+              "user": "سارة القحطاني",
               "stars": 5,
               "audio_url": "",
-              "media_type": "image",
-              "media_src": "/assets/clothes/worn-white-tee.jpg"
+              "media_type": "",
+              "media_src": ""
             },
             {
-              "body": "اللون الكراميل أجمل بكثير على الطبيعة من الصورة. طلبت مقاسي المعتاد S وكان واسع شوي عليّ، فاستبدلته بدون أي رسوم والعملية أخذت ثلاثة أيام فقط. خدمة العملاء ردت عليّ خلال دقائق. تجربة مريحة من أولها لآخرها.",
-              "user": "لمى الشهري",
+              "body": "أول مرة أجرب شمعة صويا وفعلاً فيه فرق واضح عن الشمع العادي — تحترق بالتساوي ومافيه سواد على حواف الزجاجة. طلبت الفانيليا والهيل وريحتها دافئة بدون ما تكون ثقيلة أو تصدع الراس بعد شوي.",
+              "user": "خالد العتيبي",
               "stars": 4.5,
               "audio_url": "",
-              "media_type": "image",
-              "media_src": "/assets/clothes/worn-tan-jacket.jpg"
+              "media_type": "",
+              "media_src": ""
             },
             {
-              "body": "القميص الأزرق صار قطعتي الرسمية المفضلة للدوام. الياقة تحافظ على شكلها طول اليوم ولا تترهل، والكي سهل جداً — تقريباً يخرج من الغسالة مستوي. الطباعة الداخلية بدل العلامة فكرة ذكية، ما عدت أحس بشي يخربش رقبتي.",
-              "user": "فيصل الدوسري",
+              "body": "خدمة إعادة التعبئة فكرة ذكية وفرت علي شراء زجاجة جديدة كل مرة. أرسلت الزجاجة الفارغة واستلمت قالب جديد بخصم فعلي. التواصل مع الدعم كان سريع لما سألت عن مدة التوصيل لمنطقتي.",
+              "user": "ريم الشهري",
               "stars": 5,
               "audio_url": "",
-              "media_type": "image",
-              "media_src": "/assets/clothes/worn-blue-shirt.jpg"
+              "media_type": "",
+              "media_src": ""
             },
             {
-              "body": "طلبت الكنزة البرتقالية لبنتي والطقم للولد. الخامة نفسها المذكورة بالوصف تماماً — قطن ناعم ما يهيّج بشرة الأطفال. المقاسات جاءت مضبوطة حسب الجدول، وهذا نادر بصراحة مع ملابس الأطفال أونلاين.",
-              "user": "هند المطيري",
+              "body": "علبة الإهداء وصلت بالضبط بالموعد المتوقع، والشمعدان الزجاجي المرفق نوعية ممتازة مو رخيصة زي بعض العروض الثانية. قلّمت الفتيل زي ما ذكروا في دليل الاستخدام واللهب طلع متساوي من أول إشعال.",
+              "user": "عبدالعزيز الدوسري",
               "stars": 5,
               "audio_url": "",
-              "media_type": "image",
-              "media_src": "/assets/clothes/worn-kids-outfit.jpg"
+              "media_type": "",
+              "media_src": ""
             }
           ],
           "fields": [
@@ -1495,7 +1578,7 @@
           "type": "string",
           "format": "color",
           "label": "لون الخلفية",
-          "value": "#14100D"
+          "value": "#16231B"
         },
         {
           "id": "bottom_bg_color",
@@ -1509,21 +1592,21 @@
           "type": "string",
           "format": "color",
           "label": "لون النص",
-          "value": "#ffffff"
+          "value": "#F3EFE2"
         },
         {
           "id": "brand_color",
           "type": "string",
           "format": "color",
           "label": "لون العلامة التجارية",
-          "value": "#B4643C"
+          "value": "#B08A3E"
         },
         {
           "id": "newsletter_title",
           "type": "string",
           "format": "text",
           "label": "عنوان النشرة البريدية",
-          "value": "كن أول من يعرف بالمجموعة القادمة!"
+          "value": "كوني أول من يعرف برائحتنا القادمة!"
         },
         {
           "id": "newsletter_subtitle",
@@ -1532,14 +1615,14 @@
           "label": "النص الفرعي للنشرة البريدية",
           "rows": 2,
           "required": false,
-          "value": "اشترك لتصلك المجموعات الجديدة قبل نفادها، ودعوات التخفيضات الخاصة، ونصائح العناية بقطعك حتى تدوم أطول. رسالة واحدة كل أسبوع فقط — بلا إزعاج."
+          "value": "اشتركي ليصلك إشعار بالروائح الموسمية الجديدة قبل نفادها، ونصائح العناية بشمعتك حتى تدوم أطول. رسالة واحدة كل أسبوع فقط."
         },
         {
           "id": "newsletter_placeholder",
           "type": "string",
           "format": "text",
           "label": "نص حقل البريد",
-          "value": "بريدك الالكتروني"
+          "value": "بريدك الإلكتروني"
         },
         {
           "id": "newsletter_icon",
@@ -1554,7 +1637,7 @@
           "type": "string",
           "format": "text",
           "label": "نص زر الاشتراك",
-          "value": "اشترك الآن"
+          "value": "اشتركي الآن"
         },
         {
           "id": "newsletter_button_icon",
@@ -1569,7 +1652,7 @@
           "type": "string",
           "format": "text",
           "label": "اسم المتجر",
-          "value": "أتيليه للأزياء"
+          "value": "أُنس للشموع الطبيعية"
         },
         {
           "id": "store_description",
@@ -1577,7 +1660,7 @@
           "format": "textarea",
           "label": "وصف المتجر",
           "rows": 3,
-          "value": "متجر سعودي متخصص في الملابس القطنية اليومية للرجال والنساء والأطفال. نصنع قطعاً بخامات مختارة وقصّات مدروسة، بأسعار عادلة وسياسة استبدال مريحة."
+          "value": "متجر سعودي متخصص في شموع الصويا الطبيعية المصنوعة يدوياً بفتيل خشبي وروائح مركّبة من زيوت عطرية حقيقية. نصنع دفعات صغيرة بعناية، بأسعار عادلة وخدمة إعادة تعبئة تقلّل الهدر."
         },
         {
           "id": "nav_columns",
@@ -1588,17 +1671,17 @@
           "maxLength": 6,
           "value": [
             {
-              "header": "تسوّق",
-              "link1_label": "ملابس رجالية",
+              "header": "تسوّقي",
+              "link1_label": "الروائح",
               "link1_href": "#st-variants",
-              "link2_label": "ملابس نسائية",
+              "link2_label": "الأجواء",
               "link2_href": "#st-images-slider",
-              "link3_label": "ملابس أطفال",
-              "link3_href": "#st-product-images"
+              "link3_label": "الهدايا والمجموعات",
+              "link3_href": "#st-offers"
             },
             {
               "header": "المساعدة",
-              "link1_label": "دليل المقاسات",
+              "link1_label": "دليل الاستخدام والعناية",
               "link1_href": "#st-specification",
               "link2_label": "سياسة الاستبدال والإرجاع",
               "link2_href": "#",

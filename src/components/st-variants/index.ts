@@ -269,8 +269,13 @@ export default class StVariants extends LitElement {
         position: relative;
         z-index: 20;
         flex-shrink: 0;
-        transition: width 0.2s, height 0.2s, outline 0.2s;
+        transition: width 0.2s, height 0.2s, outline 0.2s, box-shadow 0.2s;
         outline: 0 solid transparent;
+        box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.12) inset;
+      }
+
+      .st-variants__color-btn:not(.is-active):hover .st-variants__color-dot {
+        box-shadow: 0 0 0 1.5px rgba(0, 0, 0, 0.28) inset;
       }
 
       .st-variants__color-btn.is-active .st-variants__color-dot {
@@ -278,6 +283,7 @@ export default class StVariants extends LitElement {
         height: 2.25rem;
         outline: 1.5px solid ${brandColor};
         outline-offset: 2.5px;
+        box-shadow: none;
       }
 
       .st-variants__color-label {
@@ -440,7 +446,7 @@ export default class StVariants extends LitElement {
     const transitioningClass = this.isTransitioning ? 'is-transitioning' : '';
 
     return html`
-      <section class="st-variants">
+      <section id="st-variants" class="st-variants">
         <div class="st-variants__container">
           <h3 class="st-variants__title" data-animate="fade-up">
             ${this.config.section_title}
@@ -479,6 +485,7 @@ export default class StVariants extends LitElement {
                         class="st-variants__color-btn ${index === safeIndex ? 'is-active' : ''}"
                         aria-label="${variant.color_title}"
                         aria-current="${index === safeIndex ? 'true' : 'false'}"
+                        title="${variant.color_title}"
                         @click="${() => this.selectVariant(index)}"
                       >
                         <span
