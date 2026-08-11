@@ -17,4 +17,7 @@ plugins: [
     // components: ['product-card', 'scroll-top', 'table-list']
   }),
 ],
+test: {
+  environment: 'jsdom',
+},
 });

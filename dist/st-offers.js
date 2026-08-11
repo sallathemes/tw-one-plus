@@ -3,13 +3,13 @@ import { property as w, state as y } from "lit/decorators.js";
 import { classMap as $ } from "lit/directives/class-map.js";
 import { A as g } from "./animate-on-scroll-ROUn9sF1.js";
 import "./fonts-CqDo7kag.js";
-import { b as v, m as u, r as k } from "./mock-product-B38SvcvQ.js";
-var z = Object.defineProperty, b = (d, e, i, n) => {
-  for (var t = void 0, o = d.length - 1, a; o >= 0; o--)
-    (a = d[o]) && (t = a(e, i, t) || t);
-  return t && z(e, i, t), t;
+import { m as u } from "./mock-product-D0ZJbJ-m.js";
+var v = Object.defineProperty, b = (c, s, i, n) => {
+  for (var e = void 0, o = c.length - 1, t; o >= 0; o--)
+    (t = c[o]) && (e = t(s, i, e) || e);
+  return e && v(s, i, e), e;
 };
-class c extends x {
+class f extends x {
   constructor() {
     super(...arguments), this.selectedVariant = 0, this.styleElement = null;
   }
@@ -21,26 +21,22 @@ class c extends x {
     super.connectedCallback(), this.injectStyles(), g.init();
   }
   disconnectedCallback() {
-    var e;
-    super.disconnectedCallback(), (e = this.styleElement) == null || e.remove(), this.styleElement = null;
+    var s;
+    super.disconnectedCallback(), (s = this.styleElement) == null || s.remove(), this.styleElement = null;
   }
-  updated(e) {
-    super.updated(e), g.refresh();
+  updated(s) {
+    super.updated(s), g.refresh();
   }
-  // Out of stock: block navigation instead of following an empty/"#" link
-  handleBuyClick(e, i) {
-    i && e.preventDefault();
-  }
-  handleSelectVariant(e) {
-    this.selectedVariant = e, this.requestUpdate();
+  handleSelectVariant(s) {
+    this.selectedVariant = s, this.requestUpdate();
   }
   injectStyles() {
-    var f, l, m, _, p, h;
+    var d, l, m, _, p, h;
     if (this.styleElement) return;
-    const e = ((f = this.config) == null ? void 0 : f.bg_color) || "#ffffff", i = ((l = this.config) == null ? void 0 : l.primary_color) || "#050505", n = ((m = this.config) == null ? void 0 : m.secondary_color) || "#525252", t = ((_ = this.config) == null ? void 0 : _.brand_color) || "#0071E3", o = ((p = this.config) == null ? void 0 : p.green_color) || "#20A535", a = ((h = this.config) == null ? void 0 : h.red_color) || "#F62A33", s = "#EEEEEE";
+    const s = ((d = this.config) == null ? void 0 : d.bg_color) || "#ffffff", i = ((l = this.config) == null ? void 0 : l.primary_color) || "#050505", n = ((m = this.config) == null ? void 0 : m.secondary_color) || "#525252", e = ((_ = this.config) == null ? void 0 : _.brand_color) || "#0071E3", o = ((p = this.config) == null ? void 0 : p.green_color) || "#20A535", t = ((h = this.config) == null ? void 0 : h.red_color) || "#F62A33", a = "#EEEEEE";
     this.styleElement = document.createElement("style"), this.styleElement.textContent = `
       .st-offers {
-        background: ${e};
+        background: ${s};
         color: ${i};
         display: block;
         overflow: hidden;
@@ -179,7 +175,7 @@ class c extends x {
       }
 
       .st-offers__card-inner {
-        border: 1px solid ${s};
+        border: 1px solid ${a};
         border-radius: 1rem;
         padding: 1rem 1rem 1.5rem;
         display: flex;
@@ -189,7 +185,7 @@ class c extends x {
       }
 
       .st-offers__card.is-selected .st-offers__card-inner {
-        border-color: ${t};
+        border-color: ${e};
       }
 
       .st-offers__card.is-out-of-stock .st-offers__card-inner {
@@ -239,7 +235,7 @@ class c extends x {
 
       .st-offers__price-after {
         font-weight: 800;
-        color: ${a};
+        color: ${t};
       }
 
       .st-offers__price-out-of-stock {
@@ -269,8 +265,8 @@ class c extends x {
         max-width: 373px;
         padding: 0.75rem 1rem;
         border-radius: 1000px;
-        border: 1px solid ${t};
-        background: ${t};
+        border: 1px solid ${e};
+        background: ${e};
         cursor: pointer;
         text-decoration: none;
         transition: opacity 0.3s ease;
@@ -280,14 +276,14 @@ class c extends x {
         .st-offers__btn { padding: 1rem; }
       }
 
-      .st-offers__btn-label {
+      .st-offers__btn .st-buy-btn__label {
         font-size: 0.875rem;
         font-weight: 800;
         color: #ffffff;
       }
 
       @media (min-width: 1024px) {
-        .st-offers__btn-label { font-size: 1rem; }
+        .st-offers__btn .st-buy-btn__label { font-size: 1rem; }
       }
 
       .st-offers__btn i {
@@ -295,20 +291,18 @@ class c extends x {
         line-height: 1;
         color: #ffffff;
       }
-
-      ${v}
     `, document.head.appendChild(this.styleElement);
   }
   render() {
     if (!this.config)
       return r`<div>Configuration is required</div>`;
-    const e = (this.config.variants || []).slice(0, 3), i = this.config.currency || "ر.س", n = Math.min(this.selectedVariant, Math.max(e.length - 1, 0)), t = e[n], o = t ? {
-      price: t.price ?? u.price,
-      regularPrice: t.regular_price,
+    const s = (this.config.variants || []).slice(0, 3), i = this.config.currency || "ر.س", n = Math.min(this.selectedVariant, Math.max(s.length - 1, 0)), e = s[n], o = e ? {
+      price: e.price ?? u.price,
+      regularPrice: e.regular_price,
       currency: i,
-      isOnSale: t.is_on_sale ?? !1,
-      isOutOfStock: t.is_out_of_stock ?? !1
-    } : u, a = k(o, this.config.cta_label);
+      isOnSale: e.is_on_sale ?? !1,
+      isOutOfStock: e.is_out_of_stock ?? !1
+    } : u;
     return r`
       <section id="st-offers" class="st-offers">
         <div class="st-offers__container">
@@ -330,34 +324,34 @@ class c extends x {
 
           <!-- Variant options row (max 3 cards, same product) -->
           <div class="st-offers__grid">
-            ${e.map(
-      (s, f) => r`
+            ${s.map(
+      (t, a) => r`
                 <div
                   class="${$({
         "st-offers__card": !0,
-        "is-selected": f === n,
-        "is-out-of-stock": !!s.is_out_of_stock
+        "is-selected": a === n,
+        "is-out-of-stock": !!t.is_out_of_stock
       })}"
                   data-animate="bounce-in"
-                  data-delay="${f * 300}"
-                  @click="${() => this.handleSelectVariant(f)}"
+                  data-delay="${a * 300}"
+                  @click="${() => this.handleSelectVariant(a)}"
                 >
                   <div class="st-offers__card-inner">
                     <img
-                      src="${s.image}"
-                      alt="${s.name}"
+                      src="${t.image}"
+                      alt="${t.name}"
                       class="st-offers__card-img"
                       loading="lazy"
                     />
-                    <h5 class="st-offers__card-name">${s.name}</h5>
+                    <h5 class="st-offers__card-name">${t.name}</h5>
                     <h6 class="st-offers__card-price">
-                      ${s.is_out_of_stock ? r`<span class="st-offers__price-out-of-stock">نفذت الكمية</span>` : r`
+                      ${t.is_out_of_stock ? r`<span class="st-offers__price-out-of-stock">نفذت الكمية</span>` : r`
                             <span class="st-offers__price-after">
-                              ${s.price} ${i}
+                              ${t.price} ${i}
                             </span>
-                            ${s.is_on_sale && s.regular_price && s.regular_price > s.price ? r`
+                            ${t.is_on_sale && t.regular_price && t.regular_price > t.price ? r`
                                   <span class="st-offers__price-before">
-                                    ${s.regular_price} ${i}
+                                    ${t.regular_price} ${i}
                                   </span>
                                 ` : ""}
                           `}
@@ -371,15 +365,13 @@ class c extends x {
           <!-- Buy: one shared button for every variant above. Reflects whichever
                card is selected and disables/blocks navigation when it's out of stock. -->
           <div class="st-offers__cta">
-            <a
-              class="st-offers__btn st-buy-btn ${o.isOutOfStock ? "is-out-of-stock" : ""}"
-              href="${this.config.button_link || "#"}"
-              aria-disabled="${o.isOutOfStock ? "true" : "false"}"
-              @click="${(s) => this.handleBuyClick(s, !!o.isOutOfStock)}"
-            >
-              <span class="st-offers__btn-label">${a}</span>
-              <i class="sicon-caret-left-double"></i>
-            </a>
+            <buy-now-button
+              .product="${o}"
+              label="${this.config.cta_label}"
+              link="${this.config.button_link || "#"}"
+              btn-class="st-offers__btn"
+              icon="sicon-caret-left-double"
+            ></buy-now-button>
           </div>
         </div>
       </section>
@@ -388,11 +380,11 @@ class c extends x {
 }
 b([
   w({ type: Object })
-], c.prototype, "config");
+], f.prototype, "config");
 b([
   y()
-], c.prototype, "selectedVariant");
-typeof c < "u" && c.registerSallaComponent("salla-st-offers");
+], f.prototype, "selectedVariant");
+typeof f < "u" && f.registerSallaComponent("salla-st-offers");
 export {
-  c as default
+  f as default
 };
