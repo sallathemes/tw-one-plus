@@ -17,6 +17,7 @@ const COMPONENT_TAGS = [
   'st-images-slider',
   'st-reviews',
   'st-footer',
+  'st-hotspots',
 ];
 
 function injectFonts() {

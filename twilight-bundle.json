@@ -1945,6 +1945,136 @@
                     "value": ""
                 }
             ]
+        },
+        {
+            "title": "قسم نقاط الاهتمام بالمنتج",
+            "icon": "sicon-location",
+            "name": "st-hotspots",
+            "key": "aea1dd32-a271-48cc-a33a-5bb63d6a97b1",
+            "image": "https://cdn.salla.network/images/themes/default/placeholder.jpg",
+            "fields": [
+                {
+                    "id": "bg_color",
+                    "type": "string",
+                    "format": "color",
+                    "label": "لون الخلفية",
+                    "value": "#F5F5F5"
+                },
+                {
+                    "id": "primary_color",
+                    "type": "string",
+                    "format": "color",
+                    "label": "اللون الأساسي",
+                    "value": "#111111"
+                },
+                {
+                    "id": "secondary_color",
+                    "type": "string",
+                    "format": "color",
+                    "label": "لون النص الثانوي",
+                    "value": "#666666"
+                },
+                {
+                    "id": "brand_color",
+                    "type": "string",
+                    "format": "color",
+                    "label": "لون العلامة التجارية",
+                    "value": "#1F3A5F"
+                },
+                {
+                    "id": "card_bg_color",
+                    "type": "string",
+                    "format": "color",
+                    "label": "خلفية البطاقة",
+                    "value": "#ffffff"
+                },
+                {
+                    "id": "section_title",
+                    "type": "string",
+                    "format": "text",
+                    "label": "عنوان القسم",
+                    "value": "استكشف مميزات المنتج"
+                },
+                {
+                    "id": "section_subtitle",
+                    "type": "string",
+                    "format": "textarea",
+                    "label": "النص الفرعي",
+                    "rows": 2,
+                    "required": false,
+                    "value": "اضغط على المؤشرات لتتعرف على كل ميزة"
+                },
+                {
+                    "id": "product_image",
+                    "type": "string",
+                    "format": "image",
+                    "label": "صورة المنتج",
+                    "required": true,
+                    "value": ""
+                },
+                {
+                    "id": "product_image_alt",
+                    "type": "string",
+                    "format": "text",
+                    "label": "النص البديل للصورة",
+                    "required": false,
+                    "maxLength": 100
+                },
+                {
+                    "id": "hotspots",
+                    "type": "collection",
+                    "format": "collection",
+                    "label": "نقاط الاهتمام",
+                    "item_label": "نقطة",
+                    "minLength": 2,
+                    "maxLength": 6,
+                    "value": [],
+                    "fields": [
+                        {
+                            "id": "x_percent",
+                            "type": "number",
+                            "format": "slider",
+                            "label": "الموضع الأفقي (%)",
+                            "minimum": 0,
+                            "maximum": 100,
+                            "step": 1,
+                            "value": 50
+                        },
+                        {
+                            "id": "y_percent",
+                            "type": "number",
+                            "format": "slider",
+                            "label": "الموضع الرأسي (%)",
+                            "minimum": 0,
+                            "maximum": 100,
+                            "step": 1,
+                            "value": 50
+                        },
+                        {
+                            "id": "image",
+                            "type": "string",
+                            "format": "image",
+                            "label": "صورة البطاقة",
+                            "required": true
+                        },
+                        {
+                            "id": "title",
+                            "type": "string",
+                            "format": "text",
+                            "label": "العنوان",
+                            "required": true,
+                            "maxLength": 100
+                        },
+                        {
+                            "id": "description",
+                            "type": "string",
+                            "format": "textarea",
+                            "label": "الوصف",
+                            "maxLength": 300
+                        }
+                    ]
+                }
+            ]
         }
     ],
     "templates": [
