@@ -2,7 +2,7 @@ import { html, LitElement } from 'lit';
 import { property, state } from 'lit/decorators.js';
 import { ScrollScene } from '../../utils/scroll-scene';
 import '../../utils/fonts';
-import { buyNowButtonStyles, renderBuyNowLabel } from '../shared/buy-now-button';
+import '../shared/buy-now-button';
 import { mockProduct, type BuyNowProduct } from '../shared/mock-product';
 
 export default class StHero extends LitElement {
@@ -233,28 +233,12 @@ export default class StHero extends LitElement {
         .st-hero__nav-btn { display: inline-flex; }
       }
 
-      .st-hero__nav-btn-text-a,
-      .st-hero__nav-btn-text-b {
-        transition: transform 0.22s ease, opacity 0.22s ease;
-        white-space: nowrap;
-      }
-
-      .st-hero__nav-btn-text-b {
-        position: absolute;
-        inset: 0;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        transform: translateY(150%);
-        opacity: 0;
-      }
-
-      .st-hero__nav-btn:hover .st-hero__nav-btn-text-a {
+      .st-hero__nav-btn:hover .st-buy-btn__swap--a {
         transform: translateY(-150%);
         opacity: 0;
       }
 
-      .st-hero__nav-btn:hover .st-hero__nav-btn-text-b {
+      .st-hero__nav-btn:hover .st-buy-btn__swap--b {
         transform: translateY(0);
         opacity: 1;
       }
@@ -475,33 +459,15 @@ export default class StHero extends LitElement {
         }
       }
 
-      .st-hero__main-btn-text-a,
-      .st-hero__main-btn-text-b {
-        transition: transform 0.25s ease, opacity 0.25s ease;
-        white-space: nowrap;
-      }
-
-      .st-hero__main-btn-text-b {
-        position: absolute;
-        inset: 0;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        transform: translateY(150%);
-        opacity: 0;
-      }
-
-      .st-hero__main-btn:hover .st-hero__main-btn-text-a {
+      .st-hero__main-btn:hover .st-buy-btn__swap--a {
         transform: translateY(-150%);
         opacity: 0;
       }
 
-      .st-hero__main-btn:hover .st-hero__main-btn-text-b {
+      .st-hero__main-btn:hover .st-buy-btn__swap--b {
         transform: translateY(0);
         opacity: 1;
       }
-
-      ${buyNowButtonStyles}
     `;
     document.head.appendChild(this.styleElement);
   }
@@ -526,7 +492,6 @@ export default class StHero extends LitElement {
       isOnSale: this.config.product_is_on_sale ?? mockProduct.isOnSale,
       isOutOfStock: this.config.product_out_of_stock ?? mockProduct.isOutOfStock,
     };
-    const buttonLabel = renderBuyNowLabel(product, this.config.button_label);
 
     const navLinks = [
       { label: this.config.nav1_label, href: this.config.nav1_href },
@@ -577,15 +542,14 @@ export default class StHero extends LitElement {
             <!-- Actions: CTA + hamburger -->
             <div class="st-hero__nav-actions">
               ${this.config.button_label ? html`
-                <a
-                  href="${this.config.button_link || '#'}"
-                  class="st-hero__nav-btn st-buy-btn ${product.isOutOfStock ? 'is-out-of-stock' : ''}"
-                  style="color:${textColor};"
-                  aria-disabled="${product.isOutOfStock ? 'true' : 'false'}"
-                >
-                  <span class="st-hero__nav-btn-text-a">${buttonLabel}</span>
-                  <span class="st-hero__nav-btn-text-b">${buttonLabel}</span>
-                </a>
+                <buy-now-button
+                  .product="${product}"
+                  label="${this.config.button_label}"
+                  link="${this.config.button_link || '#'}"
+                  btn-class="st-hero__nav-btn"
+                  inline-style="color:${textColor};"
+                  hover-swap
+                ></buy-now-button>
               ` : ''}
 
               ${navLinks.length ? html`
@@ -649,15 +613,14 @@ export default class StHero extends LitElement {
 
               ${this.config.button_label ? html`
                 <div class="st-hero__cta">
-                  <a
-                    href="${this.config.button_link || '#'}"
-                    class="st-hero__main-btn st-buy-btn ${product.isOutOfStock ? 'is-out-of-stock' : ''}"
-                    style="background:${brandColor}; color:#fff;"
-                    aria-disabled="${product.isOutOfStock ? 'true' : 'false'}"
-                  >
-                    <span class="st-hero__main-btn-text-a">${buttonLabel}</span>
-                    <span class="st-hero__main-btn-text-b">${buttonLabel}</span>
-                  </a>
+                  <buy-now-button
+                    .product="${product}"
+                    label="${this.config.button_label}"
+                    link="${this.config.button_link || '#'}"
+                    btn-class="st-hero__main-btn"
+                    inline-style="background:${brandColor}; color:#fff;"
+                    hover-swap
+                  ></buy-now-button>
                 </div>
               ` : ''}
             </div>

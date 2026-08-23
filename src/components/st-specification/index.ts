@@ -300,7 +300,6 @@ export default class StSpecification extends LitElement {
           --st-specification-border: ${borderColor};
           --st-specification-brand: ${brandColor};
         "
-        data-animate="slide-up"
       >
         <div class="st-specification__container">
           <div class="st-specification__header">
@@ -332,7 +331,7 @@ export default class StSpecification extends LitElement {
                 return html`
                   <div
                     class="st-specification__row"
-                    data-animate="fade-up"
+                    data-animate="fade-in"
                     data-delay="${i * 150}"
                   >
                     <div class="st-specification__row-header">${row.header}</div>

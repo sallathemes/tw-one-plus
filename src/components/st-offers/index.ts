@@ -3,7 +3,7 @@ import { property, state } from 'lit/decorators.js';
 import { classMap } from 'lit/directives/class-map.js';
 import AOS from '../../utils/animate-on-scroll';
 import '../../utils/fonts';
-import { buyNowButtonStyles, renderBuyNowLabel } from '../shared/buy-now-button';
+import '../shared/buy-now-button';
 import { mockProduct, type BuyNowProduct } from '../shared/mock-product';
 
 export default class StOffers extends LitElement {
@@ -59,11 +59,6 @@ export default class StOffers extends LitElement {
   updated(changedProperties: any) {
     super.updated(changedProperties);
     AOS.refresh();
-  }
-
-  // Out of stock: block navigation instead of following an empty/"#" link
-  private handleBuyClick(e: Event, isOutOfStock: boolean) {
-    if (isOutOfStock) e.preventDefault();
   }
 
   private handleSelectVariant(index: number) {
@@ -325,14 +320,14 @@ export default class StOffers extends LitElement {
         .st-offers__btn { padding: 1rem; }
       }
 
-      .st-offers__btn-label {
+      .st-offers__btn .st-buy-btn__label {
         font-size: 0.875rem;
         font-weight: 800;
         color: #ffffff;
       }
 
       @media (min-width: 1024px) {
-        .st-offers__btn-label { font-size: 1rem; }
+        .st-offers__btn .st-buy-btn__label { font-size: 1rem; }
       }
 
       .st-offers__btn i {
@@ -340,8 +335,6 @@ export default class StOffers extends LitElement {
         line-height: 1;
         color: #ffffff;
       }
-
-      ${buyNowButtonStyles}
     `;
     document.head.appendChild(this.styleElement);
   }
@@ -367,13 +360,14 @@ export default class StOffers extends LitElement {
           isOutOfStock: activeVariant.is_out_of_stock ?? false,
         }
       : mockProduct;
-    const buttonLabel = renderBuyNowLabel(product, this.config.cta_label);
 
     return html`
       <section id="st-offers" class="st-offers">
-        <div class="st-offers__container" data-animate="fade-up">
-          <!-- Section header: badge above title (matches source SectionHeader) -->
-          <div class="st-offers__header">
+        <div class="st-offers__container">
+          <!-- Section header: badge above title (matches source SectionHeader).
+               Animated on its own — the grid below stages the cards separately,
+               so the two don't fade in on top of each other. -->
+          <div class="st-offers__header" data-animate="fade-up" data-delay="0">
             ${this.config.badge_label
               ? html`
                   <div class="st-offers__badge">
@@ -441,15 +435,13 @@ export default class StOffers extends LitElement {
           <!-- Buy: one shared button for every variant above. Reflects whichever
                card is selected and disables/blocks navigation when it's out of stock. -->
           <div class="st-offers__cta">
-            <a
-              class="st-offers__btn st-buy-btn ${product.isOutOfStock ? 'is-out-of-stock' : ''}"
-              href="${this.config.button_link || '#'}"
-              aria-disabled="${product.isOutOfStock ? 'true' : 'false'}"
-              @click="${(e: Event) => this.handleBuyClick(e, Boolean(product.isOutOfStock))}"
-            >
-              <span class="st-offers__btn-label">${buttonLabel}</span>
-              <i class="sicon-caret-left-double"></i>
-            </a>
+            <buy-now-button
+              .product="${product}"
+              label="${this.config.cta_label}"
+              link="${this.config.button_link || '#'}"
+              btn-class="st-offers__btn"
+              icon="sicon-caret-left-double"
+            ></buy-now-button>
           </div>
         </div>
       </section>

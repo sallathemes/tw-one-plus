@@ -2101,16 +2101,16 @@
             "path": "templates.candles",
             "category_id": "915304371",
             "primary_color": "#C17A3D",
-            "thumbnail": "templates-thumbs/candles.jpg",
+            "thumbnail": "https://cdn.assets.salla.network/previews/uhvqocmjhqh7/assets/b6518679a1c2e8a0af1635fb0a23cd0bb1f82023339b115fecf65c4c61fd7727/templates-thumbs/candles.jpg",
             "is_default": false,
-            "public_preview_url": ""
+            "public_preview_url": "https://salla.design/preview/s/uhvqocmjhqh7/candles"
         },
         {
             "id": "60da85e5-58ce-4d12-a0c0-baec6ec62a34",
             "path": "templates.home",
             "category_id": "989286562",
             "primary_color": "#B08D57",
-            "thumbnail": "https://cdn.assets.salla.network/previews/uhvqocmjhqh7/assets/dff1eda1a39b6b7e133cc184e8f7d51f0154013dd73fac3b34d9e5d3f9ceca4b/templates-thumbs/home.jpg",
+            "thumbnail": "https://cdn.assets.salla.network/previews/uhvqocmjhqh7/assets/5f79af167ad2ad2f5e61baead3e8c7fdb408e884c4f14afaf21655bc88faa3d5/templates-thumbs/home.jpg",
             "is_default": false,
             "public_preview_url": "https://salla.design/preview/s/uhvqocmjhqh7/home"
         },

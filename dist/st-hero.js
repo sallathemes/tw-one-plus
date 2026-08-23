@@ -1,18 +1,18 @@
-import { LitElement as _, html as i } from "lit";
-import { property as b, state as m } from "lit/decorators.js";
-import { S as f } from "./scroll-scene-DdINwXtt.js";
+import { LitElement as m, html as i } from "lit";
+import { property as b, state as p } from "lit/decorators.js";
+import { S as _ } from "./scroll-scene-DdINwXtt.js";
 import "./fonts-CqDo7kag.js";
-import { b as u, m as r, r as g } from "./mock-product-B38SvcvQ.js";
-var v = Object.defineProperty, p = (d, t, e, c) => {
-  for (var o = void 0, n = d.length - 1, s; n >= 0; n--)
-    (s = d[n]) && (o = s(t, e, o) || o);
-  return o && v(t, e, o), o;
+import { m as a } from "./mock-product-D0ZJbJ-m.js";
+var u = Object.defineProperty, h = (c, t, e, d) => {
+  for (var n = void 0, s = c.length - 1, r; s >= 0; s--)
+    (r = c[s]) && (n = r(t, e, n) || n);
+  return n && u(t, e, n), n;
 };
-class l extends _ {
+class l extends m {
   constructor() {
     super(...arguments), this.navFixed = !1, this.mobileMenuOpen = !1, this.styleElement = null, this.scene = null, this.navSceneProgress = (t, e) => {
-      const c = this.navFixed;
-      this.navFixed = e.top < -80, c !== this.navFixed && this.requestUpdate();
+      const d = this.navFixed;
+      this.navFixed = e.top < -80, d !== this.navFixed && this.requestUpdate();
     };
   }
   createRenderRoot() {
@@ -21,7 +21,7 @@ class l extends _ {
   syncScene() {
     if (this.scene) return;
     const t = this.querySelector(".st-hero");
-    t && (this.scene = new f(t, this.navSceneProgress));
+    t && (this.scene = new _(t, this.navSceneProgress));
   }
   connectedCallback() {
     super.connectedCallback(), this.injectStyles();
@@ -189,28 +189,12 @@ class l extends _ {
         .st-hero__nav-btn { display: inline-flex; }
       }
 
-      .st-hero__nav-btn-text-a,
-      .st-hero__nav-btn-text-b {
-        transition: transform 0.22s ease, opacity 0.22s ease;
-        white-space: nowrap;
-      }
-
-      .st-hero__nav-btn-text-b {
-        position: absolute;
-        inset: 0;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        transform: translateY(150%);
-        opacity: 0;
-      }
-
-      .st-hero__nav-btn:hover .st-hero__nav-btn-text-a {
+      .st-hero__nav-btn:hover .st-buy-btn__swap--a {
         transform: translateY(-150%);
         opacity: 0;
       }
 
-      .st-hero__nav-btn:hover .st-hero__nav-btn-text-b {
+      .st-hero__nav-btn:hover .st-buy-btn__swap--b {
         transform: translateY(0);
         opacity: 1;
       }
@@ -431,49 +415,31 @@ class l extends _ {
         }
       }
 
-      .st-hero__main-btn-text-a,
-      .st-hero__main-btn-text-b {
-        transition: transform 0.25s ease, opacity 0.25s ease;
-        white-space: nowrap;
-      }
-
-      .st-hero__main-btn-text-b {
-        position: absolute;
-        inset: 0;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        transform: translateY(150%);
-        opacity: 0;
-      }
-
-      .st-hero__main-btn:hover .st-hero__main-btn-text-a {
+      .st-hero__main-btn:hover .st-buy-btn__swap--a {
         transform: translateY(-150%);
         opacity: 0;
       }
 
-      .st-hero__main-btn:hover .st-hero__main-btn-text-b {
+      .st-hero__main-btn:hover .st-buy-btn__swap--b {
         transform: translateY(0);
         opacity: 1;
       }
-
-      ${u}
     `, document.head.appendChild(this.styleElement));
   }
   render() {
     if (!this.config) return i``;
-    const t = this.config.bg_color || "#050505", e = this.config.text_color || "#ffffff", c = this.config.brand_color || "#0071E3", o = (typeof this.config.overlay_opacity == "number" ? this.config.overlay_opacity : 60) / 100, n = {
-      price: this.config.product_price ?? r.price,
-      regularPrice: this.config.product_regular_price ?? r.regularPrice,
-      currency: this.config.product_currency || r.currency,
-      isOnSale: this.config.product_is_on_sale ?? r.isOnSale,
-      isOutOfStock: this.config.product_out_of_stock ?? r.isOutOfStock
-    }, s = g(n, this.config.button_label), h = [
+    const t = this.config.bg_color || "#050505", e = this.config.text_color || "#ffffff", d = this.config.brand_color || "#0071E3", n = (typeof this.config.overlay_opacity == "number" ? this.config.overlay_opacity : 60) / 100, s = {
+      price: this.config.product_price ?? a.price,
+      regularPrice: this.config.product_regular_price ?? a.regularPrice,
+      currency: this.config.product_currency || a.currency,
+      isOnSale: this.config.product_is_on_sale ?? a.isOnSale,
+      isOutOfStock: this.config.product_out_of_stock ?? a.isOutOfStock
+    }, r = [
       { label: this.config.nav1_label, href: this.config.nav1_href },
       { label: this.config.nav2_label, href: this.config.nav2_href },
       { label: this.config.nav3_label, href: this.config.nav3_href },
       { label: this.config.nav4_label, href: this.config.nav4_href }
-    ].filter((a) => a.label);
+    ].filter((o) => o.label);
     return i`
       <section
         class="st-hero"
@@ -485,7 +451,7 @@ class l extends _ {
                      src="${this.config.video_url}"></video>` : this.config.bg_image ? i`<img src="${this.config.bg_image}" alt="" loading="eager" />` : ""}
           <div
             class="st-hero__overlay"
-            style="background:${t}; opacity:${o};"
+            style="background:${t}; opacity:${n};"
           ></div>
         </div>
 
@@ -502,26 +468,25 @@ class l extends _ {
 
             <!-- Desktop nav links -->
             <ul class="st-hero__nav-links">
-              ${h.map((a) => i`
-                <li><a href="${a.href || "#"}">${a.label}</a></li>
+              ${r.map((o) => i`
+                <li><a href="${o.href || "#"}">${o.label}</a></li>
               `)}
             </ul>
 
             <!-- Actions: CTA + hamburger -->
             <div class="st-hero__nav-actions">
               ${this.config.button_label ? i`
-                <a
-                  href="${this.config.button_link || "#"}"
-                  class="st-hero__nav-btn st-buy-btn ${n.isOutOfStock ? "is-out-of-stock" : ""}"
-                  style="color:${e};"
-                  aria-disabled="${n.isOutOfStock ? "true" : "false"}"
-                >
-                  <span class="st-hero__nav-btn-text-a">${s}</span>
-                  <span class="st-hero__nav-btn-text-b">${s}</span>
-                </a>
+                <buy-now-button
+                  .product="${s}"
+                  label="${this.config.button_label}"
+                  link="${this.config.button_link || "#"}"
+                  btn-class="st-hero__nav-btn"
+                  inline-style="color:${e};"
+                  hover-swap
+                ></buy-now-button>
               ` : ""}
 
-              ${h.length ? i`
+              ${r.length ? i`
                 <button
                   class="st-hero__nav-hamburger"
                   aria-label="فتح القائمة"
@@ -559,14 +524,14 @@ class l extends _ {
     }}"
             >✕</button>
             <ul>
-              ${h.map((a) => i`
+              ${r.map((o) => i`
                 <li>
                   <a
-                    href="${a.href || "#"}"
+                    href="${o.href || "#"}"
                     @click="${() => {
       this.mobileMenuOpen = !1, this.requestUpdate();
     }}"
-                  >${a.label}</a>
+                  >${o.label}</a>
                 </li>
               `)}
             </ul>
@@ -590,15 +555,14 @@ class l extends _ {
 
               ${this.config.button_label ? i`
                 <div class="st-hero__cta">
-                  <a
-                    href="${this.config.button_link || "#"}"
-                    class="st-hero__main-btn st-buy-btn ${n.isOutOfStock ? "is-out-of-stock" : ""}"
-                    style="background:${c}; color:#fff;"
-                    aria-disabled="${n.isOutOfStock ? "true" : "false"}"
-                  >
-                    <span class="st-hero__main-btn-text-a">${s}</span>
-                    <span class="st-hero__main-btn-text-b">${s}</span>
-                  </a>
+                  <buy-now-button
+                    .product="${s}"
+                    label="${this.config.button_label}"
+                    link="${this.config.button_link || "#"}"
+                    btn-class="st-hero__main-btn"
+                    inline-style="background:${d}; color:#fff;"
+                    hover-swap
+                  ></buy-now-button>
                 </div>
               ` : ""}
             </div>
@@ -608,14 +572,14 @@ class l extends _ {
     `;
   }
 }
-p([
+h([
   b({ type: Object })
 ], l.prototype, "config");
-p([
-  m()
+h([
+  p()
 ], l.prototype, "navFixed");
-p([
-  m()
+h([
+  p()
 ], l.prototype, "mobileMenuOpen");
 typeof l < "u" && l.registerSallaComponent("salla-st-hero");
 export {
