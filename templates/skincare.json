@@ -1,0 +1,2027 @@
+{
+  "id": "b36773f1-02e0-4260-a057-4c295f1704df",
+  "components": [
+    {
+      "title": "قسم مقدمة الصفحة",
+      "icon": "sicon-image-carousel",
+      "name": "st-hero",
+      "key": "1a2b3c4d-5e6f-7a8b-9c0d-1e2f3a4b5c6d",
+      "image": "https://cdn.salla.sa/qAyGK/products/4bc21LS52nlbc2SPYuJzGv2YAS6mQaolQymbPdeN.jpg",
+      "fields": [
+        {
+          "id": "bg_color",
+          "type": "string",
+          "format": "color",
+          "label": "لون الخلفية",
+          "value": "#211A16"
+        },
+        {
+          "id": "text_color",
+          "type": "string",
+          "format": "color",
+          "label": "لون النص",
+          "value": "#FFFFFF"
+        },
+        {
+          "id": "brand_color",
+          "type": "string",
+          "format": "color",
+          "label": "لون العلامة التجارية",
+          "value": "#AD6F52"
+        },
+        {
+          "id": "overlay_opacity",
+          "type": "number",
+          "format": "slider",
+          "label": "درجة تعتيم الخلفية",
+          "minimum": 0,
+          "maximum": 100,
+          "step": 1,
+          "value": 58
+        },
+        {
+          "id": "title",
+          "type": "string",
+          "format": "text",
+          "label": "العنوان الرئيسي",
+          "required": true,
+          "maxLength": 150,
+          "value": "باقتك الكاملة للعناية بالبشرة. خصم يصل إلى 40٪."
+        },
+        {
+          "id": "subtitle",
+          "type": "string",
+          "format": "textarea",
+          "label": "النص الفرعي",
+          "rows": 3,
+          "value": "خمس خطوات مدروسة بمكوّنات فعّالة ومُختبرة، مجمّعة في باقة واحدة توفّر وقت البحث وميزانية التجربة. اطلب الباقة اليوم واستمتع بتوصيل سريع واستبدال مجاني خلال 14 يوماً."
+        },
+        {
+          "id": "button_label",
+          "type": "string",
+          "format": "text",
+          "label": "نص زر الشراء",
+          "value": "اطلب باقتك الآن بـ"
+        },
+        {
+          "id": "button_price",
+          "type": "string",
+          "format": "text",
+          "label": "سعر زر الشراء",
+          "value": "199 ر.س"
+        },
+        {
+          "id": "button_link",
+          "type": "string",
+          "format": "text",
+          "label": "رابط زر الشراء",
+          "value": "#st-offers"
+        },
+        {
+          "id": "product_price",
+          "type": "number",
+          "format": "number",
+          "label": "سعر المنتج",
+          "value": 199
+        },
+        {
+          "id": "product_regular_price",
+          "type": "number",
+          "format": "number",
+          "label": "السعر قبل الخصم",
+          "required": false,
+          "value": 320
+        },
+        {
+          "id": "product_currency",
+          "type": "string",
+          "format": "text",
+          "label": "رمز العملة",
+          "value": "ر.س"
+        },
+        {
+          "id": "product_is_on_sale",
+          "type": "boolean",
+          "format": "switch",
+          "label": "هل يوجد خصم على المنتج",
+          "value": true
+        },
+        {
+          "id": "product_out_of_stock",
+          "type": "boolean",
+          "format": "switch",
+          "label": "المنتج غير متوفر",
+          "value": false
+        },
+        {
+          "id": "video_url",
+          "type": "string",
+          "format": "url",
+          "label": "رابط الفيديو الخلفي",
+          "required": false,
+          "value": ""
+        },
+        {
+          "id": "bg_image",
+          "type": "string",
+          "format": "image",
+          "label": "صورة الخلفية (بديل الفيديو)",
+          "required": false,
+          "value": "/assets/skincare/bundle-set-mockup-01.jpg"
+        },
+        {
+          "id": "logo",
+          "type": "string",
+          "format": "image",
+          "label": "الشعار",
+          "required": false,
+          "value": "/assets/logo.svg"
+        },
+        {
+          "id": "store_name",
+          "type": "string",
+          "format": "text",
+          "label": "اسم المتجر",
+          "value": "إشراق"
+        },
+        {
+          "id": "nav1_label",
+          "type": "string",
+          "format": "text",
+          "label": "الرابط الأول - النص",
+          "value": "الباقات"
+        },
+        {
+          "id": "nav1_href",
+          "type": "string",
+          "format": "text",
+          "label": "الرابط الأول - الوجهة",
+          "value": "#st-offers"
+        },
+        {
+          "id": "nav2_label",
+          "type": "string",
+          "format": "text",
+          "label": "الرابط الثاني - النص",
+          "value": "المكوّنات"
+        },
+        {
+          "id": "nav2_href",
+          "type": "string",
+          "format": "text",
+          "label": "الرابط الثاني - الوجهة",
+          "value": "#st-hotspots"
+        },
+        {
+          "id": "nav3_label",
+          "type": "string",
+          "format": "text",
+          "label": "الرابط الثالث - النص",
+          "value": "الروتين"
+        },
+        {
+          "id": "nav3_href",
+          "type": "string",
+          "format": "text",
+          "label": "الرابط الثالث - الوجهة",
+          "value": "#st-demo"
+        },
+        {
+          "id": "nav4_label",
+          "type": "string",
+          "format": "text",
+          "label": "الرابط الرابع - النص",
+          "value": "الآراء"
+        },
+        {
+          "id": "nav4_href",
+          "type": "string",
+          "format": "text",
+          "label": "الرابط الرابع - الوجهة",
+          "value": "#st-reviews"
+        }
+      ]
+    },
+    {
+      "title": "قسم آراء العملاء",
+      "icon": "sicon-quote-close",
+      "name": "st-reviews",
+      "key": "0d1e2f3a-4b5c-6d7e-8f9a-0b1c2d3e4f5a",
+      "image": "https://cdn.salla.sa/qAyGK/products/nSqS292go5ydqASQslFXS6aqq6WUI5FJ43xnbsFj.jpg",
+      "fields": [
+        {
+          "id": "bg_color",
+          "type": "string",
+          "format": "color",
+          "label": "لون الخلفية",
+          "value": "#FFFFFF"
+        },
+        {
+          "id": "primary_color",
+          "type": "string",
+          "format": "color",
+          "label": "لون النص الأساسي",
+          "value": "#2A2320"
+        },
+        {
+          "id": "brand_color",
+          "type": "string",
+          "format": "color",
+          "label": "لون العلامة التجارية",
+          "value": "#AD6F52"
+        },
+        {
+          "id": "secondary_color",
+          "type": "string",
+          "format": "color",
+          "label": "لون النص الثانوي",
+          "value": "#7A6F67"
+        },
+        {
+          "id": "shade_color",
+          "type": "string",
+          "format": "color",
+          "label": "لون خلفية الترقيم",
+          "value": "rgba(42,35,32,0.05)"
+        },
+        {
+          "id": "section_icon",
+          "type": "string",
+          "format": "icon",
+          "label": "أيقونة الاقتباس",
+          "value": "sicon-quote-close"
+        },
+        {
+          "id": "rating_icon",
+          "type": "string",
+          "format": "icon",
+          "label": "أيقونة التقييم",
+          "value": "sicon-star2"
+        },
+        {
+          "id": "subheader",
+          "type": "string",
+          "format": "text",
+          "label": "العنوان الفرعي",
+          "value": "تجارب حقيقية من روتين عميلاتنا وعملائنا"
+        },
+        {
+          "id": "prev_icon",
+          "type": "string",
+          "format": "icon",
+          "label": "أيقونة السابق",
+          "value": "sicon-arrow-left"
+        },
+        {
+          "id": "next_icon",
+          "type": "string",
+          "format": "icon",
+          "label": "أيقونة التالي",
+          "value": "sicon-arrow-right"
+        },
+        {
+          "id": "reviews",
+          "type": "collection",
+          "format": "collection",
+          "label": "التقييمات",
+          "item_label": "تقييم",
+          "minLength": 1,
+          "maxLength": 10,
+          "fields": [
+            {
+              "id": "body",
+              "type": "string",
+              "format": "textarea",
+              "label": "نص التقييم",
+              "required": true,
+              "maxLength": 800
+            },
+            {
+              "id": "user",
+              "type": "string",
+              "format": "text",
+              "label": "اسم العميل",
+              "required": true,
+              "maxLength": 80
+            },
+            {
+              "id": "stars",
+              "type": "number",
+              "format": "slider",
+              "label": "التقييم (نجوم)",
+              "minimum": 0,
+              "maximum": 5,
+              "step": 0.5,
+              "value": 5
+            },
+            {
+              "id": "audio_url",
+              "type": "string",
+              "format": "text",
+              "label": "رابط الصوت (اختياري)",
+              "required": false
+            },
+            {
+              "id": "media_type",
+              "type": "string",
+              "format": "text",
+              "label": "نوع الوسائط: image / video / iframe (اتركه فارغاً بلا وسائط)",
+              "required": false,
+              "value": ""
+            },
+            {
+              "id": "media_src",
+              "type": "string",
+              "format": "text",
+              "label": "مصدر الوسائط (رابط أو مسار)",
+              "required": false
+            }
+          ],
+          "value": [
+            {
+              "body": "بشرتي دهنية ومعرّضة للحبوب، وترددت كثيراً قبل تجربة باقة جديدة. بعد ثلاثة أسابيع فقط لاحظت فرقاً واضحاً في نعومة الملمس وقلّة الدهون الزائدة. السيروم خفيف جداً وما يسبب لمعان مزعج تحت المكياج.",
+              "user": "منى العنزي",
+              "stars": 5,
+              "audio_url": "",
+              "media_type": "image",
+              "media_src": "/assets/skincare/texture-cream-swirl-01.jpg"
+            },
+            {
+              "body": "الباقة وصلت خلال يومين بالضبط كما وعدوا، والتغليف أنيق جداً يستاهل يكون هدية. استخدمت روتين المساء فقط أول أسبوع، والكريم الليلي فعلاً كثيف ومرطب بدون ما يكون دهني.",
+              "user": "عبدالعزيز الحربي",
+              "stars": 5,
+              "audio_url": "",
+              "media_type": "image",
+              "media_src": "/assets/skincare/styled-jar-red-flowers.jpg"
+            },
+            {
+              "body": "جربت سيروم فيتامين C من قبل من عدة ماركات وكان يهيّج بشرتي، لكن هذا التركيز لطيف جداً. الإشراقة ظهرت من أول أسبوعين، وسعر الباقة فعلاً أوفر من شراء كل منتج لحاله.",
+              "user": "ريم القحطاني",
+              "stars": 4.5,
+              "audio_url": "",
+              "media_type": "image",
+              "media_src": "/assets/skincare/product-dark-dropper-glow.jpg"
+            },
+            {
+              "body": "كنت أبحث عن روتين بسيط لا يأخذ وقتاً طويلاً صباحاً، وهذي الباقة بالضبط اللي أدور عليه. خمس خطوات بس وتشعر إن بشرتك مرتاحة طول اليوم. التوصيل كان أسرع من المتوقع.",
+              "user": "سلطان المالكي",
+              "stars": 5,
+              "audio_url": "",
+              "media_type": "image",
+              "media_src": "/assets/skincare/flatlay-mockup-pink-red.jpg"
+            },
+            {
+              "body": "أول مرة أطلب من المتجر وصراحة الجودة فاقت التوقعات. تواصلت مع خدمة العملاء بخصوص نوع بشرتي وردّوا عليّ بسرعة واقترحوا الباقة المناسبة. راح أكرر الطلب أكيد.",
+              "user": "لينا الشمري",
+              "stars": 5,
+              "audio_url": "",
+              "media_type": "image",
+              "media_src": "/assets/skincare/texture-cream-trio-leaves.jpg"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "قسم مميزات المنتج - بطاقات",
+      "icon": "sicon-layout-grid",
+      "name": "st-cards",
+      "key": "2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e",
+      "image": "https://cdn.salla.sa/qAyGK/products/COyZjADBoD2ijmCaGrXpfKLPWijMwN2MElx1G4qk.jpg",
+      "fields": [
+        {
+          "id": "bg_color",
+          "type": "string",
+          "format": "color",
+          "label": "لون الخلفية",
+          "value": "#FFFFFF"
+        },
+        {
+          "id": "primary_color",
+          "type": "string",
+          "format": "color",
+          "label": "اللون الأساسي",
+          "value": "#2A2320"
+        },
+        {
+          "id": "brand_color",
+          "type": "string",
+          "format": "color",
+          "label": "لون العلامة التجارية",
+          "value": "#AD6F52"
+        },
+        {
+          "id": "section_title",
+          "type": "string",
+          "format": "text",
+          "label": "عنوان القسم",
+          "value": "لماذا تختار باقات إشراق"
+        },
+        {
+          "id": "section_image",
+          "type": "string",
+          "format": "image",
+          "label": "صورة القسم الرئيسية",
+          "required": false,
+          "value": "/assets/skincare/flatlay-rosegold-set.jpg"
+        },
+        {
+          "id": "cards",
+          "type": "collection",
+          "format": "collection",
+          "label": "البطاقات",
+          "item_label": "بطاقة",
+          "minLength": 1,
+          "maxLength": 6,
+          "fields": [
+            {
+              "id": "icon",
+              "type": "string",
+              "format": "icon",
+              "label": "الأيقونة"
+            },
+            {
+              "id": "title",
+              "type": "string",
+              "format": "text",
+              "label": "عنوان البطاقة",
+              "required": true,
+              "maxLength": 100
+            },
+            {
+              "id": "body",
+              "type": "string",
+              "format": "textarea",
+              "label": "نص البطاقة"
+            }
+          ],
+          "value": [
+            {
+              "icon": "sicon-shield-check",
+              "title": "مكوّنات آمنة ومُختبرة جلدياً",
+              "body": "تركيبات خالية من الكحول والعطور القاسية، ومُختبرة على جميع أنواع البشرة قبل الطرح."
+            },
+            {
+              "icon": "sicon-award-ribbon",
+              "title": "توفير حقيقي يصل إلى 40٪",
+              "body": "سعر الباقة أقل بكثير من شراء كل منتج على حدة، دون أي تنازل عن الجودة."
+            },
+            {
+              "icon": "sicon-cart",
+              "title": "شحن مجاني لكل الباقات",
+              "body": "توصيل خلال يومين إلى ثلاثة أيام عمل لجميع مدن المملكة، مع تتبّع لحظي للشحنة."
+            },
+            {
+              "icon": "sicon-rotate",
+              "title": "استبدال مجاني خلال 14 يوم",
+              "body": "لم تناسب بشرتك؟ استبدلها بباقة أخرى مجاناً، دون أسئلة ودون رسوم شحن."
+            },
+            {
+              "icon": "sicon-bolt",
+              "title": "تسليم سريع خلال يومين",
+              "body": "باقتك تصل معبأة بعناية خلال يومين فقط من تأكيد الطلب."
+            },
+            {
+              "icon": "sicon-star",
+              "title": "تقييم 4.9 من 5",
+              "body": "أكثر من 2,800 عميل قيّموا الباقات، و90٪ منهم أعادوا الطلب مرة أخرى."
+            }
+          ]
+        },
+        {
+          "id": "footer_button_label",
+          "type": "string",
+          "format": "text",
+          "label": "نص الزر السفلي",
+          "value": "اكتشف روتينك الكامل"
+        },
+        {
+          "id": "footer_button_href",
+          "type": "string",
+          "format": "text",
+          "label": "رابط الزر السفلي",
+          "value": "#st-demo"
+        }
+      ]
+    },
+    {
+      "title": "قسم نقاط الاهتمام بالمنتج",
+      "icon": "sicon-location",
+      "name": "st-hotspots",
+      "key": "aea1dd32-a271-48cc-a33a-5bb63d6a97b1",
+      "image": "https://cdn.salla.network/images/themes/default/placeholder.jpg",
+      "fields": [
+        {
+          "id": "bg_color",
+          "type": "string",
+          "format": "color",
+          "label": "لون الخلفية",
+          "value": "#FFFFFF"
+        },
+        {
+          "id": "primary_color",
+          "type": "string",
+          "format": "color",
+          "label": "اللون الأساسي",
+          "value": "#2A2320"
+        },
+        {
+          "id": "secondary_color",
+          "type": "string",
+          "format": "color",
+          "label": "لون النص الثانوي",
+          "value": "#7A6F67"
+        },
+        {
+          "id": "brand_color",
+          "type": "string",
+          "format": "color",
+          "label": "لون العلامة التجارية",
+          "value": "#AD6F52"
+        },
+        {
+          "id": "card_bg_color",
+          "type": "string",
+          "format": "color",
+          "label": "خلفية البطاقة",
+          "value": "#FFFFFF"
+        },
+        {
+          "id": "section_title",
+          "type": "string",
+          "format": "text",
+          "label": "عنوان القسم",
+          "value": "داخل باقتك"
+        },
+        {
+          "id": "section_subtitle",
+          "type": "string",
+          "format": "textarea",
+          "label": "النص الفرعي",
+          "required": false,
+          "rows": 2,
+          "value": "اضغط على كل نقطة لتتعرف على منتجات الباقة وفائدة كل خطوة"
+        },
+        {
+          "id": "product_image",
+          "type": "string",
+          "format": "image",
+          "label": "صورة المنتج (يُفضّل PNG بدون خلفية)",
+          "required": true,
+          "value": "/assets/skincare/bundle-set-mockup-03.jpg"
+        },
+        {
+          "id": "product_image_alt",
+          "type": "string",
+          "format": "text",
+          "label": "النص البديل للصورة",
+          "required": false,
+          "maxLength": 100,
+          "value": "منتجات باقة العناية بالبشرة مرصوفة بجانب بعضها"
+        },
+        {
+          "id": "hotspots",
+          "type": "collection",
+          "format": "collection",
+          "label": "نقاط الاهتمام",
+          "item_label": "نقطة",
+          "minLength": 2,
+          "maxLength": 6,
+          "fields": [
+            {
+              "id": "x_percent",
+              "type": "number",
+              "format": "slider",
+              "label": "الموضع الأفقي (%)",
+              "minimum": 0,
+              "maximum": 100,
+              "step": 1,
+              "value": 50
+            },
+            {
+              "id": "y_percent",
+              "type": "number",
+              "format": "slider",
+              "label": "الموضع الرأسي (%)",
+              "minimum": 0,
+              "maximum": 100,
+              "step": 1,
+              "value": 50
+            },
+            {
+              "id": "image",
+              "type": "string",
+              "format": "image",
+              "label": "صورة البطاقة (يُفضّل PNG بدون خلفية)",
+              "required": true
+            },
+            {
+              "id": "title",
+              "type": "string",
+              "format": "text",
+              "label": "العنوان",
+              "required": true,
+              "maxLength": 100
+            },
+            {
+              "id": "description",
+              "type": "string",
+              "format": "textarea",
+              "label": "الوصف",
+              "maxLength": 300
+            }
+          ],
+          "value": [
+            {
+              "x_percent": 12,
+              "y_percent": 58,
+              "image": "/assets/skincare/product-black-pump-mockup.jpg",
+              "title": "منظف الوجه اللطيف",
+              "description": "ينظف دون أن يجرّد البشرة من زيوتها الطبيعية، مناسب للاستخدام اليومي صباحاً ومساءً."
+            },
+            {
+              "x_percent": 30,
+              "y_percent": 42,
+              "image": "/assets/skincare/product-glass-dropper-silver.jpg",
+              "title": "سيروم فيتامين C",
+              "description": "تركيز 15٪ لإشراقة فورية وحماية من العوامل الخارجية طوال اليوم."
+            },
+            {
+              "x_percent": 50,
+              "y_percent": 38,
+              "image": "/assets/skincare/product-jar-grey-fabric.jpg",
+              "title": "كريم الترطيب المكثّف",
+              "description": "ترطيب يدوم حتى 48 ساعة بفضل زبدة الشيا والسيراميدات."
+            },
+            {
+              "x_percent": 70,
+              "y_percent": 45,
+              "image": "/assets/skincare/product-amber-dropper-pedestal.jpg",
+              "title": "سيروم حمض الهيالورونيك",
+              "description": "جزيئات مختلفة الحجم تملأ البشرة بترطيب متعدد الطبقات."
+            },
+            {
+              "x_percent": 88,
+              "y_percent": 52,
+              "image": "/assets/skincare/product-white-spray-bottle.jpg",
+              "title": "واقي الشمس اليومي",
+              "description": "SPF 50 خفيف القوام، يمتص خلال ثوانٍ ولا يترك أثراً أبيض تحت المكياج."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "قسم تفصيل الميزة",
+      "icon": "sicon-star",
+      "name": "st-feature",
+      "key": "3c4d5e6f-7a8b-9c0d-1e2f-3a4b5c6d7e8f",
+      "image": "https://cdn.salla.sa/qAyGK/products/VDYhBmwAG0hLbnAqleLctup4ozHiOc0b2ljn8I4c.jpg",
+      "fields": [
+        {
+          "id": "bg_color",
+          "type": "string",
+          "format": "color",
+          "label": "لون الخلفية",
+          "value": "#FFFFFF"
+        },
+        {
+          "id": "shade_color",
+          "type": "string",
+          "format": "color",
+          "label": "لون الخلفية الداخلية",
+          "value": "#F7EFEA"
+        },
+        {
+          "id": "primary_color",
+          "type": "string",
+          "format": "color",
+          "label": "لون النص",
+          "value": "#2A2320"
+        },
+        {
+          "id": "brand_color",
+          "type": "string",
+          "format": "color",
+          "label": "لون العلامة التجارية",
+          "value": "#AD6F52"
+        },
+        {
+          "id": "icon",
+          "type": "string",
+          "format": "icon",
+          "label": "الأيقونة",
+          "value": "sicon-shield-check"
+        },
+        {
+          "id": "title",
+          "type": "string",
+          "format": "text",
+          "label": "العنوان",
+          "required": true,
+          "maxLength": 150,
+          "value": "حمض الهيالورونيك. ترطيب يدوم حتى 48 ساعة."
+        },
+        {
+          "id": "body1",
+          "type": "string",
+          "format": "textarea",
+          "label": "الفقرة الأولى",
+          "rows": 3,
+          "value": "نستخدم تركيزاً مدروساً من حمض الهيالورونيك منخفض الوزن الجزيئي، لينفذ إلى طبقات البشرة العميقة بدل البقاء على السطح فقط. النتيجة ترطيب فعلي يُحسّ من أول استخدام، لا مج��د لمعان مؤقت."
+        },
+        {
+          "id": "body2",
+          "type": "string",
+          "format": "textarea",
+          "label": "الفقرة الثانية",
+          "required": false,
+          "rows": 3,
+          "value": "كل باقة تخضع لاختبار حساسية جلدية قبل الطرح، وخالية من الكحول والعطور الصناعية القاسية، لتناسب حتى البشرة الحساسة."
+        },
+        {
+          "id": "button_label",
+          "type": "string",
+          "format": "text",
+          "label": "نص الزر",
+          "value": "تسوّق الباقة الكاملة"
+        },
+        {
+          "id": "button_link",
+          "type": "string",
+          "format": "text",
+          "label": "رابط الزر",
+          "value": "#st-offers"
+        },
+        {
+          "id": "button_icon",
+          "type": "string",
+          "format": "icon",
+          "label": "أيقونة الزر",
+          "required": false,
+          "value": "sicon-caret-left-double"
+        },
+        {
+          "id": "side_image",
+          "type": "string",
+          "format": "image",
+          "label": "الصورة الجانبية",
+          "required": false,
+          "value": "/assets/skincare/product-amber-dropper-pedestal.jpg"
+        }
+      ]
+    },
+    {
+      "title": "قسم ألوان وأنواع المنتج",
+      "icon": "sicon-gameboy",
+      "name": "st-variants",
+      "key": "6f7a8b9c-0d1e-2f3a-4b5c-6d7e8f9a0b1c",
+      "image": "https://cdn.salla.sa/qAyGK/products/wIbuA2dLogcdgxdmX0UPYvY1xuOQNHe7jGPIiKHo.jpg",
+      "fields": [
+        {
+          "id": "bg_color",
+          "type": "string",
+          "format": "color",
+          "label": "لون الخلفية",
+          "value": "#FFFFFF"
+        },
+        {
+          "id": "primary_color",
+          "type": "string",
+          "format": "color",
+          "label": "اللون الأساسي",
+          "value": "#2A2320"
+        },
+        {
+          "id": "brand_color",
+          "type": "string",
+          "format": "color",
+          "label": "لون العلامة التجارية",
+          "value": "#AD6F52"
+        },
+        {
+          "id": "section_title",
+          "type": "string",
+          "format": "text",
+          "label": "عنوان القسم",
+          "value": "أي باقة تناسب بشرتك؟"
+        },
+        {
+          "id": "selector_label",
+          "type": "string",
+          "format": "text",
+          "label": "تسمية اختيار اللون",
+          "value": "اختر نوع الباقة"
+        },
+        {
+          "id": "variants",
+          "type": "collection",
+          "format": "collection",
+          "label": "المتغيرات",
+          "item_label": "لون",
+          "minLength": 1,
+          "maxLength": 8,
+          "fields": [
+            {
+              "id": "product_image",
+              "type": "string",
+              "format": "image",
+              "label": "صورة المنتج",
+              "required": true
+            },
+            {
+              "id": "side_image",
+              "type": "string",
+              "format": "image",
+              "label": "صورة الارتداء",
+              "required": false
+            },
+            {
+              "id": "color_hex",
+              "type": "string",
+              "format": "color",
+              "label": "لون الزر",
+              "value": "#2E3642"
+            },
+            {
+              "id": "color_title",
+              "type": "string",
+              "format": "text",
+              "label": "اسم اللون",
+              "maxLength": 50
+            }
+          ],
+          "value": [
+            {
+              "product_image": "/assets/skincare/bundle-set-mockup-02.jpg",
+              "side_image": "/assets/skincare/texture-cream-swirl-01.jpg",
+              "color_hex": "#C98A5D",
+              "color_title": "باقة الترطيب المكثّف"
+            },
+            {
+              "product_image": "/assets/skincare/flatlay-rosegold-set.jpg",
+              "side_image": "/assets/skincare/texture-cream-leaf-02.jpg",
+              "color_hex": "#E7C7C0",
+              "color_title": "باقة النضارة والإشراقة"
+            },
+            {
+              "product_image": "/assets/skincare/flatlay-charcoal-gold-set.jpg",
+              "side_image": "/assets/skincare/texture-cream-smear-grey.jpg",
+              "color_hex": "#3B332C",
+              "color_title": "باقة تنقية البشرة الدهنية"
+            },
+            {
+              "product_image": "/assets/skincare/product-box-jar-minimal.jpg",
+              "side_image": "/assets/skincare/texture-cream-trio-beige.jpg",
+              "color_hex": "#EFE6DA",
+              "color_title": "باقة تهدئة البشرة الحساسة"
+            },
+            {
+              "product_image": "/assets/skincare/bundle-set-mockup-01.jpg",
+              "side_image": "/assets/skincare/texture-serum-gel-swirl.jpg",
+              "color_hex": "#A8B79A",
+              "color_title": "باقة مكافحة علامات التقدّم بالعمر"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "معرض الصور المتحرك",
+      "icon": "sicon-images",
+      "name": "st-images-slider",
+      "key": "9c0d1e2f-3a4b-5c6d-7e8f-9a0b1c2d3e4f",
+      "image": "https://cdn.salla.sa/qAyGK/products/nNUJFeg1t2IYMTjGOednr4WsjHdpocbLnsuOwENI.jpg",
+      "fields": [
+        {
+          "id": "bg_color",
+          "type": "string",
+          "format": "color",
+          "label": "لون الخلفية",
+          "value": "#F7EFEA"
+        },
+        {
+          "id": "primary_color",
+          "type": "string",
+          "format": "color",
+          "label": "لون النص",
+          "value": "#2A2320"
+        },
+        {
+          "id": "brand_color",
+          "type": "string",
+          "format": "color",
+          "label": "لون العلامة التجارية",
+          "value": "#AD6F52"
+        },
+        {
+          "id": "section_title",
+          "type": "string",
+          "format": "text",
+          "label": "عنوان القسم",
+          "value": "لحظات من روتين العناية اليومي"
+        },
+        {
+          "id": "images",
+          "type": "collection",
+          "format": "collection",
+          "label": "الصور",
+          "item_label": "صورة",
+          "minLength": 1,
+          "maxLength": 10,
+          "fields": [
+            {
+              "id": "src",
+              "type": "string",
+              "format": "image",
+              "label": "الصورة",
+              "required": true
+            },
+            {
+              "id": "title",
+              "type": "string",
+              "format": "text",
+              "label": "عنوان الصورة",
+              "required": false,
+              "maxLength": 80
+            }
+          ],
+          "value": [
+            {
+              "src": "/assets/skincare/flatlay-pink-mirror-set.jpg",
+              "title": "روتين الصباح"
+            },
+            {
+              "src": "/assets/skincare/flatlay-black-gold-boxes.jpg",
+              "title": "طقس المساء"
+            },
+            {
+              "src": "/assets/skincare/styled-jar-dried-flowers.jpg",
+              "title": "ترطيب هادئ"
+            },
+            {
+              "src": "/assets/skincare/styled-jar-red-flowers.jpg",
+              "title": "عناية فاخرة"
+            },
+            {
+              "src": "/assets/skincare/texture-cream-plates-leaf.jpg",
+              "title": "قوام يمتص بسرعة"
+            },
+            {
+              "src": "/assets/skincare/ingredient-leaf-droplet-01.jpg",
+              "title": "مكوّنات طبيعية"
+            },
+            {
+              "src": "/assets/skincare/product-dark-dropper-glow.jpg",
+              "title": "إشراقة من أول قطرة"
+            },
+            {
+              "src": "/assets/skincare/flatlay-mockup-pink-red.jpg",
+              "title": "باقة هدايا جاهزة"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "قسم العرض التفاعلي",
+      "icon": "sicon-image-carousel",
+      "name": "st-demo",
+      "key": "4d5e6f7a-8b9c-0d1e-2f3a-4b5c6d7e8f9a",
+      "image": "https://cdn.salla.sa/qAyGK/products/abIkWxEFmL9rNYjWpw7joATInBPtGCg62yd2Imqt.jpg",
+      "fields": [
+        {
+          "id": "bg_color",
+          "type": "string",
+          "format": "color",
+          "label": "لون الخلفية",
+          "value": "#211A16"
+        },
+        {
+          "id": "text_color",
+          "type": "string",
+          "format": "color",
+          "label": "لون النص",
+          "value": "#FFFFFF"
+        },
+        {
+          "id": "brand_color",
+          "type": "string",
+          "format": "color",
+          "label": "لون العلامة التجارية",
+          "value": "#AD6F52"
+        },
+        {
+          "id": "panel1_title",
+          "type": "string",
+          "format": "text",
+          "label": "عنوان اللوحة الأولى",
+          "value": "روتين الصباح"
+        },
+        {
+          "id": "panel1_body1",
+          "type": "string",
+          "format": "textarea",
+          "label": "نص اللوحة الأولى - الفقرة 1",
+          "rows": 3,
+          "value": "منظف لطيف يوقظ البشرة دون أن يجرّدها من زيوتها الطبيعية، يليه سيروم فيتامين C لإشراقة فورية وحماية من العوامل الخارجية طوال اليوم."
+        },
+        {
+          "id": "panel1_body2",
+          "type": "string",
+          "format": "textarea",
+          "label": "نص اللوحة الأولى - الفقرة 2",
+          "required": false,
+          "rows": 3,
+          "value": "ننهي الروتين بواقي شمس خفيف القوام SPF 50، يمتص خلال ثوانٍ ولا يترك أثراً أبيض تحت المكياج."
+        },
+        {
+          "id": "panel1_image",
+          "type": "string",
+          "format": "image",
+          "label": "صورة اللوحة الأولى",
+          "required": false,
+          "value": "/assets/skincare/product-white-spray-bottle.jpg"
+        },
+        {
+          "id": "panel2_title",
+          "type": "string",
+          "format": "text",
+          "label": "عنوان اللوحة الثانية",
+          "value": "روتين المساء"
+        },
+        {
+          "id": "panel2_body1",
+          "type": "string",
+          "format": "textarea",
+          "label": "نص اللوحة الثانية - الفقرة 1",
+          "rows": 3,
+          "value": "تنظيف عميق يزيل بقايا المكياج والشوائب، ثم سيروم حمض الهيالورونيك لترطيب مكثّف يعمل أثناء ساعات النوم."
+        },
+        {
+          "id": "panel2_body2",
+          "type": "string",
+          "format": "textarea",
+          "label": "نص اللوحة الثانية - الفقرة 2",
+          "required": false,
+          "rows": 3,
+          "value": "كريم ليلي غني يُغلق الروتين، ليستيقظ بشرتك في الصباح أكثر نعومة وامتلاءً."
+        },
+        {
+          "id": "panel2_image",
+          "type": "string",
+          "format": "image",
+          "label": "صورة اللوحة الثانية",
+          "required": false,
+          "value": "/assets/skincare/product-black-dropper-jar-duo.jpg"
+        },
+        {
+          "id": "panel2_button_label",
+          "type": "string",
+          "format": "text",
+          "label": "نص زر اللوحة الثانية",
+          "value": "اطلب باقتك الآن"
+        },
+        {
+          "id": "panel2_button_link",
+          "type": "string",
+          "format": "text",
+          "label": "رابط زر اللوحة الثانية",
+          "value": "#st-offers"
+        },
+        {
+          "id": "viewer_images",
+          "type": "collection",
+          "format": "collection",
+          "label": "صور العارض الدوار",
+          "item_label": "صورة",
+          "minLength": 1,
+          "maxLength": 6,
+          "fields": [
+            {
+              "id": "image",
+              "type": "string",
+              "format": "image",
+              "label": "الصورة",
+              "required": true
+            },
+            {
+              "id": "label",
+              "type": "string",
+              "format": "text",
+              "label": "التسمية",
+              "maxLength": 50
+            }
+          ],
+          "value": [
+            {
+              "image": "/assets/skincare/product-amber-dropper-pedestal.jpg",
+              "label": "سيروم الفيتامين C"
+            },
+            {
+              "image": "/assets/skincare/product-glass-dropper-silver.jpg",
+              "label": "سيروم الهيالورونيك"
+            },
+            {
+              "image": "/assets/skincare/product-black-bottle-blank-label.jpg",
+              "label": "المنظف اللطيف"
+            },
+            {
+              "image": "/assets/skincare/product-tube-wet-glass.jpg",
+              "label": "كريم الترطيب"
+            },
+            {
+              "image": "/assets/skincare/product-white-bottle-mockup.jpg",
+              "label": "واقي الشمس"
+            }
+          ]
+        },
+        {
+          "id": "viewer_bg_text",
+          "type": "string",
+          "format": "text",
+          "label": "نص خلفية العارض",
+          "value": "استعرض منتجات الباقة"
+        }
+      ]
+    },
+    {
+      "title": "معرض صور المنتج",
+      "icon": "sicon-album-photo",
+      "name": "st-product-images",
+      "key": "5e6f7a8b-9c0d-1e2f-3a4b-5c6d7e8f9a0b",
+      "image": "https://cdn.salla.sa/qAyGK/products/VHHeqb0ZwsRHPvGMrozI3zBprGX9dBkWagvPwrmB.jpg",
+      "fields": [
+        {
+          "id": "bg_color",
+          "type": "string",
+          "format": "color",
+          "label": "لون الخلفية",
+          "value": "#FFFFFF"
+        },
+        {
+          "id": "text_color",
+          "type": "string",
+          "format": "color",
+          "label": "لون النص",
+          "value": "#2A2320"
+        },
+        {
+          "id": "brand_color",
+          "type": "string",
+          "format": "color",
+          "label": "لون العلامة التجارية",
+          "value": "#AD6F52"
+        },
+        {
+          "id": "section_title",
+          "type": "string",
+          "format": "text",
+          "label": "عنوان القسم",
+          "value": "من روتين عملائنا"
+        },
+        {
+          "id": "grid_columns",
+          "type": "string",
+          "format": "text",
+          "label": "عدد الأعمدة (2 أو 3)",
+          "value": "3"
+        },
+        {
+          "id": "images",
+          "type": "collection",
+          "format": "collection",
+          "label": "الصور",
+          "item_label": "صورة",
+          "minLength": 1,
+          "maxLength": 6,
+          "fields": [
+            {
+              "id": "src",
+              "type": "string",
+              "format": "image",
+              "label": "الصورة",
+              "required": true
+            },
+            {
+              "id": "alt",
+              "type": "string",
+              "format": "text",
+              "label": "النص البديل للصورة",
+              "maxLength": 100
+            },
+            {
+              "id": "overlay_text",
+              "type": "string",
+              "format": "text",
+              "label": "نص التراكب",
+              "required": false,
+              "maxLength": 80
+            },
+            {
+              "id": "overlay_position",
+              "type": "string",
+              "format": "text",
+              "label": "موضع التراكب (top-left / top-right / bottom-left / bottom-right)",
+              "required": false,
+              "value": "bottom-right"
+            },
+            {
+              "id": "always_show",
+              "type": "boolean",
+              "format": "switch",
+              "label": "إظهار التراكب دائماً",
+              "value": false
+            },
+            {
+              "id": "show_overlay_bg",
+              "type": "boolean",
+              "format": "switch",
+              "label": "إظهار خلفية التراكب",
+              "value": true
+            }
+          ],
+          "value": [
+            {
+              "src": "/assets/skincare/styled-jar-dried-flowers.jpg",
+              "alt": "كريم ترطيب على منضدة رخامية",
+              "overlay_text": "روتين سارة الصباحي",
+              "overlay_position": "bottom-right",
+              "always_show": false,
+              "show_overlay_bg": true
+            },
+            {
+              "src": "/assets/skincare/texture-cream-duo-leaves.jpg",
+              "alt": "قوام كريمي طبيعي مع أوراق خضراء",
+              "overlay_text": "نتيجة بعد أسبوعين",
+              "overlay_position": "top-right",
+              "always_show": false,
+              "show_overlay_bg": true
+            },
+            {
+              "src": "/assets/skincare/product-jar-grey-fabric.jpg",
+              "alt": "برطمان عناية على قماش رمادي",
+              "overlay_text": "روتين مساء هادئ",
+              "overlay_position": "bottom-left",
+              "always_show": false,
+              "show_overlay_bg": true
+            },
+            {
+              "src": "/assets/skincare/flatlay-pink-set.jpg",
+              "alt": "تشكيلة منتجات عناية وردية",
+              "overlay_text": "باقة النضارة المفضّلة",
+              "overlay_position": "top-left",
+              "always_show": false,
+              "show_overlay_bg": true
+            },
+            {
+              "src": "/assets/skincare/product-dark-dropper-glow.jpg",
+              "alt": "سيروم داكن على سطح رخامي",
+              "overlay_text": "لمسة العناية الليلية",
+              "overlay_position": "bottom-right",
+              "always_show": false,
+              "show_overlay_bg": true
+            },
+            {
+              "src": "/assets/skincare/ingredient-leaf-droplet-02.jpg",
+              "alt": "قطرة ماء على ورقة خضراء",
+              "overlay_text": "مكوّنات نقية 100٪",
+              "overlay_position": "bottom-left",
+              "always_show": false,
+              "show_overlay_bg": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "المواصفات التقنية",
+      "icon": "sicon-layout-grid-rearrange",
+      "name": "st-specification",
+      "key": "7a8b9c0d-1e2f-3a4b-5c6d-7e8f9a0b1c2d",
+      "image": "https://cdn.salla.sa/qAyGK/products/zqKsr18rbGBz47ke4kpWDcrmLUAmuw7pfGltOk1w.jpg",
+      "fields": [
+        {
+          "id": "bg_color",
+          "type": "string",
+          "format": "color",
+          "label": "لون الخلفية",
+          "value": "#F7EFEA"
+        },
+        {
+          "id": "primary_color",
+          "type": "string",
+          "format": "color",
+          "label": "لون النص الأساسي",
+          "value": "#2A2320"
+        },
+        {
+          "id": "secondary_color",
+          "type": "string",
+          "format": "color",
+          "label": "لون النص الثانوي",
+          "value": "#7A6F67"
+        },
+        {
+          "id": "border_color",
+          "type": "string",
+          "format": "color",
+          "label": "لون الحدود",
+          "value": "#EAE0D8"
+        },
+        {
+          "id": "brand_color",
+          "type": "string",
+          "format": "color",
+          "label": "لون العلامة التجارية",
+          "value": "#AD6F52"
+        },
+        {
+          "id": "section_title",
+          "type": "string",
+          "format": "text",
+          "label": "عنوان القسم",
+          "value": "دليل الاستخدام والمكوّنات"
+        },
+        {
+          "id": "section_subtitle",
+          "type": "string",
+          "format": "textarea",
+          "label": "النص الفرعي",
+          "required": false,
+          "rows": 2,
+          "value": "خطوات بسيطة صباحاً ومساءً، بأوقات تطبيق دقيقة تضمن أفضل امتصاص لكل منتج."
+        },
+        {
+          "id": "rows",
+          "type": "collection",
+          "format": "collection",
+          "label": "صفوف الجدول",
+          "item_label": "صف",
+          "minLength": 1,
+          "maxLength": 20,
+          "fields": [
+            {
+              "id": "header",
+              "type": "string",
+              "format": "text",
+              "label": "عنوان الصف",
+              "required": true
+            },
+            {
+              "id": "col1_title",
+              "type": "string",
+              "format": "text",
+              "label": "العمود 1 - التسمية",
+              "required": false
+            },
+            {
+              "id": "col1_value",
+              "type": "string",
+              "format": "text",
+              "label": "العمود 1 - القيمة",
+              "required": false
+            },
+            {
+              "id": "col2_title",
+              "type": "string",
+              "format": "text",
+              "label": "العمود 2 - التسمية",
+              "required": false
+            },
+            {
+              "id": "col2_value",
+              "type": "string",
+              "format": "text",
+              "label": "العمود 2 - القيمة",
+              "required": false
+            },
+            {
+              "id": "col3_title",
+              "type": "string",
+              "format": "text",
+              "label": "العمود 3 - التسمية",
+              "required": false
+            },
+            {
+              "id": "col3_value",
+              "type": "string",
+              "format": "text",
+              "label": "العمود 3 - القيمة",
+              "required": false
+            },
+            {
+              "id": "col4_title",
+              "type": "string",
+              "format": "text",
+              "label": "العمود 4 - التسمية",
+              "required": false
+            },
+            {
+              "id": "col4_value",
+              "type": "string",
+              "format": "text",
+              "label": "العمود 4 - القيمة",
+              "required": false
+            }
+          ],
+          "value": [
+            {
+              "header": "الخطوة 1 — التنظيف",
+              "col1_title": "المنتج",
+              "col1_value": "منظف الوجه اللطيف",
+              "col2_title": "المكوّن الرئيسي",
+              "col2_value": "شاي أخضر",
+              "col3_title": "التوقيت",
+              "col3_value": "صباحاً ومساءً",
+              "col4_title": "مدة الامتصاص",
+              "col4_value": "فوري"
+            },
+            {
+              "header": "الخطوة 2 — العلاج",
+              "col1_title": "المنتج",
+              "col1_value": "سيروم فيتامين C",
+              "col2_title": "المكوّن الرئيسي",
+              "col2_value": "فيتامين C 15٪",
+              "col3_title": "التوقيت",
+              "col3_value": "صباحاً",
+              "col4_title": "مدة الامتصاص",
+              "col4_value": "دقيقة واحدة"
+            },
+            {
+              "header": "الخطوة 3 — الترطيب المكثّف",
+              "col1_title": "المنتج",
+              "col1_value": "سيروم حمض الهيالورونيك",
+              "col2_title": "المكوّن الرئيسي",
+              "col2_value": "هيالورونيك منخفض الوزن",
+              "col3_title": "التوقيت",
+              "col3_value": "مساءً",
+              "col4_title": "مدة الامتصاص",
+              "col4_value": "دقيقتان"
+            },
+            {
+              "header": "الخطوة 4 — الإغلاق",
+              "col1_title": "المنتج",
+              "col1_value": "كريم الترطيب",
+              "col2_title": "المكوّن الرئيسي",
+              "col2_value": "زبدة شيا وسيراميد",
+              "col3_title": "التوقيت",
+              "col3_value": "صباحاً ومساءً",
+              "col4_title": "مدة الامتصاص",
+              "col4_value": "حتى الامتصاص الكامل"
+            },
+            {
+              "header": "الخطوة 5 — الحماية",
+              "col1_title": "المنتج",
+              "col1_value": "واقي الشمس SPF 50",
+              "col2_title": "المكوّن الرئيسي",
+              "col2_value": "مرشحات معدنية",
+              "col3_title": "التوقيت",
+              "col3_value": "صباحاً فقط",
+              "col4_title": "مدة الامتصاص",
+              "col4_value": "يُجدَّد كل 3 ساعات"
+            },
+            {
+              "header": "المكوّنات والعناية",
+              "col1_title": "خالٍ من",
+              "col1_value": "الكحول والعطور القاسية",
+              "col2_title": "الاختبار",
+              "col2_value": "مُختبر جلدياً",
+              "col3_title": "الملاءمة",
+              "col3_value": "جميع أنواع البشرة",
+              "col4_title": "الصلاحية",
+              "col4_value": "12 شهراً بعد الفتح"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "قسم العروض الخاصة",
+      "icon": "sicon-award-ribbon",
+      "name": "st-offers",
+      "key": "8b9c0d1e-2f3a-4b5c-6d7e-8f9a0b1c2d3e",
+      "image": "https://cdn.salla.sa/qAyGK/products/NjmylDTEgqGLFsmMsj1PI9S7DL2NTT9K4Z6xMlW7.jpg",
+      "fields": [
+        {
+          "id": "bg_color",
+          "type": "string",
+          "format": "color",
+          "label": "لون الخلفية",
+          "value": "#FFFFFF"
+        },
+        {
+          "id": "primary_color",
+          "type": "string",
+          "format": "color",
+          "label": "اللون الأساسي",
+          "value": "#2A2320"
+        },
+        {
+          "id": "brand_color",
+          "type": "string",
+          "format": "color",
+          "label": "لون العلامة التجارية",
+          "value": "#AD6F52"
+        },
+        {
+          "id": "secondary_color",
+          "type": "string",
+          "format": "color",
+          "label": "لون النص الثانوي",
+          "value": "#7A6F67"
+        },
+        {
+          "id": "green_color",
+          "type": "string",
+          "format": "color",
+          "label": "لون الشارة",
+          "value": "#1F8A5F"
+        },
+        {
+          "id": "red_color",
+          "type": "string",
+          "format": "color",
+          "label": "لون سعر الخصم",
+          "value": "#D64550"
+        },
+        {
+          "id": "section_title",
+          "type": "string",
+          "format": "text",
+          "label": "عنوان القسم",
+          "value": "اختر باقتك ووفّر أكثر"
+        },
+        {
+          "id": "section_subtitle",
+          "type": "string",
+          "format": "textarea",
+          "label": "النص الفرعي",
+          "required": false,
+          "rows": 2,
+          "value": "كل باقة مُجهّزة بعناية لتغطي روتين العناية كاملاً، وتشمل شحناً مجانياً واستبدالاً خلال 14 يوماً. العرض لفترة محدودة."
+        },
+        {
+          "id": "badge_label",
+          "type": "string",
+          "format": "text",
+          "label": "نص الشارة",
+          "required": false,
+          "value": "عرض لفترة محدودة"
+        },
+        {
+          "id": "badge_icon",
+          "type": "string",
+          "format": "icon",
+          "label": "أيقونة الشارة",
+          "required": false,
+          "value": "sicon-bolt"
+        },
+        {
+          "id": "cta_label",
+          "type": "string",
+          "format": "text",
+          "label": "نص زر الشراء",
+          "value": "اطلب الباقة الآن"
+        },
+        {
+          "id": "button_link",
+          "type": "string",
+          "format": "text",
+          "label": "رابط زر الشراء (رابط المنتج في المتجر)",
+          "value": "#"
+        },
+        {
+          "id": "currency",
+          "type": "string",
+          "format": "text",
+          "label": "رمز العملة",
+          "value": "ر.س"
+        },
+        {
+          "id": "variants",
+          "type": "collection",
+          "format": "collection",
+          "label": "الأنواع",
+          "item_label": "نوع",
+          "minLength": 1,
+          "maxLength": 3,
+          "fields": [
+            {
+              "id": "image",
+              "type": "string",
+              "format": "image",
+              "label": "صورة النوع",
+              "required": false
+            },
+            {
+              "id": "name",
+              "type": "string",
+              "format": "text",
+              "label": "اسم النوع",
+              "required": true,
+              "maxLength": 100
+            },
+            {
+              "id": "price",
+              "type": "number",
+              "format": "number",
+              "label": "السعر",
+              "required": true
+            },
+            {
+              "id": "regular_price",
+              "type": "number",
+              "format": "number",
+              "label": "السعر قبل الخصم",
+              "required": false
+            },
+            {
+              "id": "is_on_sale",
+              "type": "boolean",
+              "format": "switch",
+              "label": "هل يوجد خصم",
+              "value": true
+            },
+            {
+              "id": "is_out_of_stock",
+              "type": "boolean",
+              "format": "switch",
+              "label": "غير متوفر",
+              "value": false
+            }
+          ],
+          "value": [
+            {
+              "image": "/assets/skincare/product-white-bottle-mockup.jpg",
+              "name": "باقة الأساسيات",
+              "price": 149,
+              "regular_price": 219,
+              "is_on_sale": true,
+              "is_out_of_stock": false
+            },
+            {
+              "image": "/assets/skincare/bundle-set-mockup-02.jpg",
+              "name": "باقة الروتين الكامل",
+              "price": 219,
+              "regular_price": 329,
+              "is_on_sale": true,
+              "is_out_of_stock": false
+            },
+            {
+              "image": "/assets/skincare/product-box-jar-minimal.jpg",
+              "name": "باقة العناية الفاخرة",
+              "price": 299,
+              "regular_price": 460,
+              "is_on_sale": true,
+              "is_out_of_stock": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "تذييل الصفحة",
+      "icon": "sicon-layout-grid",
+      "name": "st-footer",
+      "key": "1e2f3a4b-5c6d-7e8f-9a0b-1c2d3e4f5a6b",
+      "image": "https://cdn.salla.sa/qAyGK/products/rq9Pbj2xeDhSpso0g3Z0hMsWB7gLug7Jr0CVdSLh.jpg",
+      "fields": [
+        {
+          "id": "bg_color",
+          "type": "string",
+          "format": "color",
+          "label": "لون الخلفية",
+          "value": "#211A16"
+        },
+        {
+          "id": "bottom_bg_color",
+          "type": "string",
+          "format": "color",
+          "label": "لون الشريط السفلي",
+          "value": "#FFFFFF"
+        },
+        {
+          "id": "text_color",
+          "type": "string",
+          "format": "color",
+          "label": "لون النص",
+          "value": "#FFFFFF"
+        },
+        {
+          "id": "brand_color",
+          "type": "string",
+          "format": "color",
+          "label": "لون العلامة التجارية",
+          "value": "#AD6F52"
+        },
+        {
+          "id": "newsletter_title",
+          "type": "string",
+          "format": "text",
+          "label": "عنوان النشرة البريدية",
+          "value": "لا تفوّت عروض العناية القادمة"
+        },
+        {
+          "id": "newsletter_subtitle",
+          "type": "string",
+          "format": "textarea",
+          "label": "النص الفرعي للنشرة البريدية",
+          "required": false,
+          "rows": 2,
+          "value": "اشترك لتصلك الباقات الجديدة أولاً بأول، وعروض حصرية على منتجات العناية، ونصائح روتين مبنية على نوع بشرتك. رسالة واحدة أسبوعياً بلا إزعاج."
+        },
+        {
+          "id": "newsletter_placeholder",
+          "type": "string",
+          "format": "text",
+          "label": "نص حقل البريد",
+          "value": "بريدك الإلكتروني"
+        },
+        {
+          "id": "newsletter_icon",
+          "type": "string",
+          "format": "icon",
+          "label": "أيقونة حقل البريد",
+          "required": false,
+          "value": "sicon-mail"
+        },
+        {
+          "id": "newsletter_button_label",
+          "type": "string",
+          "format": "text",
+          "label": "نص زر الاشتراك",
+          "value": "اشترك الآن"
+        },
+        {
+          "id": "newsletter_button_icon",
+          "type": "string",
+          "format": "icon",
+          "label": "أيقونة زر الاشتراك",
+          "required": false,
+          "value": "sicon-caret-left-double"
+        },
+        {
+          "id": "store_title",
+          "type": "string",
+          "format": "text",
+          "label": "اسم المتجر",
+          "value": "إشراق للعناية بالبشرة"
+        },
+        {
+          "id": "store_description",
+          "type": "string",
+          "format": "textarea",
+          "label": "وصف المتجر",
+          "rows": 3,
+          "value": "متجر سعودي متخصص في باقات العناية بالبشرة، نجمع منتجات مدروسة بمكوّنات فعّالة ومُختبرة في باقة واحدة موفّرة، بدل تشتّت البحث والتجربة. شحن سريع وسياسة استبدال مريحة لكل الباقات."
+        },
+        {
+          "id": "nav_columns",
+          "type": "collection",
+          "format": "collection",
+          "label": "أعمدة الروابط",
+          "item_label": "عمود",
+          "maxLength": 6,
+          "fields": [
+            {
+              "id": "header",
+              "type": "string",
+              "format": "text",
+              "label": "عنوان العمود",
+              "required": true
+            },
+            {
+              "id": "link1_label",
+              "type": "string",
+              "format": "text",
+              "label": "الرابط 1 - النص",
+              "required": false
+            },
+            {
+              "id": "link1_href",
+              "type": "string",
+              "format": "text",
+              "label": "الرابط 1 - الوجهة",
+              "required": false,
+              "value": "#"
+            },
+            {
+              "id": "link2_label",
+              "type": "string",
+              "format": "text",
+              "label": "الرابط 2 - النص",
+              "required": false
+            },
+            {
+              "id": "link2_href",
+              "type": "string",
+              "format": "text",
+              "label": "الرابط 2 - الوجهة",
+              "required": false,
+              "value": "#"
+            },
+            {
+              "id": "link3_label",
+              "type": "string",
+              "format": "text",
+              "label": "الرابط 3 - النص",
+              "required": false
+            },
+            {
+              "id": "link3_href",
+              "type": "string",
+              "format": "text",
+              "label": "الرابط 3 - الوجهة",
+              "required": false,
+              "value": "#"
+            }
+          ],
+          "value": [
+            {
+              "header": "تسوّق",
+              "link1_label": "باقات العناية",
+              "link1_href": "#st-offers",
+              "link2_label": "روتين الصباح والمساء",
+              "link2_href": "#st-demo",
+              "link3_label": "جميع المنتجات",
+              "link3_href": "#st-product-images"
+            },
+            {
+              "header": "المساعدة",
+              "link1_label": "دليل الاستخدام",
+              "link1_href": "#st-specification",
+              "link2_label": "سياسة الاستبدال والإرجاع",
+              "link2_href": "#",
+              "link3_label": "تتبع شحنتك",
+              "link3_href": "#"
+            },
+            {
+              "header": "تواصل معنا",
+              "link1_label": "8001111210",
+              "link1_href": "#",
+              "link2_label": "واتساب المتجر",
+              "link2_href": "#",
+              "link3_label": "sallathemes@gmail.com",
+              "link3_href": "#"
+            }
+          ]
+        },
+        {
+          "id": "meta1_image",
+          "type": "string",
+          "format": "image",
+          "label": "صورة شارة الثقة 1",
+          "required": false,
+          "value": "/assets/vat.jpeg"
+        },
+        {
+          "id": "meta1_title",
+          "type": "string",
+          "format": "text",
+          "label": "عنوان شارة الثقة 1",
+          "required": false,
+          "value": "546987552"
+        },
+        {
+          "id": "meta1_subtitle",
+          "type": "string",
+          "format": "text",
+          "label": "نص شارة الثقة 1",
+          "required": false,
+          "value": "سجل ضريبي"
+        },
+        {
+          "id": "meta1_link",
+          "type": "string",
+          "format": "url",
+          "label": "رابط شارة الثقة 1",
+          "required": false,
+          "value": ""
+        },
+        {
+          "id": "meta2_image",
+          "type": "string",
+          "format": "image",
+          "label": "صورة شارة الثقة 2",
+          "required": false,
+          "value": "/assets/sbc.png"
+        },
+        {
+          "id": "meta2_title",
+          "type": "string",
+          "format": "text",
+          "label": "عنوان شارة الثقة 2",
+          "required": false,
+          "value": "منصة الأعمال"
+        },
+        {
+          "id": "meta2_subtitle",
+          "type": "string",
+          "format": "text",
+          "label": "نص شارة الثقة 2",
+          "required": false,
+          "value": "موثق لدي"
+        },
+        {
+          "id": "meta2_link",
+          "type": "string",
+          "format": "url",
+          "label": "رابط شارة الثقة 2",
+          "required": false,
+          "value": "https://google.com"
+        },
+        {
+          "id": "copyright",
+          "type": "string",
+          "format": "text",
+          "label": "نص حقوق النشر",
+          "value": "صنع بإتقان على | {{year}} منصة سلة"
+        },
+        {
+          "id": "social1_icon",
+          "type": "string",
+          "format": "icon",
+          "label": "أيقونة التواصل 1",
+          "required": false,
+          "value": "sicon-facebook"
+        },
+        {
+          "id": "social1_link",
+          "type": "string",
+          "format": "url",
+          "label": "رابط التواصل 1",
+          "required": false,
+          "value": "#"
+        },
+        {
+          "id": "social2_icon",
+          "type": "string",
+          "format": "icon",
+          "label": "أيقونة التواصل 2",
+          "required": false,
+          "value": "sicon-facebook"
+        },
+        {
+          "id": "social2_link",
+          "type": "string",
+          "format": "url",
+          "label": "رابط التواصل 2",
+          "required": false,
+          "value": "#"
+        },
+        {
+          "id": "social3_icon",
+          "type": "string",
+          "format": "icon",
+          "label": "أيقونة التواصل 3",
+          "required": false,
+          "value": "sicon-facebook"
+        },
+        {
+          "id": "social3_link",
+          "type": "string",
+          "format": "url",
+          "label": "رابط التواصل 3",
+          "required": false,
+          "value": "#"
+        },
+        {
+          "id": "side_icons",
+          "type": "collection",
+          "format": "collection",
+          "label": "شعارات الدفع",
+          "item_label": "شعار",
+          "maxLength": 6,
+          "fields": [
+            {
+              "id": "image",
+              "type": "string",
+              "format": "image",
+              "label": "الصورة",
+              "required": true
+            },
+            {
+              "id": "link",
+              "type": "string",
+              "format": "text",
+              "label": "الرابط",
+              "required": false,
+              "value": "#"
+            }
+          ],
+          "value": [
+            {
+              "image": "/assets/bank-icon.png",
+              "link": "#"
+            },
+            {
+              "image": "/assets/bank-icon.png",
+              "link": "#"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

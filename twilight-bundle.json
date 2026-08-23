@@ -2008,7 +2008,7 @@
                     "id": "product_image",
                     "type": "string",
                     "format": "image",
-                    "label": "صورة المنتج",
+                    "label": "صورة المنتج (يُفضّل PNG بدون خلفية)",
                     "required": true,
                     "value": ""
                 },
@@ -2054,7 +2054,7 @@
                             "id": "image",
                             "type": "string",
                             "format": "image",
-                            "label": "صورة البطاقة",
+                            "label": "صورة البطاقة (يُفضّل PNG بدون خلفية)",
                             "required": true
                         },
                         {
@@ -2113,6 +2113,15 @@
             "thumbnail": "https://cdn.assets.salla.network/previews/uhvqocmjhqh7/assets/dff1eda1a39b6b7e133cc184e8f7d51f0154013dd73fac3b34d9e5d3f9ceca4b/templates-thumbs/home.jpg",
             "is_default": false,
             "public_preview_url": "https://salla.design/preview/s/uhvqocmjhqh7/home"
+        },
+        {
+            "id": "b36773f1-02e0-4260-a057-4c295f1704df",
+            "path": "templates.skincare",
+            "category_id": "665151403",
+            "primary_color": "#AD6F52",
+            "thumbnail": "templates-thumbs/skincare.jpg",
+            "is_default": false,
+            "public_preview_url": ""
         }
     ],
     "features": [
