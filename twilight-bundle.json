@@ -2113,15 +2113,6 @@
             "thumbnail": "templates-thumbs/skincare.jpg",
             "is_default": false,
             "public_preview_url": ""
-        },
-        {
-            "id": "60da85e5-58ce-4d12-a0c0-baec6ec62a34",
-            "path": "templates.home",
-            "category_id": "989286562",
-            "primary_color": "#B08D57",
-            "thumbnail": "https://cdn.assets.salla.network/previews/uhvqocmjhqh7/assets/5f79af167ad2ad2f5e61baead3e8c7fdb408e884c4f14afaf21655bc88faa3d5/templates-thumbs/home.jpg",
-            "is_default": false,
-            "public_preview_url": "https://salla.design/preview/s/uhvqocmjhqh7/home"
         }
     ],
     "features": [
