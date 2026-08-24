@@ -787,6 +787,166 @@
       ]
     },
     {
+      "title": "قسم نقاط الاهتمام بالمنتج",
+      "icon": "sicon-location",
+      "name": "st-hotspots",
+      "key": "aea1dd32-a271-48cc-a33a-5bb63d6a97b1",
+      "image": "https://cdn.salla.network/images/themes/default/placeholder.jpg",
+      "fields": [
+        {
+          "id": "bg_color",
+          "type": "string",
+          "format": "color",
+          "label": "لون الخلفية",
+          "value": "#F5F5F7"
+        },
+        {
+          "id": "primary_color",
+          "type": "string",
+          "format": "color",
+          "label": "اللون الأساسي",
+          "value": "#050505"
+        },
+        {
+          "id": "secondary_color",
+          "type": "string",
+          "format": "color",
+          "label": "لون النص الثانوي",
+          "value": "#6E6E73"
+        },
+        {
+          "id": "brand_color",
+          "type": "string",
+          "format": "color",
+          "label": "لون العلامة التجارية",
+          "value": "#0071E3"
+        },
+        {
+          "id": "card_bg_color",
+          "type": "string",
+          "format": "color",
+          "label": "خلفية البطاقة",
+          "value": "#ffffff"
+        },
+        {
+          "id": "section_title",
+          "type": "string",
+          "format": "text",
+          "label": "عنوان القسم",
+          "value": "استكشف تفاصيل التصميم"
+        },
+        {
+          "id": "section_subtitle",
+          "type": "string",
+          "format": "textarea",
+          "label": "النص الفرعي",
+          "rows": 2,
+          "required": false,
+          "value": "اضغط على المؤشرات لتتعرف على كل ميزة"
+        },
+        {
+          "id": "product_image",
+          "type": "string",
+          "format": "image",
+          "label": "صورة المنتج (يُفضّل PNG بدون خلفية)",
+          "required": true,
+          "value": "/assets/variant-white-product.png"
+        },
+        {
+          "id": "product_image_alt",
+          "type": "string",
+          "format": "text",
+          "label": "النص البديل للصورة",
+          "required": false,
+          "maxLength": 100,
+          "value": "سماعة أير بودز باللون الأبيض"
+        },
+        {
+          "id": "hotspots",
+          "type": "collection",
+          "format": "collection",
+          "label": "نقاط الاهتمام",
+          "item_label": "نقطة",
+          "minLength": 2,
+          "maxLength": 6,
+          "value": [
+            {
+              "x_percent": 38,
+              "y_percent": 22,
+              "image": "/assets/airpod.png",
+              "title": "تصميم مريح لساعات الاستماع",
+              "description": "هيكل مصقول بعناية يلائم شكل الأذن، خفيف الوزن حتى بعد ساعات طويلة من الاستخدام."
+            },
+            {
+              "x_percent": 60,
+              "y_percent": 42,
+              "image": "/assets/airpod-right.png",
+              "title": "ميكروفون عالي الوضوح",
+              "description": "شبكة ميكروفون دقيقة تلتقط صوتك بنقاء أثناء المكالمات، حتى في الأماكن المزدحمة."
+            },
+            {
+              "x_percent": 42,
+              "y_percent": 66,
+              "image": "/assets/airpod-side.png",
+              "title": "عزل ضوضاء نشط مضاعف",
+              "description": "تقنية عزل مزدوجة تُبعد ضوضاء المحيط وتُبقيك داخل عالمك الصوتي الخاص."
+            },
+            {
+              "x_percent": 58,
+              "y_percent": 90,
+              "image": "/assets/variant-black-product.png",
+              "title": "ألوان تناسب أسلوبك",
+              "description": "متوفرة بتشكيلة ألوان أنيقة لتختار ما يعبّر عن ذوقك."
+            }
+          ],
+          "fields": [
+            {
+              "id": "x_percent",
+              "type": "number",
+              "format": "slider",
+              "label": "الموضع الأفقي (%)",
+              "minimum": 0,
+              "maximum": 100,
+              "step": 1,
+              "value": 50
+            },
+            {
+              "id": "y_percent",
+              "type": "number",
+              "format": "slider",
+              "label": "الموضع الرأسي (%)",
+              "minimum": 0,
+              "maximum": 100,
+              "step": 1,
+              "value": 50
+            },
+            {
+              "id": "image",
+              "type": "string",
+              "format": "image",
+              "label": "صورة البطاقة (يُفضّل PNG بدون خلفية)",
+              "required": true
+            },
+            {
+              "id": "title",
+              "type": "string",
+              "format": "text",
+              "label": "العنوان",
+              "required": true,
+              "maxLength": 100
+            },
+            {
+              "id": "description",
+              "type": "string",
+              "format": "textarea",
+              "label": "الوصف",
+              "maxLength": 300
+            }
+          ]
+        }
+      ]
+    },
+    {
       "title": "المواصفات التقنية",
       "icon": "sicon-layout-grid-rearrange",
       "name": "st-specification",

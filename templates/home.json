@@ -529,6 +529,166 @@
       ]
     },
     {
+      "title": "قسم نقاط الاهتمام بالمنتج",
+      "icon": "sicon-location",
+      "name": "st-hotspots",
+      "key": "aea1dd32-a271-48cc-a33a-5bb63d6a97b1",
+      "image": "https://cdn.salla.network/images/themes/default/placeholder.jpg",
+      "fields": [
+        {
+          "id": "bg_color",
+          "type": "string",
+          "format": "color",
+          "label": "لون الخلفية",
+          "value": "#FFFFFF"
+        },
+        {
+          "id": "primary_color",
+          "type": "string",
+          "format": "color",
+          "label": "اللون الأساسي",
+          "value": "#2B2620"
+        },
+        {
+          "id": "secondary_color",
+          "type": "string",
+          "format": "color",
+          "label": "لون النص الثانوي",
+          "value": "#6B6259"
+        },
+        {
+          "id": "brand_color",
+          "type": "string",
+          "format": "color",
+          "label": "لون العلامة التجارية",
+          "value": "#B08D57"
+        },
+        {
+          "id": "card_bg_color",
+          "type": "string",
+          "format": "color",
+          "label": "خلفية البطاقة",
+          "value": "#FFFFFF"
+        },
+        {
+          "id": "section_title",
+          "type": "string",
+          "format": "text",
+          "label": "عنوان القسم",
+          "value": "استكشف أقسام المنزل"
+        },
+        {
+          "id": "section_subtitle",
+          "type": "string",
+          "format": "textarea",
+          "label": "النص الفرعي",
+          "rows": 2,
+          "required": false,
+          "value": "اضغط على المؤشرات لتتعرف على كل قسم"
+        },
+        {
+          "id": "product_image",
+          "type": "string",
+          "format": "image",
+          "label": "صورة المنتج (يُفضّل PNG بدون خلفية)",
+          "required": true,
+          "value": "https://images.unsplash.com/photo-1610701596007-11502861dcfa?w=700&q=80&auto=format&fit=crop"
+        },
+        {
+          "id": "product_image_alt",
+          "type": "string",
+          "format": "text",
+          "label": "النص البديل للصورة",
+          "required": false,
+          "maxLength": 100,
+          "value": "قطع سيراميك وفخار منزلية"
+        },
+        {
+          "id": "hotspots",
+          "type": "collection",
+          "format": "collection",
+          "label": "نقاط الاهتمام",
+          "item_label": "نقطة",
+          "minLength": 2,
+          "maxLength": 6,
+          "value": [
+            {
+              "x_percent": 50,
+              "y_percent": 20,
+              "image": "https://images.unsplash.com/photo-1571175443880-49e1d25b2bc5?w=1000&q=80&auto=format&fit=crop",
+              "title": "أدوات المطبخ",
+              "description": "أواني طهي متعددة الاستخدامات مصنوعة لتدوم، تجمع بين الأداء العملي والمظهر الأنيق."
+            },
+            {
+              "x_percent": 72,
+              "y_percent": 42,
+              "image": "https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?w=900&q=80&auto=format&fit=crop",
+              "title": "السيراميك والفخار",
+              "description": "قطع مصنوعة يدوياً بلمسة فنية تضيف دفئاً إلى طاولتك وركن العرض لديك."
+            },
+            {
+              "x_percent": 32,
+              "y_percent": 66,
+              "image": "https://images.unsplash.com/photo-1600166898405-da9535204843?w=700&q=80&auto=format&fit=crop",
+              "title": "المفروشات والسجاد",
+              "description": "أقمشة ناعمة وسجاد يضفي دفئاً على كل ركن، باختيارات تناسب كل مساحة."
+            },
+            {
+              "x_percent": 58,
+              "y_percent": 88,
+              "image": "https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?w=700&q=80&auto=format&fit=crop",
+              "title": "الأثاث والديكور",
+              "description": "قطع ديكور وأثاث مختارة بعناية لتمنح منزلك طابعاً مميزاً يعكس ذوقك."
+            }
+          ],
+          "fields": [
+            {
+              "id": "x_percent",
+              "type": "number",
+              "format": "slider",
+              "label": "الموضع الأفقي (%)",
+              "minimum": 0,
+              "maximum": 100,
+              "step": 1,
+              "value": 50
+            },
+            {
+              "id": "y_percent",
+              "type": "number",
+              "format": "slider",
+              "label": "الموضع الرأسي (%)",
+              "minimum": 0,
+              "maximum": 100,
+              "step": 1,
+              "value": 50
+            },
+            {
+              "id": "image",
+              "type": "string",
+              "format": "image",
+              "label": "صورة البطاقة (يُفضّل PNG بدون خلفية)",
+              "required": true
+            },
+            {
+              "id": "title",
+              "type": "string",
+              "format": "text",
+              "label": "العنوان",
+              "required": true,
+              "maxLength": 100
+            },
+            {
+              "id": "description",
+              "type": "string",
+              "format": "textarea",
+              "label": "الوصف",
+              "maxLength": 300
+            }
+          ]
+        }
+      ]
+    },
+    {
       "title": "قسم العرض التفاعلي",
       "icon": "sicon-image-carousel",
       "name": "st-demo",

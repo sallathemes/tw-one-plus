@@ -282,6 +282,166 @@
       ]
     },
     {
+      "title": "قسم نقاط الاهتمام بالمنتج",
+      "icon": "sicon-location",
+      "name": "st-hotspots",
+      "key": "aea1dd32-a271-48cc-a33a-5bb63d6a97b1",
+      "image": "https://cdn.salla.network/images/themes/default/placeholder.jpg",
+      "fields": [
+        {
+          "id": "bg_color",
+          "type": "string",
+          "format": "color",
+          "label": "لون الخلفية",
+          "value": "#ffffff"
+        },
+        {
+          "id": "primary_color",
+          "type": "string",
+          "format": "color",
+          "label": "اللون الأساسي",
+          "value": "#1A1613"
+        },
+        {
+          "id": "secondary_color",
+          "type": "string",
+          "format": "color",
+          "label": "لون النص الثانوي",
+          "value": "#6B6259"
+        },
+        {
+          "id": "brand_color",
+          "type": "string",
+          "format": "color",
+          "label": "لون العلامة التجارية",
+          "value": "#B4643C"
+        },
+        {
+          "id": "card_bg_color",
+          "type": "string",
+          "format": "color",
+          "label": "خلفية البطاقة",
+          "value": "#ffffff"
+        },
+        {
+          "id": "section_title",
+          "type": "string",
+          "format": "text",
+          "label": "عنوان القسم",
+          "value": "تفاصيل تصنع الفرق"
+        },
+        {
+          "id": "section_subtitle",
+          "type": "string",
+          "format": "textarea",
+          "label": "النص الفرعي",
+          "rows": 2,
+          "required": false,
+          "value": "اضغط على المؤشرات لتتعرف على كل تفصيلة"
+        },
+        {
+          "id": "product_image",
+          "type": "string",
+          "format": "image",
+          "label": "صورة المنتج (يُفضّل PNG بدون خلفية)",
+          "required": true,
+          "value": "/assets/clothes/tee-black-product.jpg"
+        },
+        {
+          "id": "product_image_alt",
+          "type": "string",
+          "format": "text",
+          "label": "النص البديل للصورة",
+          "required": false,
+          "maxLength": 100,
+          "value": "تيشيرت أسود قطني معلّق"
+        },
+        {
+          "id": "hotspots",
+          "type": "collection",
+          "format": "collection",
+          "label": "نقاط الاهتمام",
+          "item_label": "نقطة",
+          "minLength": 2,
+          "maxLength": 6,
+          "value": [
+            {
+              "x_percent": 50,
+              "y_percent": 12,
+              "image": "/assets/clothes/tee-black-product.jpg",
+              "title": "طوق يحافظ على شكله",
+              "description": "قطن مُمشّط بوزن 240 غرام يمنح الطوق ثباتاً لا يترهّل مهما تكررت الغسلات."
+            },
+            {
+              "x_percent": 66,
+              "y_percent": 36,
+              "image": "/assets/clothes/sweatshirt-white-product.jpg",
+              "title": "مغسول مسبقاً لثبات المقاس",
+              "description": "كل قطعة مغسولة مسبقاً في المصنع حتى لا تنكمش بعد أول غسلة في المنزل."
+            },
+            {
+              "x_percent": 50,
+              "y_percent": 60,
+              "image": "/assets/clothes/shirt-chambray-product.jpg",
+              "title": "قصّة مستقيمة مريحة",
+              "description": "تريح الكتف ولا تشدّ عند الخصر، وحياكة مزدوجة عند الأطراف تحفظ شكل القطعة موسماً بعد موسم."
+            },
+            {
+              "x_percent": 50,
+              "y_percent": 90,
+              "image": "/assets/clothes/rack-colorful.jpg",
+              "title": "خمسة ألوان ثابتة",
+              "description": "تشكيلة ألوان لا تبهت مع الغسيل، ومقاسات من S إلى 3XL تناسب الجميع."
+            }
+          ],
+          "fields": [
+            {
+              "id": "x_percent",
+              "type": "number",
+              "format": "slider",
+              "label": "الموضع الأفقي (%)",
+              "minimum": 0,
+              "maximum": 100,
+              "step": 1,
+              "value": 50
+            },
+            {
+              "id": "y_percent",
+              "type": "number",
+              "format": "slider",
+              "label": "الموضع الرأسي (%)",
+              "minimum": 0,
+              "maximum": 100,
+              "step": 1,
+              "value": 50
+            },
+            {
+              "id": "image",
+              "type": "string",
+              "format": "image",
+              "label": "صورة البطاقة (يُفضّل PNG بدون خلفية)",
+              "required": true
+            },
+            {
+              "id": "title",
+              "type": "string",
+              "format": "text",
+              "label": "العنوان",
+              "required": true,
+              "maxLength": 100
+            },
+            {
+              "id": "description",
+              "type": "string",
+              "format": "textarea",
+              "label": "الوصف",
+              "maxLength": 300
+            }
+          ]
+        }
+      ]
+    },
+    {
       "title": "معرض الصور المتحرك",
       "icon": "sicon-images",
       "name": "st-images-slider",

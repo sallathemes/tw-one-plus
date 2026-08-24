@@ -410,6 +410,166 @@
       ]
     },
     {
+      "title": "قسم نقاط الاهتمام بالمنتج",
+      "icon": "sicon-location",
+      "name": "st-hotspots",
+      "key": "aea1dd32-a271-48cc-a33a-5bb63d6a97b1",
+      "image": "https://cdn.salla.network/images/themes/default/placeholder.jpg",
+      "fields": [
+        {
+          "id": "bg_color",
+          "type": "string",
+          "format": "color",
+          "label": "لون الخلفية",
+          "value": "#F7F5EF"
+        },
+        {
+          "id": "primary_color",
+          "type": "string",
+          "format": "color",
+          "label": "اللون الأساسي",
+          "value": "#1B271F"
+        },
+        {
+          "id": "secondary_color",
+          "type": "string",
+          "format": "color",
+          "label": "لون النص الثانوي",
+          "value": "#5C6B5E"
+        },
+        {
+          "id": "brand_color",
+          "type": "string",
+          "format": "color",
+          "label": "لون العلامة التجارية",
+          "value": "#B08A3E"
+        },
+        {
+          "id": "card_bg_color",
+          "type": "string",
+          "format": "color",
+          "label": "خلفية البطاقة",
+          "value": "#ffffff"
+        },
+        {
+          "id": "section_title",
+          "type": "string",
+          "format": "text",
+          "label": "عنوان القسم",
+          "value": "استكشف مميزات الشمعة"
+        },
+        {
+          "id": "section_subtitle",
+          "type": "string",
+          "format": "textarea",
+          "label": "النص الفرعي",
+          "rows": 2,
+          "required": false,
+          "value": "اضغط على المؤشرات لتتعرف على كل تفصيلة"
+        },
+        {
+          "id": "product_image",
+          "type": "string",
+          "format": "image",
+          "label": "صورة المنتج (يُفضّل PNG بدون خلفية)",
+          "required": true,
+          "value": "/assets/candles/candle-jar-2.jpg"
+        },
+        {
+          "id": "product_image_alt",
+          "type": "string",
+          "format": "text",
+          "label": "النص البديل للصورة",
+          "required": false,
+          "maxLength": 100,
+          "value": "شمعة العود الملكي في وعاء زجاجي"
+        },
+        {
+          "id": "hotspots",
+          "type": "collection",
+          "format": "collection",
+          "label": "نقاط الاهتمام",
+          "item_label": "نقطة",
+          "minLength": 2,
+          "maxLength": 6,
+          "value": [
+            {
+              "x_percent": 50,
+              "y_percent": 16,
+              "image": "/assets/candles/flame-macro.jpg",
+              "title": "فتيل خشبي نقي",
+              "description": "يصدر طقطقة هادئة عند الاشتعال، ويمنح إضاءة دافئة ومستقرة طوال فترة الاحتراق."
+            },
+            {
+              "x_percent": 76,
+              "y_percent": 42,
+              "image": "/assets/candles/glass-holder-white.jpg",
+              "title": "زجاج مقاوم للحرارة",
+              "description": "وعاء زجاجي سميك يتحمّل الحرارة العالية ويحافظ على شكله ولمعانه بعد كل استخدام."
+            },
+            {
+              "x_percent": 50,
+              "y_percent": 66,
+              "image": "/assets/candles/white-candle-glass.jpg",
+              "title": "شمع طبيعي 100%",
+              "description": "مزيج من شمع الصويا وزيوت عطرية أصلية، يحترق بالتساوي دون سواد أو دخان."
+            },
+            {
+              "x_percent": 50,
+              "y_percent": 90,
+              "image": "/assets/candles/candle-jar-2.jpg",
+              "title": "قاعدة ثابتة وآمنة",
+              "description": "تصميم بقاعدة عريضة يمنع الانزلاق ويضمن ثباتاً كاملاً أثناء الاستخدام."
+            }
+          ],
+          "fields": [
+            {
+              "id": "x_percent",
+              "type": "number",
+              "format": "slider",
+              "label": "الموضع الأفقي (%)",
+              "minimum": 0,
+              "maximum": 100,
+              "step": 1,
+              "value": 50
+            },
+            {
+              "id": "y_percent",
+              "type": "number",
+              "format": "slider",
+              "label": "الموضع الرأسي (%)",
+              "minimum": 0,
+              "maximum": 100,
+              "step": 1,
+              "value": 50
+            },
+            {
+              "id": "image",
+              "type": "string",
+              "format": "image",
+              "label": "صورة البطاقة (يُفضّل PNG بدون خلفية)",
+              "required": true
+            },
+            {
+              "id": "title",
+              "type": "string",
+              "format": "text",
+              "label": "العنوان",
+              "required": true,
+              "maxLength": 100
+            },
+            {
+              "id": "description",
+              "type": "string",
+              "format": "textarea",
+              "label": "الوصف",
+              "maxLength": 300
+            }
+          ]
+        }
+      ]
+    },
+    {
       "title": "قسم تفصيل الميزة",
       "icon": "sicon-star",
       "name": "st-feature",
@@ -1904,166 +2064,6 @@
               "label": "الرابط",
               "value": "#",
               "required": false
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "title": "قسم نقاط الاهتمام بالمنتج",
-      "icon": "sicon-location",
-      "name": "st-hotspots",
-      "key": "aea1dd32-a271-48cc-a33a-5bb63d6a97b1",
-      "image": "https://cdn.salla.network/images/themes/default/placeholder.jpg",
-      "fields": [
-        {
-          "id": "bg_color",
-          "type": "string",
-          "format": "color",
-          "label": "لون الخلفية",
-          "value": "#F7F5EF"
-        },
-        {
-          "id": "primary_color",
-          "type": "string",
-          "format": "color",
-          "label": "اللون الأساسي",
-          "value": "#1B271F"
-        },
-        {
-          "id": "secondary_color",
-          "type": "string",
-          "format": "color",
-          "label": "لون النص الثانوي",
-          "value": "#5C6B5E"
-        },
-        {
-          "id": "brand_color",
-          "type": "string",
-          "format": "color",
-          "label": "لون العلامة التجارية",
-          "value": "#B08A3E"
-        },
-        {
-          "id": "card_bg_color",
-          "type": "string",
-          "format": "color",
-          "label": "خلفية البطاقة",
-          "value": "#ffffff"
-        },
-        {
-          "id": "section_title",
-          "type": "string",
-          "format": "text",
-          "label": "عنوان القسم",
-          "value": "استكشف مميزات الشمعة"
-        },
-        {
-          "id": "section_subtitle",
-          "type": "string",
-          "format": "textarea",
-          "label": "النص الفرعي",
-          "rows": 2,
-          "required": false,
-          "value": "اضغط على المؤشرات لتتعرف على كل تفصيلة"
-        },
-        {
-          "id": "product_image",
-          "type": "string",
-          "format": "image",
-          "label": "صورة المنتج",
-          "required": true,
-          "value": "/assets/candles/candle-jar-2.jpg"
-        },
-        {
-          "id": "product_image_alt",
-          "type": "string",
-          "format": "text",
-          "label": "النص البديل للصورة",
-          "required": false,
-          "maxLength": 100,
-          "value": "شمعة العود الملكي في وعاء زجاجي"
-        },
-        {
-          "id": "hotspots",
-          "type": "collection",
-          "format": "collection",
-          "label": "نقاط الاهتمام",
-          "item_label": "نقطة",
-          "minLength": 2,
-          "maxLength": 6,
-          "value": [
-            {
-              "x_percent": 50,
-              "y_percent": 16,
-              "image": "/assets/candles/flame-macro.jpg",
-              "title": "فتيل خشبي نقي",
-              "description": "يصدر طقطقة هادئة عند الاشتعال، ويمنح إضاءة دافئة ومستقرة طوال فترة الاحتراق."
-            },
-            {
-              "x_percent": 76,
-              "y_percent": 42,
-              "image": "/assets/candles/glass-holder-white.jpg",
-              "title": "زجاج مقاوم للحرارة",
-              "description": "وعاء زجاجي سميك يتحمّل الحرارة العالية ويحافظ على شكله ولمعانه بعد كل استخدام."
-            },
-            {
-              "x_percent": 50,
-              "y_percent": 66,
-              "image": "/assets/candles/white-candle-glass.jpg",
-              "title": "شمع طبيعي 100%",
-              "description": "مزيج من شمع الصويا وزيوت عطرية أصلية، يحترق بالتساوي دون سواد أو دخان."
-            },
-            {
-              "x_percent": 50,
-              "y_percent": 90,
-              "image": "/assets/candles/candle-jar-2.jpg",
-              "title": "قاعدة ثابتة وآمنة",
-              "description": "تصميم بقاعدة عريضة يمنع الانزلاق ويضمن ثباتاً كاملاً أثناء الاستخدام."
-            }
-          ],
-          "fields": [
-            {
-              "id": "x_percent",
-              "type": "number",
-              "format": "slider",
-              "label": "الموضع الأفقي (%)",
-              "minimum": 0,
-              "maximum": 100,
-              "step": 1,
-              "value": 50
-            },
-            {
-              "id": "y_percent",
-              "type": "number",
-              "format": "slider",
-              "label": "الموضع الرأسي (%)",
-              "minimum": 0,
-              "maximum": 100,
-              "step": 1,
-              "value": 50
-            },
-            {
-              "id": "image",
-              "type": "string",
-              "format": "image",
-              "label": "صورة البطاقة",
-              "required": true
-            },
-            {
-              "id": "title",
-              "type": "string",
-              "format": "text",
-              "label": "العنوان",
-              "required": true,
-              "maxLength": 100
-            },
-            {
-              "id": "description",
-              "type": "string",
-              "format": "textarea",
-              "label": "الوصف",
-              "maxLength": 300
             }
           ]
         }

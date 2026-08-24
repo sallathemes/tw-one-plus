@@ -169,8 +169,12 @@ export default class StHotspots extends LitElement {
       .st-hotspots__card-img {
         width: 100%;
         height: 220px;
-        object-fit: cover;
+        object-fit: contain;
+        object-position: center;
+        background: rgba(0, 0, 0, 0.03);
         border-radius: 0.85rem;
+        padding: 0.75rem;
+        box-sizing: border-box;
         display: block;
         margin: 0 0 1.25rem;
       }
