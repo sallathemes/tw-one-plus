@@ -2075,6 +2075,133 @@
                     ]
                 }
             ]
+        },
+        {
+            "title": "قسم العرض الدوّار ثلاثي الأبعاد",
+            "icon": "sicon-image-carousel",
+            "name": "st-coverflow",
+            "key": "60d77f90-5596-44ca-ad19-b035eaee2446",
+            "image": "https://cdn.salla.network/images/themes/default/placeholder.jpg",
+            "fields": [
+                {
+                    "id": "bg_color",
+                    "type": "string",
+                    "format": "color",
+                    "label": "لون الخلفية",
+                    "value": "#0c0a09"
+                },
+                {
+                    "id": "text_color",
+                    "type": "string",
+                    "format": "color",
+                    "label": "لون النص",
+                    "value": "#ffffff"
+                },
+                {
+                    "id": "secondary_color",
+                    "type": "string",
+                    "format": "color",
+                    "label": "لون النص الثانوي",
+                    "value": "rgba(255,255,255,0.85)"
+                },
+                {
+                    "id": "brand_color",
+                    "type": "string",
+                    "format": "color",
+                    "label": "لون العلامة التجارية",
+                    "value": "#c5a880"
+                },
+                {
+                    "id": "section_label",
+                    "type": "string",
+                    "format": "text",
+                    "label": "نص العنوان الصغير (Eyebrow)",
+                    "required": false,
+                    "value": "الأكثر مبيعاً"
+                },
+                {
+                    "id": "autoplay",
+                    "type": "boolean",
+                    "format": "switch",
+                    "label": "تشغيل تلقائي",
+                    "value": true
+                },
+                {
+                    "id": "autoplay_delay",
+                    "type": "number",
+                    "format": "number",
+                    "label": "مدة التشغيل التلقائي (بالميلي ثانية)",
+                    "required": false,
+                    "value": 5000
+                },
+                {
+                    "id": "items",
+                    "type": "collection",
+                    "format": "collection",
+                    "label": "البطاقات",
+                    "item_label": "بطاقة",
+                    "minLength": 1,
+                    "maxLength": 10,
+                    "value": [],
+                    "fields": [
+                        {
+                            "id": "image",
+                            "type": "string",
+                            "format": "image",
+                            "label": "الصورة",
+                            "required": true
+                        },
+                        {
+                            "id": "tag",
+                            "type": "string",
+                            "format": "text",
+                            "label": "وسم صغير أعلى البطاقة",
+                            "required": false,
+                            "maxLength": 40
+                        },
+                        {
+                            "id": "title_line1",
+                            "type": "string",
+                            "format": "text",
+                            "label": "العنوان - السطر الأول",
+                            "required": true,
+                            "maxLength": 60
+                        },
+                        {
+                            "id": "title_line2",
+                            "type": "string",
+                            "format": "text",
+                            "label": "العنوان - السطر الثاني",
+                            "required": false,
+                            "maxLength": 60
+                        },
+                        {
+                            "id": "desc",
+                            "type": "string",
+                            "format": "textarea",
+                            "label": "الوصف",
+                            "required": false,
+                            "maxLength": 200
+                        },
+                        {
+                            "id": "cta_text",
+                            "type": "string",
+                            "format": "text",
+                            "label": "نص الزر",
+                            "required": false,
+                            "value": "عرض المزيد"
+                        },
+                        {
+                            "id": "cta_link",
+                            "type": "string",
+                            "format": "text",
+                            "label": "رابط الزر",
+                            "required": false,
+                            "value": "#"
+                        }
+                    ]
+                }
+            ]
         }
     ],
     "templates": [
