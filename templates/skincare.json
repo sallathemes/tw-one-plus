@@ -672,6 +672,179 @@
       ]
     },
     {
+      "title": "قسم العرض الدوّار ثلاثي الأبعاد",
+      "icon": "sicon-image-carousel",
+      "name": "st-coverflow",
+      "key": "60d77f90-5596-44ca-ad19-b035eaee2446",
+      "image": "https://cdn.salla.network/images/themes/default/placeholder.jpg",
+      "fields": [
+        {
+          "id": "bg_color",
+          "type": "string",
+          "format": "color",
+          "label": "لون الخلفية",
+          "value": "#14100D"
+        },
+        {
+          "id": "text_color",
+          "type": "string",
+          "format": "color",
+          "label": "لون النص",
+          "value": "#ffffff"
+        },
+        {
+          "id": "secondary_color",
+          "type": "string",
+          "format": "color",
+          "label": "لون النص الثانوي",
+          "value": "rgba(255,255,255,0.85)"
+        },
+        {
+          "id": "brand_color",
+          "type": "string",
+          "format": "color",
+          "label": "لون العلامة التجارية",
+          "value": "#D9B48F"
+        },
+        {
+          "id": "section_label",
+          "type": "string",
+          "format": "text",
+          "label": "نص العنوان الصغير (Eyebrow)",
+          "required": false,
+          "value": "الأكثر مبيعاً"
+        },
+        {
+          "id": "autoplay",
+          "type": "boolean",
+          "format": "switch",
+          "label": "تشغيل تلقائي",
+          "value": true
+        },
+        {
+          "id": "autoplay_delay",
+          "type": "number",
+          "format": "number",
+          "label": "مدة التشغيل التلقائي (بالميلي ثانية)",
+          "required": false,
+          "value": 5000
+        },
+        {
+          "id": "items",
+          "type": "collection",
+          "format": "collection",
+          "label": "البطاقات",
+          "item_label": "بطاقة",
+          "minLength": 1,
+          "maxLength": 10,
+          "value": [
+            {
+              "image": "/assets/skincare/bundle-set-mockup-02.jpg",
+              "tag": "#الأكثر_مبيعاً",
+              "title_line1": "باقة",
+              "title_line2": "الترطيب المكثّف",
+              "desc": "خمس خطوات مدروسة تعيد لبشرتك توازنها خلال أسبوعين.",
+              "cta_text": "تسوّق الباقة",
+              "cta_link": "#st-offers"
+            },
+            {
+              "image": "/assets/skincare/product-amber-dropper-pedestal.jpg",
+              "tag": "#الأعلى_تقييماً",
+              "title_line1": "سيروم",
+              "title_line2": "فيتامين C",
+              "desc": "إشراقة فورية وحماية من العوامل الخارجية طوال اليوم.",
+              "cta_text": "تسوّق الباقة",
+              "cta_link": "#st-offers"
+            },
+            {
+              "image": "/assets/skincare/flatlay-rosegold-set.jpg",
+              "tag": "#مفضّل_العملاء",
+              "title_line1": "باقة",
+              "title_line2": "النضارة والإشراقة",
+              "desc": "تركيبة متكاملة لبشرة مشرقة وملمس ناعم من أول استخدام.",
+              "cta_text": "تسوّق الباقة",
+              "cta_link": "#st-offers"
+            },
+            {
+              "image": "/assets/skincare/product-glass-dropper-silver.jpg",
+              "tag": "#جديد",
+              "title_line1": "سيروم",
+              "title_line2": "حمض الهيالورونيك",
+              "desc": "ترطيب متعدد الطبقات يدوم حتى 48 ساعة.",
+              "cta_text": "تسوّق الباقة",
+              "cta_link": "#st-offers"
+            },
+            {
+              "image": "/assets/skincare/bundle-set-mockup-01.jpg",
+              "tag": "#للعناية_الليلية",
+              "title_line1": "باقة",
+              "title_line2": "العناية الفاخرة",
+              "desc": "روتين مسائي كامل بمكوّنات فعّالة ومُختبرة جلدياً.",
+              "cta_text": "تسوّق الباقة",
+              "cta_link": "#st-offers"
+            }
+          ],
+          "fields": [
+            {
+              "id": "image",
+              "type": "string",
+              "format": "image",
+              "label": "الصورة",
+              "required": true
+            },
+            {
+              "id": "tag",
+              "type": "string",
+              "format": "text",
+              "label": "وسم صغير أعلى البطاقة",
+              "required": false,
+              "maxLength": 40
+            },
+            {
+              "id": "title_line1",
+              "type": "string",
+              "format": "text",
+              "label": "العنوان - السطر الأول",
+              "required": true,
+              "maxLength": 60
+            },
+            {
+              "id": "title_line2",
+              "type": "string",
+              "format": "text",
+              "label": "العنوان - السطر الثاني",
+              "required": false,
+              "maxLength": 60
+            },
+            {
+              "id": "desc",
+              "type": "string",
+              "format": "textarea",
+              "label": "الوصف",
+              "required": false,
+              "maxLength": 200
+            },
+            {
+              "id": "cta_text",
+              "type": "string",
+              "format": "text",
+              "label": "نص الزر",
+              "required": false,
+              "value": "عرض المزيد"
+            },
+            {
+              "id": "cta_link",
+              "type": "string",
+              "format": "text",
+              "label": "رابط الزر",
+              "required": false,
+              "value": "#"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "title": "قسم تفصيل الميزة",
       "icon": "sicon-star",
       "name": "st-feature",
@@ -881,179 +1054,6 @@
               "side_image": "/assets/skincare/texture-serum-gel-swirl.jpg",
               "color_hex": "#A8B79A",
               "color_title": "باقة مكافحة علامات التقدّم بالعمر"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "title": "قسم العرض الدوّار ثلاثي الأبعاد",
-      "icon": "sicon-image-carousel",
-      "name": "st-coverflow",
-      "key": "60d77f90-5596-44ca-ad19-b035eaee2446",
-      "image": "https://cdn.salla.network/images/themes/default/placeholder.jpg",
-      "fields": [
-        {
-          "id": "bg_color",
-          "type": "string",
-          "format": "color",
-          "label": "لون الخلفية",
-          "value": "#14100D"
-        },
-        {
-          "id": "text_color",
-          "type": "string",
-          "format": "color",
-          "label": "لون النص",
-          "value": "#ffffff"
-        },
-        {
-          "id": "secondary_color",
-          "type": "string",
-          "format": "color",
-          "label": "لون النص الثانوي",
-          "value": "rgba(255,255,255,0.85)"
-        },
-        {
-          "id": "brand_color",
-          "type": "string",
-          "format": "color",
-          "label": "لون العلامة التجارية",
-          "value": "#D9B48F"
-        },
-        {
-          "id": "section_label",
-          "type": "string",
-          "format": "text",
-          "label": "نص العنوان الصغير (Eyebrow)",
-          "required": false,
-          "value": "الأكثر مبيعاً"
-        },
-        {
-          "id": "autoplay",
-          "type": "boolean",
-          "format": "switch",
-          "label": "تشغيل تلقائي",
-          "value": true
-        },
-        {
-          "id": "autoplay_delay",
-          "type": "number",
-          "format": "number",
-          "label": "مدة التشغيل التلقائي (بالميلي ثانية)",
-          "required": false,
-          "value": 5000
-        },
-        {
-          "id": "items",
-          "type": "collection",
-          "format": "collection",
-          "label": "البطاقات",
-          "item_label": "بطاقة",
-          "minLength": 1,
-          "maxLength": 10,
-          "value": [
-            {
-              "image": "/assets/skincare/bundle-set-mockup-02.jpg",
-              "tag": "#الأكثر_مبيعاً",
-              "title_line1": "باقة",
-              "title_line2": "الترطيب المكثّف",
-              "desc": "خمس خطوات مدروسة تعيد لبشرتك توازنها خلال أسبوعين.",
-              "cta_text": "تسوّق الباقة",
-              "cta_link": "#st-offers"
-            },
-            {
-              "image": "/assets/skincare/product-amber-dropper-pedestal.jpg",
-              "tag": "#الأعلى_تقييماً",
-              "title_line1": "سيروم",
-              "title_line2": "فيتامين C",
-              "desc": "إشراقة فورية وحماية من العوامل الخارجية طوال اليوم.",
-              "cta_text": "تسوّق الباقة",
-              "cta_link": "#st-offers"
-            },
-            {
-              "image": "/assets/skincare/flatlay-rosegold-set.jpg",
-              "tag": "#مفضّل_العملاء",
-              "title_line1": "باقة",
-              "title_line2": "النضارة والإشراقة",
-              "desc": "تركيبة متكاملة لبشرة مشرقة وملمس ناعم من أول استخدام.",
-              "cta_text": "تسوّق الباقة",
-              "cta_link": "#st-offers"
-            },
-            {
-              "image": "/assets/skincare/product-glass-dropper-silver.jpg",
-              "tag": "#جديد",
-              "title_line1": "سيروم",
-              "title_line2": "حمض الهيالورونيك",
-              "desc": "ترطيب متعدد الطبقات يدوم حتى 48 ساعة.",
-              "cta_text": "تسوّق الباقة",
-              "cta_link": "#st-offers"
-            },
-            {
-              "image": "/assets/skincare/bundle-set-mockup-01.jpg",
-              "tag": "#للعناية_الليلية",
-              "title_line1": "باقة",
-              "title_line2": "العناية الفاخرة",
-              "desc": "روتين مسائي كامل بمكوّنات فعّالة ومُختبرة جلدياً.",
-              "cta_text": "تسوّق الباقة",
-              "cta_link": "#st-offers"
-            }
-          ],
-          "fields": [
-            {
-              "id": "image",
-              "type": "string",
-              "format": "image",
-              "label": "الصورة",
-              "required": true
-            },
-            {
-              "id": "tag",
-              "type": "string",
-              "format": "text",
-              "label": "وسم صغير أعلى البطاقة",
-              "required": false,
-              "maxLength": 40
-            },
-            {
-              "id": "title_line1",
-              "type": "string",
-              "format": "text",
-              "label": "العنوان - السطر الأول",
-              "required": true,
-              "maxLength": 60
-            },
-            {
-              "id": "title_line2",
-              "type": "string",
-              "format": "text",
-              "label": "العنوان - السطر الثاني",
-              "required": false,
-              "maxLength": 60
-            },
-            {
-              "id": "desc",
-              "type": "string",
-              "format": "textarea",
-              "label": "الوصف",
-              "required": false,
-              "maxLength": 200
-            },
-            {
-              "id": "cta_text",
-              "type": "string",
-              "format": "text",
-              "label": "نص الزر",
-              "required": false,
-              "value": "عرض المزيد"
-            },
-            {
-              "id": "cta_link",
-              "type": "string",
-              "format": "text",
-              "label": "رابط الزر",
-              "required": false,
-              "value": "#"
             }
           ]
         }
