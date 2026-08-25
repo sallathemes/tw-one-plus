@@ -203,11 +203,11 @@
       ]
     },
     {
-      "title": "قسم العروض الخاصة",
-      "icon": "sicon-award-ribbon",
-      "name": "st-offers",
-      "key": "8b9c0d1e-2f3a-4b5c-6d7e-8f9a0b1c2d3e",
-      "image": "https://cdn.salla.sa/qAyGK/products/NjmylDTEgqGLFsmMsj1PI9S7DL2NTT9K4Z6xMlW7.jpg",
+      "title": "قسم آراء العملاء",
+      "icon": "sicon-quote-close",
+      "name": "st-reviews",
+      "key": "0d1e2f3a-4b5c-6d7e-8f9a-0b1c2d3e4f5a",
+      "image": "https://cdn.salla.sa/qAyGK/products/nSqS292go5ydqASQslFXS6aqq6WUI5FJ43xnbsFj.jpg",
       "fields": [
         {
           "id": "bg_color",
@@ -220,7 +220,7 @@
           "id": "primary_color",
           "type": "string",
           "format": "color",
-          "label": "اللون الأساسي",
+          "label": "لون النص الأساسي",
           "value": "#2A2320"
         },
         {
@@ -238,149 +238,145 @@
           "value": "#7A6F67"
         },
         {
-          "id": "green_color",
+          "id": "shade_color",
           "type": "string",
           "format": "color",
-          "label": "لون الشارة",
-          "value": "#1F8A5F"
+          "label": "لون خلفية الترقيم",
+          "value": "rgba(42,35,32,0.05)"
         },
         {
-          "id": "red_color",
-          "type": "string",
-          "format": "color",
-          "label": "لون سعر الخصم",
-          "value": "#D64550"
-        },
-        {
-          "id": "section_title",
-          "type": "string",
-          "format": "text",
-          "label": "عنوان القسم",
-          "value": "اختر باقتك ووفّر أكثر"
-        },
-        {
-          "id": "section_subtitle",
-          "type": "string",
-          "format": "textarea",
-          "label": "النص الفرعي",
-          "required": false,
-          "rows": 2,
-          "value": "كل باقة مُجهّزة بعناية لتغطي روتين العناية كاملاً، وتشمل شحناً مجانياً واستبدالاً خلال 14 يوماً. العرض لفترة محدودة."
-        },
-        {
-          "id": "badge_label",
-          "type": "string",
-          "format": "text",
-          "label": "نص الشارة",
-          "required": false,
-          "value": "عرض لفترة محدودة"
-        },
-        {
-          "id": "badge_icon",
+          "id": "section_icon",
           "type": "string",
           "format": "icon",
-          "label": "أيقونة الشارة",
-          "required": false,
-          "value": "sicon-bolt"
+          "label": "أيقونة الاقتباس",
+          "value": "sicon-quote-close"
         },
         {
-          "id": "cta_label",
+          "id": "rating_icon",
+          "type": "string",
+          "format": "icon",
+          "label": "أيقونة التقييم",
+          "value": "sicon-star2"
+        },
+        {
+          "id": "subheader",
           "type": "string",
           "format": "text",
-          "label": "نص زر الشراء",
-          "value": "اطلب الباقة الآن"
+          "label": "العنوان الفرعي",
+          "value": "تجارب حقيقية من روتين عميلاتنا وعملائنا"
         },
         {
-          "id": "button_link",
+          "id": "prev_icon",
           "type": "string",
-          "format": "text",
-          "label": "رابط زر الشراء (رابط المنتج في المتجر)",
-          "value": "#"
+          "format": "icon",
+          "label": "أيقونة السابق",
+          "value": "sicon-arrow-left"
         },
         {
-          "id": "currency",
+          "id": "next_icon",
           "type": "string",
-          "format": "text",
-          "label": "رمز العملة",
-          "value": "ر.س"
+          "format": "icon",
+          "label": "أيقونة التالي",
+          "value": "sicon-arrow-right"
         },
         {
-          "id": "variants",
+          "id": "reviews",
           "type": "collection",
           "format": "collection",
-          "label": "الأنواع",
-          "item_label": "نوع",
+          "label": "التقييمات",
+          "item_label": "تقييم",
           "minLength": 1,
-          "maxLength": 3,
+          "maxLength": 10,
           "fields": [
             {
-              "id": "image",
+              "id": "body",
               "type": "string",
-              "format": "image",
-              "label": "صورة النوع",
-              "required": false
+              "format": "textarea",
+              "label": "نص التقييم",
+              "required": true,
+              "maxLength": 800
             },
             {
-              "id": "name",
+              "id": "user",
               "type": "string",
               "format": "text",
-              "label": "اسم النوع",
+              "label": "اسم العميل",
               "required": true,
-              "maxLength": 100
+              "maxLength": 80
             },
             {
-              "id": "price",
+              "id": "stars",
               "type": "number",
-              "format": "number",
-              "label": "السعر",
-              "required": true
+              "format": "slider",
+              "label": "التقييم (نجوم)",
+              "minimum": 0,
+              "maximum": 5,
+              "step": 0.5,
+              "value": 5
             },
             {
-              "id": "regular_price",
-              "type": "number",
-              "format": "number",
-              "label": "السعر قبل الخصم",
+              "id": "audio_url",
+              "type": "string",
+              "format": "text",
+              "label": "رابط الصوت (اختياري)",
               "required": false
             },
             {
-              "id": "is_on_sale",
-              "type": "boolean",
-              "format": "switch",
-              "label": "هل يوجد خصم",
-              "value": true
+              "id": "media_type",
+              "type": "string",
+              "format": "text",
+              "label": "نوع الوسائط: image / video / iframe (اتركه فارغاً بلا وسائط)",
+              "required": false,
+              "value": ""
             },
             {
-              "id": "is_out_of_stock",
-              "type": "boolean",
-              "format": "switch",
-              "label": "غير متوفر",
-              "value": false
+              "id": "media_src",
+              "type": "string",
+              "format": "text",
+              "label": "مصدر الوسائط (رابط أو مسار)",
+              "required": false
             }
           ],
           "value": [
             {
-              "image": "/assets/skincare/product-white-bottle-mockup.jpg",
-              "name": "باقة الأساسيات",
-              "price": 149,
-              "regular_price": 219,
-              "is_on_sale": true,
-              "is_out_of_stock": false
+              "body": "بشرتي دهنية ومعرّضة للحبوب، وترددت كثيراً قبل تجربة باقة جديدة. بعد ثلاثة أسابيع فقط لاحظت فرقاً واضحاً في نعومة الملمس وقلّة الدهون الزائدة. السيروم خفيف جداً وما يسبب لمعان مزعج تحت المكياج.",
+              "user": "منى العنزي",
+              "stars": 5,
+              "audio_url": "",
+              "media_type": "image",
+              "media_src": "/assets/skincare/texture-cream-swirl-01.jpg"
             },
             {
-              "image": "/assets/skincare/bundle-set-mockup-02.jpg",
-              "name": "باقة الروتين الكامل",
-              "price": 219,
-              "regular_price": 329,
-              "is_on_sale": true,
-              "is_out_of_stock": false
+              "body": "الباقة وصلت خلال يومين بالضبط كما وعدوا، والتغليف أنيق جداً يستاهل يكون هدية. استخدمت روتين المساء فقط أول أسبوع، والكريم الليلي فعلاً كثيف ومرطب بدون ما يكون دهني.",
+              "user": "عبدالعزيز الحربي",
+              "stars": 5,
+              "audio_url": "",
+              "media_type": "image",
+              "media_src": "/assets/skincare/styled-jar-red-flowers.jpg"
             },
             {
-              "image": "/assets/skincare/product-box-jar-minimal.jpg",
-              "name": "باقة العناية الفاخرة",
-              "price": 299,
-              "regular_price": 460,
-              "is_on_sale": true,
-              "is_out_of_stock": false
+              "body": "جربت سيروم فيتامين C من قبل من عدة ماركات وكان يهيّج بشرتي، لكن هذا التركيز لطيف جداً. الإشراقة ظهرت من أول أسبوعين، وسعر الباقة فعلاً أوفر من شراء كل منتج لحاله.",
+              "user": "ريم القحطاني",
+              "stars": 4.5,
+              "audio_url": "",
+              "media_type": "image",
+              "media_src": "/assets/skincare/product-dark-dropper-glow.jpg"
+            },
+            {
+              "body": "كنت أبحث عن روتين بسيط لا يأخذ وقتاً طويلاً صباحاً، وهذي الباقة بالضبط اللي أدور عليه. خمس خطوات بس وتشعر إن بشرتك مرتاحة طول اليوم. التوصيل كان أسرع من المتوقع.",
+              "user": "سلطان المالكي",
+              "stars": 5,
+              "audio_url": "",
+              "media_type": "image",
+              "media_src": "/assets/skincare/flatlay-mockup-pink-red.jpg"
+            },
+            {
+              "body": "أول مرة أطلب من المتجر وصراحة الجودة فاقت التوقعات. تواصلت مع خدمة العملاء بخصوص نوع بشرتي وردّوا عليّ بسرعة واقترحوا الباقة المناسبة. راح أكرر الطلب أكيد.",
+              "user": "لينا الشمري",
+              "stars": 5,
+              "audio_url": "",
+              "media_type": "image",
+              "media_src": "/assets/skincare/texture-cream-trio-leaves.jpg"
             }
           ]
         }
@@ -1674,11 +1670,11 @@
       ]
     },
     {
-      "title": "قسم آراء العملاء",
-      "icon": "sicon-quote-close",
-      "name": "st-reviews",
-      "key": "0d1e2f3a-4b5c-6d7e-8f9a-0b1c2d3e4f5a",
-      "image": "https://cdn.salla.sa/qAyGK/products/nSqS292go5ydqASQslFXS6aqq6WUI5FJ43xnbsFj.jpg",
+      "title": "قسم العروض الخاصة",
+      "icon": "sicon-award-ribbon",
+      "name": "st-offers",
+      "key": "8b9c0d1e-2f3a-4b5c-6d7e-8f9a0b1c2d3e",
+      "image": "https://cdn.salla.sa/qAyGK/products/NjmylDTEgqGLFsmMsj1PI9S7DL2NTT9K4Z6xMlW7.jpg",
       "fields": [
         {
           "id": "bg_color",
@@ -1691,7 +1687,7 @@
           "id": "primary_color",
           "type": "string",
           "format": "color",
-          "label": "لون النص الأساسي",
+          "label": "اللون الأساسي",
           "value": "#2A2320"
         },
         {
@@ -1709,145 +1705,149 @@
           "value": "#7A6F67"
         },
         {
-          "id": "shade_color",
+          "id": "green_color",
           "type": "string",
           "format": "color",
-          "label": "لون خلفية الترقيم",
-          "value": "rgba(42,35,32,0.05)"
+          "label": "لون الشارة",
+          "value": "#1F8A5F"
         },
         {
-          "id": "section_icon",
+          "id": "red_color",
           "type": "string",
-          "format": "icon",
-          "label": "أيقونة الاقتباس",
-          "value": "sicon-quote-close"
+          "format": "color",
+          "label": "لون سعر الخصم",
+          "value": "#D64550"
         },
         {
-          "id": "rating_icon",
-          "type": "string",
-          "format": "icon",
-          "label": "أيقونة التقييم",
-          "value": "sicon-star2"
-        },
-        {
-          "id": "subheader",
+          "id": "section_title",
           "type": "string",
           "format": "text",
-          "label": "العنوان الفرعي",
-          "value": "تجارب حقيقية من روتين عميلاتنا وعملائنا"
+          "label": "عنوان القسم",
+          "value": "اختر باقتك ووفّر أكثر"
         },
         {
-          "id": "prev_icon",
+          "id": "section_subtitle",
+          "type": "string",
+          "format": "textarea",
+          "label": "النص الفرعي",
+          "required": false,
+          "rows": 2,
+          "value": "كل باقة مُجهّزة بعناية لتغطي روتين العناية كاملاً، وتشمل شحناً مجانياً واستبدالاً خلال 14 يوماً. العرض لفترة محدودة."
+        },
+        {
+          "id": "badge_label",
+          "type": "string",
+          "format": "text",
+          "label": "نص الشارة",
+          "required": false,
+          "value": "عرض لفترة محدودة"
+        },
+        {
+          "id": "badge_icon",
           "type": "string",
           "format": "icon",
-          "label": "أيقونة السابق",
-          "value": "sicon-arrow-left"
+          "label": "أيقونة الشارة",
+          "required": false,
+          "value": "sicon-bolt"
         },
         {
-          "id": "next_icon",
+          "id": "cta_label",
           "type": "string",
-          "format": "icon",
-          "label": "أيقونة التالي",
-          "value": "sicon-arrow-right"
+          "format": "text",
+          "label": "نص زر الشراء",
+          "value": "اطلب الباقة الآن"
         },
         {
-          "id": "reviews",
+          "id": "button_link",
+          "type": "string",
+          "format": "text",
+          "label": "رابط زر الشراء (رابط المنتج في المتجر)",
+          "value": "#"
+        },
+        {
+          "id": "currency",
+          "type": "string",
+          "format": "text",
+          "label": "رمز العملة",
+          "value": "ر.س"
+        },
+        {
+          "id": "variants",
           "type": "collection",
           "format": "collection",
-          "label": "التقييمات",
-          "item_label": "تقييم",
+          "label": "الأنواع",
+          "item_label": "نوع",
           "minLength": 1,
-          "maxLength": 10,
+          "maxLength": 3,
           "fields": [
             {
-              "id": "body",
+              "id": "image",
               "type": "string",
-              "format": "textarea",
-              "label": "نص التقييم",
-              "required": true,
-              "maxLength": 800
+              "format": "image",
+              "label": "صورة النوع",
+              "required": false
             },
             {
-              "id": "user",
+              "id": "name",
               "type": "string",
               "format": "text",
-              "label": "اسم العميل",
+              "label": "اسم النوع",
               "required": true,
-              "maxLength": 80
+              "maxLength": 100
             },
             {
-              "id": "stars",
+              "id": "price",
               "type": "number",
-              "format": "slider",
-              "label": "التقييم (نجوم)",
-              "minimum": 0,
-              "maximum": 5,
-              "step": 0.5,
-              "value": 5
+              "format": "number",
+              "label": "السعر",
+              "required": true
             },
             {
-              "id": "audio_url",
-              "type": "string",
-              "format": "text",
-              "label": "رابط الصوت (اختياري)",
+              "id": "regular_price",
+              "type": "number",
+              "format": "number",
+              "label": "السعر قبل الخصم",
               "required": false
             },
             {
-              "id": "media_type",
-              "type": "string",
-              "format": "text",
-              "label": "نوع الوسائط: image / video / iframe (اتركه فارغاً بلا وسائط)",
-              "required": false,
-              "value": ""
+              "id": "is_on_sale",
+              "type": "boolean",
+              "format": "switch",
+              "label": "هل يوجد خصم",
+              "value": true
             },
             {
-              "id": "media_src",
-              "type": "string",
-              "format": "text",
-              "label": "مصدر الوسائط (رابط أو مسار)",
-              "required": false
+              "id": "is_out_of_stock",
+              "type": "boolean",
+              "format": "switch",
+              "label": "غير متوفر",
+              "value": false
             }
           ],
           "value": [
             {
-              "body": "بشرتي دهنية ومعرّضة للحبوب، وترددت كثيراً قبل تجربة باقة جديدة. بعد ثلاثة أسابيع فقط لاحظت فرقاً واضحاً في نعومة الملمس وقلّة الدهون الزائدة. السيروم خفيف جداً وما يسبب لمعان مزعج تحت المكياج.",
-              "user": "منى العنزي",
-              "stars": 5,
-              "audio_url": "",
-              "media_type": "image",
-              "media_src": "/assets/skincare/texture-cream-swirl-01.jpg"
+              "image": "/assets/skincare/product-white-bottle-mockup.jpg",
+              "name": "باقة الأساسيات",
+              "price": 149,
+              "regular_price": 219,
+              "is_on_sale": true,
+              "is_out_of_stock": false
             },
             {
-              "body": "الباقة وصلت خلال يومين بالضبط كما وعدوا، والتغليف أنيق جداً يستاهل يكون هدية. استخدمت روتين المساء فقط أول أسبوع، والكريم الليلي فعلاً كثيف ومرطب بدون ما يكون دهني.",
-              "user": "عبدالعزيز الحربي",
-              "stars": 5,
-              "audio_url": "",
-              "media_type": "image",
-              "media_src": "/assets/skincare/styled-jar-red-flowers.jpg"
+              "image": "/assets/skincare/bundle-set-mockup-02.jpg",
+              "name": "باقة الروتين الكامل",
+              "price": 219,
+              "regular_price": 329,
+              "is_on_sale": true,
+              "is_out_of_stock": false
             },
             {
-              "body": "جربت سيروم فيتامين C من قبل من عدة ماركات وكان يهيّج بشرتي، لكن هذا التركيز لطيف جداً. الإشراقة ظهرت من أول أسبوعين، وسعر الباقة فعلاً أوفر من شراء كل منتج لحاله.",
-              "user": "ريم القحطاني",
-              "stars": 4.5,
-              "audio_url": "",
-              "media_type": "image",
-              "media_src": "/assets/skincare/product-dark-dropper-glow.jpg"
-            },
-            {
-              "body": "كنت أبحث عن روتين بسيط لا يأخذ وقتاً طويلاً صباحاً، وهذي الباقة بالضبط اللي أدور عليه. خمس خطوات بس وتشعر إن بشرتك مرتاحة طول اليوم. التوصيل كان أسرع من المتوقع.",
-              "user": "سلطان المالكي",
-              "stars": 5,
-              "audio_url": "",
-              "media_type": "image",
-              "media_src": "/assets/skincare/flatlay-mockup-pink-red.jpg"
-            },
-            {
-              "body": "أول مرة أطلب من المتجر وصراحة الجودة فاقت التوقعات. تواصلت مع خدمة العملاء بخصوص نوع بشرتي وردّوا عليّ بسرعة واقترحوا الباقة المناسبة. راح أكرر الطلب أكيد.",
-              "user": "لينا الشمري",
-              "stars": 5,
-              "audio_url": "",
-              "media_type": "image",
-              "media_src": "/assets/skincare/texture-cream-trio-leaves.jpg"
+              "image": "/assets/skincare/product-box-jar-minimal.jpg",
+              "name": "باقة العناية الفاخرة",
+              "price": 299,
+              "regular_price": 460,
+              "is_on_sale": true,
+              "is_out_of_stock": false
             }
           ]
         }
