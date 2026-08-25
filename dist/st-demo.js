@@ -1,7 +1,7 @@
 import { LitElement as b, html as i } from "lit";
 import { property as v, state as y } from "lit/decorators.js";
 import { A as g } from "./animate-on-scroll-ROUn9sF1.js";
-import "./fonts-CqDo7kag.js";
+import "./fonts-ClHg20Ea.js";
 var $ = Object.defineProperty, w = (_, e, t, o) => {
   for (var n = void 0, s = _.length - 1, a; s >= 0; s--)
     (a = _[s]) && (n = a(e, t, n) || n);

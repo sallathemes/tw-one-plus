@@ -1,7 +1,7 @@
 import { LitElement as u, html as c } from "lit";
 import { property as x } from "lit/decorators.js";
 import { A as f } from "./animate-on-scroll-ROUn9sF1.js";
-import "./fonts-CqDo7kag.js";
+import "./fonts-ClHg20Ea.js";
 var b = Object.defineProperty, g = (n, i, t, r) => {
   for (var e = void 0, s = n.length - 1, o; s >= 0; s--)
     (o = n[s]) && (e = o(i, t, e) || e);

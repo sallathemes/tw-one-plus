@@ -2,7 +2,7 @@ import { LitElement as h, html as a } from "lit";
 import { property as u, state as g } from "lit/decorators.js";
 import { A as p } from "./animate-on-scroll-ROUn9sF1.js";
 import { S as _ } from "./scroll-scene-DdINwXtt.js";
-import "./fonts-CqDo7kag.js";
+import "./fonts-ClHg20Ea.js";
 var x = Object.defineProperty, c = (d, t, e, n) => {
   for (var i = void 0, r = d.length - 1, o; r >= 0; r--)
     (o = d[r]) && (i = o(t, e, i) || i);

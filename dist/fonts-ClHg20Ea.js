@@ -9,7 +9,8 @@ const e = "st-pingar-fonts", s = [
   "st-offers",
   "st-images-slider",
   "st-reviews",
-  "st-footer"
+  "st-footer",
+  "st-hotspots"
 ];
 function n() {
   if (document.getElementById(e)) return;

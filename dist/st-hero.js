@@ -1,7 +1,7 @@
 import { LitElement as m, html as i } from "lit";
 import { property as b, state as p } from "lit/decorators.js";
 import { S as _ } from "./scroll-scene-DdINwXtt.js";
-import "./fonts-CqDo7kag.js";
+import "./fonts-ClHg20Ea.js";
 import { m as a } from "./mock-product-D0ZJbJ-m.js";
 var u = Object.defineProperty, h = (c, t, e, d) => {
   for (var n = void 0, s = c.length - 1, r; s >= 0; s--)
